@@ -1,0 +1,83 @@
+.navigation-wrapper{
+  height: 64px;
+  background: url(../images/nav-bg.png) repeat-x;
+  -webkit-transition: background-color 2s;
+  -moz-transition: background-color 2s;
+  -o-transition: background-color 2s;
+  transition: background-color 2s;
+}
+.l-region--navigation:after{
+  clear: both;
+  content: "";
+  display: table;
+}
+#block-system-main-menu{
+  width: 909px;
+  float: left;
+  ul.menu, 
+  ul.menu li{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  > ul.menu:after{
+    clear: both;
+    display: table;
+    content: "";
+  }
+  > ul.menu > li{
+    float: left;
+  }
+  > ul.menu > li > a{
+    padding: 19px 11px 0px 11px;
+    height: 52px;
+    display: block;
+    text-decoration: none;
+    color: #202020;
+    font-size: 16px;
+  }
+  > ul.menu > li > a.active,
+  > ul.menu > li > a:hover{
+    border-bottom: #122d3f solid 4px;
+  }
+  > ul.menu > li ul.menu{
+    display: none;
+  }
+  /* Specific Items */
+  > ul.menu > li > a.portada, 
+  > ul.menu > li > a.reporte{
+    text-indent: -9999px;
+    width: 47px;
+    position: relative;
+  }
+  > ul.menu > li > a.portada:after,
+  > ul.menu > li > a.reporte:after{
+    position: absolute;
+    top: 15px;
+    left: 11px;
+    width: 25px;
+    height: 25px;
+    display: block;
+    background: url('../images/elements.png') no-repeat -20px -479px;
+    content: "";
+  }
+  > ul.menu > li > a.reporte:after{
+    background-position: -20px -1632px;
+  }
+  
+  /* For Expanded SubMenus */
+  > ul.menu > li.expanded > a{
+    position: relative;
+    padding-right: 29px;
+  }
+  > ul.menu > li.expanded > a:after{
+    position: absolute;
+    right: 12px;
+    top: 26px;
+    display: block;
+    content: "";
+    width: 9px;
+    height: 6px;
+    background: url('../images/elements.png') no-repeat -20px -832px;
+  }
+}

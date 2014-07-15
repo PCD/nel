@@ -1,3 +1,20 @@
 .l-branding-wrapper{
   background: #122d3f;
+  .l-branding{
+    height: 120px;
+    padding-top: 10px;
+  }
+}
+a.site-logo{
+  display: block;
+  width: 300px;
+  height: 100px;
+  background: url(../logo.png) no-repeat;
+  text-indent: -9999px;
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2) {
+  a.site-logo{
+    background-image: url(../logo_retina.png);
+    background-size: 300px 100px;
+  }
 }

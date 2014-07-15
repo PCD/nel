@@ -1,3 +1,9 @@
+body{
+  background: #4c4c4c;
+}
+.l-page{
+  background: white;
+}
 .l-main,
 .l-branding,
 .l-region--top-navigation, 
@@ -5,4 +11,37 @@
 .l-region--footer{
   width: $desktop_width;
   margin: 0 auto;
+  padding: 0 15px;
+}
+
+/** 2 Columns Fluid Layout **/
+.colmask.right-menu{
+  position: relative;
+  clear: both;
+  float: left;
+  width: 100%;
+  overflow: hidden;
+}
+.right-menu .colleft{
+  float: left;
+  width: 200%;
+  margin-left: -336px;
+  position: relative;
+  right: 100%;
+}
+.right-menu .col1wrap{
+  float: left;
+  width: 50%;
+  position: relative;
+  left: 50%;
+}
+.right-menu .l-content{
+  margin: 0 0 0 336px;
+  overflow: hidden;
+}
+.right-menu .l-region--sidebar-second{
+  float: right;
+  width: 293px;
+  position: relative;
+  left: 336px;
 }

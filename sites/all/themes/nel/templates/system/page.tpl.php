@@ -79,9 +79,7 @@
     <?php endif; ?>
     <div class="l-branding-wrapper">
       <div class="l-branding">
-        <?php if ($logo): ?>
-          <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home" class="site-logo"><img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" /></a>
-        <?php endif; ?>
+        <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home" class="site-logo"><?php print t('Home'); ?></a>
         <?php print render($page['header']); ?>
       </div>
     </div>

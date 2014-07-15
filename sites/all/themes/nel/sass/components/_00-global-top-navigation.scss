@@ -1,6 +1,6 @@
 .top-navigation-wrapper{
   background: #4c4c4c;
-  padding: 2px 0 4px 0px;
+  padding: 4px 0;
   height: 30px;
 }
 .l-region--top-navigation:after{
@@ -9,6 +9,7 @@
   content: "";
 }
 #block-menu-menu-top-navigation{
+  padding-left: 10px;
   padding-right: 48px;
   float: left;
   ul.menu, 
@@ -49,7 +50,6 @@
 }
 /* Social Menu */
 #block-menu-menu-social-menu{
-  padding-right: 48px;
   float: right;
   ul.menu, 
   ul.menu li{
@@ -63,7 +63,7 @@
   ul.menu li{
     display: inline-block;
     text-align: left;
-    margin-left: 14px;
+    margin-left: 10px;
   }
   ul.menu li.first{
     margin-left: 0;
@@ -103,6 +103,18 @@
     }
     a.youtube{
       background-position: -96px -96px;
+    }
+  }
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2) {
+  #block-menu-menu-social-menu ul.menu li{
+    a.facebook, 
+    a.twitter, 
+    a.google, 
+    a.instagram, 
+    a.youtube{
+      background-image: url('../images/style3-16@2x.png');
+      background-size: 128px 112px;
     }
   }
 }

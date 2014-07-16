@@ -3,6 +3,192 @@
 img, media {
   max-width: 100%; }
 
+/**
+ * Fjalla One
+ */
+@font-face {
+  font-family: 'Fjalla One';
+  font-style: normal;
+  font-weight: 400;
+  src: local("Fjalla One"), local("FjallaOne-Regular"), url(../fonts/SHXJdWnWW6HDq-6DpcG8P73hpw3pgy2gAi-Ip7WPMi0.woff) format("woff"); }
+
+/**
+ * PTSans
+ */
+@font-face {
+  font-family: 'PT Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local("PT Sans"), local("PTSans-Regular"), url(../fonts/D7F3bIyVvgEwAiTjRyhWnKCWcynf_cDxXwCLxiixG1c.woff) format("woff"); }
+
+@font-face {
+  font-family: 'PT Sans';
+  font-style: normal;
+  font-weight: 700;
+  src: local("PT Sans Bold"), local("PTSans-Bold"), url(../fonts/HXiERDIZdwFzjXlbcMq7XHYhjbSpvc47ee6xR_80Hnw.woff) format("woff"); }
+
+@font-face {
+  font-family: 'PT Sans';
+  font-style: italic;
+  font-weight: 400;
+  src: local("PT Sans Italic"), local("PTSans-Italic"), url(../fonts/dvl0TAzVoKo9r1vdjBULWwLUuEpTyoUstqEm5AMlJo4.woff) format("woff"); }
+
+/**
+ * Domine
+ */
+@font-face {
+  font-family: 'Domine';
+  font-style: normal;
+  font-weight: 400;
+  src: local("Domine"), local("Domine-Regular"), url(../fonts/RULlWjScuWh5J1C37BKntevvDin1pK8aKteLpeZ5c0A.woff) format("woff"); }
+
+@font-face {
+  font-family: 'Domine';
+  font-style: normal;
+  font-weight: 700;
+  src: local("Domine Bold"), local("Domine-Bold"), url(../fonts/kxdP69OfpXh5jz-VlR6wIrO3LdcAZYWl9Si6vvxL-qU.woff) format("woff"); }
+
+/**
+ * Open Sans
+ */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 300;
+  src: local("Open Sans Light"), local("OpenSans-Light"), url(../fonts/DXI1ORHCpsQm3Vp6mXoaTb3hpw3pgy2gAi-Ip7WPMi0.woff) format("woff"); }
+
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local("Open Sans"), local("OpenSans"), url(../fonts/wMws1cEtxWZc6AZZIpiqWALUuEpTyoUstqEm5AMlJo4.woff) format("woff"); }
+
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 600;
+  src: local("Open Sans Semibold"), local("OpenSans-Semibold"), url(../fonts/MTP_ySUJH_bn48VBG8sNSr3hpw3pgy2gAi-Ip7WPMi0.woff) format("woff"); }
+
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 700;
+  src: local("Open Sans Bold"), local("OpenSans-Bold"), url(../fonts/k3k702ZOKiLJc3WVjuplzL3hpw3pgy2gAi-Ip7WPMi0.woff) format("woff"); }
+
+/**
+ * Ubuntu
+ */
+@font-face {
+  font-family: 'Ubuntu';
+  font-style: normal;
+  font-weight: 300;
+  src: local("Ubuntu Light"), local("Ubuntu-Light"), url(../fonts/xx108hMj0oHBrTYbdCQsdALUuEpTyoUstqEm5AMlJo4.woff) format("woff"); }
+
+@font-face {
+  font-family: 'Ubuntu';
+  font-style: normal;
+  font-weight: 400;
+  src: local("Ubuntu"), url(../fonts/VeuwHt-_EDaMbc2iV8rWdvesZW2xOQ-xsNqO47m55DA.woff) format("woff"); }
+
+@font-face {
+  font-family: 'Ubuntu';
+  font-style: normal;
+  font-weight: 500;
+  src: local("Ubuntu Medium"), local("Ubuntu-Medium"), url(../fonts/u6T5uGZB79iKPg7v5KAP8wLUuEpTyoUstqEm5AMlJo4.woff) format("woff"); }
+
+@font-face {
+  font-family: 'Ubuntu';
+  font-style: normal;
+  font-weight: 700;
+  src: local("Ubuntu Bold"), local("Ubuntu-Bold"), url(../fonts/ng4oaVEu7ONgf1iSf6o7PQLUuEpTyoUstqEm5AMlJo4.woff) format("woff"); }
+
+@font-face {
+  font-family: 'Ubuntu';
+  font-style: italic;
+  font-weight: 300;
+  src: local("Ubuntu Light Italic"), local("Ubuntu-LightItalic"), url(../fonts/j-TYDdXcC_eQzhhp386SjbO3LdcAZYWl9Si6vvxL-qU.woff) format("woff"); }
+
+@font-face {
+  font-family: 'Ubuntu';
+  font-style: italic;
+  font-weight: 400;
+  src: local("Ubuntu Italic"), local("Ubuntu-Italic"), url(../fonts/YfG8XX-KwlG8BaayCOcEfOvvDin1pK8aKteLpeZ5c0A.woff) format("woff"); }
+
+@font-face {
+  font-family: 'Ubuntu';
+  font-style: italic;
+  font-weight: 500;
+  src: local("Ubuntu Medium Italic"), local("Ubuntu-MediumItalic"), url(../fonts/NWdMogIO7U6AtEM4dDdf_bO3LdcAZYWl9Si6vvxL-qU.woff) format("woff"); }
+
+@font-face {
+  font-family: 'Ubuntu';
+  font-style: italic;
+  font-weight: 700;
+  src: local("Ubuntu Bold Italic"), local("Ubuntu-BoldItalic"), url(../fonts/pqisLQoeO9YTDCNnlQ9bf7O3LdcAZYWl9Si6vvxL-qU.woff) format("woff"); }
+
+/**
+ * Oswald
+ */
+@font-face {
+  font-family: 'Oswald';
+  font-style: normal;
+  font-weight: 300;
+  src: local("Oswald Light"), local("Oswald-Light"), url(../fonts/l1cOQ90roY9yC7voEhngDLO3LdcAZYWl9Si6vvxL-qU.woff) format("woff"); }
+
+@font-face {
+  font-family: 'Oswald';
+  font-style: normal;
+  font-weight: 400;
+  src: local("Oswald Regular"), local("Oswald-Regular"), url(../fonts/qs_6LdoYjCitupC9judWT-vvDin1pK8aKteLpeZ5c0A.woff) format("woff"); }
+
+@font-face {
+  font-family: 'Oswald';
+  font-style: normal;
+  font-weight: 700;
+  src: local("Oswald Bold"), local("Oswald-Bold"), url(../fonts/dI-qzxlKVQA6TUC5RKSb37O3LdcAZYWl9Si6vvxL-qU.woff) format("woff"); }
+
+/**
+ * Roboto Condensed
+ */
+@font-face {
+  font-family: 'Roboto Condensed';
+  font-style: normal;
+  font-weight: 300;
+  src: local("Roboto Condensed Light"), local("RobotoCondensed-Light"), url(../fonts/b9QBgL0iMZfDSpmcXcE8nH6GPO4TjrCsXWY4PSfraSY.woff) format("woff"); }
+
+@font-face {
+  font-family: 'Roboto Condensed';
+  font-style: normal;
+  font-weight: 400;
+  src: local("Roboto Condensed Regular"), local("RobotoCondensed-Regular"), url(../fonts/Zd2E9abXLFGSr9G3YK2MsEYkBUapGhkWjcxWm3_vZWA.woff) format("woff"); }
+
+@font-face {
+  font-family: 'Roboto Condensed';
+  font-style: normal;
+  font-weight: 700;
+  src: local("Roboto Condensed Bold"), local("RobotoCondensed-Bold"), url(../fonts/b9QBgL0iMZfDSpmcXcE8nAXW-UgdjZ3YrDta4-p32EE.woff) format("woff"); }
+
+@font-face {
+  font-family: 'Roboto Condensed';
+  font-style: italic;
+  font-weight: 300;
+  src: local("Roboto Condensed Light Italic"), local("RobotoCondensed-LightItalic"), url(../fonts/mg0cGfGRUERshzBlvqxeAL_0DpHDa0qevVXsivaKxsI.woff) format("woff"); }
+
+@font-face {
+  font-family: 'Roboto Condensed';
+  font-style: italic;
+  font-weight: 400;
+  src: local("Roboto Condensed Italic"), local("RobotoCondensed-Italic"), url(../fonts/BP5K8ZAJv9qEbmuFp8RpJau6VQ0jQQbvSE8VA7z_fVA.woff) format("woff"); }
+
+@font-face {
+  font-family: 'Roboto Condensed';
+  font-style: italic;
+  font-weight: 700;
+  src: local("Roboto Condensed Bold Italic"), local("RobotoCondensed-BoldItalic"), url(../fonts/mg0cGfGRUERshzBlvqxeAKyfWPSGaEIhFC6Y-MJ0oyw.woff) format("woff"); }
+
+/**
+ *
+ */
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/nayaritenlinea\/html\/sites\/all\/themes\/nel\/sass\/components\/_00-global-footer\.scss}line{font-family:\000031}}
 .l-footer {
   clear: both;

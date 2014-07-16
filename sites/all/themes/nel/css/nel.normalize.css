@@ -1,26 +1,3 @@
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nayeli\/Sites\/nel\/html\/sites\/all\/themes\/nel\/sass\/variables\/_typography\.scss}line{font-family:\000038}}
-h1 {
-  font-family: Fjalla One;
-  color: #444444;
-  font-weight: normal;
-  font-size: 30px; }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nayeli\/Sites\/nel\/html\/sites\/all\/themes\/nel\/sass\/variables\/_typography\.scss}line{font-family:\0000315}}
-h2 {
-  font-family: Fjalla One;
-  font-size: 21px;
-  line-height: 25px;
-  color: #333333;
-  font-weight: normal; }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nayeli\/Sites\/nel\/html\/sites\/all\/themes\/nel\/sass\/variables\/_typography\.scss}line{font-family:\0000323}}
-h2.block__title {
-  font-family: 'Roboto Condensed', sans-serif;
-  font-size: 20px;
-  color: #333333;
-  line-height: 30px;
-  font-weight: normal; }
-
 /*! normalize.css v3.0.0 | MIT License | git.io/normalize */
 /*! normalize.css v3.0.0 | HTML5 Display Definitions | MIT License | git.io/normalize */
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nayeli\/\.rvm\/gems\/ruby-2\.1\.2\/gems\/compass-normalize-1\.5\/stylesheets\/normalize\/_html5\.scss}line{font-family:\0000320}}

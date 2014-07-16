@@ -1,32 +1,11 @@
 $font_size: 14px;
+$font_size_h1: 2.142em;// 30px
+$font_size_h2: 1.428em;// 20px
 
 
 
 
-//--- Headers  
 
-h1{
-  font-family: Fjalla One ;
-  color: #444444;
-  font-weight: normal;
-  font-size: 30px;
-} 
-
-h2{  //normal 
-  font-family: Fjalla One;
-  font-size: 21px;
-  line-height: 25px;
-  color: #333333;	
-  font-weight: normal;
-}
-
-h2.block__title{ //block h2
-  font-family: 'Roboto Condensed', sans-serif;  
-  font-size: 20px;
-  color: #333333;	
-  line-height: 30px;
-  font-weight: normal;
-}
 
 
 

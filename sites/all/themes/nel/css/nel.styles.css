@@ -212,32 +212,6 @@ img, media {
 /**
  *
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nayeli\/Sites\/nel\/html\/sites\/all\/themes\/nel\/sass\/components\/_00-forms-global\.scss}line{font-family:\000032}}
-form input, form textarea {
-  background: #fafafa;
-  border: 1px solid #f5f5f5;
-  transition: 1px solid #f5f5f5; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nayeli\/Sites\/nel\/html\/sites\/all\/themes\/nel\/sass\/components\/_00-forms-global\.scss}line{font-family:\000039}}
-form input:focus,
-form textarea:focus {
-  outline: none; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nayeli\/Sites\/nel\/html\/sites\/all\/themes\/nel\/sass\/components\/_00-forms-global\.scss}line{font-family:\0000313}}
-form textarea {
-  width: 98%; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nayeli\/Sites\/nel\/html\/sites\/all\/themes\/nel\/sass\/components\/_00-forms-global\.scss}line{font-family:\0000317}}
-form input[type=submit] {
-  background-color: #122d3f !important;
-  color: #fff;
-  height: 34px !important;
-  font-size: 14px;
-  width: auto; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nayeli\/Sites\/nel\/html\/sites\/all\/themes\/nel\/sass\/components\/_00-forms-global\.scss}line{font-family:\0000325}}
-form label {
-  color: #445f71;
-  font-size: 14px;
-  font-family: Domine;
-  line-height: 21px; }
-
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nayeli\/Sites\/nel\/html\/sites\/all\/themes\/nel\/sass\/components\/_00-global-footer\.scss}line{font-family:\000031}}
 .l-footer {
   clear: both;
@@ -300,6 +274,33 @@ form label {
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nayeli\/Sites\/nel\/html\/sites\/all\/themes\/nel\/sass\/components\/_00-global-footer\.scss}line{font-family:\0000356}}
   #block-menu-menu-footer-menu ul.menu li a:hover {
     text-decoration: underline; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nayeli\/Sites\/nel\/html\/sites\/all\/themes\/nel\/sass\/components\/_00-global-forms\.scss}line{font-family:\000032}}
+form input, form textarea {
+  background: #fafafa;
+  border: 1px solid #f5f5f5;
+  transition: 1px solid #f5f5f5; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nayeli\/Sites\/nel\/html\/sites\/all\/themes\/nel\/sass\/components\/_00-global-forms\.scss}line{font-family:\000039}}
+form input:focus,
+form textarea:focus {
+  outline: none; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nayeli\/Sites\/nel\/html\/sites\/all\/themes\/nel\/sass\/components\/_00-global-forms\.scss}line{font-family:\0000313}}
+form textarea {
+  width: 98%; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nayeli\/Sites\/nel\/html\/sites\/all\/themes\/nel\/sass\/components\/_00-global-forms\.scss}line{font-family:\0000317}}
+form input[type=submit] {
+  background-color: #122d3f;
+  color: #fff;
+  height: 34px;
+  font-size: 14px;
+  width: auto; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nayeli\/Sites\/nel\/html\/sites\/all\/themes\/nel\/sass\/components\/_00-global-forms\.scss}line{font-family:\0000325}}
+form .form-item label, form .form-actions label {
+  color: #445f71;
+  font-size: 14px;
+  font-family: Domine;
+  line-height: 21px;
+  font-weight: lighter; }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nayeli\/Sites\/nel\/html\/sites\/all\/themes\/nel\/sass\/components\/_00-global-header\.scss}line{font-family:\000031}}
 .l-branding-wrapper {

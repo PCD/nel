@@ -15,17 +15,18 @@ form{
 	}
 
 	input[type=submit]{
-		background-color: #122d3f !important;
+		background-color: #122d3f;
 		color: #fff;
-		height: 34px !important;
+		height: 34px ;
 		font-size: $font_size;
 		width: auto;
 	}
 
-	label{
+	 .form-item label, .form-actions label{
 		color: #445f71;
 		font-size: $font_size;
 		font-family: Domine;
 		line-height: 21px;
+		font-weight: lighter;
 	}
 }

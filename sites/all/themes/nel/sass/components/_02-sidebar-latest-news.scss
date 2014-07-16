@@ -1,0 +1,42 @@
+.l-region--sidebar-second{
+  
+  h2{  
+    background: #122d3f;
+    padding: 3px 10px 3px 10px;
+    color: #fff;
+    display: inline-block;
+    margin-bottom: 0px;
+    font-size: 20px;
+  }
+  
+  .block__content{
+	  border-top: solid #122d3f 2px;  
+  }
+  
+  .block--views-latest-news-block .views-row{
+    .image{
+	  width: 100px;
+	  float: left;
+    }
+    
+    .info{
+	  margin-left: 115px;
+    }
+    
+    .info >h4{
+	  margin-bottom: 5px;
+    }
+    
+    .info >h4 a{
+		font-size: 15px;
+    }
+    
+    .date span{
+	  font-style: italic;
+      white-space: nowrap;
+      font-family: 'Ubuntu', sans-serif;
+      color: #cbcbcb;
+      font-size: 12px;
+    }
+  }
+}

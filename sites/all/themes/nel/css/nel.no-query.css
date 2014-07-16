@@ -1,11 +1,11 @@
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nayeli\/Sites\/nel\/html\/sites\/all\/themes\/nel\/sass\/variables\/_typography\.scss}line{font-family:\000038}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/nayaritenlinea\/html\/sites\/all\/themes\/nel\/sass\/variables\/_typography\.scss}line{font-family:\000038}}
 h1 {
   font-family: Fjalla One;
   color: #444444;
   font-weight: normal;
   font-size: 30px; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nayeli\/Sites\/nel\/html\/sites\/all\/themes\/nel\/sass\/variables\/_typography\.scss}line{font-family:\0000315}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/nayaritenlinea\/html\/sites\/all\/themes\/nel\/sass\/variables\/_typography\.scss}line{font-family:\0000315}}
 h2 {
   font-family: Fjalla One;
   font-size: 21px;
@@ -13,7 +13,7 @@ h2 {
   color: #333333;
   font-weight: normal; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nayeli\/Sites\/nel\/html\/sites\/all\/themes\/nel\/sass\/variables\/_typography\.scss}line{font-family:\0000323}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/nayaritenlinea\/html\/sites\/all\/themes\/nel\/sass\/variables\/_typography\.scss}line{font-family:\0000323}}
 h2.block__title {
   font-family: 'Roboto Condensed', sans-serif;
   font-size: 20px;
@@ -22,7 +22,7 @@ h2.block__title {
   font-weight: normal; }
 
 /* No files to import found in abstractions/**\/* */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nayeli\/Sites\/nel\/html\/sites\/all\/themes\/nel\/sass\/base\/_media\.scss}line{font-family:\000031}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/nayaritenlinea\/html\/sites\/all\/themes\/nel\/sass\/base\/_media\.scss}line{font-family:\000031}}
 img, media {
   max-width: 100%; }
 
@@ -212,69 +212,69 @@ img, media {
 /**
  *
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nayeli\/Sites\/nel\/html\/sites\/all\/themes\/nel\/sass\/components\/_00-forms-global\.scss}line{font-family:\000032}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/nayaritenlinea\/html\/sites\/all\/themes\/nel\/sass\/components\/_00-forms-global\.scss}line{font-family:\000032}}
 form input, form textarea {
   background: #fafafa;
   border: 1px solid #f5f5f5;
   transition: 1px solid #f5f5f5; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nayeli\/Sites\/nel\/html\/sites\/all\/themes\/nel\/sass\/components\/_00-forms-global\.scss}line{font-family:\000038}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/nayaritenlinea\/html\/sites\/all\/themes\/nel\/sass\/components\/_00-forms-global\.scss}line{font-family:\000038}}
 form input:focus, form textarea:focus {
   outline: none; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nayeli\/Sites\/nel\/html\/sites\/all\/themes\/nel\/sass\/components\/_00-forms-global\.scss}line{font-family:\0000311}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/nayaritenlinea\/html\/sites\/all\/themes\/nel\/sass\/components\/_00-forms-global\.scss}line{font-family:\0000311}}
 form textarea {
   width: 98%; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nayeli\/Sites\/nel\/html\/sites\/all\/themes\/nel\/sass\/components\/_00-forms-global\.scss}line{font-family:\0000315}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/nayaritenlinea\/html\/sites\/all\/themes\/nel\/sass\/components\/_00-forms-global\.scss}line{font-family:\0000315}}
 form input[type=submit] {
   background-color: #122d3f !important;
   color: #fff;
   height: 34px !important;
   font-size: 14px;
   width: auto; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nayeli\/Sites\/nel\/html\/sites\/all\/themes\/nel\/sass\/components\/_00-forms-global\.scss}line{font-family:\0000323}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/nayaritenlinea\/html\/sites\/all\/themes\/nel\/sass\/components\/_00-forms-global\.scss}line{font-family:\0000323}}
 form label {
   color: #445f71;
   font-size: 14px; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nayeli\/Sites\/nel\/html\/sites\/all\/themes\/nel\/sass\/components\/_00-global-footer\.scss}line{font-family:\000031}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/nayaritenlinea\/html\/sites\/all\/themes\/nel\/sass\/components\/_00-global-footer\.scss}line{font-family:\000031}}
 .l-footer {
   clear: both;
   background: #4c4c4c;
   color: #fff;
   padding: 48px 0 0 0; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nayeli\/Sites\/nel\/html\/sites\/all\/themes\/nel\/sass\/components\/_00-global-footer\.scss}line{font-family:\000037}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/nayaritenlinea\/html\/sites\/all\/themes\/nel\/sass\/components\/_00-global-footer\.scss}line{font-family:\000037}}
 .l-region--footer {
   min-height: 31px; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nayeli\/Sites\/nel\/html\/sites\/all\/themes\/nel\/sass\/components\/_00-global-footer\.scss}line{font-family:\0000310}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/nayaritenlinea\/html\/sites\/all\/themes\/nel\/sass\/components\/_00-global-footer\.scss}line{font-family:\0000310}}
 #block-block-1 {
   float: left;
   font-size: 12px; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nayeli\/Sites\/nel\/html\/sites\/all\/themes\/nel\/sass\/components\/_00-global-footer\.scss}line{font-family:\0000313}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/nayaritenlinea\/html\/sites\/all\/themes\/nel\/sass\/components\/_00-global-footer\.scss}line{font-family:\0000313}}
   #block-block-1 .block__content * {
     margin: 0; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nayeli\/Sites\/nel\/html\/sites\/all\/themes\/nel\/sass\/components\/_00-global-footer\.scss}line{font-family:\0000316}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/nayaritenlinea\/html\/sites\/all\/themes\/nel\/sass\/components\/_00-global-footer\.scss}line{font-family:\0000316}}
   #block-block-1 .block__content * + * {
     margin-top: 1em; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nayeli\/Sites\/nel\/html\/sites\/all\/themes\/nel\/sass\/components\/_00-global-footer\.scss}line{font-family:\0000320}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/nayaritenlinea\/html\/sites\/all\/themes\/nel\/sass\/components\/_00-global-footer\.scss}line{font-family:\0000320}}
 #block-menu-menu-footer-menu {
   float: right; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nayeli\/Sites\/nel\/html\/sites\/all\/themes\/nel\/sass\/components\/_00-global-footer\.scss}line{font-family:\0000323}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/nayaritenlinea\/html\/sites\/all\/themes\/nel\/sass\/components\/_00-global-footer\.scss}line{font-family:\0000323}}
   #block-menu-menu-footer-menu ul.menu,
   #block-menu-menu-footer-menu ul.menu li {
     margin: 0;
     padding: 0;
     list-style: none; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nayeli\/Sites\/nel\/html\/sites\/all\/themes\/nel\/sass\/components\/_00-global-footer\.scss}line{font-family:\0000328}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/nayaritenlinea\/html\/sites\/all\/themes\/nel\/sass\/components\/_00-global-footer\.scss}line{font-family:\0000328}}
   #block-menu-menu-footer-menu ul.menu {
     text-align: right; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nayeli\/Sites\/nel\/html\/sites\/all\/themes\/nel\/sass\/components\/_00-global-footer\.scss}line{font-family:\0000331}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/nayaritenlinea\/html\/sites\/all\/themes\/nel\/sass\/components\/_00-global-footer\.scss}line{font-family:\0000331}}
   #block-menu-menu-footer-menu ul.menu li {
     text-align: left;
     float: left;
     position: relative; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nayeli\/Sites\/nel\/html\/sites\/all\/themes\/nel\/sass\/components\/_00-global-footer\.scss}line{font-family:\0000336}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/nayaritenlinea\/html\/sites\/all\/themes\/nel\/sass\/components\/_00-global-footer\.scss}line{font-family:\0000336}}
   #block-menu-menu-footer-menu ul.menu li:before {
     position: absolute;
     left: 0;
@@ -284,29 +284,29 @@ form label {
     display: block;
     content: "";
     background: #a5a5a5; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nayeli\/Sites\/nel\/html\/sites\/all\/themes\/nel\/sass\/components\/_00-global-footer\.scss}line{font-family:\0000346}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/nayaritenlinea\/html\/sites\/all\/themes\/nel\/sass\/components\/_00-global-footer\.scss}line{font-family:\0000346}}
   #block-menu-menu-footer-menu ul.menu li.first:before {
     display: none; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nayeli\/Sites\/nel\/html\/sites\/all\/themes\/nel\/sass\/components\/_00-global-footer\.scss}line{font-family:\0000349}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/nayaritenlinea\/html\/sites\/all\/themes\/nel\/sass\/components\/_00-global-footer\.scss}line{font-family:\0000349}}
   #block-menu-menu-footer-menu ul.menu li a {
     display: block;
     color: #f5f5f5;
     padding: 0px 10px;
     text-decoration: none;
     font-size: 12px; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nayeli\/Sites\/nel\/html\/sites\/all\/themes\/nel\/sass\/components\/_00-global-footer\.scss}line{font-family:\0000356}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/nayaritenlinea\/html\/sites\/all\/themes\/nel\/sass\/components\/_00-global-footer\.scss}line{font-family:\0000356}}
   #block-menu-menu-footer-menu ul.menu li a:hover {
     text-decoration: underline; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nayeli\/Sites\/nel\/html\/sites\/all\/themes\/nel\/sass\/components\/_00-global-header\.scss}line{font-family:\000031}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/nayaritenlinea\/html\/sites\/all\/themes\/nel\/sass\/components\/_00-global-header\.scss}line{font-family:\000031}}
 .l-branding-wrapper {
   background: #122d3f; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nayeli\/Sites\/nel\/html\/sites\/all\/themes\/nel\/sass\/components\/_00-global-header\.scss}line{font-family:\000033}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/nayaritenlinea\/html\/sites\/all\/themes\/nel\/sass\/components\/_00-global-header\.scss}line{font-family:\000033}}
   .l-branding-wrapper .l-branding {
     height: 120px;
     padding-top: 10px; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nayeli\/Sites\/nel\/html\/sites\/all\/themes\/nel\/sass\/components\/_00-global-header\.scss}line{font-family:\000038}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/nayaritenlinea\/html\/sites\/all\/themes\/nel\/sass\/components\/_00-global-header\.scss}line{font-family:\000038}}
 a.site-logo {
   display: block;
   width: 300px;
@@ -315,19 +315,19 @@ a.site-logo {
   text-indent: -9999px; }
 
 @media only screen and (-webkit-min-device-pixel-ratio: 2) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nayeli\/Sites\/nel\/html\/sites\/all\/themes\/nel\/sass\/components\/_00-global-header\.scss}line{font-family:\0000316}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/nayaritenlinea\/html\/sites\/all\/themes\/nel\/sass\/components\/_00-global-header\.scss}line{font-family:\0000316}}
   a.site-logo {
     background-image: url(../logo_retina.png);
     background-size: 300px 100px; } }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nayeli\/Sites\/nel\/html\/sites\/all\/themes\/nel\/sass\/components\/_00-global-layout\.scss}line{font-family:\000031}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/nayaritenlinea\/html\/sites\/all\/themes\/nel\/sass\/components\/_00-global-layout\.scss}line{font-family:\000031}}
 body {
   background: #4c4c4c; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nayeli\/Sites\/nel\/html\/sites\/all\/themes\/nel\/sass\/components\/_00-global-layout\.scss}line{font-family:\000034}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/nayaritenlinea\/html\/sites\/all\/themes\/nel\/sass\/components\/_00-global-layout\.scss}line{font-family:\000034}}
 .l-page {
   background: white; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nayeli\/Sites\/nel\/html\/sites\/all\/themes\/nel\/sass\/components\/_00-global-layout\.scss}line{font-family:\0000311}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/nayaritenlinea\/html\/sites\/all\/themes\/nel\/sass\/components\/_00-global-layout\.scss}line{font-family:\0000311}}
 .l-main,
 .l-branding,
 .l-region--top-navigation,
@@ -338,7 +338,7 @@ body {
   padding: 0 15px; }
 
 /** 2 Columns Fluid Layout **/
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nayeli\/Sites\/nel\/html\/sites\/all\/themes\/nel\/sass\/components\/_00-global-layout\.scss}line{font-family:\0000318}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/nayaritenlinea\/html\/sites\/all\/themes\/nel\/sass\/components\/_00-global-layout\.scss}line{font-family:\0000318}}
 .colmask.right-menu {
   position: relative;
   clear: both;
@@ -346,7 +346,7 @@ body {
   width: 100%;
   overflow: hidden; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nayeli\/Sites\/nel\/html\/sites\/all\/themes\/nel\/sass\/components\/_00-global-layout\.scss}line{font-family:\0000325}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/nayaritenlinea\/html\/sites\/all\/themes\/nel\/sass\/components\/_00-global-layout\.scss}line{font-family:\0000325}}
 .right-menu .colleft {
   float: left;
   width: 200%;
@@ -354,26 +354,26 @@ body {
   position: relative;
   right: 100%; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nayeli\/Sites\/nel\/html\/sites\/all\/themes\/nel\/sass\/components\/_00-global-layout\.scss}line{font-family:\0000332}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/nayaritenlinea\/html\/sites\/all\/themes\/nel\/sass\/components\/_00-global-layout\.scss}line{font-family:\0000332}}
 .right-menu .col1wrap {
   float: left;
   width: 50%;
   position: relative;
   left: 50%; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nayeli\/Sites\/nel\/html\/sites\/all\/themes\/nel\/sass\/components\/_00-global-layout\.scss}line{font-family:\0000338}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/nayaritenlinea\/html\/sites\/all\/themes\/nel\/sass\/components\/_00-global-layout\.scss}line{font-family:\0000338}}
 .right-menu .l-content {
   margin: 0 0 0 336px;
   overflow: hidden; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nayeli\/Sites\/nel\/html\/sites\/all\/themes\/nel\/sass\/components\/_00-global-layout\.scss}line{font-family:\0000342}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/nayaritenlinea\/html\/sites\/all\/themes\/nel\/sass\/components\/_00-global-layout\.scss}line{font-family:\0000342}}
 .right-menu .l-region--sidebar-second {
   float: right;
   width: 293px;
   position: relative;
   left: 336px; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nayeli\/Sites\/nel\/html\/sites\/all\/themes\/nel\/sass\/components\/_00-global-navigation\.scss}line{font-family:\000031}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/nayaritenlinea\/html\/sites\/all\/themes\/nel\/sass\/components\/_00-global-navigation\.scss}line{font-family:\000031}}
 .navigation-wrapper {
   height: 64px;
   background: url(../images/nav-bg.png) repeat-x;
@@ -382,33 +382,33 @@ body {
   -o-transition: background-color 2s;
   transition: background-color 2s; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nayeli\/Sites\/nel\/html\/sites\/all\/themes\/nel\/sass\/components\/_00-global-navigation\.scss}line{font-family:\000039}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/nayaritenlinea\/html\/sites\/all\/themes\/nel\/sass\/components\/_00-global-navigation\.scss}line{font-family:\000039}}
 .l-region--navigation:after {
   clear: both;
   content: "";
   display: table; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nayeli\/Sites\/nel\/html\/sites\/all\/themes\/nel\/sass\/components\/_00-global-navigation\.scss}line{font-family:\0000314}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/nayaritenlinea\/html\/sites\/all\/themes\/nel\/sass\/components\/_00-global-navigation\.scss}line{font-family:\0000314}}
 #block-system-main-menu {
   width: 909px;
   float: left;
   /* Specific Items */
   /* For Expanded SubMenus */ }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nayeli\/Sites\/nel\/html\/sites\/all\/themes\/nel\/sass\/components\/_00-global-navigation\.scss}line{font-family:\0000318}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/nayaritenlinea\/html\/sites\/all\/themes\/nel\/sass\/components\/_00-global-navigation\.scss}line{font-family:\0000318}}
   #block-system-main-menu ul.menu,
   #block-system-main-menu ul.menu li {
     margin: 0;
     padding: 0;
     list-style: none; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nayeli\/Sites\/nel\/html\/sites\/all\/themes\/nel\/sass\/components\/_00-global-navigation\.scss}line{font-family:\0000323}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/nayaritenlinea\/html\/sites\/all\/themes\/nel\/sass\/components\/_00-global-navigation\.scss}line{font-family:\0000323}}
   #block-system-main-menu > ul.menu:after {
     clear: both;
     display: table;
     content: ""; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nayeli\/Sites\/nel\/html\/sites\/all\/themes\/nel\/sass\/components\/_00-global-navigation\.scss}line{font-family:\0000328}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/nayaritenlinea\/html\/sites\/all\/themes\/nel\/sass\/components\/_00-global-navigation\.scss}line{font-family:\0000328}}
   #block-system-main-menu > ul.menu > li {
     float: left; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nayeli\/Sites\/nel\/html\/sites\/all\/themes\/nel\/sass\/components\/_00-global-navigation\.scss}line{font-family:\0000331}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/nayaritenlinea\/html\/sites\/all\/themes\/nel\/sass\/components\/_00-global-navigation\.scss}line{font-family:\0000331}}
   #block-system-main-menu > ul.menu > li > a {
     padding: 17px 11px 0px 11px;
     height: 52px;
@@ -416,20 +416,20 @@ body {
     text-decoration: none;
     color: #202020;
     font-size: 16px; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nayeli\/Sites\/nel\/html\/sites\/all\/themes\/nel\/sass\/components\/_00-global-navigation\.scss}line{font-family:\0000340}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/nayaritenlinea\/html\/sites\/all\/themes\/nel\/sass\/components\/_00-global-navigation\.scss}line{font-family:\0000340}}
   #block-system-main-menu > ul.menu > li > a.active,
   #block-system-main-menu > ul.menu > li > a:hover {
     border-bottom: #122d3f solid 4px; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nayeli\/Sites\/nel\/html\/sites\/all\/themes\/nel\/sass\/components\/_00-global-navigation\.scss}line{font-family:\0000343}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/nayaritenlinea\/html\/sites\/all\/themes\/nel\/sass\/components\/_00-global-navigation\.scss}line{font-family:\0000343}}
   #block-system-main-menu > ul.menu > li ul.menu {
     display: none; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nayeli\/Sites\/nel\/html\/sites\/all\/themes\/nel\/sass\/components\/_00-global-navigation\.scss}line{font-family:\0000348}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/nayaritenlinea\/html\/sites\/all\/themes\/nel\/sass\/components\/_00-global-navigation\.scss}line{font-family:\0000348}}
   #block-system-main-menu > ul.menu > li > a.portada,
   #block-system-main-menu > ul.menu > li > a.reporte {
     text-indent: -9999px;
     width: 47px;
     position: relative; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nayeli\/Sites\/nel\/html\/sites\/all\/themes\/nel\/sass\/components\/_00-global-navigation\.scss}line{font-family:\0000354}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/nayaritenlinea\/html\/sites\/all\/themes\/nel\/sass\/components\/_00-global-navigation\.scss}line{font-family:\0000354}}
   #block-system-main-menu > ul.menu > li > a.portada:after,
   #block-system-main-menu > ul.menu > li > a.reporte:after {
     position: absolute;
@@ -440,14 +440,14 @@ body {
     display: block;
     background: url("../images/elements.png") no-repeat -20px -479px;
     content: ""; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nayeli\/Sites\/nel\/html\/sites\/all\/themes\/nel\/sass\/components\/_00-global-navigation\.scss}line{font-family:\0000364}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/nayaritenlinea\/html\/sites\/all\/themes\/nel\/sass\/components\/_00-global-navigation\.scss}line{font-family:\0000364}}
   #block-system-main-menu > ul.menu > li > a.reporte:after {
     background-position: -20px -1632px; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nayeli\/Sites\/nel\/html\/sites\/all\/themes\/nel\/sass\/components\/_00-global-navigation\.scss}line{font-family:\0000369}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/nayaritenlinea\/html\/sites\/all\/themes\/nel\/sass\/components\/_00-global-navigation\.scss}line{font-family:\0000369}}
   #block-system-main-menu > ul.menu > li.expanded > a {
     position: relative;
     padding-right: 29px; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nayeli\/Sites\/nel\/html\/sites\/all\/themes\/nel\/sass\/components\/_00-global-navigation\.scss}line{font-family:\0000373}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/nayaritenlinea\/html\/sites\/all\/themes\/nel\/sass\/components\/_00-global-navigation\.scss}line{font-family:\0000373}}
   #block-system-main-menu > ul.menu > li.expanded > a:after {
     position: absolute;
     right: 12px;
@@ -459,44 +459,44 @@ body {
     background: url("../images/elements.png") no-repeat -20px -832px; }
 
 @media only screen and (-webkit-min-device-pixel-ratio: 2) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nayeli\/Sites\/nel\/html\/sites\/all\/themes\/nel\/sass\/components\/_00-global-navigation\.scss}line{font-family:\0000389}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/nayaritenlinea\/html\/sites\/all\/themes\/nel\/sass\/components\/_00-global-navigation\.scss}line{font-family:\0000389}}
   #block-system-main-menu > ul.menu > li > a.portada:after,
   #block-system-main-menu > ul.menu > li > a.reporte:after,
   #block-system-main-menu > ul.menu > li.expanded > a:after {
     background-image: url("../images/elements@2x.png");
     background-size: 91px 1900px; } }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nayeli\/Sites\/nel\/html\/sites\/all\/themes\/nel\/sass\/components\/_00-global-search-form\.scss}line{font-family:\000031}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/nayaritenlinea\/html\/sites\/all\/themes\/nel\/sass\/components\/_00-global-search-form\.scss}line{font-family:\000031}}
 #block-search-form {
   display: none; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nayeli\/Sites\/nel\/html\/sites\/all\/themes\/nel\/sass\/components\/_00-global-top-navigation\.scss}line{font-family:\000031}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/nayaritenlinea\/html\/sites\/all\/themes\/nel\/sass\/components\/_00-global-top-navigation\.scss}line{font-family:\000031}}
 .top-navigation-wrapper {
   background: #4c4c4c;
   padding: 4px 0;
   height: 30px; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nayeli\/Sites\/nel\/html\/sites\/all\/themes\/nel\/sass\/components\/_00-global-top-navigation\.scss}line{font-family:\000036}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/nayaritenlinea\/html\/sites\/all\/themes\/nel\/sass\/components\/_00-global-top-navigation\.scss}line{font-family:\000036}}
 .l-region--top-navigation:after {
   clear: both;
   display: table;
   content: ""; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nayeli\/Sites\/nel\/html\/sites\/all\/themes\/nel\/sass\/components\/_00-global-top-navigation\.scss}line{font-family:\0000311}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/nayaritenlinea\/html\/sites\/all\/themes\/nel\/sass\/components\/_00-global-top-navigation\.scss}line{font-family:\0000311}}
 #block-menu-menu-top-navigation {
   padding-left: 10px;
   padding-right: 48px;
   float: left; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nayeli\/Sites\/nel\/html\/sites\/all\/themes\/nel\/sass\/components\/_00-global-top-navigation\.scss}line{font-family:\0000316}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/nayaritenlinea\/html\/sites\/all\/themes\/nel\/sass\/components\/_00-global-top-navigation\.scss}line{font-family:\0000316}}
   #block-menu-menu-top-navigation ul.menu,
   #block-menu-menu-top-navigation ul.menu li {
     margin: 0;
     padding: 0;
     list-style: none; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nayeli\/Sites\/nel\/html\/sites\/all\/themes\/nel\/sass\/components\/_00-global-top-navigation\.scss}line{font-family:\0000321}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/nayaritenlinea\/html\/sites\/all\/themes\/nel\/sass\/components\/_00-global-top-navigation\.scss}line{font-family:\0000321}}
   #block-menu-menu-top-navigation ul.menu li {
     float: left;
     position: relative; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nayeli\/Sites\/nel\/html\/sites\/all\/themes\/nel\/sass\/components\/_00-global-top-navigation\.scss}line{font-family:\0000325}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/nayaritenlinea\/html\/sites\/all\/themes\/nel\/sass\/components\/_00-global-top-navigation\.scss}line{font-family:\0000325}}
   #block-menu-menu-top-navigation ul.menu li:after {
     width: 1px;
     height: 7px;
@@ -506,53 +506,53 @@ body {
     top: 7px;
     display: block;
     content: ""; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nayeli\/Sites\/nel\/html\/sites\/all\/themes\/nel\/sass\/components\/_00-global-top-navigation\.scss}line{font-family:\0000335}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/nayaritenlinea\/html\/sites\/all\/themes\/nel\/sass\/components\/_00-global-top-navigation\.scss}line{font-family:\0000335}}
   #block-menu-menu-top-navigation ul.menu li.last:after {
     display: none; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nayeli\/Sites\/nel\/html\/sites\/all\/themes\/nel\/sass\/components\/_00-global-top-navigation\.scss}line{font-family:\0000338}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/nayaritenlinea\/html\/sites\/all\/themes\/nel\/sass\/components\/_00-global-top-navigation\.scss}line{font-family:\0000338}}
   #block-menu-menu-top-navigation ul.menu li a {
     color: #dddddd;
     text-decoration: none;
     font-size: 12px;
     padding: 5px 15px; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nayeli\/Sites\/nel\/html\/sites\/all\/themes\/nel\/sass\/components\/_00-global-top-navigation\.scss}line{font-family:\0000344}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/nayaritenlinea\/html\/sites\/all\/themes\/nel\/sass\/components\/_00-global-top-navigation\.scss}line{font-family:\0000344}}
   #block-menu-menu-top-navigation ul.menu li.first a {
     padding-left: 0; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nayeli\/Sites\/nel\/html\/sites\/all\/themes\/nel\/sass\/components\/_00-global-top-navigation\.scss}line{font-family:\0000347}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/nayaritenlinea\/html\/sites\/all\/themes\/nel\/sass\/components\/_00-global-top-navigation\.scss}line{font-family:\0000347}}
   #block-menu-menu-top-navigation ul.menu li a:hover {
     text-decoration: underline; }
 
 /* Social Menu */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nayeli\/Sites\/nel\/html\/sites\/all\/themes\/nel\/sass\/components\/_00-global-top-navigation\.scss}line{font-family:\0000352}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/nayaritenlinea\/html\/sites\/all\/themes\/nel\/sass\/components\/_00-global-top-navigation\.scss}line{font-family:\0000352}}
 #block-menu-menu-social-menu {
   float: right;
   /* Specific Items */ }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nayeli\/Sites\/nel\/html\/sites\/all\/themes\/nel\/sass\/components\/_00-global-top-navigation\.scss}line{font-family:\0000355}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/nayaritenlinea\/html\/sites\/all\/themes\/nel\/sass\/components\/_00-global-top-navigation\.scss}line{font-family:\0000355}}
   #block-menu-menu-social-menu ul.menu,
   #block-menu-menu-social-menu ul.menu li {
     margin: 0;
     padding: 0;
     list-style: none; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nayeli\/Sites\/nel\/html\/sites\/all\/themes\/nel\/sass\/components\/_00-global-top-navigation\.scss}line{font-family:\0000360}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/nayaritenlinea\/html\/sites\/all\/themes\/nel\/sass\/components\/_00-global-top-navigation\.scss}line{font-family:\0000360}}
   #block-menu-menu-social-menu ul.menu {
     text-align: right; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nayeli\/Sites\/nel\/html\/sites\/all\/themes\/nel\/sass\/components\/_00-global-top-navigation\.scss}line{font-family:\0000363}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/nayaritenlinea\/html\/sites\/all\/themes\/nel\/sass\/components\/_00-global-top-navigation\.scss}line{font-family:\0000363}}
   #block-menu-menu-social-menu ul.menu li {
     display: inline-block;
     text-align: left;
     margin-left: 10px; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nayeli\/Sites\/nel\/html\/sites\/all\/themes\/nel\/sass\/components\/_00-global-top-navigation\.scss}line{font-family:\0000368}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/nayaritenlinea\/html\/sites\/all\/themes\/nel\/sass\/components\/_00-global-top-navigation\.scss}line{font-family:\0000368}}
   #block-menu-menu-social-menu ul.menu li.first {
     margin-left: 0; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nayeli\/Sites\/nel\/html\/sites\/all\/themes\/nel\/sass\/components\/_00-global-top-navigation\.scss}line{font-family:\0000371}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/nayaritenlinea\/html\/sites\/all\/themes\/nel\/sass\/components\/_00-global-top-navigation\.scss}line{font-family:\0000371}}
   #block-menu-menu-social-menu ul.menu li a {
     color: #dddddd;
     font-size: 12px;
     text-decoration: none; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nayeli\/Sites\/nel\/html\/sites\/all\/themes\/nel\/sass\/components\/_00-global-top-navigation\.scss}line{font-family:\0000376}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/nayaritenlinea\/html\/sites\/all\/themes\/nel\/sass\/components\/_00-global-top-navigation\.scss}line{font-family:\0000376}}
   #block-menu-menu-social-menu ul.menu li a:hover {
     text-decoration: underline; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nayeli\/Sites\/nel\/html\/sites\/all\/themes\/nel\/sass\/components\/_00-global-top-navigation\.scss}line{font-family:\0000385}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/nayaritenlinea\/html\/sites\/all\/themes\/nel\/sass\/components\/_00-global-top-navigation\.scss}line{font-family:\0000385}}
   #block-menu-menu-social-menu ul.menu li a.facebook,
   #block-menu-menu-social-menu ul.menu li a.twitter,
   #block-menu-menu-social-menu ul.menu li a.google,
@@ -563,24 +563,24 @@ body {
     width: 16px;
     height: 16px;
     background: url("../images/style3-16.png") no-repeat; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nayeli\/Sites\/nel\/html\/sites\/all\/themes\/nel\/sass\/components\/_00-global-top-navigation\.scss}line{font-family:\0000392}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/nayaritenlinea\/html\/sites\/all\/themes\/nel\/sass\/components\/_00-global-top-navigation\.scss}line{font-family:\0000392}}
   #block-menu-menu-social-menu ul.menu li a.facebook {
     background-position: -32px -16px; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nayeli\/Sites\/nel\/html\/sites\/all\/themes\/nel\/sass\/components\/_00-global-top-navigation\.scss}line{font-family:\0000395}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/nayaritenlinea\/html\/sites\/all\/themes\/nel\/sass\/components\/_00-global-top-navigation\.scss}line{font-family:\0000395}}
   #block-menu-menu-social-menu ul.menu li a.google {
     background-position: -32px -32px; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nayeli\/Sites\/nel\/html\/sites\/all\/themes\/nel\/sass\/components\/_00-global-top-navigation\.scss}line{font-family:\0000398}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/nayaritenlinea\/html\/sites\/all\/themes\/nel\/sass\/components\/_00-global-top-navigation\.scss}line{font-family:\0000398}}
   #block-menu-menu-social-menu ul.menu li a.instagram {
     background-position: -80px -32px; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nayeli\/Sites\/nel\/html\/sites\/all\/themes\/nel\/sass\/components\/_00-global-top-navigation\.scss}line{font-family:\00003101}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/nayaritenlinea\/html\/sites\/all\/themes\/nel\/sass\/components\/_00-global-top-navigation\.scss}line{font-family:\00003101}}
   #block-menu-menu-social-menu ul.menu li a.twitter {
     background-position: -96px -80px; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nayeli\/Sites\/nel\/html\/sites\/all\/themes\/nel\/sass\/components\/_00-global-top-navigation\.scss}line{font-family:\00003104}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/nayaritenlinea\/html\/sites\/all\/themes\/nel\/sass\/components\/_00-global-top-navigation\.scss}line{font-family:\00003104}}
   #block-menu-menu-social-menu ul.menu li a.youtube {
     background-position: -96px -96px; }
 
 @media only screen and (-webkit-min-device-pixel-ratio: 2) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nayeli\/Sites\/nel\/html\/sites\/all\/themes\/nel\/sass\/components\/_00-global-top-navigation\.scss}line{font-family:\00003115}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/nayaritenlinea\/html\/sites\/all\/themes\/nel\/sass\/components\/_00-global-top-navigation\.scss}line{font-family:\00003115}}
   #block-menu-menu-social-menu ul.menu li a.facebook,
   #block-menu-menu-social-menu ul.menu li a.twitter,
   #block-menu-menu-social-menu ul.menu li a.google,
@@ -588,43 +588,43 @@ body {
   #block-menu-menu-social-menu ul.menu li a.youtube {
     background-image: url("../images/style3-16@2x.png");
     background-size: 128px 112px; } }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nayeli\/Sites\/nel\/html\/sites\/all\/themes\/nel\/sass\/components\/_01-article-detail\.scss}line{font-family:\000031}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/nayaritenlinea\/html\/sites\/all\/themes\/nel\/sass\/components\/_01-article-detail\.scss}line{font-family:\000031}}
 .group-by {
   font-size: 12px;
   color: #cbcbcb;
   margin-bottom: 28px; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nayeli\/Sites\/nel\/html\/sites\/all\/themes\/nel\/sass\/components\/_01-article-detail\.scss}line{font-family:\000035}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/nayaritenlinea\/html\/sites\/all\/themes\/nel\/sass\/components\/_01-article-detail\.scss}line{font-family:\000035}}
   .group-by a {
     text-decoration: none;
     line-height: 15px; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nayeli\/Sites\/nel\/html\/sites\/all\/themes\/nel\/sass\/components\/_01-article-detail\.scss}line{font-family:\000039}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/nayaritenlinea\/html\/sites\/all\/themes\/nel\/sass\/components\/_01-article-detail\.scss}line{font-family:\000039}}
   .group-by a:hover {
     text-decoration: underline; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nayeli\/Sites\/nel\/html\/sites\/all\/themes\/nel\/sass\/components\/_01-article-detail\.scss}line{font-family:\0000314}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/nayaritenlinea\/html\/sites\/all\/themes\/nel\/sass\/components\/_01-article-detail\.scss}line{font-family:\0000314}}
   .group-by .category,
   .group-by .author,
   .group-by .date {
     display: inline-block; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nayeli\/Sites\/nel\/html\/sites\/all\/themes\/nel\/sass\/components\/_01-article-detail\.scss}line{font-family:\0000318}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/nayaritenlinea\/html\/sites\/all\/themes\/nel\/sass\/components\/_01-article-detail\.scss}line{font-family:\0000318}}
   .group-by .category ul,
   .group-by .category ul li {
     margin: 0;
     padding: 0;
     list-style: none; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nayeli\/Sites\/nel\/html\/sites\/all\/themes\/nel\/sass\/components\/_01-article-detail\.scss}line{font-family:\0000323}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/nayaritenlinea\/html\/sites\/all\/themes\/nel\/sass\/components\/_01-article-detail\.scss}line{font-family:\0000323}}
   .group-by .category ul li {
     display: inline-block;
     margin-right: 10px; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nayeli\/Sites\/nel\/html\/sites\/all\/themes\/nel\/sass\/components\/_01-article-detail\.scss}line{font-family:\0000326}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/nayaritenlinea\/html\/sites\/all\/themes\/nel\/sass\/components\/_01-article-detail\.scss}line{font-family:\0000326}}
     .group-by .category ul li a {
       display: block;
       background: #122d3f;
       padding: 2px 8px 3px 8px;
       color: white; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nayeli\/Sites\/nel\/html\/sites\/all\/themes\/nel\/sass\/components\/_01-article-detail\.scss}line{font-family:\0000334}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/nayaritenlinea\/html\/sites\/all\/themes\/nel\/sass\/components\/_01-article-detail\.scss}line{font-family:\0000334}}
   .group-by .author a {
     color: #1f9ee7; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nayeli\/Sites\/nel\/html\/sites\/all\/themes\/nel\/sass\/components\/_01-article-detail\.scss}line{font-family:\0000338}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/nayaritenlinea\/html\/sites\/all\/themes\/nel\/sass\/components\/_01-article-detail\.scss}line{font-family:\0000338}}
   .group-by .date {
     margin-left: 5px;
     text-transform: lowercase; }

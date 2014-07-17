@@ -189,6 +189,14 @@ img, media {
 /**
  *
  */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nayeli\/Sites\/nel\/html\/sites\/all\/themes\/nel\/sass\/components\/_00-global-article\.scss}line{font-family:\000031}}
+.date span {
+  font-style: italic;
+  white-space: nowrap;
+  font-family: 'Ubuntu', sans-serif;
+  color: #cbcbcb;
+  font-size: 12px; }
+
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nayeli\/Sites\/nel\/html\/sites\/all\/themes\/nel\/sass\/components\/_00-global-footer\.scss}line{font-family:\000031}}
 .l-footer {
   clear: both;

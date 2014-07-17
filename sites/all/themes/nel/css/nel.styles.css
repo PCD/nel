@@ -316,7 +316,7 @@ body {
   background: #4c4c4c; }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/nayaritenlinea\/html\/sites\/all\/themes\/nel\/sass\/components\/_00-global-layout\.scss}line{font-family:\000034}}
-body.cke_editable {
+body.cke_editable.cke_editable_themed {
   background: white; }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/nayaritenlinea\/html\/sites\/all\/themes\/nel\/sass\/components\/_00-global-layout\.scss}line{font-family:\000037}}

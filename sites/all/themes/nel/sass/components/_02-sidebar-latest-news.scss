@@ -2,11 +2,11 @@
   
   h2{  
     background: #122d3f;
-    padding: 3px 10px 3px 10px;
     color: #fff;
     display: inline-block;
-    margin-bottom: 0px;
     font-size: 20px;
+    margin-bottom: 0px;
+    padding: 3px 10px 3px 10px;
   }
   
   .block__content{
@@ -15,8 +15,8 @@
   
   .block--views-latest-news-block .views-row{
     .image{
-	  width: 100px;
-	  float: left;
+    float: left;
+    width: 100px;
     }
     
     .info{
@@ -31,12 +31,5 @@
 		font-size: 15px;
     }
     
-    .date span{
-	  font-style: italic;
-      white-space: nowrap;
-      font-family: 'Ubuntu', sans-serif;
-      color: #cbcbcb;
-      font-size: 12px;
-    }
   }
 }

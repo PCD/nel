@@ -1,4 +1,7 @@
 <?php
+// First One
+$first_article = views_embed_view('taxonomy_articles','block', $tid);
+$fourth_articles = views_embed_view('taxonomy_articles','block_1', $tid);
 
 /**
  * @file
@@ -12,6 +15,14 @@
   <?php endif; ?>
 
   <?php print $ds_content; ?>
+  <div class="article-content">
+    <div class="col-1 main-article">
+      <?php print $first_article;?>
+    </div>
+    <div class="col-1 other-article">
+      <?php print $fourth_articles;?>
+    </div>
+  </div>
 </<?php print $ds_content_wrapper ?>>
 
 <?php if (!empty($drupal_render_children)): ?>

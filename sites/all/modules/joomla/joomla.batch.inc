@@ -410,6 +410,7 @@ function joomla_content_save(&$context) {
                       ':jcategoryid' => $data_joomla->catid,
                       ':jsectionid' => $data_joomla->sectionid,
                     ))->fetchField();
+    $other_info = array();
     if ($tid) {
       $vid = db_query('SELECT vid FROM {taxonomy_term_data} WHERE tid = :tid', array(':tid' => $tid))->fetchField();
       $vocabulary = taxonomy_vocabulary_load($vid);
@@ -417,6 +418,7 @@ function joomla_content_save(&$context) {
       if ($field_name) {
         $node->{$field_name}[$lang[$field_name]][]['tid'] = $tid;
       }
+      $other_info['tid'] = $tid;
     }
     // Promote to front page?
     if ($data_joomla->content_id) {
@@ -426,6 +428,8 @@ function joomla_content_save(&$context) {
       $joomla_promote = 0;
     }
     $node->promote = $joomla_promote;
+    $node->other_info = $other_info;
+    $node = node_submit($node);
     node_save($node);
     if (!$content_map) {
       // Created new node, update joomla table

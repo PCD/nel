@@ -1,0 +1,4 @@
+name = nelb
+description = Backend for Nayarit en Linea
+package = Nayarit en Linea
+core = 7.x

@@ -1,0 +1,3 @@
+<?php
+include_once('inc/hooks.inc');
+include_once('inc/static.inc');

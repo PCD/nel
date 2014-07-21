@@ -359,7 +359,7 @@ function joomla_replace_mos_image($images_source, $text_source) {
       }
     }
     copy($joomla_path . '/images/stories/' . $images_items[0], "public://$joomla_img_folder/" . $images_items[0]);
-    $images_replace = '<img src="' . base_path() . variable_get('file_public_path', conf_path() . '/files') . "/$joomla_img_folder/{$images_items[0]}" . '"'
+    $images_replace = '<img src="' . base_path() . variable_get('file_public_path', conf_path() . '/files') . "/{$joomla_img_folder}/{$images_items[0]}" . '"'
                  . ' align="' . $images_items[1] . '" title="' . $images_items[2] . '" alt="' . $images_items[2] . '"/>';
     $text_source = substr_replace($text_source, $images_replace, strpos($text_source, $image_string), 10) ;
     $n++;

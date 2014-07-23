@@ -3,6 +3,9 @@
  * Implements hook_node_presave.
  */
 function nelb_node_presave($node, $other_info = null) {
+  if ( !(isset($node->joomla) && $node->joomla == 1) ) {
+    return;
+  }
   // Language
   $node->language = LANGUAGE_NONE;
   
@@ -47,6 +50,15 @@ function nelb_extract_pictures_from_body(&$node) {
     }
   }
   $body = preg_replace('/<img [^>]*/msi', '', $body);
+  
+  // Replace Youtube Video
+  $body = nelb_extract_pictures_from_body_youtube($body);
+
+  // Replace Vimeo Video
+  $body = nelb_extract_pictures_from_body_vimeo($body);
+  
+  // Replace Audio Player
+  $body = nelb_extract_pictures_from_body_audio($body);
 
   $instance = field_info_instance('node', 'body', $node->type);
   $node->body[LANGUAGE_NONE][0]['value'] = $body;
@@ -54,6 +66,33 @@ function nelb_extract_pictures_from_body(&$node) {
   $node->body[LANGUAGE_NONE][0]['format'] = 'full_html';
   $node->body[LANGUAGE_NONE][0]['safe_value'] = _text_sanitize($instance, LANGUAGE_NONE, $node->body[$LANGUAGE_NONE][0], 'value'); 
   $node->body[LANGUAGE_NONE][0]['safe_summary'] = _text_sanitize($instance, LANGUAGE_NONE, $node->body[$LANGUAGE_NONE][0], 'summary');
+}
+
+/**
+ * Youtube player
+ */
+function nelb_extract_pictures_from_body_youtube($body) {
+  $pattern = '/\{youtube\}([^\}]*)\{\/youtube\}/msi';
+  $replace = '<iframe allowfullscreen="" frameborder="0" height="350" src="//www.youtube.com/embed/${1}" width="630"></iframe>';
+  return preg_replace($pattern, $replace, $body);
+}
+
+/**
+ * Vimeo player
+ */
+function nelb_extract_pictures_from_body_vimeo($body) {
+  $pattern = '/\{vimeo\}([^\}]*)\{\/vimeo\}/msi';
+  $replace = '<iframe src="//player.vimeo.com/video/${1}?title=0&amp;byline=0&amp;portrait=0" width="630" height="354" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>';
+  return preg_replace($pattern, $replace, $body);
+}
+
+/**
+ * Audio player
+ */
+function nelb_extract_pictures_from_body_audio($body) {
+  $pattern = '/\{audio\}mp3\/([^\}]*)\{\/audio\}/msi';
+  $replace = '<audio id="player2" src="/sites/default/files/mp3/${1}" type="audio/mp3" controls="controls"></audio>';
+  return preg_replace($pattern, $replace, $body);
 }
 
 /**

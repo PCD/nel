@@ -8,6 +8,7 @@ core = 7.x
 ; ========================================
 ; Stylesheets
 ; ========================================
+stylesheets[all][] = js/mediaelementjs/build/mediaelementplayer.min.css
 stylesheets[all][] = css/nel.normalize.css
 stylesheets[all][] = css/nel.hacks.css
 stylesheets[all][] = css/nel.styles.css
@@ -17,6 +18,7 @@ stylesheets[all][] = css/nel.no-query.css
 ; Scripts
 ; ========================================
 scripts[] = js/nel.behaviors.js
+scripts[] = js/mediaelementjs/build/mediaelement-and-player.min.js
 
 ; ========================================
 ; Regions

@@ -480,7 +480,7 @@ function joomla_database_init() {
  * Test whether a valid joomla database has been configured.
  */
 function joomla_database_test() {
-  $connection = @mysql_connect(variable_get('joomla_database_host', JOOMLA_DATABASE_HOST) . ':' . variable_get('joomla_database_port', JOOMLA_DATABASE_PORT), variable_get('joomla_database_user', JOOMLA_DATABASE_USER), variable_get('joomla_database_pass', JOOMLA_DATABASE_PASS), TRUE, 2);
+  $connection = mysql_connect(variable_get('joomla_database_host', JOOMLA_DATABASE_HOST) . ':' . variable_get('joomla_database_port', JOOMLA_DATABASE_PORT), variable_get('joomla_database_user', JOOMLA_DATABASE_USER), variable_get('joomla_database_pass', JOOMLA_DATABASE_PASS), TRUE, 2);
   if (!$connection) {
     return FALSE;
   }

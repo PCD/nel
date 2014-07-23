@@ -315,15 +315,16 @@ a.site-logo {
 body {
   background: #4c4c4c; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/nayaritenlinea\/html\/sites\/all\/themes\/nel\/sass\/components\/_00-global-layout\.scss}line{font-family:\000034}}
-body.cke_editable.cke_editable_themed {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/nayaritenlinea\/html\/sites\/all\/themes\/nel\/sass\/components\/_00-global-layout\.scss}line{font-family:\000035}}
+body.cke_editable.cke_editable_themed,
+body.cke_ltr {
   background: white; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/nayaritenlinea\/html\/sites\/all\/themes\/nel\/sass\/components\/_00-global-layout\.scss}line{font-family:\000037}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/nayaritenlinea\/html\/sites\/all\/themes\/nel\/sass\/components\/_00-global-layout\.scss}line{font-family:\000038}}
 .l-page {
   background: white; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/nayaritenlinea\/html\/sites\/all\/themes\/nel\/sass\/components\/_00-global-layout\.scss}line{font-family:\0000314}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/nayaritenlinea\/html\/sites\/all\/themes\/nel\/sass\/components\/_00-global-layout\.scss}line{font-family:\0000315}}
 .l-main,
 .l-branding,
 .l-region--top-navigation,
@@ -334,7 +335,7 @@ body.cke_editable.cke_editable_themed {
   padding: 0 15px; }
 
 /** 2 Columns Fluid Layout **/
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/nayaritenlinea\/html\/sites\/all\/themes\/nel\/sass\/components\/_00-global-layout\.scss}line{font-family:\0000321}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/nayaritenlinea\/html\/sites\/all\/themes\/nel\/sass\/components\/_00-global-layout\.scss}line{font-family:\0000322}}
 .colmask.right-menu {
   position: relative;
   clear: both;
@@ -342,7 +343,7 @@ body.cke_editable.cke_editable_themed {
   width: 100%;
   overflow: hidden; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/nayaritenlinea\/html\/sites\/all\/themes\/nel\/sass\/components\/_00-global-layout\.scss}line{font-family:\0000328}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/nayaritenlinea\/html\/sites\/all\/themes\/nel\/sass\/components\/_00-global-layout\.scss}line{font-family:\0000329}}
 .right-menu .colleft {
   float: left;
   width: 200%;
@@ -350,19 +351,19 @@ body.cke_editable.cke_editable_themed {
   position: relative;
   right: 100%; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/nayaritenlinea\/html\/sites\/all\/themes\/nel\/sass\/components\/_00-global-layout\.scss}line{font-family:\0000335}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/nayaritenlinea\/html\/sites\/all\/themes\/nel\/sass\/components\/_00-global-layout\.scss}line{font-family:\0000336}}
 .right-menu .col1wrap {
   float: left;
   width: 50%;
   position: relative;
   left: 50%; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/nayaritenlinea\/html\/sites\/all\/themes\/nel\/sass\/components\/_00-global-layout\.scss}line{font-family:\0000341}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/nayaritenlinea\/html\/sites\/all\/themes\/nel\/sass\/components\/_00-global-layout\.scss}line{font-family:\0000342}}
 .right-menu .l-content {
   margin: 0 0 0 336px;
   overflow: hidden; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/nayaritenlinea\/html\/sites\/all\/themes\/nel\/sass\/components\/_00-global-layout\.scss}line{font-family:\0000345}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/nayaritenlinea\/html\/sites\/all\/themes\/nel\/sass\/components\/_00-global-layout\.scss}line{font-family:\0000346}}
 .right-menu .l-region--sidebar-second {
   float: right;
   width: 293px;

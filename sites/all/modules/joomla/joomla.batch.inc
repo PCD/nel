@@ -429,7 +429,9 @@ function joomla_content_save(&$context) {
     }
     $node->promote = $joomla_promote;
     $node->other_info = $other_info;
-    $node = node_submit($node);
+    //$node = node_submit($node);
+    $node->joomla = 1;
+    $node = joomla_node_submit($node);
     node_save($node);
     if (!$content_map) {
       // Created new node, update joomla table
@@ -581,4 +583,24 @@ function joomla_batch_finished($success, $results, $operations) {
     $message = t('An error occurred while processing %error_operation with arguments: @arguments', array('%error_operation' => $error_operation[0], '@arguments' => print_r($error_operation[1], TRUE)));
     drupal_set_message($message, 'error');
   }
+}
+
+/**
+ * Joomla Version of node_submit.
+ */
+function joomla_node_submit($node) {
+  // A user might assign the node author by entering a user name in the node
+  // form, which we then need to translate to a user ID.
+  if (isset($node->name)) {
+    if ($account = user_load_by_name($node->name)) {
+      $node->uid = $account->uid;
+    }
+    else {
+      $node->uid = 0;
+    }
+  }
+
+  $node->validated = TRUE;
+
+  return $node;
 }

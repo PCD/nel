@@ -12,6 +12,22 @@ a.site-logo{
   background: url(../logo.png) no-repeat;
   text-indent: -9999px;
 }
+.navigation-wrapper.stuck{
+	position:fixed;
+	top:0;
+	width: 100%;
+	z-index: 30;
+	.l-region--navigation{
+  	background-color: rgba(254, 254, 253, 0.95);
+	}
+}
+body.toolbar .navigation-wrapper.stuck{
+  margin-top: 30px;
+}
+body.toolbar-drawer .navigation-wrapper.stuck{
+  margin-top: 64px;
+}
+
 @media only screen and (-webkit-min-device-pixel-ratio: 2) {
   a.site-logo{
     background-image: url(../logo_retina.png);

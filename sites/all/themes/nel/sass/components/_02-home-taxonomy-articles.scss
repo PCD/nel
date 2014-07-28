@@ -35,7 +35,11 @@
   margin-left: 341px;
 
   .clearfix:after{
-    display: inline;
+    clear: right;
+  }
+  .view-taxonomy-articles .views-row{
+    margin-bottom: 15px;
+    min-height: 76px;
   }
   .image{
     float: left;
@@ -49,6 +53,7 @@
   }
   
   h4{
+    margin-top: 0;
     margin-bottom: 3px;
   }
 }

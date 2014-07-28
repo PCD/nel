@@ -45,5 +45,14 @@
       });
     }
   };
+  
+  Drupal.behaviors.nelStickyHeader = {
+    attach: function (context, settings) {
+      paddingTop = parseInt($('body').css('padding-top'), 10);
+      $('.navigation-wrapper').waypoint('sticky', {
+        offset: paddingTop
+      });
+    }
+  };
 
 })(jQuery);

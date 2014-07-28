@@ -17,8 +17,10 @@ stylesheets[all][] = css/nel.no-query.css
 ; ========================================
 ; Scripts
 ; ========================================
-scripts[] = js/nel.behaviors.js
+scripts[] = js/waypoints/waypoints.min.js
+scripts[] = js/waypoints/shortcuts/sticky-elements/waypoints-sticky.min.js
 scripts[] = js/mediaelementjs/build/mediaelement-and-player.min.js
+scripts[] = js/nel.behaviors.js
 
 ; ========================================
 ; Regions

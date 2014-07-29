@@ -1,0 +1,37 @@
+.view-id-taxonomy_promoted.double-main{
+  .two-main-articles .views-row{
+    float: left;
+    width: 293px;
+    h3{
+      font-family: Fjalla One;
+      margin: 0;
+    }
+  }
+  .two-main-articles .views-row.views-row-last{
+    float: right;
+  }
+  .fourth-after-two-main-articles{
+    clear: both;
+  }
+  .fourth-after-two-main-articles .views-row{
+    float: left;
+    width: 293px;
+    min-height: 76px;
+    
+    .image{
+      width: 100px;
+      height: 65px;
+      float: left;
+    }
+    .info{
+      margin-left: 117px;
+    }
+    .info h4{
+      margin: 0;
+    }
+  }
+  .fourth-after-two-main-articles .views-row.views-row-even{
+    float: right;
+    clear: right;
+  }
+}

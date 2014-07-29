@@ -8,10 +8,10 @@
 
 .main-article{
   float: left;
-  width: 301px;
+  width: 293px;
   .image{
-    width: 301px;
-    height: 217px;
+    width: 293px;
+    height: 211px;
     margin-bottom: 11px;
   }
   h3{
@@ -36,7 +36,8 @@
 }
 
 .other-article{
-  margin-left: 341px;
+  float: right;
+  width: 293px;
 
   .clearfix:after{
     clear: right;

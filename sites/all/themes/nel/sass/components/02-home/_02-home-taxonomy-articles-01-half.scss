@@ -1,0 +1,19 @@
+.view-taxonomy-promoted.half-block{
+  .col-1{
+    float: none;
+    margin: 0;
+    width: auto;
+  }
+  > .view-content:after{
+    clear: both;
+    display: table;
+    content: "";
+  }
+  > .view-content > .views-row{
+    width: 301px;
+    float: left;
+  }
+  > .view-content > .views-row-last{
+    float: right;
+  }
+}

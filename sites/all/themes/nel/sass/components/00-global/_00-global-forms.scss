@@ -1,0 +1,36 @@
+form{
+  input,textarea{
+    background: #fafafa;
+	border: 1px solid #f5f5f5;
+  }
+
+  input:focus,
+  textarea:focus{
+    outline: none;
+  }
+	
+  textarea{
+    width:98%;
+  }
+  
+  input[type=text],input[type=email]{
+	  width: 100%;
+  }
+
+  input[type=submit]{
+    background-color: #122d3f;
+	color: #fff;
+	height: 34px ;
+	font-size: $font_size;
+	width: auto;
+  }
+
+  .form-item label, 
+  .form-actions label{
+    color: #445f71;
+    font-size: $font_size;
+	font-family: Domine;
+	line-height: 21px;
+	font-weight: lighter;
+  }
+}

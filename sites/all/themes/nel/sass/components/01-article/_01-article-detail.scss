@@ -1,0 +1,42 @@
+.group-by{
+  font-size: 12px;
+  color: #cbcbcb;
+  margin-bottom: 28px;
+  a{
+    text-decoration: none;
+    line-height: 15px;
+  }
+  a:hover{
+    text-decoration: underline;
+  }
+  .category,
+  .author, 
+  .date{
+    display: inline-block;
+  }
+  .category ul,
+  .category ul li{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  .category ul li{
+    display: inline-block;
+    margin-right: 10px;
+    a{
+      display: block;
+      background: #122d3f;
+      padding: 2px 8px 3px 8px;
+      color: white;
+    }
+  }
+  .author{
+    a{
+      color: #1f9ee7;
+    }
+  }
+  .date{
+    margin-left: 5px;
+    text-transform: lowercase;
+  }
+}

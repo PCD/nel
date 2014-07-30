@@ -1,10 +1,33 @@
 .view-id-taxonomy_promoted.double-main{
+  .two-main-articles{
+    margin-bottom: 20px;
+  }
+  .view-taxonomy-articles > .view-content:after{
+    clear: both;
+    display: table;
+    content: "";
+  }
   .two-main-articles .views-row{
     float: left;
     width: 293px;
+    .image{
+      width: 293px;
+      height: 143px;
+      margin-bottom: 11px;
+    }
     h3{
       font-family: Fjalla One;
       margin: 0;
+      font-size: 1.3em;
+    }
+    .date{
+      margin: 2px 0px 6px 0px;
+      min-height: 21px;
+    }
+    .body{
+      font-family: Domine;
+      font-size: 0.9em;
+      line-height: 150%;
     }
   }
   .two-main-articles .views-row.views-row-last{
@@ -17,6 +40,7 @@
     float: left;
     width: 293px;
     min-height: 76px;
+    margin-bottom: 15px;
     
     .image{
       width: 100px;

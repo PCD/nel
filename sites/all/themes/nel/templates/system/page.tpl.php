@@ -118,8 +118,29 @@
       </div>
     </div>
   </div>
+  
+  <?php if ($page['footer_content_left'] || $page['footer_content_right'] || $page['footer_sidebar']):?>
+  <div class="l-footer-main">
+    <div class="l-footer-main-inner">
+      <div class="colmask right-menu">
+        <div class="colleft">
+          <div class="col1wrap">
+            <div class="l-footer-content" role="contentinfo">
+              <?php print render($page['footer_content_left']); ?>
+              <?php print render($page['footer_content_right']); ?>
+            </div>
+          </div>
+          
+          <?php print render($page['footer_sidebar']); ?>
+        </div>
+      </div>
+    </div>
+  </div>
+  <?php endif;?>
 
+  <?php if ($page['footer']):?>
   <footer class="l-footer" role="contentinfo">
     <?php print render($page['footer']); ?>
   </footer>
+  <?php endif;?>
 </div>

@@ -2,4 +2,22 @@
   width: 191px;
   float: right;
   clear: both;
+  .views-row{
+    margin-bottom: 25px;
+  }
+  .image{
+    width: 191px;
+    height: 93px;
+    margin-bottom: 11px;
+  }
+  .info h3{
+    margin: 0;
+    font-size: 21px;
+    line-height: 25px;
+    font-family: Fjalla One;
+  }
+  .info .date{
+    min-height: 21px;
+    margin: 2px 0px 6px 0px;
+  }
 }

@@ -1,0 +1,20 @@
+#block-block-2{
+  margin-bottom: 21px;
+  
+  .block__content{
+    padding: 102px 0 0;
+    border: none;
+    text-align: center;
+    font-family: Domine;
+    font-size: 0.9em;
+    line-height: 150%;
+    color: #4b4b4b;
+    
+    *{
+      margin: 0;
+    }
+    *+*{
+      margin-top: 10px;
+    }
+  }
+}

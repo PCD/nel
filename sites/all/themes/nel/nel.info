@@ -31,7 +31,8 @@ regions[navigation] = Navigation
 regions[highlighted] = Highlighted
 regions[content] = Content
 regions[sidebar_second] = Second Sidebar
-regions[footer_content] = Footer Content
+regions[footer_content_left] = Footer Content Column Left
+regions[footer_content_right] = Footer Content Column Right
 regions[footer_sidebar] = Footer Sidebar
 regions[footer] = Footer Bottom
 

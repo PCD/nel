@@ -1,0 +1,10 @@
+#block-block-3{
+  .block__content{
+    padding-top: 17px;
+  }
+  .block__content:before{
+    border-top: 1px solid #315c99;
+    display: block;
+    content: "";
+  }
+}

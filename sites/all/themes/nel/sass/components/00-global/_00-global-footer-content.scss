@@ -1,0 +1,45 @@
+.l-footer-main{
+  background: #fafafa url(../images/top-shadow.png) repeat-x top;
+  clear: both;
+}
+.l-footer-main:after{
+  clear: both;
+  display: table;
+  content: "";
+}
+.l-footer-main .block{
+  h2.block__title{
+    margin: 0;
+    padding: 0 10px;
+  }
+  .block__content{
+    border-top: solid #122d3f 2px;
+    padding-top: 26px;
+  }
+}
+.l-region--footer-content-left,
+.l-region--footer-content-right{
+  float: left;
+  width: 293px;
+}
+.l-region--footer-content-right{
+  float: right;
+}
+.l-footer-content{
+  padding: 48px 0 43px;
+  background: url(../images/logo001.png) 0 38px no-repeat;
+}
+.l-footer-content:after{
+  clear: both;
+  display: table;
+  content: "";
+}
+.l-region--footer-sidebar{
+  padding: 48px 0 43px;
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2) {
+  .l-footer-content{
+    background: url(../images/logo_retina1.png) 0 36px no-repeat;
+    background-size: 293px 98px;
+  }
+}

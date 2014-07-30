@@ -12,10 +12,14 @@ body.cke_ltr{
 .l-branding,
 .l-region--top-navigation, 
 .l-region--navigation,
+.l-footer-main-inner, 
 .l-region--footer{
   width: $desktop_width;
   margin: 0 auto;
   padding: 0 15px;
+}
+.l-main{
+  padding-top: 36px;
 }
 
 /** 2 Columns Fluid Layout **/
@@ -25,7 +29,6 @@ body.cke_ltr{
   float: left;
   width: 100%;
   overflow: hidden;
-  padding-top: 36px;
 }
 .right-menu .colleft{
   float: left;
@@ -40,12 +43,16 @@ body.cke_ltr{
   position: relative;
   left: 50%;
 }
-.right-menu .l-content{
+.right-menu .l-content,
+.right-menu .l-footer-content{
   margin: 0 0 0 336px;
-  padding-bottom: 79px;
   overflow: hidden;
 }
-.right-menu .l-region--sidebar-second{
+.right-menu .l-content{
+  padding-bottom: 79px;
+}
+.right-menu .l-region--sidebar-second,
+.right-menu .l-region--footer-sidebar{
   float: right;
   width: 293px;
   position: relative;

@@ -1,0 +1,47 @@
+<?php
+/**
+ * Implements hook_block_info.
+ */
+function socialcounts_block_info() {
+  $blocks = array();
+  $blocks['counts'] = array(
+    'info' => t('Social Counts'), 
+  );
+  return $blocks;
+}
+
+/**
+ * Implements hook_block_view.
+ */
+function socialcounts_block_view($delta = '') {
+  $block = array();
+  switch($delta) {
+    case 'counts':
+      $block['content'] = socialcounts_block_view_counts();
+      break;
+  }
+  return $block;
+}
+
+/**
+ * Retrieves Social Counts.
+ */
+function socialcounts_block_view_counts() {
+  
+}
+
+/**
+ * Implements hook_theme.
+ */
+function socialcounts_theme() {
+  return array(
+    'socialcounts-counts' => array(
+      'arguments' => array(
+        'social_likes' => NULL, 
+        'twitter_followers' => NULL, 
+        'plus_subscribers' => NULL, 
+      ), 
+      'template' => 'themes/socialcounts-counts', 
+    ), 
+  );
+}

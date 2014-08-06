@@ -1,0 +1,4 @@
+name = Social Counts
+description = Provides a Block with Social Counts
+package = BuscarSalud
+core = 7.x

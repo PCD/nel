@@ -1,0 +1,10 @@
+.type-row.type-node{
+  .node--block{
+    .body *{
+      margin: 0;
+    }
+    .body *+*{
+      margin-top: 1em;
+    }
+  }
+}

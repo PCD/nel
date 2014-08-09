@@ -1,0 +1,23 @@
+.one-big-4-small-one-column{
+  width: 293px;
+  .col-1{
+    float: none;
+    margin: 0;
+    width: auto;
+  }
+  .col-1.main-article{
+    margin-bottom: 20px;
+  }
+  > .view-content:after{
+    clear: both;
+    display: table;
+    content: "";
+  }
+  > .view-content > .views-row{
+    width: 293px;
+    float: left;
+  }
+  > .view-content > .views-row-last{
+    float: right;
+  }
+}

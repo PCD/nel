@@ -5,6 +5,7 @@
 function nelb_data_get_blocks($params) {
   // Place
   $params['place'] = isset($params['place'])?$params['place']:0;
+  $params['promote_to'] = isset($params['promote_to'])?$params['promote_to']:0;
   $params['pid'] = isset($params['pid'])?$params['pid']:0;
   
   // Get Node Blocks
@@ -17,20 +18,46 @@ function nelb_data_get_blocks($params) {
   $blocks = nelb_data_get_blocks_sorted($node_blocks, $taxonomy_blocks);
   
   // Group them.
-  return nelb_data_get_blocks_grouped($blocks);
+  $groups = nelb_data_get_blocks_grouped($blocks);
+  
+  // Add Classes.
+  return nelb_data_get_blocks_classify($groups);
 }
 
 /**
  * Get Node Blocks.
  */
-function nelb_data_get_blocks_node($place = 0) {
-  $sql = "SELECT n.nid id, n.title, field_promoted_level_value level, field_columna_value 'column' 
-  FROM {node} n 
-  INNER JOIN {field_data_field_promoted} p ON n.nid = p.entity_id AND n.vid = p.revision_id AND p.field_promoted_value = 1\n";
-  $sql .= sprintf("INNER JOIN {field_data_field_promoted_place} pl ON n.nid = pl.entity_id AND n.vid = pl.revision_id AND pl.field_promoted_place_value = %d\n", $place);
-  $sql .= "INNER JOIN {field_data_field_promoted_level} l ON n.nid = l.entity_id AND n.vid = l.revision_id 
-  LEFT JOIN {field_data_field_columna} c ON n.nid = c.entity_id AND n.vid = c.revision_id 
-  WHERE n.status = 1";
+function nelb_data_get_blocks_node($params) {
+  $sql = "SELECT 
+    n.nid id, 
+    n.title, 
+    field_promoted_level_value level, 
+    field_promoted_size_value size, 
+    field_columna_value 'column', 
+    field_show_title_value show_title 
+
+  FROM {node} n \n";
+  
+  // A que pagina se dirige el block
+  $sql .= sprintf("INNER JOIN {field_data_field_promote_to} pt ON n.nid = pt.entity_id AND n.vid = pt.revision_id AND pt.field_promote_to_value = %d \n", $params['promote_to']);
+  
+  // Level
+  $sql .= "INNER JOIN {field_data_field_promoted_level} l ON n.nid = l.entity_id AND n.vid = l.revision_id \n";
+  
+  // Place: Contenido Principal o Barra derecha
+  $sql .= sprintf("INNER JOIN {field_data_field_promoted_place} pl ON n.nid = pl.entity_id AND n.vid = pl.revision_id AND pl.field_promoted_place_value = %d\n", $params['place']);
+  
+  // Size
+  $sql .= "LEFT JOIN {field_data_field_promoted_size} size ON n.nid = size.entity_id AND n.vid = size.revision_id \n";
+  
+  // Column
+  $sql .= sprintf("LEFT JOIN {field_data_field_columna} c ON n.nid = c.entity_id AND n.vid = c.revision_id \n");
+  
+  // Show Title
+  $sql .= "LEFT JOIN {field_data_field_show_title} t ON n.nid = t.entity_id AND n.vid = t.revision_id \n";
+  
+  // Where
+  $sql .= "WHERE n.type = 'block' AND n.status = 1";
   $results = db_query($sql);
   $items = array();
   while(($item = $results->fetchAssoc())) {
@@ -45,21 +72,62 @@ function nelb_data_get_blocks_node($place = 0) {
  * Get Taxonomy Blocks.
  */
 function nelb_data_get_blocks_taxonomy($place = 0, $pid = 0) {
-  $sql = "SELECT td.tid id, td.name title, field_promoted_level_value level, field_columna_value 'column', field_promoted_style_value style 
+  $sql = "SELECT 
+    td.tid id, 
+    td.name title, 
+    field_promoted_level_value level, 
+    field_columna_value 'column', 
+    field_promoted_place_value place, 
+    field_promoted_size_value size, 
+    field_promoted_style_value style, 
+    field_promoted_style_one_column_value style_one_column, 
+    field_promoted_sidebar_style_value style_sidebar 
+    
   FROM {taxonomy_term_data} td \n";
   if ( intval($pid) > 0 ) {
     $sql .= sprintf("INNER JOIN {taxonomy_term_hierarchy} h ON td.tid = h.tid AND h.parent = %d\n", $pid);
   }
+  
+  // Promoted is a Must
   $sql .= "INNER JOIN {field_data_field_promoted} p ON td.tid = p.entity_id AND p.field_promoted_value = 1\n";
+  
+  // Place: Main or Sidebar
   $sql .= sprintf("INNER JOIN {field_data_field_promoted_place} pl ON td.tid = pl.entity_id AND pl.field_promoted_place_value = %d\n", $place);
-  $sql .= "INNER JOIN {field_data_field_promoted_level} l ON td.tid = l.entity_id 
-  INNER JOIN {field_data_field_promoted_style} s ON td.tid = s.entity_id 
-  LEFT JOIN {field_data_field_columna} c ON td.tid = c.entity_id ";
+  
+  // Level
+  $sql .= "INNER JOIN {field_data_field_promoted_level} l ON td.tid = l.entity_id \n";
+  
+  // Promoted Style for Two Columns
+  $sql .= "LEFT JOIN {field_data_field_promoted_style} s ON td.tid = s.entity_id \n";
+  
+  // Promoted Style for One Column
+  $sql .= "LEFT JOIN {field_revision_field_promoted_style_one_column} s2 ON td.tid = s2.entity_id \n";
+  
+  // Promoted Style for Sidebar
+  $sql .= "LEFT JOIN {field_revision_field_promoted_sidebar_style} s3 ON td.tid = s3.entity_id \n";
+  
+  // Size
+  $sql .= "LEFT JOIN {field_revision_field_promoted_size} size ON td.tid = size.entity_id \n";
+  
+  // Column: Left or Right
+  $sql .= "LEFT JOIN {field_data_field_columna} c ON td.tid = c.entity_id ";
+  
   $results = db_query($sql);
   $items = array();
   while(($item = $results->fetchAssoc())) {
     $item['type'] = 'taxonomy';
     $item['path'] = 'taxonomy/term/' . $item['id'];
+    
+    // Choose Style
+    if ( $item['place'] == 0 ) {
+      if ( $item['size'] == 'one-column' ) {
+        $item['style'] = $item['style_one_column'];
+      }
+    } else if ( $item['place'] == 1 ) {
+      $item['style'] = $item['style_sidebar'];
+    }
+    unset($item['style_sidebar']);
+    unset($item['style_one_column']);
     $items[] = $item;
   }
   return $items;
@@ -71,10 +139,11 @@ function nelb_data_get_blocks_taxonomy($place = 0, $pid = 0) {
 function nelb_data_get_blocks_sorted($node_blocks, $taxonomy_blocks) {
   $blocks = array_merge($node_blocks, $taxonomy_blocks);
   foreach($blocks as $key => $block) {
+    $types[$key] = $block['type']=='node'?0:1;
     $levels[$key] = $block['level'];
     $columns[$key] = isset($block['column'])&&intval($block['column'])>0?intval($block['column']):0;
   }
-  array_multisort($levels, SORT_DESC, $columns, SORT_ASC, $blocks);
+  array_multisort($levels, SORT_DESC, $types, SORT_ASC, $columns, SORT_ASC, $blocks);
   return $blocks;
 }
 
@@ -95,9 +164,83 @@ function nelb_data_taxonomy_display_get_by_id($display_id) {
 function nelb_data_get_blocks_grouped($blocks) {
   $groups = array();
   foreach($blocks as $block) {
-    $groups[$block['level']][] = $block;
+    $groups[$block['level']]['level'] = $block['level'];
+    
+    // Initialize Count
+    if ( !isset($groups[$block['level']]['types'][$block['type']]['count']) ) {
+      $groups[$block['level']]['types'][$block['type']]['count'] = 0;
+    }
+
+    // Items
+    $groups[$block['level']]['types'][$block['type']]['type'] = $block['type'];
+    $groups[$block['level']]['types'][$block['type']]['items'][] = $block;
+    
+    // Increment
+    $groups[$block['level']]['types'][$block['type']]['count']++;
   }
+  
   return $groups;
+}
+
+/**
+ * Classify Group Blocks.
+ */
+function nelb_data_get_blocks_classify($groups) {
+  $group_i = 0;
+  $group_t = count($groups);
+  foreach($groups as &$group) {
+    // Group Specifics
+    $group['class'] = nelb_data_get_classes_i($group_i, $group_t, 'group-row group-level-' . $group['level']);
+    $group_i++;
+    
+    // Types
+    foreach($group['types'] as &$type) {
+      $type['class'] = "type-row type-{$type['type']} count-{$type['count']}";
+      $block_i = 0;
+      $block_t = $type['count'];
+      foreach($type['items'] as &$block) {
+        $classes = 'block-item block-' . $block['type'] . '-item';
+        if ( $block['type'] == 'taxonomy' ) {
+          $classes .= ' ' . $block['style'];
+        }
+        $block['class'] = nelb_data_get_classes_i($block_i, $block_t, $classes);
+        $block_i++;
+      }
+    }
+  }
+  
+  return $groups;
+}
+
+/**
+ * Return Classes Acording some Parameters.
+ */
+function nelb_data_get_classes_i($i, $t, $extra = '') {
+  $classes = array();
+  if ( !empty($extra) ) {
+    $classes[] = $extra;
+  }
+  if ( $i == 0 ) {
+    $classes[] = 'first';
+  }
+  if ( $i == ($t-1) ) {
+    $classes[] = 'last';
+  }
+  $classes[] = ($i%2==0?'odd':'even');
+  return implode(' ', $classes);
+}
+
+/**
+ *
+ */
+function nelb_data_get_block_count_per_type($blocks, $type = 'taxonomy') {
+  $t = 0;
+  foreach($blocks as $block) {
+    if ( $block['type'] = $type ) {
+      $t++;
+    }
+  }
+  return $t;
 }
 
 /**

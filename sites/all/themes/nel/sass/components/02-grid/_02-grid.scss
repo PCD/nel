@@ -1,0 +1,25 @@
+.nelb-grid{
+  .group-row{
+    margin: 30px 0;
+  }
+  .type-row{
+    margin: 30px 0;
+    clear: both;
+  }
+  .type-row:after{
+    clear: both;
+    content: "";
+    display: table;
+  }
+  .type-row .block-item{
+    float: left;
+    width: 293px;
+  }
+  .type-row .block-item.even{
+    float: right;
+  }
+  .type-row.count-1 .block-item{
+    float: none;
+    width: auto;
+  }
+}

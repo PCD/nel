@@ -1,6 +1,5 @@
 <?php
-$dvars = get_defined_vars();
-$category = $dvars['field_category'][0]['taxonomy_term'];
+$category = $field_category[0]['taxonomy_term'];
 $category_url = url('taxonomy/term/' . $category->tid);
 $ntitle = explode("\n", wordwrap($title, 25, "\n"));
 $wtitle = '';
@@ -11,8 +10,15 @@ foreach($ntitle as $i => $ntitle_line) {
     $wtitle .= "<span class=\"td-sbig-sep\">&nbsp;</span>\n";
   }
 }
-$image_url = image_style_url('slider', $dvars['field_image'][0]['uri']);
-$image_alt = $dvars['field_image'][0]['alt'];
+$image_url = $image_alt = '';
+if ( isset($field_image[0]['uri']) ) {
+  $image_url = image_style_url('slider', $field_image[0]['uri']);
+  $image_alt = $field_image[0]['alt'];
+}
+
+if ( isset($field_video[LANGUAGE_NONE][0]['uri']) ) {
+  //$image_url = image_style_url('slider', $field_image);
+}
 
 /**
  * @file
@@ -25,11 +31,13 @@ $image_alt = $dvars['field_image'][0]['alt'];
   <?php print render($title_suffix['contextual_links']); ?>
   <?php endif; ?>
 
+<?php if ($image_url):?>
   <div class="image">
-    <a href="<?php print $dvars['node_url'];?>">
+    <a href="<?php print $node_url;?>">
       <img src="<?php print $image_url;?>" alt="<?php print $image_alt;?>" />
     </a>
   </div>
+<?php endif;?>
   <div class="info">
     <div class="tagdate">
       <div class="category">
@@ -43,7 +51,7 @@ $image_alt = $dvars['field_image'][0]['alt'];
         </span>
       </div>
     </div>
-    <h3><a href="<?php print $dvars['node_url'];?>">
+    <h3><a href="<?php print $node_url;?>">
       <?php print $wtitle;?>
     </a></h3>
   </div>

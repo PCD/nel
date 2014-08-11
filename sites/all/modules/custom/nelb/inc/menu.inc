@@ -6,7 +6,7 @@ function nelb_menu() {
   $items = array();
   $items['portada'] = array(
     'page callback' => 'nelb_menu_home', 
-    'access arguments' => array(TRUE),
+    'access arguments' => array('access nelb pages'),
     'type' => MENU_CALLBACK, 
   );
   return $items;

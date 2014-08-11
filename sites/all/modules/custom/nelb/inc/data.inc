@@ -9,13 +9,16 @@ function nelb_data_get_blocks($params) {
   $params['pid'] = isset($params['pid'])?$params['pid']:0;
   
   // Get Node Blocks
-  $node_blocks = nelb_data_get_blocks_node($params['place']);
+  $blocks = nelb_data_get_blocks_node($params);
 
-  // Get Taxonomy Blocks
-  $taxonomy_blocks = nelb_data_get_blocks_taxonomy($params['place'], $params['pid']);
+  if ( $params['promote_to'] == 0 ) {
+    // Get Taxonomy Blocks
+    $taxonomy_blocks = nelb_data_get_blocks_taxonomy($params);
+    $blocks = array_merge($blocks, $taxonomy_blocks);
+  }
   
   // Sort Them together.
-  $blocks = nelb_data_get_blocks_sorted($node_blocks, $taxonomy_blocks);
+  $blocks = nelb_data_get_blocks_sorted($blocks);
   
   // Group them.
   $groups = nelb_data_get_blocks_grouped($blocks);
@@ -38,7 +41,7 @@ function nelb_data_get_blocks_node($params) {
 
   FROM {node} n \n";
   
-  // A que pagina se dirige el block
+  // A que pagina se dirige el block: Homepage o Categoria
   $sql .= sprintf("INNER JOIN {field_data_field_promote_to} pt ON n.nid = pt.entity_id AND n.vid = pt.revision_id AND pt.field_promote_to_value = %d \n", $params['promote_to']);
   
   // Level
@@ -59,11 +62,42 @@ function nelb_data_get_blocks_node($params) {
   // Where
   $sql .= "WHERE n.type = 'block' AND n.status = 1";
   $results = db_query($sql);
+  
   $items = array();
   while(($item = $results->fetchAssoc())) {
     $item['type'] = 'node';
     $item['path'] = 'node/' . $item['id'];
     $items[] = $item;
+  }
+  
+  // Get Rid of Dupps if Random active
+  if ( isset($params['random']) && $params['random'] == true ) {
+    $items = nelb_data_get_blocks_node_random($items);
+  }
+  
+  return $items;
+}
+
+/**
+ * Randomize dupp nodes.
+ */
+function nelb_data_get_blocks_node_random($items) {
+  $levels = array();
+  foreach($items as $key => $item) {
+    $levels[$item['level']]['items'][] = $key;
+    $levels[$item['level']]['count'] = isset($levels[$item['level']]['count'])?$levels[$item['level']]['count']+1:1;
+  }
+  
+  // Randomly Choose
+  foreach($levels as &$level) {
+    if ( $level['count'] > 1 ) {
+      $chosen_index = rand(0, ($level['count']-1));
+      foreach($level['items'] as $key => $item) {
+        if ( $key != $chosen_index ) {
+          unset($items[$level['items'][$key]]);
+        }
+      }
+    }
   }
   return $items;
 }
@@ -71,7 +105,7 @@ function nelb_data_get_blocks_node($params) {
 /**
  * Get Taxonomy Blocks.
  */
-function nelb_data_get_blocks_taxonomy($place = 0, $pid = 0) {
+function nelb_data_get_blocks_taxonomy($params) {
   $sql = "SELECT 
     td.tid id, 
     td.name title, 
@@ -84,15 +118,15 @@ function nelb_data_get_blocks_taxonomy($place = 0, $pid = 0) {
     field_promoted_sidebar_style_value style_sidebar 
     
   FROM {taxonomy_term_data} td \n";
-  if ( intval($pid) > 0 ) {
-    $sql .= sprintf("INNER JOIN {taxonomy_term_hierarchy} h ON td.tid = h.tid AND h.parent = %d\n", $pid);
+  if ( intval($params['pid']) > 0 ) {
+    $sql .= sprintf("INNER JOIN {taxonomy_term_hierarchy} h ON td.tid = h.tid AND h.parent = %d\n", $params['pid']);
   }
   
   // Promoted is a Must
   $sql .= "INNER JOIN {field_data_field_promoted} p ON td.tid = p.entity_id AND p.field_promoted_value = 1\n";
   
   // Place: Main or Sidebar
-  $sql .= sprintf("INNER JOIN {field_data_field_promoted_place} pl ON td.tid = pl.entity_id AND pl.field_promoted_place_value = %d\n", $place);
+  $sql .= sprintf("INNER JOIN {field_data_field_promoted_place} pl ON td.tid = pl.entity_id AND pl.field_promoted_place_value = %d\n", $params['place']);
   
   // Level
   $sql .= "INNER JOIN {field_data_field_promoted_level} l ON td.tid = l.entity_id \n";
@@ -136,8 +170,7 @@ function nelb_data_get_blocks_taxonomy($place = 0, $pid = 0) {
 /**
  * Sort Blocks out.
  */
-function nelb_data_get_blocks_sorted($node_blocks, $taxonomy_blocks) {
-  $blocks = array_merge($node_blocks, $taxonomy_blocks);
+function nelb_data_get_blocks_sorted($blocks) {
   foreach($blocks as $key => $block) {
     $types[$key] = $block['type']=='node'?0:1;
     $levels[$key] = $block['level'];
@@ -248,13 +281,53 @@ function nelb_data_get_block_count_per_type($blocks, $type = 'taxonomy') {
  */
 function nelb_data_taxonomy_displays() {
   $displays = array(
+    // Sidebar area
+    'small-carousel-sidebar' => array(
+      'columns' => array(
+        array(
+          'view' => 'taxonomy_articles_sidebar', 
+          'display_id' => 'block', 
+          'class' => 'small-carousel-sidebar', 
+        ), 
+      ), 
+    ), 
+    'small-carousel-sidebar-one-delay' => array(
+      'columns' => array(
+        array(
+          'view' => 'taxonomy_articles_sidebar', 
+          'display_id' => 'block_1', 
+          'class' => 'small-carousel-sidebar one-delay', 
+        ), 
+      ), 
+    ), 
+    'small-carousel-sidebar-two-delay' => array(
+      'columns' => array(
+        array(
+          'view' => 'taxonomy_articles_sidebar', 
+          'display_id' => 'block_2', 
+          'class' => 'small-carousel-sidebar two-delay', 
+        ), 
+      ), 
+    ), 
+    'small-carousel-sidebar-three-delay' => array(
+      'columns' => array(
+        array(
+          'view' => 'taxonomy_articles_sidebar', 
+          'display_id' => 'block_3', 
+          'class' => 'small-carousel-sidebar three-delay', 
+        ), 
+      ), 
+    ), 
+    // Content area
     'one-big-4-small-two-columns' => array(
       'columns' => array(
         array(
+          'view' => 'taxonomy_articles', 
           'display_id' => 'block', 
           'class' => 'col-1 main-article', 
         ), 
         array(
+          'view' => 'taxonomy_articles', 
           'display_id' => 'block_1', 
           'class' => 'col-1 other-article', 
         ), 
@@ -264,10 +337,12 @@ function nelb_data_taxonomy_displays() {
     'one-big-4-small-one-column' => array(
       'columns' => array(
         array(
+          'view' => 'taxonomy_articles', 
           'display_id' => 'block', 
           'class' => 'col-1 main-article', 
         ), 
         array(
+          'view' => 'taxonomy_articles', 
           'display_id' => 'block_1', 
           'class' => 'col-1 other-article', 
         ), 
@@ -277,10 +352,12 @@ function nelb_data_taxonomy_displays() {
     'two-big-4-small-two-columns' => array(
       'columns' => array(
         array(
+          'view' => 'taxonomy_articles', 
           'display_id' => 'block_5', 
           'class' => 'two-main-articles', 
         ), 
         array(
+          'view' => 'taxonomy_articles', 
           'display_id' => 'block_6', 
           'class' => 'fourth-after-two-main-articles', 
         ), 
@@ -290,6 +367,7 @@ function nelb_data_taxonomy_displays() {
     'small-carousel' => array(
       'columns' => array(
         array(
+          'view' => 'taxonomy_articles', 
           'display_id' => 'block_4', 
           'class' => '', 
         ), 
@@ -299,6 +377,7 @@ function nelb_data_taxonomy_displays() {
     'four-small-inverted-list' => array(
       'columns' => array(
         array(
+          'view' => 'taxonomy_articles', 
           'display_id' => 'block_3', 
           'class' => '', 
         ), 
@@ -308,6 +387,7 @@ function nelb_data_taxonomy_displays() {
     'two-medium-list' => array(
       'columns' => array(
         array(
+          'view' => 'taxonomy_articles', 
           'display_id' => 'block_2', 
           'class' => '', 
         ), 

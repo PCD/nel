@@ -79,12 +79,14 @@ function nelb_theme_blocks_type_item_node($item) {
  */
 function nelb_theme_blocks_type_item_taxonomy($item) {
   $title = l($item['title'], $item['path']);
-  $display = nelb_data_taxonomy_display_get_by_id($item['style']);
+  if ( !($display = nelb_data_taxonomy_display_get_by_id($item['style'])) ) {
+    return '';
+  }
   
   // Build Output
   $content = '';
   foreach($display['columns'] as $column) {
-    $content .= nelb_theme_blocks_type_item_taxonomy_style($column, $item, $display);
+    $content .= nelb_theme_blocks_type_item_taxonomy_style($column, $item);
   }
   
   return theme('nelb-block', array(
@@ -98,8 +100,8 @@ function nelb_theme_blocks_type_item_taxonomy($item) {
 /**
  * Embeds a View for Taxonomy Style.
  */
-function nelb_theme_blocks_type_item_taxonomy_style($column, $block, $display) {
-  $content = views_embed_view('taxonomy_articles', $column['display_id'], $block['id']);
+function nelb_theme_blocks_type_item_taxonomy_style($column, $block) {
+  $content = views_embed_view($column['view'], $column['display_id'], $block['id']);
   
   return theme('nelb-block', array(
     'class' => $column['class'], 

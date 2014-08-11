@@ -11,13 +11,14 @@ foreach($ntitle as $i => $ntitle_line) {
   }
 }
 $image_url = $image_alt = '';
-if ( isset($field_image[0]['uri']) ) {
+if ( isset($field_video[LANGUAGE_NONE][0]['uri']) ) {
+  $file_for_view = file_load($field_video[LANGUAGE_NONE][0]['fid']);
+  $file_for_view = file_view_file($file_for_view, 'article_slider');
+  $image_url = image_style_url('slider', $file_for_view['#path']);
+  $image_alt = $file_for_view['#alt'];
+} else if ( isset($field_image[0]['uri']) ) {
   $image_url = image_style_url('slider', $field_image[0]['uri']);
   $image_alt = $field_image[0]['alt'];
-}
-
-if ( isset($field_video[LANGUAGE_NONE][0]['uri']) ) {
-  //$image_url = image_style_url('slider', $field_image);
 }
 
 /**

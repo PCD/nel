@@ -84,17 +84,22 @@ function nelb_data_get_blocks_node($params) {
 function nelb_data_get_blocks_node_random($items) {
   $levels = array();
   foreach($items as $key => $item) {
-    $levels[$item['level']]['items'][] = $key;
-    $levels[$item['level']]['count'] = isset($levels[$item['level']]['count'])?$levels[$item['level']]['count']+1:1;
+    $item['column'] = isset($item['column'])?$item['column']:0;
+    $levels[$item['level']][$item['size']][$item['column']]['items'][] = $key;
+    $levels[$item['level']][$item['size']][$item['column']]['count'] = isset($levels[$item['level']][$item['size']][$item['column']]['count'])?$levels[$item['level']][$item['size']][$item['column']]['count']+1:1;
   }
   
   // Randomly Choose
   foreach($levels as &$level) {
-    if ( $level['count'] > 1 ) {
-      $chosen_index = rand(0, ($level['count']-1));
-      foreach($level['items'] as $key => $item) {
-        if ( $key != $chosen_index ) {
-          unset($items[$level['items'][$key]]);
+    foreach($level as &$size) {
+      foreach($size as &$column) {
+        if ( $column['count'] > 1 ) {
+          $chosen_index = rand(0, ($column['count']-1));
+          foreach($column['items'] as $key => $item) {
+            if ( $key != $chosen_index ) {
+              unset($items[$column['items'][$key]]);
+            }
+          }
         }
       }
     }

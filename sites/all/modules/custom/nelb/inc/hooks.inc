@@ -3,6 +3,44 @@
  * Implements hook_node_presave.
  */
 function nelb_node_presave($node, $other_info = null) {
+  // Joomla Import
+  nelb_node_presave_joomla($node, $other_info);
+}
+
+/**
+ * URL Alter at hook_node_presave for Articles.
+ */
+function nelb_node_presave_article($node) {
+  if ( $node->type == 'article' ) {
+    return;
+  }
+}
+
+/**
+ * Implements hook_node_insert.
+ */
+function nelb_node_insert($node) {
+  if ( $node->type != 'article' ) {
+    return;
+  }
+  nelb_pathauto_node_update_alias($node, 'insert');
+}
+
+/**
+ * Implements hook_node_update.
+ */
+function nelb_node_update($node) {
+  if ( $node->type != 'article' ) {
+    return;
+  }
+  nelb_pathauto_node_update_alias($node, 'update');
+}
+
+/**
+ * hook_node_presave for importing joomla.
+ */
+function nelb_node_presave_joomla($node, $other_info = null) {
+  // Joomla Import
   if ( !(isset($node->joomla) && $node->joomla == 1) ) {
     return;
   }

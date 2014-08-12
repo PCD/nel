@@ -17,7 +17,9 @@ function nelb_menu() {
  */
 function nelb_menu_home() {
   // Get Node Blocks and Taxonomy Blocks for HomePage.
-  $params = array();
+  $params = array(
+    'random' => TRUE, 
+  );
   $blocks = nelb_data_get_blocks($params);
   return nelb_theme_blocks($blocks);
 }

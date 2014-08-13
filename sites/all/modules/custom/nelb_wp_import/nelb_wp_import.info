@@ -1,0 +1,4 @@
+name = nelb wp import
+description = Imports Wordpress into Drupal
+package = Nayarit en Linea
+core = 7.x

@@ -1,0 +1,41 @@
+ul.breadcrumb, 
+ul.breadcrumb li{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+ul.breadcrumb{
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 12px;
+  line-height: 14px;
+  display: table;
+}
+ul.breadcrumb li{
+  position: relative;
+  display: inline-block;
+  margin-right: 8px;
+  padding-right: 13px;
+  a{
+    color: #cbcbcb;
+    text-decoration: none;
+  }
+  a:hover{
+    text-decoration: underline;
+  }
+}
+ul.breadcrumb li:after{
+  display: block;
+  position: absolute;
+  top: 4px;
+  right: 0;
+  width: 4px;
+  height: 7px;
+  content: "";
+  background: url('../images/elements.png') no-repeat -20px -1560px;
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2) {
+  ul.breadcrumb li:after{
+    background-image: url('../images/elements@2x.png');
+    background-size: 91px 1900px;
+  }
+}

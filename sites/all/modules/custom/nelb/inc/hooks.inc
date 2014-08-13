@@ -24,6 +24,16 @@ function nelb_node_insert($node) {
     return;
   }
   nelb_pathauto_node_update_alias($node, 'insert');
+  
+  // Check for Date
+  if ( !isset($node->field_date[LANGUAGE_NONE][0]['value']) ) {
+    $node->field_date[LANGUAGE_NONE][0] = array(
+      'value' => date('Y-m-d H:i:s', $node->created), 
+      'timezone' => 'America/Mazatlan', 
+      'timezone_db' => 'America/Mazatlan', 
+      'date_type' => 'datetime', 
+    );
+  }
 }
 
 /**

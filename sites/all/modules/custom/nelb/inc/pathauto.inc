@@ -1,5 +1,72 @@
 <?php
 /**
+ * Implements hook_node_operations().
+ */
+function nelb_node_operations() {
+  $operations['nelb_pathauto_update_alias'] = array(
+    'label' => t('Nelb Update URL alias'),
+    'callback' => 'nelb_pathauto_node_update_alias_multiple',
+    'callback arguments' => array('bulkupdate', array('message' => TRUE)),
+  );
+  return $operations;
+}
+
+/**
+ * Implements hook_action_info().
+ */
+function nelb_action_info() {
+  $info['nelb_pathauto_node_update_action'] = array(
+    'type' => 'node',
+    'label' => t('Nelb Update node alias'),
+    'configurable' => FALSE,
+  );
+  $info['pathauto_taxonomy_term_update_action'] = array(
+    'type' => 'taxonomy_term',
+    'label' => t('Nelb Update taxonomy term alias'),
+    'configurable' => FALSE,
+  );
+  $info['pathauto_user_update_action'] = array(
+    'type' => 'user',
+    'label' => t('Nelb Update user alias'),
+    'configurable' => FALSE,
+  );
+
+  return $info;
+}
+
+/**
+ * Update action wrapper for pathauto_node_update_alias().
+ */
+function nelb_pathauto_node_update_action($node, $context = array()) {
+  nelb_pathauto_node_update_alias($node, 'bulkupdate', array('message' => TRUE));
+}
+
+/**
+ * Update the URL aliases for multiple nodes.
+ *
+ * @param $nids
+ *   An array of node IDs.
+ * @param $op
+ *   Operation being performed on the nodes ('insert', 'update' or
+ *   'bulkupdate').
+ * @param $options
+ *   An optional array of additional options.
+ */
+function nelb_pathauto_node_update_alias_multiple(array $nids, $op, array $options = array()) {
+  $options += array('message' => FALSE);
+
+  $nodes = node_load_multiple($nids);
+  foreach ($nodes as $node) {
+    nelb_pathauto_node_update_alias($node, $op, $options);
+  }
+
+  if (!empty($options['message'])) {
+    drupal_set_message(format_plural(count($nids), 'Updated URL alias for 1 node.', 'Updated URL aliases for @count nodes.'));
+  }
+}
+
+
+/**
  *
  */
 function nelb_pathauto_node_update_alias(stdClass $node, $op, array $options = array()) {

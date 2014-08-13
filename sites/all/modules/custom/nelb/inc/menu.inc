@@ -13,6 +13,13 @@ function nelb_menu() {
 }
 
 /**
+ * Implements hook_menu_alter.
+ */
+function nelb_menu_alter() {
+  
+}
+
+/**
  * Callback for HomePage.
  */
 function nelb_menu_home() {

@@ -28,6 +28,7 @@ scripts[] = js/nel.behaviors.js
 regions[top_navigation] = Top Navigation
 regions[header] = Header
 regions[navigation] = Navigation
+regions[over_highlighted] = Over Highlighted
 regions[highlighted] = Highlighted
 regions[content] = Content
 regions[sidebar_second] = Second Sidebar

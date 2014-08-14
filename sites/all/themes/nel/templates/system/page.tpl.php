@@ -91,6 +91,7 @@
   </header>
 
   <div class="l-main">
+    <?php print render($page['over_highlighted']); ?>
     <div class="colmask right-menu">
       <div class="colleft">
         <div class="col1wrap">

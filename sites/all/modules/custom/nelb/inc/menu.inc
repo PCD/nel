@@ -25,6 +25,23 @@ function nelb_menu_alter(&$items) {
 function nelb_menu_home() {
   // Get Node Blocks and Taxonomy Blocks for HomePage.
   $params = array(
+    'promote_to' => 0, 
+    'place' => 0, 
+    'random' => TRUE, 
+  );
+  $blocks = nelb_data_get_blocks($params);
+  return nelb_theme_blocks($blocks);
+}
+
+/**
+ *
+ */
+function nelb_menu_taxonomy_home($term) {
+  // Get Node Blocks and Taxonomy Blocks for HomePage.
+  $params = array(
+    'promote_to' => 1, 
+    'pid' => $term->tid, 
+    'place' => 0, 
     'random' => TRUE, 
   );
   $blocks = nelb_data_get_blocks($params);
@@ -74,7 +91,8 @@ function nelb_taxonomy_term_page($term) {
   $build['term_heading'] = array(
     '#prefix' => '<div class="term-listing-heading">',
     '#suffix' => '</div>',
-    'term' => taxonomy_term_view($term, 'full'),
+    '#markup' =>  nelb_menu_taxonomy_home($term), 
+    //'term' => taxonomy_term_view($term, 'full'),
   );
   
   return $build;

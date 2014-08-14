@@ -11,11 +11,9 @@ function nelb_data_get_blocks($params) {
   // Get Node Blocks
   $blocks = nelb_data_get_blocks_node($params);
 
-  if ( $params['promote_to'] == 0 ) {
     // Get Taxonomy Blocks
-    $taxonomy_blocks = nelb_data_get_blocks_taxonomy($params);
-    $blocks = array_merge($blocks, $taxonomy_blocks);
-  }
+  $taxonomy_blocks = nelb_data_get_blocks_taxonomy($params);
+  $blocks = array_merge($blocks, $taxonomy_blocks);
   
   // Sort Them together.
   $blocks = nelb_data_get_blocks_sorted($blocks);
@@ -43,6 +41,12 @@ function nelb_data_get_blocks_node($params) {
   
   // A que pagina se dirige el block: Homepage o Categoria
   $sql .= sprintf("INNER JOIN {field_data_field_promote_to} pt ON n.nid = pt.entity_id AND n.vid = pt.revision_id AND pt.field_promote_to_value = %d \n", $params['promote_to']);
+  
+  if ( isset($params['pid']) && $params['pid'] > 0 ) {
+    $sql .= sprintf("INNER JOIN {field_data_field_category} fc ON n.nid = fc.entity_id AND n.vid = fc.revision_id AND fc.field_category_tid = %d \n", $params['pid']);
+  } else {
+    $sql .= "LEFT JOIN {field_data_field_category} fc ON n.nid = fc.entity_id AND n.vid = fc.revision_id AND fc.field_category_tid IS NULL \n";
+  }
   
   // Level
   $sql .= "INNER JOIN {field_data_field_promoted_level} l ON n.nid = l.entity_id AND n.vid = l.revision_id \n";
@@ -123,8 +127,13 @@ function nelb_data_get_blocks_taxonomy($params) {
     field_promoted_sidebar_style_value style_sidebar 
     
   FROM {taxonomy_term_data} td \n";
-  if ( intval($params['pid']) > 0 ) {
-    $sql .= sprintf("INNER JOIN {taxonomy_term_hierarchy} h ON td.tid = h.tid AND h.parent = %d\n", $params['pid']);
+  
+  if ( isset($params['promote_to']) ) {
+    $sql .= sprintf("INNER JOIN {field_data_field_promote_to} pt ON td.tid = pt.entity_id AND pt.field_promote_to_value = %d \n", $params['promote_to']);
+  }
+  
+  if ( isset($params['pid']) && $params['pid'] > 0 ) {
+    $sql .= sprintf("INNER JOIN {field_data_field_category} fc ON td.tid = fc.entity_id AND fc.field_category_tid = %d \n", $params['pid']);
   }
   
   // Promoted is a Must
@@ -176,6 +185,9 @@ function nelb_data_get_blocks_taxonomy($params) {
  * Sort Blocks out.
  */
 function nelb_data_get_blocks_sorted($blocks) {
+  if ( empty($blocks) ) {
+    return $blocks;
+  }
   foreach($blocks as $key => $block) {
     $types[$key] = $block['type']=='node'?0:1;
     $levels[$key] = $block['level'];
@@ -279,6 +291,25 @@ function nelb_data_get_block_count_per_type($blocks, $type = 'taxonomy') {
     }
   }
   return $t;
+}
+
+/**
+ *
+ */
+function nelb_data_get_category_page($node) {
+  if ( isset($node->field_category[LANGUAGE_NONE][0]['tid']) ) {
+    // Look for any Category having Term Page.
+    foreach($node->field_category[LANGUAGE_NONE] as $item) {
+      if ( !($term = taxonomy_term_load($item['tid'])) ) {
+        continue;
+      }
+      
+      if ( isset($term->field_taxonomy_page[LANGUAGE_NONE][0]['value']) && $term->field_taxonomy_page[LANGUAGE_NONE][0]['value'] == 1 ) {
+        return $term;
+      }
+    }
+  }
+  return false;
 }
 
 /**

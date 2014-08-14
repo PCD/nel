@@ -1,0 +1,38 @@
+.nelb-table table caption{
+  font-family: 'Roboto Condensed', sans-serif;
+  text-align: left;
+  font-size: 20px;
+  line-height: 30px;
+  font-weight: normal;
+  text-transform: uppercase;
+  background: #122d3f;
+  color: #fff;
+  padding: 3px 10px 3px 10px;
+  margin: 0 0 0 0;
+  width: 120px;
+}
+.nelb-table table .views-field-views-bulk-operations{
+  width: 12px;
+}
+.nelb-table table .views-field-edit-node,
+.nelb-table table .views-field-edit-term{
+  width: 43px;
+}
+.nelb-table table .views-field-field-promote-to{
+  width: 130px;
+}
+.nelb-table table .views-field-field-category{
+  width: 100px;
+}
+.nelb-table table .views-field-field-promoted-place{
+  width: 120px;
+}
+.nelb-table table .views-field-field-promoted-size{
+  width: 200px;
+}
+.nelb-table table .views-field-field-columna{
+  width: 62px;
+}
+.nelb-table table .views-field-status{
+  width: 48px;
+}

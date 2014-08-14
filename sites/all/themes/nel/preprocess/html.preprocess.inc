@@ -15,6 +15,12 @@ function nel_preprocess_html(&$variables) {
   
   // Apply Color
   nel_preprocess_html_apply_color($variables);
+  
+  // Apply Header Background
+  nel_preprocess_html_apply_header_background($variables);
+  
+  // Apply Logo
+  nel_preprocess_html_apply_logo($variables);
 }
 
 /**
@@ -49,6 +55,7 @@ function nel_preprocess_html_taxonomy(&$variables) {
     
   if ( isset($term->field_taxonomy_page[LANGUAGE_NONE][0]['value']) && $term->field_taxonomy_page[LANGUAGE_NONE][0]['value'] == 1 ) {
     $variables['term_page'] = $term;
+    $variables['classes_array'][] = 'term-front-page';
   }
   
 }
@@ -59,6 +66,7 @@ function nel_preprocess_html_taxonomy(&$variables) {
 function nel_preprocess_html_apply_color(&$variables) {
   if ( isset($variables['term_page']) ) {
     $term = $variables['term_page'];
+    
     // Add Class
     if ( isset($term->field_color[LANGUAGE_NONE][0]['value']) ) {
       $term_class = $term->field_color[LANGUAGE_NONE][0]['value'];
@@ -67,4 +75,47 @@ function nel_preprocess_html_apply_color(&$variables) {
       }
     }
   }
+}
+
+/**
+ * Apply Header Background class to Body.
+ */
+function nel_preprocess_html_apply_header_background(&$variables) {
+  if ( isset($variables['term_page']) ) {
+    $term = $variables['term_page'];
+    // Add Class
+    if ( isset($term->field_header_background[LANGUAGE_NONE][0]['value']) ) {
+      $term_class = $term->field_header_background[LANGUAGE_NONE][0]['value'];
+      if ( !in_array($term_class, $variables['classes_array']) ) {
+        $variables['classes_array'][] = $term_class;
+      }
+    }
+  }
+}
+
+/**
+ * Apply Logo class to Body.
+ */
+function nel_preprocess_html_apply_logo(&$variables) {
+  if ( !isset($variables['term_page']) ) {
+    return;
+  }
+  
+  $term = $variables['term_page'];
+  if ( !isset($term->field_logotipo[LANGUAGE_NONE][0]['uri']) ) {
+    return;
+  }
+  
+  $uri = $term->field_logotipo[LANGUAGE_NONE][0]['uri'];
+  $ancho = intval($term->field_logo_ancho[LANGUAGE_NONE][0]['value']);
+  $alto = intval($term->field_logo_alto[LANGUAGE_NONE][0]['value']);
+  
+  $image_path = image_style_url('logo', $uri);
+  $style = "a.site-logo{";
+  $style .= "background-image: url('{$image_path}') !important;";
+  $style .= "background-size: {$ancho}px {$alto}px !important;";
+  $style .= "width: {$ancho}px !important;";
+  $style .= "height: {$alto}px !important;";
+  $style .= "}";
+  drupal_add_css($style, array('type' => 'inline', 'media' => 'all', 'group' => CSS_THEME));
 }

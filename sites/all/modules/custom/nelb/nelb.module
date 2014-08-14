@@ -2,6 +2,7 @@
 include_once('inc/block.inc');
 include_once('inc/data.inc');
 include_once('inc/hooks.inc');
+include_once('inc/init.inc');
 include_once('inc/menu.inc');
 include_once('inc/pathauto.inc');
 include_once('inc/permission.inc');

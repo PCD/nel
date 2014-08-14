@@ -28,6 +28,11 @@ body.toolbar-drawer .navigation-wrapper.stuck{
   margin-top: 64px;
 }
 
+.header-white{
+  .l-branding-wrapper{
+    background: white;
+  }
+}
 @media only screen and (-webkit-min-device-pixel-ratio: 2) {
   a.site-logo{
     background-image: url(../logo_retina.png);

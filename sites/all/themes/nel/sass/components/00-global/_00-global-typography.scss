@@ -30,7 +30,9 @@ h2.block__title a{
   color: #fff;
 }
 .article-content,
-.article-block{
+.article-block,
+.l-footer-main .block .block__content, 
+#block-block-7 .block__content{
   border-top: solid #122d3f 2px;  
   padding-top: 26px;
 }
@@ -78,7 +80,8 @@ h4 a{
   }
   .article-content,
   .article-block,
-  .l-footer-main .block .block__content{
+  .l-footer-main .block .block__content,
+  #block-block-7 .block__content{
     border-top-color: #4db2ec;
   }
 }

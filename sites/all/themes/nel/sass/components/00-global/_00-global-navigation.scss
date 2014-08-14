@@ -11,7 +11,8 @@
   content: "";
   display: table;
 }
-#block-system-main-menu{
+#block-system-main-menu,
+.menu-block-1{
   width: 909px;
   float: left;
   ul.menu, 
@@ -83,7 +84,8 @@
 }
 
 @media only screen and (-webkit-min-device-pixel-ratio: 2) {
-  #block-system-main-menu{
+  #block-system-main-menu,
+  .menu-block-1{
     > ul.menu > li > a.portada:after,
     > ul.menu > li > a.reporte:after,
     > ul.menu > li.expanded > a:after{

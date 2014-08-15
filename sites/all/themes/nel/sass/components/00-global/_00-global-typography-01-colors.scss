@@ -1,0 +1,24 @@
+.site-blue{
+  .group-by .category ul li a,
+  h2.block__title{
+    background: #4db2ec;
+  }
+  .article-content,
+  .article-block,
+  .l-footer-main .block .block__content,
+  #block-block-7 .block__content{
+    border-top-color: #4db2ec;
+  }
+}
+.site-red{
+  .group-by .category ul li a, 
+  h2.block__title{
+    background: #9d0a0e;
+  }
+  .article-content,
+  .article-block,
+  .l-footer-main .block .block__content,
+  #block-block-7 .block__content{
+    border-top-color: #9d0a0e;
+  }
+}

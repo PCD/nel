@@ -1108,19 +1108,20 @@ h4 a {
   float: left;
   width: 293px;
   min-height: 76px;
-  margin-bottom: 15px; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/nayaritenlinea\/html\/sites\/all\/themes\/nel\/sass\/components\/02-grid\/_02-taxonomy-double-main\.scss}line{font-family:\0000345}}
+  margin-bottom: 15px;
+  clear: left; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/nayaritenlinea\/html\/sites\/all\/themes\/nel\/sass\/components\/02-grid\/_02-taxonomy-double-main\.scss}line{font-family:\0000346}}
   .two-big-4-small-two-columns .fourth-after-two-main-articles .views-row .image {
     width: 100px;
     height: 65px;
     float: left; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/nayaritenlinea\/html\/sites\/all\/themes\/nel\/sass\/components\/02-grid\/_02-taxonomy-double-main\.scss}line{font-family:\0000350}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/nayaritenlinea\/html\/sites\/all\/themes\/nel\/sass\/components\/02-grid\/_02-taxonomy-double-main\.scss}line{font-family:\0000351}}
   .two-big-4-small-two-columns .fourth-after-two-main-articles .views-row .info {
     margin-left: 117px; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/nayaritenlinea\/html\/sites\/all\/themes\/nel\/sass\/components\/02-grid\/_02-taxonomy-double-main\.scss}line{font-family:\0000353}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/nayaritenlinea\/html\/sites\/all\/themes\/nel\/sass\/components\/02-grid\/_02-taxonomy-double-main\.scss}line{font-family:\0000354}}
   .two-big-4-small-two-columns .fourth-after-two-main-articles .views-row .info h4 {
     margin: 0; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/nayaritenlinea\/html\/sites\/all\/themes\/nel\/sass\/components\/02-grid\/_02-taxonomy-double-main\.scss}line{font-family:\0000357}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/nayaritenlinea\/html\/sites\/all\/themes\/nel\/sass\/components\/02-grid\/_02-taxonomy-double-main\.scss}line{font-family:\0000358}}
 .two-big-4-small-two-columns .fourth-after-two-main-articles .views-row.views-row-even {
   float: right;
   clear: right; }

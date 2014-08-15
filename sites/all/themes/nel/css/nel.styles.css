@@ -619,17 +619,8 @@ body.cke_ltr {
     height: 6px;
     background: url("../images/elements.png") no-repeat -20px -832px; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/nayaritenlinea\/html\/sites\/all\/themes\/nel\/sass\/components\/00-global\/_00-global-navigation\.scss}line{font-family:\0000393}}
-.site-blue #block-system-main-menu > ul.menu > li > a.active,
-.site-blue #block-system-main-menu > ul.menu > li > a:hover,
-.site-blue .menu-block-1 > ul.menu > li > a.active,
-.site-blue .menu-block-1 > ul.menu > li > a:hover,
-.site-blue .menu-block-2 > ul.menu > li > a.active,
-.site-blue .menu-block-2 > ul.menu > li > a:hover {
-  border-bottom-color: #4db2ec; }
-
 @media only screen and (-webkit-min-device-pixel-ratio: 2) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/nayaritenlinea\/html\/sites\/all\/themes\/nel\/sass\/components\/00-global\/_00-global-navigation\.scss}line{font-family:\00003104}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/nayaritenlinea\/html\/sites\/all\/themes\/nel\/sass\/components\/00-global\/_00-global-navigation\.scss}line{font-family:\0000393}}
   #block-system-main-menu > ul.menu > li > a.portada:after,
   #block-system-main-menu > ul.menu > li > a.reporte:after,
   #block-system-main-menu > ul.menu > li.expanded > a:after,
@@ -847,17 +838,33 @@ h4 a {
 .site-blue .l-footer-main .block .block__content,
 .site-blue #block-block-7 .block__content {
   border-top-color: #4db2ec; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/nayaritenlinea\/html\/sites\/all\/themes\/nel\/sass\/components\/00-global\/_00-global-typography-01-colors\.scss}line{font-family:\0000317}}
+.site-blue #block-system-main-menu > ul.menu > li > a.active,
+.site-blue #block-system-main-menu > ul.menu > li > a:hover,
+.site-blue .menu-block-1 > ul.menu > li > a.active,
+.site-blue .menu-block-1 > ul.menu > li > a:hover,
+.site-blue .menu-block-2 > ul.menu > li > a.active,
+.site-blue .menu-block-2 > ul.menu > li > a:hover {
+  border-bottom-color: #4db2ec; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/nayaritenlinea\/html\/sites\/all\/themes\/nel\/sass\/components\/00-global\/_00-global-typography-01-colors\.scss}line{font-family:\0000315}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/nayaritenlinea\/html\/sites\/all\/themes\/nel\/sass\/components\/00-global\/_00-global-typography-01-colors\.scss}line{font-family:\0000323}}
 .site-red .group-by .category ul li a,
 .site-red h2.block__title {
   background: #9d0a0e; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/nayaritenlinea\/html\/sites\/all\/themes\/nel\/sass\/components\/00-global\/_00-global-typography-01-colors\.scss}line{font-family:\0000321}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/nayaritenlinea\/html\/sites\/all\/themes\/nel\/sass\/components\/00-global\/_00-global-typography-01-colors\.scss}line{font-family:\0000329}}
 .site-red .article-content,
 .site-red .article-block,
 .site-red .l-footer-main .block .block__content,
 .site-red #block-block-7 .block__content {
   border-top-color: #9d0a0e; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/nayaritenlinea\/html\/sites\/all\/themes\/nel\/sass\/components\/00-global\/_00-global-typography-01-colors\.scss}line{font-family:\0000337}}
+.site-red #block-system-main-menu > ul.menu > li > a.active,
+.site-red #block-system-main-menu > ul.menu > li > a:hover,
+.site-red .menu-block-1 > ul.menu > li > a.active,
+.site-red .menu-block-1 > ul.menu > li > a:hover,
+.site-red .menu-block-2 > ul.menu > li > a.active,
+.site-red .menu-block-2 > ul.menu > li > a:hover {
+  border-bottom-color: #9d0a0e; }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/nayaritenlinea\/html\/sites\/all\/themes\/nel\/sass\/components\/01-article\/_01-article-detail\.scss}line{font-family:\000031}}
 .group-by {

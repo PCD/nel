@@ -1,24 +1,40 @@
 .site-blue{
   .group-by .category ul li a,
   h2.block__title{
-    background: #4db2ec;
+    background: $blue_bg_color;
   }
   .article-content,
   .article-block,
   .l-footer-main .block .block__content,
   #block-block-7 .block__content{
-    border-top-color: #4db2ec;
+    border-top-color: $blue_bg_color;
+  }
+  #block-system-main-menu > ul.menu > li > a.active, 
+  #block-system-main-menu > ul.menu > li > a:hover, 
+  .menu-block-1 > ul.menu > li > a.active, 
+  .menu-block-1 > ul.menu > li > a:hover, 
+  .menu-block-2 > ul.menu > li > a.active, 
+  .menu-block-2 > ul.menu > li > a:hover{
+    border-bottom-color: $blue_bg_color;
   }
 }
 .site-red{
   .group-by .category ul li a, 
   h2.block__title{
-    background: #9d0a0e;
+    background: $red_bg_color;
   }
   .article-content,
   .article-block,
   .l-footer-main .block .block__content,
   #block-block-7 .block__content{
-    border-top-color: #9d0a0e;
+    border-top-color: $red_bg_color;
+  }
+  #block-system-main-menu > ul.menu > li > a.active, 
+  #block-system-main-menu > ul.menu > li > a:hover, 
+  .menu-block-1 > ul.menu > li > a.active, 
+  .menu-block-1 > ul.menu > li > a:hover, 
+  .menu-block-2 > ul.menu > li > a.active, 
+  .menu-block-2 > ul.menu > li > a:hover{
+    border-bottom-color: $red_bg_color;
   }
 }

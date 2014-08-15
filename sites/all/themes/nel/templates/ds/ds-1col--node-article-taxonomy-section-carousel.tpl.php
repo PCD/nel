@@ -10,8 +10,6 @@ foreach($ntitle as $i => $ntitle_line) {
     $wtitle .= "<span class=\"td-sbig-sep\">&nbsp;</span>\n";
   }
 }
-$image_url = image_style_url('home_content_slider', $field_image[0]['uri']);
-$image_alt = $field_image[0]['alt'];
 
 $image_url = $image_alt = '';
 if ( isset($field_video[LANGUAGE_NONE][0]['uri']) ) {

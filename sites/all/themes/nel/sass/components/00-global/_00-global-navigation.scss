@@ -12,7 +12,8 @@
   display: table;
 }
 #block-system-main-menu,
-.menu-block-1{
+.menu-block-1,
+.menu-block-2{
   width: 909px;
   float: left;
   ul.menu, 
@@ -83,9 +84,21 @@
   }
 }
 
+.site-blue{
+  #block-system-main-menu > ul.menu > li > a.active, 
+  #block-system-main-menu > ul.menu > li > a:hover, 
+  .menu-block-1 > ul.menu > li > a.active, 
+  .menu-block-1 > ul.menu > li > a:hover,
+  .menu-block-2 > ul.menu > li > a.active, 
+  .menu-block-2 > ul.menu > li > a:hover{
+    border-bottom-color: #4db2ec;
+  }
+}
+
 @media only screen and (-webkit-min-device-pixel-ratio: 2) {
   #block-system-main-menu,
-  .menu-block-1{
+  .menu-block-1, 
+  .menu-block-2{
     > ul.menu > li > a.portada:after,
     > ul.menu > li > a.reporte:after,
     > ul.menu > li.expanded > a:after{

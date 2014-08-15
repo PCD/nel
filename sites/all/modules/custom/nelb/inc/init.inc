@@ -11,5 +11,9 @@ function nelb_init() {
       drupal_add_css(drupal_get_path('theme', 'nel') . '/css/typography.css');
       drupal_add_css(drupal_get_path('module', 'nelb') . '/css/nelb-table.css');
       break;
+
+    case 'node/add/article':
+      drupal_add_css(drupal_get_path('module', 'nelb') . '/css/nelb-categories.css');
+      break;
   }
 }

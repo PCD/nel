@@ -3,7 +3,15 @@
  * Implements hook_init.
  */
 function nelb_init() {
-  switch($_GET['q']) {
+  $q = $_GET['q'];
+  
+  // Special Cases
+  if ( arg(0) == 'node' && arg(2) == 'edit' ) {
+    $q = 'node/add/article';
+  }
+  
+  // Switch
+  switch($q) {
     case 'admin/blocks':
     case 'admin/categories':
     case 'admin/articles':

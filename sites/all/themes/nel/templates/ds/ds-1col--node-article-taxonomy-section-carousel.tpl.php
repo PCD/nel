@@ -12,7 +12,7 @@ foreach($ntitle as $i => $ntitle_line) {
 }
 
 if ( isset($_GET['test_all_1']) ) {
-  print_r(array_keys(get_defined_vars()));
+  print_r($field_video);
   exit;
 }
 $image_url = $image_alt = '';

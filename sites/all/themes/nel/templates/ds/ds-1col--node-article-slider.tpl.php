@@ -12,8 +12,20 @@ foreach($ntitle as $i => $ntitle_line) {
 }
 $image_url = $image_alt = '';
 if ( isset($field_video[LANGUAGE_NONE][0]['uri']) ) {
+  if ( isset($_GET['test_file_raw_0']) ) {
+    print_r($field_video);
+    exit;
+  }
   $file_for_view = file_load($field_video[LANGUAGE_NONE][0]['fid']);
+  if ( isset($_GET['test_file_pre_0']) ) {
+    print_r($file_for_view);
+    exit;
+  }
   $file_for_view = file_view_file($file_for_view, 'article_slider');
+  if ( isset($_GET['test_file_0']) ) {
+    print_r($file_for_view);
+    exit;
+  }
   $image_url = image_style_url('slider', $file_for_view['#path']);
   $image_alt = $file_for_view['#alt'];
 } else if ( isset($field_image[0]['uri']) ) {

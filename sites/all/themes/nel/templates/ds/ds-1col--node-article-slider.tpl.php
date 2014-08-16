@@ -11,6 +11,10 @@ foreach($ntitle as $i => $ntitle_line) {
   }
 }
 $image_url = $image_alt = '';
+if ( isset($_GET['test_all_0']) ) {
+  print_r(array_keys(get_defined_vars()));
+  exit;
+}
 if ( isset($field_video[LANGUAGE_NONE][0]['uri']) ) {
   if ( isset($_GET['test_file_raw_0']) ) {
     print_r($field_video);

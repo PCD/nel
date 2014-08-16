@@ -15,11 +15,11 @@ $image_url = $image_alt = '';
 if ( isset($field_video[LANGUAGE_NONE][0]['uri']) ) {
   $file_for_view = file_load($field_video[LANGUAGE_NONE][0]['fid']);
   $file_for_view = file_view_file($file_for_view, 'article_taxonomy_slider');
-  $image_url = image_style_url('slider', $file_for_view['#path']);
-  $image_alt = $file_for_view['#alt'];
+  $image_url = image_style_url('home_content_slider', $file_for_view['#path']);
+  $image_alt = $file_for_view['#alt'] . ' aqui';
 } else if ( isset($field_image[0]['uri']) ) {
   $image_url = image_style_url('home_content_slider', $field_image[0]['uri']);
-  $image_alt = $field_image[0]['alt'];
+  $image_alt = $field_image[0]['alt'] . ' aqui';
 }
 
 /**

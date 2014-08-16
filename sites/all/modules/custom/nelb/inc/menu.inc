@@ -53,9 +53,62 @@ function nelb_menu_taxonomy_home($term) {
  */
 function nelb_taxonomy_term_page($term) {
   if ( !(isset($term->field_taxonomy_page[LANGUAGE_NONE][0]['value']) && $term->field_taxonomy_page[LANGUAGE_NONE][0]['value'] == 1) ) {
-    return taxonomy_term_page($term);
+    return nelb_taxonomy_term_page_generic($term);
   }
   
+  // Common Logic
+  nelb_taxonomy_term_page_common($term);
+
+  // Content
+  $build['term_heading'] = array(
+    '#prefix' => '<div class="term-listing-heading">',
+    '#suffix' => '</div>',
+    '#markup' =>  nelb_menu_taxonomy_home($term), 
+    //'term' => taxonomy_term_view($term, 'full'),
+  );
+  
+  return $build;
+
+  if ($nids = taxonomy_select_nodes($term->tid, TRUE, variable_get('default_nodes_main', 10))) {
+    $nodes = node_load_multiple($nids);
+    $build += node_view_multiple($nodes);
+    $build['pager'] = array(
+      '#theme' => 'pager',
+      '#weight' => 5,
+    );
+  }
+  else {
+    $build['no_content'] = array(
+      '#prefix' => '<p>',
+      '#markup' => t('There is currently no content classified with this term.'),
+      '#suffix' => '</p>',
+    );
+  }
+  return $build;
+}
+
+/**
+ * Overrides callback taxonomy_term_page.
+ */
+function nelb_taxonomy_term_page_generic($term) {
+  // Common Logic
+  nelb_taxonomy_term_page_common($term);
+  
+  // Content
+  $build['term_heading'] = array(
+    '#prefix' => '<div class="term-listing-heading">',
+    '#suffix' => '</div>',
+    '#markup' =>  views_embed_view('taxonomy_page_articles', 'block', $term->tid), 
+    //'term' => taxonomy_term_view($term, 'full'),
+  );
+  
+  return $build;
+}
+
+/**
+ * Common taxonomy_term_page logic.
+ */
+function nelb_taxonomy_term_page_common($term) {
   // If there is a menu link to this term, the link becomes the last part of
   // the active trail, and the link name becomes the page title. Thus, we must
   // explicitly set the page title to be the term title.
@@ -82,35 +135,4 @@ function nelb_taxonomy_term_page($term) {
   drupal_add_html_head_link(array('rel' => 'canonical', 'href' => url($uri['path'], $uri['options'])), TRUE);
   // Set the non-aliased path as a default shortlink.
   drupal_add_html_head_link(array('rel' => 'shortlink', 'href' => url($uri['path'], array_merge($uri['options'], array('alias' => TRUE)))), TRUE);
-
-  // Normally we would call taxonomy_term_show() here, but for backwards
-  // compatibility in Drupal 7 we do not want to do that (it produces different
-  // data structures and HTML markup than what Drupal 7 released with). Calling
-  // taxonomy_term_view() directly provides essentially the same thing, but
-  // allows us to wrap the rendered term in our desired array structure.
-  $build['term_heading'] = array(
-    '#prefix' => '<div class="term-listing-heading">',
-    '#suffix' => '</div>',
-    '#markup' =>  nelb_menu_taxonomy_home($term), 
-    //'term' => taxonomy_term_view($term, 'full'),
-  );
-  
-  return $build;
-
-  if ($nids = taxonomy_select_nodes($term->tid, TRUE, variable_get('default_nodes_main', 10))) {
-    $nodes = node_load_multiple($nids);
-    $build += node_view_multiple($nodes);
-    $build['pager'] = array(
-      '#theme' => 'pager',
-      '#weight' => 5,
-    );
-  }
-  else {
-    $build['no_content'] = array(
-      '#prefix' => '<p>',
-      '#markup' => t('There is currently no content classified with this term.'),
-      '#suffix' => '</p>',
-    );
-  }
-  return $build;
 }

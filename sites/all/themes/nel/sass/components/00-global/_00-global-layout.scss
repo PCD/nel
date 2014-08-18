@@ -58,3 +58,14 @@ body.cke_ltr{
   position: relative;
   left: 336px;
 }
+
+@media only screen and (min-width: 768px) {
+  .l-main,
+  .l-branding,
+  .l-region--top-navigation, 
+  .l-region--navigation,
+  .l-footer-main-inner, 
+  .l-region--footer{
+    width: $tablet_width;
+  }
+}

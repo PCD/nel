@@ -76,3 +76,11 @@
     height: 0px;
   }
 }
+@media only screen and (max-width: 996px) {
+  .block-taxonomy-item.small-carousel{
+    width: 226px;
+  }
+  .node--article--taxonomy-section-carousel{
+    width: 226px;
+  }
+}

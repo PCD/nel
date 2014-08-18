@@ -57,7 +57,8 @@
   
   Drupal.behaviors.nelTopCarousel = {
     attach: function (context, settings) {
-      
+      $(window).resize(topCarouselResize);
+      $(window).load(topCarouselResize);
     }
   };
 

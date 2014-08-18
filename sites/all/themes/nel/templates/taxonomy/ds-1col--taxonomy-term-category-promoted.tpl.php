@@ -81,9 +81,6 @@ if ( isset($field_promoted_style[LANGUAGE_NONE][0]['value']) && isset($displays[
     $view_output .= views_embed_view('taxonomy_articles', $column['display_id'], $tid);
     $view_output .= "</div>\n";
   }
-} else if ( isset($_GET['test']) ) {
-  print_r($field_promoted_style[LANGUAGE_NONE][0]['value']);
-  exit;
 }
 
 

@@ -11,9 +11,18 @@
   right: 10px;
   bottom: 8px;
 }
+.play-video.small:after{
+  background-image: url(../images/video-small.png);
+  width: 20px;
+  height: 20px;
+}
 @media only screen and (-webkit-min-device-pixel-ratio: 2) {
   .play-video:after{
     background-image: url(../images/video-large@2x.png);
     background-size: 40px 40px;
+  }
+  .play-video.small:after{
+    background-image: url(../images/video-small@2x.png);
+    background-size: 20px 20px;
   }
 }

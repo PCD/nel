@@ -1221,6 +1221,24 @@ h4 a {
   float: right;
   clear: right; }
 
+@media only screen and (max-width: 996px) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/nayaritenlinea\/html\/sites\/all\/themes\/nel\/sass\/components\/02-grid\/_02-taxonomy-double-main\.scss}line{font-family:\0000366}}
+  .two-big-4-small-two-columns .two-main-articles .views-row {
+    width: 226px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/nayaritenlinea\/html\/sites\/all\/themes\/nel\/sass\/components\/02-grid\/_02-taxonomy-double-main\.scss}line{font-family:\0000368}}
+    .two-big-4-small-two-columns .two-main-articles .views-row .image {
+      width: 226px;
+      height: 110px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/nayaritenlinea\/html\/sites\/all\/themes\/nel\/sass\/components\/02-grid\/_02-taxonomy-double-main\.scss}line{font-family:\0000373}}
+  .two-big-4-small-two-columns .fourth-after-two-main-articles .views-row {
+    width: 226px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/nayaritenlinea\/html\/sites\/all\/themes\/nel\/sass\/components\/02-grid\/_02-taxonomy-double-main\.scss}line{font-family:\0000375}}
+    .two-big-4-small-two-columns .fourth-after-two-main-articles .views-row .image {
+      width: 60px;
+      height: 39px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/nayaritenlinea\/html\/sites\/all\/themes\/nel\/sass\/components\/02-grid\/_02-taxonomy-double-main\.scss}line{font-family:\0000379}}
+    .two-big-4-small-two-columns .fourth-after-two-main-articles .views-row .info {
+      margin-left: 70px; } }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/nayaritenlinea\/html\/sites\/all\/themes\/nel\/sass\/components\/02-grid\/_02-taxonomy-inverted-list\.scss}line{font-family:\000031}}
 .four-small-inverted-list {
   width: 293px; }

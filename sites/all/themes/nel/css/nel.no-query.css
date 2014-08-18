@@ -659,6 +659,24 @@ body.cke_ltr {
   .menu-block-2 > ul.menu > li.expanded > a:after {
     background-image: url("../images/elements@2x.png");
     background-size: 91px 1900px; } }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/nayaritenlinea\/html\/sites\/all\/themes\/nel\/sass\/components\/00-global\/_00-global-play-video\.scss}line{font-family:\000031}}
+.play-video {
+  position: relative; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/nayaritenlinea\/html\/sites\/all\/themes\/nel\/sass\/components\/00-global\/_00-global-play-video\.scss}line{font-family:\000034}}
+.play-video:after {
+  position: absolute;
+  background: url(../images/video-small.png) no-repeat;
+  width: 40px;
+  height: 40px;
+  right: 10px;
+  bottom: 8px; }
+
+@media only screen and (max-width: 996px) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/nayaritenlinea\/html\/sites\/all\/themes\/nel\/sass\/components\/00-global\/_00-global-play-video\.scss}line{font-family:\0000313}}
+  .play-video {
+    background-image: url(../images/video-small@2x.png);
+    background-size: 40px 40px; } }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/nayaritenlinea\/html\/sites\/all\/themes\/nel\/sass\/components\/00-global\/_00-global-search-form\.scss}line{font-family:\000031}}
 #block-search-form {
   display: none; }
@@ -1517,7 +1535,7 @@ h4 a {
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/nayaritenlinea\/html\/sites\/all\/themes\/nel\/sass\/components\/02-sidebar\/_02-sidebar-wide-articles\.scss}line{font-family:\0000322}}
 .node--article--taxonomy-sidebar-wide .date {
   height: 21px;
-  margin: 2px 0px 6px 0px; }
+  margin: 2px 0px 0 0px; }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/nayaritenlinea\/html\/sites\/all\/themes\/nel\/sass\/components\/03-blocks\/_03-latest-news\.scss}line{font-family:\000032}}
 #block-views-latest-news-block h2.block__title {

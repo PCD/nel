@@ -1517,8 +1517,9 @@ h4 a {
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/nayaritenlinea\/html\/sites\/all\/themes\/nel\/sass\/components\/02-grid\/_02-top-slider\.scss}line{font-family:\00003143}}
     #block-views-slider-block article .image {
       width: 100%; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/nayaritenlinea\/html\/sites\/all\/themes\/nel\/sass\/components\/02-grid\/_02-top-slider\.scss}line{font-family:\00003147}}
-  #block-views-slider-block .views-slideshow-cycle-main-frame {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/nayaritenlinea\/html\/sites\/all\/themes\/nel\/sass\/components\/02-grid\/_02-top-slider\.scss}line{font-family:\00003148}}
+  #block-views-slider-block .views-slideshow-cycle-main-frame,
+  #block-views-slider-block .views-slideshow-cycle-main-frame-row {
     width: 100% !important; } }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/nayaritenlinea\/html\/sites\/all\/themes\/nel\/sass\/components\/02-sidebar\/_02-sidebar-latest-news\.scss}line{font-family:\000032}}
 .block--views-latest-news-block .views-row .image {

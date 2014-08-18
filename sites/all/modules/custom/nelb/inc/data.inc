@@ -357,6 +357,106 @@ function nelb_data_taxonomy_displays() {
         ), 
       ), 
     ), 
+    'one-articles-with-picture' => array(
+      'columns' => array(
+        array(
+          'view' => 'taxonomy_articles_sidebar_2', 
+          'display_id' => 'block', 
+          'class' => 'articles-wide-sidebar', 
+        ), 
+      ), 
+      'class' => 'nine-articles-with-picture', 
+    ), 
+    'two-articles-with-picture' => array(
+      'columns' => array(
+        array(
+          'view' => 'taxonomy_articles_sidebar_2', 
+          'display_id' => 'block_1', 
+          'class' => 'articles-wide-sidebar', 
+        ), 
+      ), 
+      'class' => 'nine-articles-with-picture', 
+    ), 
+    'three-articles-with-picture' => array(
+      'columns' => array(
+        array(
+          'view' => 'taxonomy_articles_sidebar_2', 
+          'display_id' => 'block_2', 
+          'class' => 'articles-wide-sidebar', 
+        ), 
+      ), 
+      'class' => 'nine-articles-with-picture', 
+    ), 
+    'four-articles-with-picture' => array(
+      'columns' => array(
+        array(
+          'view' => 'taxonomy_articles_sidebar_2', 
+          'display_id' => 'block_3', 
+          'class' => 'articles-wide-sidebar', 
+        ), 
+      ), 
+      'class' => 'nine-articles-with-picture', 
+    ), 
+    'five-articles-with-picture' => array(
+      'columns' => array(
+        array(
+          'view' => 'taxonomy_articles_sidebar_2', 
+          'display_id' => 'block_4', 
+          'class' => 'articles-wide-sidebar', 
+        ), 
+      ), 
+      'class' => 'nine-articles-with-picture', 
+    ), 
+    'six-articles-with-picture' => array(
+      'columns' => array(
+        array(
+          'view' => 'taxonomy_articles_sidebar_2', 
+          'display_id' => 'block_5', 
+          'class' => 'articles-wide-sidebar', 
+        ), 
+      ), 
+      'class' => 'nine-articles-with-picture', 
+    ), 
+    'seven-articles-with-picture' => array(
+      'columns' => array(
+        array(
+          'view' => 'taxonomy_articles_sidebar_2', 
+          'display_id' => 'block_6', 
+          'class' => 'articles-wide-sidebar', 
+        ), 
+      ), 
+      'class' => 'nine-articles-with-picture', 
+    ), 
+    'eight-articles-with-picture' => array(
+      'columns' => array(
+        array(
+          'view' => 'taxonomy_articles_sidebar_2', 
+          'display_id' => 'block_7', 
+          'class' => 'articles-wide-sidebar', 
+        ), 
+      ), 
+      'class' => 'nine-articles-with-picture', 
+    ), 
+    'nine-articles-with-picture' => array(
+      'columns' => array(
+        array(
+          'view' => 'taxonomy_articles_sidebar_2', 
+          'display_id' => 'block_8', 
+          'class' => 'articles-wide-sidebar', 
+        ), 
+      ), 
+      'class' => 'nine-articles-with-picture', 
+    ), 
+    'ten-articles-with-picture' => array(
+      'columns' => array(
+        array(
+          'view' => 'taxonomy_articles_sidebar_2', 
+          'display_id' => 'block_9', 
+          'class' => 'articles-wide-sidebar', 
+        ), 
+      ), 
+      'class' => 'nine-articles-with-picture', 
+    ), 
     // Content area
     'one-big-4-small-two-columns' => array(
       'columns' => array(

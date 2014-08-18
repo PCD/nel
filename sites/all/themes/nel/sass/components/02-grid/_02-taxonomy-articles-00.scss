@@ -63,3 +63,16 @@
     margin-bottom: 3px;
   }
 }
+
+@media only screen and (max-width: 996px) {
+  .main-article{
+    width: 226px;
+    .image{
+      width: 226px;
+      height: 163px;
+    }
+  }
+  .other-article{
+    width: 226px;
+  }
+}

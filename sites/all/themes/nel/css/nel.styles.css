@@ -674,11 +674,22 @@ body.cke_ltr {
   right: 10px;
   bottom: 8px; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/nayaritenlinea\/html\/sites\/all\/themes\/nel\/sass\/components\/00-global\/_00-global-play-video\.scss}line{font-family:\0000314}}
+.play-video.small:after {
+  background-image: url(../images/video-small.png);
+  width: 20px;
+  height: 20px; }
+
 @media only screen and (-webkit-min-device-pixel-ratio: 2) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/nayaritenlinea\/html\/sites\/all\/themes\/nel\/sass\/components\/00-global\/_00-global-play-video\.scss}line{font-family:\0000315}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/nayaritenlinea\/html\/sites\/all\/themes\/nel\/sass\/components\/00-global\/_00-global-play-video\.scss}line{font-family:\0000320}}
   .play-video:after {
     background-image: url(../images/video-large@2x.png);
-    background-size: 40px 40px; } }
+    background-size: 40px 40px; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/nayaritenlinea\/html\/sites\/all\/themes\/nel\/sass\/components\/00-global\/_00-global-play-video\.scss}line{font-family:\0000324}}
+  .play-video.small:after {
+    background-image: url(../images/video-small@2x.png);
+    background-size: 20px 20px; } }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/nayaritenlinea\/html\/sites\/all\/themes\/nel\/sass\/components\/00-global\/_00-global-search-form\.scss}line{font-family:\000031}}
 #block-search-form {
   display: none; }

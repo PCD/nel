@@ -1169,7 +1169,10 @@ h4 a {
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/nayaritenlinea\/html\/sites\/all\/themes\/nel\/sass\/components\/02-grid\/_02-taxonomy-content-slider\.scss}line{font-family:\0000383}}
   .node--article--taxonomy-section-carousel {
     width: 226px;
-    height: 240px; } }
+    height: 240px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/nayaritenlinea\/html\/sites\/all\/themes\/nel\/sass\/components\/02-grid\/_02-taxonomy-content-slider\.scss}line{font-family:\0000386}}
+    .node--article--taxonomy-section-carousel .image img {
+      width: 226px; } }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/nayaritenlinea\/html\/sites\/all\/themes\/nel\/sass\/components\/02-grid\/_02-taxonomy-double-main\.scss}line{font-family:\000032}}
 .two-big-4-small-two-columns .two-main-articles {
   margin-bottom: 20px; }

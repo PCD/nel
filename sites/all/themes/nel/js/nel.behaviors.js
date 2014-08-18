@@ -66,6 +66,7 @@ function topCarouselResize() {
   selector = '#block-views-slider-block article, ';
   selector += '#block-views-slider-block .views-slideshow-cycle-main-frame, ';
   selector += '#block-views-slider-block .views-slideshow-cycle-main-frame-row';
+  console.dir(selector)
   
   window_width = parseInt($(window).width(), 10);
   if ( window_width <= 748 ) {
@@ -73,7 +74,7 @@ function topCarouselResize() {
     carousel_width = 321/630*window_width;
     carousel_width = Math.min(321, carousel_width);
     carousel_width = parseInt(Math.max(196, carousel_width), 10) + 'px !important';
-    $(selector).css(
+    $('#block-views-slider-block article').css(
       'height', carousel_width
     );
   }

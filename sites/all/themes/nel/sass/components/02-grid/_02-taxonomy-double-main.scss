@@ -60,3 +60,25 @@
     clear: right;
   }
 }
+
+@media only screen and (max-width: 996px) {
+  .two-big-4-small-two-columns{
+    .two-main-articles .views-row{
+      width: 226px;
+      .image{
+        width: 226px;
+        height: 110px;
+      }
+    }
+    .fourth-after-two-main-articles .views-row{
+      width: 226px;
+      .image{
+        width: 60px;
+        height: 39px;
+      }
+      .info{
+        margin-left: 70px;
+      }
+    }
+  }
+}

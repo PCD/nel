@@ -690,6 +690,18 @@ body.cke_ltr {
   .play-video.small:after {
     background-image: url(../images/video-small@2x.png);
     background-size: 20px 20px; } }
+@media only screen and (max-width: 996px) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/nayaritenlinea\/html\/sites\/all\/themes\/nel\/sass\/components\/00-global\/_00-global-play-video\.scss}line{font-family:\0000330}}
+  .play-video.small:after {
+    width: 15px;
+    height: 15px;
+    background-size: 15px 15px;
+    right: 0;
+    bottom: 4px; } }
+@media only screen and (max-width: 996px) and (-webkit-min-device-pixel-ratio: 2) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/nayaritenlinea\/html\/sites\/all\/themes\/nel\/sass\/components\/00-global\/_00-global-play-video\.scss}line{font-family:\0000339}}
+  .play-video.small:after {
+    background-size: 15px 15px; } }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/nayaritenlinea\/html\/sites\/all\/themes\/nel\/sass\/components\/00-global\/_00-global-search-form\.scss}line{font-family:\000031}}
 #block-search-form {
   display: none; }

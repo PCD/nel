@@ -26,3 +26,17 @@
     background-size: 20px 20px;
   }
 }
+@media only screen and (max-width: 996px) {
+  .play-video.small:after{
+    width: 15px;
+    height: 15px;
+    background-size: 15px 15px;
+    right: 0;
+    bottom: 4px;
+  }
+}
+@media only screen and (max-width: 996px) and (-webkit-min-device-pixel-ratio: 2) {
+  .play-video.small:after{
+    background-size: 15px 15px;
+  }
+}

@@ -54,5 +54,28 @@
       });
     }
   };
+  
+  Drupal.behaviors.nelTopCarousel = {
+    attach: function (context, settings) {
+      
+    }
+  };
+
+function topCarouselResize() {
+  selector = '#block-views-slider-block article, ';
+  selector += '#block-views-slider-block .views-slideshow-cycle-main-frame, ';
+  selector += '#block-views-slider-block .views-slideshow-cycle-main-frame-row';
+  
+  window_width = parseInt($(window).width(), 10);
+  if ( window_width <= 748 ) {
+    window_width -= 16;
+    carousel_width = 321/630*window_width;
+    carousel_width = Math.min(321, carousel_width);
+    carousel_width = Math.max(196, carousel_width);
+    $(selector).css({
+      height: carousel_width + 'px !important'
+    });
+  }
+}
 
 })(jQuery);

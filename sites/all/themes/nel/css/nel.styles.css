@@ -1,7 +1,8 @@
 /* No files to import found in abstractions/**\/* */
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/nayaritenlinea\/html\/sites\/all\/themes\/nel\/sass\/base\/_media\.scss}line{font-family:\000031}}
 img, media {
-  max-width: 100%; }
+  max-width: 100%;
+  height: 100%; }
 
 /**
  * Fjalla One
@@ -1381,10 +1382,6 @@ h4 a {
 .skin-default:hover .views_slideshow_controls_text_previous a:hover,
 .skin-default:hover .views_slideshow_controls_text_next a:hover {
   opacity: 1; }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/nayaritenlinea\/html\/sites\/all\/themes\/nel\/sass\/components\/02-sidebar\/_02-blocks\.scss}line{font-family:\000032}}
-.l-region--sidebar-second img, .l-region--sidebar-second media {
-  height: 100%; }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/nayaritenlinea\/html\/sites\/all\/themes\/nel\/sass\/components\/02-sidebar\/_02-sidebar-latest-news\.scss}line{font-family:\000032}}
 .block--views-latest-news-block .views-row .image {

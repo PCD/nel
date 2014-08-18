@@ -55,7 +55,6 @@
   .info{
   	font-size: 15px;
   	margin-left: 115px;
-  	width: 177px;
   }
   
   h4{
@@ -74,5 +73,11 @@
   }
   .other-article{
     width: 226px;
+    .image{
+      width: 60px;
+    }
+    .info{
+      margin-left: 70px;
+    }
   }
 }

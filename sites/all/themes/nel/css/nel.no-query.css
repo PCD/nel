@@ -1496,16 +1496,16 @@ h4 a {
       color: white; }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/nayaritenlinea\/html\/sites\/all\/themes\/nel\/sass\/components\/02-sidebar\/_02-sidebar-wide-articles\.scss}line{font-family:\000032}}
-.articles-wide-sidebar img {
+.node--article--taxonomy-sidebar-wide img {
   display: block; }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/nayaritenlinea\/html\/sites\/all\/themes\/nel\/sass\/components\/02-sidebar\/_02-sidebar-wide-articles\.scss}line{font-family:\000035}}
-.articles-wide-sidebar .image {
+.node--article--taxonomy-sidebar-wide .image {
   margin-bottom: 11px; }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/nayaritenlinea\/html\/sites\/all\/themes\/nel\/sass\/components\/02-sidebar\/_02-sidebar-wide-articles\.scss}line{font-family:\000038}}
-.articles-wide-sidebar h4 {
+.node--article--taxonomy-sidebar-wide h4 {
   margin: 0; }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/nayaritenlinea\/html\/sites\/all\/themes\/nel\/sass\/components\/02-sidebar\/_02-sidebar-wide-articles\.scss}line{font-family:\0000311}}
-.articles-wide-sidebar .date {
+.node--article--taxonomy-sidebar-wide .date {
   height: 21px;
   margin: 2px 0px 6px 0px; }
 

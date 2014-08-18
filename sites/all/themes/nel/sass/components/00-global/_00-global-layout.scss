@@ -59,7 +59,7 @@ body.cke_ltr{
   left: 336px;
 }
 
-@media only screen and (max-width: 996px) {
+@media only screen and (max-width: $desktop_width) {
   .l-main,
   .l-branding,
   .l-region--top-navigation, 
@@ -81,5 +81,40 @@ body.cke_ltr{
   .right-menu .l-region--footer-sidebar{
     width: 220px;
     left: 253px;
+  }
+}
+
+@media only screen and (max-width: $tablet_width) {
+  .l-main,
+  .l-branding,
+  .l-region--top-navigation, 
+  .l-region--navigation,
+  .l-footer-main-inner, 
+  .l-region--footer{
+    width: 100%;
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+  .right-menu .colleft{
+    float: none;
+    width: 100%;
+    margin-left: 0;
+    right: auto;
+  }
+  .right-menu .col1wrap{
+    float: none;
+    width: 100%;
+    left: auto;
+  }
+  .right-menu .l-content,
+  .right-menu .l-footer-content{
+    margin: 0;
+    overflow: visible;
+  }
+  .right-menu .l-region--sidebar-second,
+  .right-menu .l-region--footer-sidebar{
+    float: none;
+    width: 100%;
+    left: auto;
   }
 }

@@ -73,10 +73,10 @@ function topCarouselResize() {
     window_width -= 16;
     carousel_width = 321/630*window_width;
     carousel_width = Math.min(321, carousel_width);
-    carousel_width = Math.max(196, carousel_width);
+    carousel_width = parseInt(Math.max(196, carousel_width), 10) + 'px !important';
     console.dir(carousel_width);
     $(selector).css({
-      height: carousel_width + 'px !important'
+      height: carousel_width
     });
   }
 }

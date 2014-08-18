@@ -1495,6 +1495,20 @@ h4 a {
       text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.5);
       color: white; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/nayaritenlinea\/html\/sites\/all\/themes\/nel\/sass\/components\/02-sidebar\/_02-sidebar-wide-articles\.scss}line{font-family:\000032}}
+.articles-wide-sidebar img {
+  display: block; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/nayaritenlinea\/html\/sites\/all\/themes\/nel\/sass\/components\/02-sidebar\/_02-sidebar-wide-articles\.scss}line{font-family:\000035}}
+.articles-wide-sidebar .image {
+  margin-bottom: 11px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/nayaritenlinea\/html\/sites\/all\/themes\/nel\/sass\/components\/02-sidebar\/_02-sidebar-wide-articles\.scss}line{font-family:\000038}}
+.articles-wide-sidebar h4 {
+  margin: 0; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/nayaritenlinea\/html\/sites\/all\/themes\/nel\/sass\/components\/02-sidebar\/_02-sidebar-wide-articles\.scss}line{font-family:\0000311}}
+.articles-wide-sidebar .date {
+  height: 21px;
+  margin: 2px 0px 6px 0px; }
+
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/nayaritenlinea\/html\/sites\/all\/themes\/nel\/sass\/components\/03-blocks\/_03-latest-news\.scss}line{font-family:\000032}}
 #block-views-latest-news-block h2.block__title {
   margin-top: 0; }

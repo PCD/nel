@@ -204,6 +204,9 @@ function nelb_data_taxonomy_display_get_by_id($display_id) {
   $displays = nelb_data_taxonomy_displays();
   if ( isset($displays[$display_id]) ) {
     return $displays[$display_id];
+  } else if ( isset($_GET['test']) ) {
+    print_r($display_id);
+    exit;
   }
   return false;
 }

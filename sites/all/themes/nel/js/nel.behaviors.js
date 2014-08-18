@@ -74,9 +74,7 @@ function topCarouselResize() {
     carousel_width = 321/630*window_width;
     carousel_width = Math.min(321, carousel_width);
     carousel_width = parseInt(Math.max(196, carousel_width), 10) + 'px !important';
-    $('#block-views-slider-block article').css(
-      'height', carousel_width
-    );
+    $('#block-views-slider-block article').attr('style', 'position:absolute; height: ' + carousel_width);
   }
 }
 

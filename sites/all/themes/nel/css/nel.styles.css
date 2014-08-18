@@ -502,6 +502,15 @@ body.cke_ltr {
   position: relative;
   left: 336px; }
 
+@media only screen and (min-width: 768px) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/nayaritenlinea\/html\/sites\/all\/themes\/nel\/sass\/components\/00-global\/_00-global-layout\.scss}line{font-family:\0000368}}
+  .l-main,
+  .l-branding,
+  .l-region--top-navigation,
+  .l-region--navigation,
+  .l-footer-main-inner,
+  .l-region--footer {
+    width: 748px; } }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/nayaritenlinea\/html\/sites\/all\/themes\/nel\/sass\/components\/00-global\/_00-global-navigation\.scss}line{font-family:\000031}}
 .navigation-wrapper {
   height: 64px;

@@ -126,13 +126,13 @@
   }
   .views-slideshow-cycle-main-frame{
     position: relative;
-    width: 630px;
+    width: 630px !important;
     height: 321px;
     overflow: hidden;
   }
   .views-slideshow-cycle-main-frame-row{
     position: absolute;
-    width: 630px;
+    width: 630px !important;
     height: 321px;
   }
 }
@@ -150,10 +150,10 @@
 @media only screen and (max-width: $desktop_width) {
   #block-views-slider-block{
     .views-slideshow-cycle-main-frame{
-      width: 473px;
+      width: 473px !important;
     }
     .views-slideshow-cycle-main-frame-row{
-      width: 473px;
+      width: 473px !important;
     }
   }
 }

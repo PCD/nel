@@ -79,7 +79,7 @@ function topCarouselResize() {
     carousel_width = parseInt(Math.max(196, carousel_width), 10) + 'px !important';
     $(selector).attr('style', 'height: ' + carousel_width);
   } else {
-    $(selector).removeAttr('style');
+    //$(selector).removeAttr('style');
   }
 }
 

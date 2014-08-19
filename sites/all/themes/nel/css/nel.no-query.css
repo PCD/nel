@@ -1561,7 +1561,7 @@ h4 a {
   #block-views-slider-block .views-slideshow-cycle-main-frame,
   #block-views-slider-block .views-slideshow-cycle-main-frame-row,
   #block-views-slider-block .views-slideshow-cycle-main-frame-row img {
-    width: 100%; }
+    width: 100% !important; }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/nayaritenlinea\/html\/sites\/all\/themes\/nel\/sass\/components\/02-grid\/_02-top-slider\.scss}line{font-family:\00003185}}
   #block-views-slider-block .views-slideshow-cycle-main-frame-row img {
     max-width: 100%; } }

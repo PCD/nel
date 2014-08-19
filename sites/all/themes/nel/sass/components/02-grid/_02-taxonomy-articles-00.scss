@@ -63,7 +63,7 @@
   }
 }
 
-@media only screen and (max-width: 996px) {
+@media only screen and (max-width: $desktop_width) {
   .main-article{
     width: 226px;
     .image{
@@ -78,6 +78,24 @@
     }
     .info{
       margin-left: 70px;
+    }
+  }
+}
+@media only screen and (max-width: $tablet_width) {
+  .main-article{
+    width: 100%;
+    .image{
+      width: 100%;
+      height: auto;
+    }
+  }
+  .other-article{
+    width: 100%;
+    .image{
+      100px;
+    }
+    .info{
+      margin-left: 117px;
     }
   }
 }

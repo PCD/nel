@@ -1068,7 +1068,15 @@ h4 a {
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/nayaritenlinea\/html\/sites\/all\/themes\/nel\/sass\/components\/02-grid\/_02-grid\.scss}line{font-family:\0000351}}
     .nelb-grid .type-row .block-item .image,
     .nelb-grid .type-row .block-item.even .image {
-      text-align: center; } }
+      text-align: center; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/nayaritenlinea\/html\/sites\/all\/themes\/nel\/sass\/components\/02-grid\/_02-grid\.scss}line{font-family:\0000356}}
+  .nelb-grid .type-row .block-item.first,
+  .nelb-grid .type-row .block-item.first.even {
+    margin-top: 0; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/nayaritenlinea\/html\/sites\/all\/themes\/nel\/sass\/components\/02-grid\/_02-grid\.scss}line{font-family:\0000360}}
+  .nelb-grid .type-row .block-item.last,
+  .nelb-grid .type-row .block-item.last.even {
+    margin-bottom: 0; } }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/nayaritenlinea\/html\/sites\/all\/themes\/nel\/sass\/components\/02-grid\/_02-node-article\.scss}line{font-family:\000033}}
 .type-row.type-node .node--block .body * {
   margin: 0; }

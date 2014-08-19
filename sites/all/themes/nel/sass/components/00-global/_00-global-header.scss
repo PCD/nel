@@ -41,8 +41,9 @@ body.toolbar-drawer .navigation-wrapper.stuck{
 }
 
 @media only screen and (max-width: $tablet_width) {
+  body.toolbar-drawer .navigation-wrapper.stuck,
   body.toolbar .navigation-wrapper.stuck,
-  body.toolbar-drawer .navigation-wrapper.stuck{
-    margin-top: 0;
+  body .navigation-wrapper.stuck{
+    margin-top: 0 !important;
   }
 }

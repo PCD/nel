@@ -77,11 +77,11 @@ function topCarouselResize() {
     carousel_width = 321/630*window_width;
     carousel_width = Math.min(321, carousel_width);
     carousel_width = parseInt(Math.max(196, carousel_width), 10);
-    //$(selector).height(carousel_width);
-    $(selector).css("cssText", "height: " + carousel_width + "px !important");
+    $(selector).height(carousel_width);
+    //$(selector).css("cssText", "height: " + carousel_width + "px !important");
   } else {
-    //$(selector).height(321);
-    $(selector).css("cssText", "height: 321px !important");
+    $(selector).height(321);
+    //$(selector).css("cssText", "height: 321px !important");
   }
 }
 

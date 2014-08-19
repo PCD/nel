@@ -40,10 +40,10 @@ body.toolbar-drawer .navigation-wrapper.stuck{
   }
 }
 
-@media only screen and (max-width: $tablet_width) {
+@media only screen and (max-width: $desktop_width) {
   body.toolbar-drawer .navigation-wrapper.stuck,
   body.toolbar .navigation-wrapper.stuck,
   body .navigation-wrapper.stuck{
-    margin-top: 0 !important;
+    margin-top: 0;
   }
 }

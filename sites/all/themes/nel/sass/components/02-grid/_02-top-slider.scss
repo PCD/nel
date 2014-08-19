@@ -172,11 +172,12 @@
 @media only screen and (max-width: $tablet_width) {
   #block-views-slider-block{
     article{
-      width: 100%;
+      width: 100% !important;
       .image{
         width: 100%;
       }
     }
+    
     .views-slideshow-cycle-main-frame,
     .views-slideshow-cycle-main-frame-row,
     .views-slideshow-cycle-main-frame-row img{

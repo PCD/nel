@@ -88,7 +88,7 @@ function topCarouselResize() {
     //$(selector).css("cssText", "height: 321px !important");
   }
   $('#views_slideshow_cycle_teaser_section_slider-block').cycle('pause');
-  //$('#block-views-slider-block .views_slideshow_cycle_main').cycle('resume');
+  $('#views_slideshow_cycle_teaser_section_slider-block').cycle('resume');
 }
 
 })(jQuery);

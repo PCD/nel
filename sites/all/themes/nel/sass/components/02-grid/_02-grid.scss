@@ -44,8 +44,12 @@
 @media only screen and (max-width: $tablet_width) {
   .nelb-grid{
     .type-row .block-item{
+      text-align: center;
       width: 100%;
       float: none;
+      .node--block{
+        text-align: left;
+      }
     }
   }
 }

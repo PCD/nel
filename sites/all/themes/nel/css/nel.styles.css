@@ -1541,12 +1541,12 @@ h4 a {
 @media only screen and (max-width: 748px) {
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/nayaritenlinea\/html\/sites\/all\/themes\/nel\/sass\/components\/02-grid\/_02-top-slider\.scss}line{font-family:\00003162}}
   #block-views-slider-block article {
-    width: 100%;
+    width: 100% !important;
     overflow: hidden; }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/nayaritenlinea\/html\/sites\/all\/themes\/nel\/sass\/components\/02-grid\/_02-top-slider\.scss}line{font-family:\00003165}}
     #block-views-slider-block article .image {
-      width: 100%;
-      height: auto; }
+      width: 100% !important;
+      height: auto !important; }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/nayaritenlinea\/html\/sites\/all\/themes\/nel\/sass\/components\/02-grid\/_02-top-slider\.scss}line{font-family:\00003172}}
   #block-views-slider-block .views-slideshow-cycle-main-frame,
   #block-views-slider-block .views-slideshow-cycle-main-frame-row,

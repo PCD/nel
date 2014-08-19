@@ -1,5 +1,5 @@
 // Hide the toolbar or admin menu on small screens.
-@media all and (max-width: $desktop_width) {
+@media all and (max-width: 996px) {
   #toolbar, #admin-menu {
     display: none;
   }

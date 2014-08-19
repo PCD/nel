@@ -1378,20 +1378,22 @@ h4 a {
 @media only screen and (max-width: 748px) {
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/nayaritenlinea\/html\/sites\/all\/themes\/nel\/sass\/components\/02-grid\/_02-taxonomy-double-main\.scss}line{font-family:\0000388}}
   .two-big-4-small-two-columns .two-main-articles .views-row {
-    width: 100%; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/nayaritenlinea\/html\/sites\/all\/themes\/nel\/sass\/components\/02-grid\/_02-taxonomy-double-main\.scss}line{font-family:\0000390}}
+    float: none;
+    width: 100%;
+    margin-bottom: 20px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/nayaritenlinea\/html\/sites\/all\/themes\/nel\/sass\/components\/02-grid\/_02-taxonomy-double-main\.scss}line{font-family:\0000392}}
     .two-big-4-small-two-columns .two-main-articles .views-row .image {
       background: #f2f2f2;
       width: 100%;
       height: auto; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/nayaritenlinea\/html\/sites\/all\/themes\/nel\/sass\/components\/02-grid\/_02-taxonomy-double-main\.scss}line{font-family:\0000396}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/nayaritenlinea\/html\/sites\/all\/themes\/nel\/sass\/components\/02-grid\/_02-taxonomy-double-main\.scss}line{font-family:\0000398}}
   .two-big-4-small-two-columns .fourth-after-two-main-articles .views-row {
     width: 100%; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/nayaritenlinea\/html\/sites\/all\/themes\/nel\/sass\/components\/02-grid\/_02-taxonomy-double-main\.scss}line{font-family:\0000398}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/nayaritenlinea\/html\/sites\/all\/themes\/nel\/sass\/components\/02-grid\/_02-taxonomy-double-main\.scss}line{font-family:\00003100}}
     .two-big-4-small-two-columns .fourth-after-two-main-articles .views-row .image {
       width: 100px;
       height: 65px; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/nayaritenlinea\/html\/sites\/all\/themes\/nel\/sass\/components\/02-grid\/_02-taxonomy-double-main\.scss}line{font-family:\00003102}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/nayaritenlinea\/html\/sites\/all\/themes\/nel\/sass\/components\/02-grid\/_02-taxonomy-double-main\.scss}line{font-family:\00003104}}
     .two-big-4-small-two-columns .fourth-after-two-main-articles .views-row .info {
       margin-left: 117px; } }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/nayaritenlinea\/html\/sites\/all\/themes\/nel\/sass\/components\/02-grid\/_02-taxonomy-inverted-list\.scss}line{font-family:\000031}}

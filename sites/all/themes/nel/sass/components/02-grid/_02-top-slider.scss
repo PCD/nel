@@ -59,6 +59,7 @@
     width: 630px;
     height: 321px;
     position: relative;
+    overflow: hidden;
     
     .image{
       width: 630px;
@@ -126,12 +127,14 @@
   }
   .views-slideshow-cycle-main-frame{
     position: relative;
-    width: 630px;
-    height: 321px;
     overflow: hidden;
   }
   .views-slideshow-cycle-main-frame-row{
     position: absolute;
+  }
+  .views-slideshow-cycle-main-frame,
+  .views-slideshow-cycle-main-frame-row,
+  .views-slideshow-cycle-main-frame-row img{
     width: 630px;
     height: 321px;
   }
@@ -149,10 +152,17 @@
 }
 @media only screen and (max-width: $desktop_width) {
   #block-views-slider-block{
-    .views-slideshow-cycle-main-frame{
+    article{
       width: 473px;
+      height: auto;
+      .image{
+        width: 473px;
+        height: auto;
+      }
     }
-    .views-slideshow-cycle-main-frame-row{
+    .views-slideshow-cycle-main-frame,
+    .views-slideshow-cycle-main-frame-row,
+    .views-slideshow-cycle-main-frame-row img{
       width: 473px;
     }
   }
@@ -160,17 +170,15 @@
 @media only screen and (max-width: $tablet_width) {
   #block-views-slider-block{
     article{
-      width: 100% !important;
-      overflow: hidden;
+      width: 100%;
       .image{
-        width: 100% !important;
-        height: auto !important;
+        width: 100%;
       }
     }
     .views-slideshow-cycle-main-frame,
     .views-slideshow-cycle-main-frame-row,
     .views-slideshow-cycle-main-frame-row img{
-      width: 100% !important;
+      width: 100%;
     }
   }
 }

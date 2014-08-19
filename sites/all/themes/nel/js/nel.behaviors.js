@@ -49,7 +49,7 @@
   Drupal.behaviors.nelStickyHeader = {
     attach: function (context, settings) {
       paddingTop = 0;
-      window_width parseInt($(window).width(), 10);
+      window_width = parseInt($(window).width(), 10);
       if ( window_width > 996 ) {
         paddingTop = parseInt($('body').css('padding-top'), 10);
       }

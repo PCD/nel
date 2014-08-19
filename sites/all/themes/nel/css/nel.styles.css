@@ -1059,12 +1059,15 @@ h4 a {
   .nelb-grid .type-row .block-item {
     width: 226px; } }
 @media only screen and (max-width: 748px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/nayaritenlinea\/html\/sites\/all\/themes\/nel\/sass\/components\/02-grid\/_02-grid\.scss}line{font-family:\0000346}}
-  .nelb-grid .type-row .block-item {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/nayaritenlinea\/html\/sites\/all\/themes\/nel\/sass\/components\/02-grid\/_02-grid\.scss}line{font-family:\0000347}}
+  .nelb-grid .type-row .block-item,
+  .nelb-grid .type-row .block-item.even {
     width: 100%;
-    float: none; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/nayaritenlinea\/html\/sites\/all\/themes\/nel\/sass\/components\/02-grid\/_02-grid\.scss}line{font-family:\0000349}}
-    .nelb-grid .type-row .block-item .image {
+    float: none;
+    margin: 30px 0; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/nayaritenlinea\/html\/sites\/all\/themes\/nel\/sass\/components\/02-grid\/_02-grid\.scss}line{font-family:\0000351}}
+    .nelb-grid .type-row .block-item .image,
+    .nelb-grid .type-row .block-item.even .image {
       text-align: center; } }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/nayaritenlinea\/html\/sites\/all\/themes\/nel\/sass\/components\/02-grid\/_02-node-article\.scss}line{font-family:\000033}}
 .type-row.type-node .node--block .body * {

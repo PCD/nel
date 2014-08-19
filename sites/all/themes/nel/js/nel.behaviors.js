@@ -87,7 +87,7 @@ function topCarouselResize() {
     $(selector).height(321);
     //$(selector).css("cssText", "height: 321px !important");
   }
-  $('#block-views-slider-block .views_slideshow_cycle_main').cycle('pause');
+  $('#views_slideshow_cycle_main_slider-block').cycle('pause');
   //$('#block-views-slider-block .views_slideshow_cycle_main').cycle('resume');
 }
 

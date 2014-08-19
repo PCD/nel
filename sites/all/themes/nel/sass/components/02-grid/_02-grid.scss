@@ -52,5 +52,13 @@
         text-align: center;
       }
     }
+    .type-row .block-item.first, 
+    .type-row .block-item.first.even{
+      margin-top: 0;
+    }
+    .type-row .block-item.last, 
+    .type-row .block-item.last.even{
+      margin-bottom: 0;
+    }
   }
 }

@@ -95,6 +95,9 @@
         height: auto;
       }
     }
+    .two-main-articles .views-row.views-row-last{
+      margin-bottom: 0;
+    }
     .fourth-after-two-main-articles .views-row{
       width: 100%;
       .image{
@@ -104,6 +107,9 @@
       .info{
         margin-left: 117px;
       }
+    }
+    .fourth-after-two-main-articles .views-row.views-row-last{
+      margin-bottom: 0;
     }
   }
 }

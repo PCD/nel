@@ -1546,19 +1546,25 @@ h4 a {
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/nayaritenlinea\/html\/sites\/all\/themes\/nel\/sass\/components\/02-grid\/_02-top-slider\.scss}line{font-family:\00003164}}
   #block-views-slider-block .views-slideshow-cycle-main-frame,
   #block-views-slider-block .views-slideshow-cycle-main-frame-row {
-    width: 473px; } }
+    width: 473px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/nayaritenlinea\/html\/sites\/all\/themes\/nel\/sass\/components\/02-grid\/_02-top-slider\.scss}line{font-family:\00003167}}
+  #block-views-slider-block .views-slideshow-cycle-main-frame-row img {
+    max-width: 630px; } }
 @media only screen and (max-width: 748px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/nayaritenlinea\/html\/sites\/all\/themes\/nel\/sass\/components\/02-grid\/_02-top-slider\.scss}line{font-family:\00003171}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/nayaritenlinea\/html\/sites\/all\/themes\/nel\/sass\/components\/02-grid\/_02-top-slider\.scss}line{font-family:\00003174}}
   #block-views-slider-block article {
     width: 100%; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/nayaritenlinea\/html\/sites\/all\/themes\/nel\/sass\/components\/02-grid\/_02-top-slider\.scss}line{font-family:\00003173}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/nayaritenlinea\/html\/sites\/all\/themes\/nel\/sass\/components\/02-grid\/_02-top-slider\.scss}line{font-family:\00003176}}
     #block-views-slider-block article .image {
       width: 100%; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/nayaritenlinea\/html\/sites\/all\/themes\/nel\/sass\/components\/02-grid\/_02-top-slider\.scss}line{font-family:\00003179}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/nayaritenlinea\/html\/sites\/all\/themes\/nel\/sass\/components\/02-grid\/_02-top-slider\.scss}line{font-family:\00003182}}
   #block-views-slider-block .views-slideshow-cycle-main-frame,
   #block-views-slider-block .views-slideshow-cycle-main-frame-row,
   #block-views-slider-block .views-slideshow-cycle-main-frame-row img {
-    width: 100%; } }
+    width: 100%; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/nayaritenlinea\/html\/sites\/all\/themes\/nel\/sass\/components\/02-grid\/_02-top-slider\.scss}line{font-family:\00003185}}
+  #block-views-slider-block .views-slideshow-cycle-main-frame-row img {
+    max-width: 100%; } }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/nayaritenlinea\/html\/sites\/all\/themes\/nel\/sass\/components\/02-sidebar\/_02-sidebar-latest-news\.scss}line{font-family:\000032}}
 .block--views-latest-news-block .views-row .image {
   float: left;

@@ -430,10 +430,9 @@ body.toolbar-drawer .navigation-wrapper.stuck {
     background-image: url(../logo_retina.png);
     background-size: 300px 100px; } }
 @media only screen and (max-width: 996px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/nayaritenlinea\/html\/sites\/all\/themes\/nel\/sass\/components\/00-global\/_00-global-header\.scss}line{font-family:\0000346}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/nayaritenlinea\/html\/sites\/all\/themes\/nel\/sass\/components\/00-global\/_00-global-header\.scss}line{font-family:\0000345}}
   body.toolbar-drawer .navigation-wrapper.stuck,
-  body.toolbar .navigation-wrapper.stuck,
-  body .navigation-wrapper.stuck {
+  body.toolbar .navigation-wrapper.stuck {
     margin-top: 0; } }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/nayaritenlinea\/html\/sites\/all\/themes\/nel\/sass\/components\/00-global\/_00-global-highlighted\.scss}line{font-family:\000031}}
 .l-region--highlighted {

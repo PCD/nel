@@ -79,7 +79,11 @@ function topCarouselResize() {
     carousel_width = parseInt(Math.max(196, carousel_width), 10);
     $(selector).height(carousel_width);
     //$(selector).css("cssText", "height: " + carousel_width + "px !important");
+  } else if ( window_width <= 996 ) {
+    $(selector).width(473);
+    $(selector).height(321);
   } else {
+    $(selector).width(630);
     $(selector).height(321);
     //$(selector).css("cssText", "height: 321px !important");
   }

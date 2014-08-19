@@ -1564,7 +1564,8 @@ h4 a {
     width: 100% !important; }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/nayaritenlinea\/html\/sites\/all\/themes\/nel\/sass\/components\/02-grid\/_02-top-slider\.scss}line{font-family:\00003186}}
   #block-views-slider-block .views-slideshow-cycle-main-frame-row img {
-    max-width: 100%; } }
+    max-width: 100%;
+    height: 100% !important; } }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/nayaritenlinea\/html\/sites\/all\/themes\/nel\/sass\/components\/02-sidebar\/_02-sidebar-latest-news\.scss}line{font-family:\000032}}
 .block--views-latest-news-block .views-row .image {
   float: left;

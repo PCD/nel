@@ -1168,16 +1168,17 @@ h4 a {
     margin-bottom: 20px; }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/nayaritenlinea\/html\/sites\/all\/themes\/nel\/sass\/components\/02-grid\/_02-taxonomy-articles-00\.scss}line{font-family:\0000388}}
     .main-article .image {
+      background: #f2f2f2;
       width: 100%;
       height: auto; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/nayaritenlinea\/html\/sites\/all\/themes\/nel\/sass\/components\/02-grid\/_02-taxonomy-articles-00\.scss}line{font-family:\0000393}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/nayaritenlinea\/html\/sites\/all\/themes\/nel\/sass\/components\/02-grid\/_02-taxonomy-articles-00\.scss}line{font-family:\0000394}}
   .other-article {
     width: 100%; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/nayaritenlinea\/html\/sites\/all\/themes\/nel\/sass\/components\/02-grid\/_02-taxonomy-articles-00\.scss}line{font-family:\0000395}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/nayaritenlinea\/html\/sites\/all\/themes\/nel\/sass\/components\/02-grid\/_02-taxonomy-articles-00\.scss}line{font-family:\0000396}}
     .other-article .image {
       width: 100px; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/nayaritenlinea\/html\/sites\/all\/themes\/nel\/sass\/components\/02-grid\/_02-taxonomy-articles-00\.scss}line{font-family:\0000398}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/nayaritenlinea\/html\/sites\/all\/themes\/nel\/sass\/components\/02-grid\/_02-taxonomy-articles-00\.scss}line{font-family:\0000399}}
     .other-article .info {
       margin-left: 117px; } }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/nayaritenlinea\/html\/sites\/all\/themes\/nel\/sass\/components\/02-grid\/_02-taxonomy-articles-01-half\.scss}line{font-family:\000031}}
@@ -1374,6 +1375,25 @@ h4 a {
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/nayaritenlinea\/html\/sites\/all\/themes\/nel\/sass\/components\/02-grid\/_02-taxonomy-double-main\.scss}line{font-family:\0000379}}
     .two-big-4-small-two-columns .fourth-after-two-main-articles .views-row .info {
       margin-left: 70px; } }
+@media only screen and (max-width: 748px) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/nayaritenlinea\/html\/sites\/all\/themes\/nel\/sass\/components\/02-grid\/_02-taxonomy-double-main\.scss}line{font-family:\0000388}}
+  .two-big-4-small-two-columns .two-main-articles .views-row {
+    width: 100%; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/nayaritenlinea\/html\/sites\/all\/themes\/nel\/sass\/components\/02-grid\/_02-taxonomy-double-main\.scss}line{font-family:\0000390}}
+    .two-big-4-small-two-columns .two-main-articles .views-row .image {
+      background: #f2f2f2;
+      width: 100%;
+      height: auto; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/nayaritenlinea\/html\/sites\/all\/themes\/nel\/sass\/components\/02-grid\/_02-taxonomy-double-main\.scss}line{font-family:\0000396}}
+  .two-big-4-small-two-columns .fourth-after-two-main-articles .views-row {
+    width: 100%; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/nayaritenlinea\/html\/sites\/all\/themes\/nel\/sass\/components\/02-grid\/_02-taxonomy-double-main\.scss}line{font-family:\0000398}}
+    .two-big-4-small-two-columns .fourth-after-two-main-articles .views-row .image {
+      width: 100px;
+      height: 65px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/nayaritenlinea\/html\/sites\/all\/themes\/nel\/sass\/components\/02-grid\/_02-taxonomy-double-main\.scss}line{font-family:\00003102}}
+    .two-big-4-small-two-columns .fourth-after-two-main-articles .views-row .info {
+      margin-left: 117px; } }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/nayaritenlinea\/html\/sites\/all\/themes\/nel\/sass\/components\/02-grid\/_02-taxonomy-inverted-list\.scss}line{font-family:\000031}}
 .four-small-inverted-list {
   width: 293px; }

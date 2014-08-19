@@ -1444,9 +1444,9 @@ h4 a {
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/nayaritenlinea\/html\/sites\/all\/themes\/nel\/sass\/components\/02-grid\/_02-top-slider\.scss}line{font-family:\0000368}}
   #block-views-slider-block article .info {
     position: absolute;
-    top: 12px;
     left: 0;
-    height: 288px; }
+    height: 288px;
+    bottom: 12px; }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/nayaritenlinea\/html\/sites\/all\/themes\/nel\/sass\/components\/02-grid\/_02-top-slider\.scss}line{font-family:\0000374}}
   #block-views-slider-block article .info .tagdate {
     display: table; }

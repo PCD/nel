@@ -40,7 +40,7 @@ h2.block__title a{
 h3{
   color: #333333;
   font-family: 'Roboto Condensed', sans-serif;
-  font-size: 1.535em;
+  font-size: 21px;
   font-weight: normal;
   line-height: 25px;
 }
@@ -71,4 +71,12 @@ h2 a,
 h3 a,
 h4 a{
   color: #333333 ;
+}
+@media only screen and (max-width: $desktop_width) {
+  h2.block__title{
+    padding: 1px 10px 1px 10px;
+  }
+  h4{
+    font-size: 14px;
+  }
 }

@@ -1,6 +1,7 @@
 .top-navigation-wrapper{
+  font-family: 'PT Sans', sans-serif;
   background: #4c4c4c;
-  padding: 4px 0;
+  padding: 3px 0 4px;
   height: 30px;
 }
 .l-region--top-navigation:after{
@@ -28,7 +29,7 @@
     background: #7d7d7d;
     position: absolute;
     right: 0;
-    top: 7px;
+    top: 9px;
     display: block;
     content: "";
   }
@@ -39,7 +40,7 @@
     color: #dddddd;
     text-decoration: none;
     font-size: 12px;
-    padding: 5px 15px;
+    padding: 5px 18px 5px 15px;
   }
   ul.menu li.first a{
     padding-left: 0;
@@ -117,4 +118,7 @@
       background-size: 128px 112px;
     }
   }
+}
+@media only screen and (max-width: $desktop_width) {
+  
 }

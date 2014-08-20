@@ -1,4 +1,5 @@
 .l-footer{
+  font-family: Domine;
   clear: both;
   background: #4c4c4c;
   color: #fff;
@@ -55,5 +56,34 @@
   }
   ul.menu li a:hover{
     text-decoration: underline;
+  }
+}
+@media only screen and (max-width: $desktop_width) {
+  .l-footer{
+    padding-top: 20px;
+  }
+}
+@media only screen and (max-width: $tablet_width) {
+  .l-footer{
+    padding-top: 9px;
+    padding-bottom: 16px;
+  }
+  #block-block-1, 
+  #block-menu-menu-footer-menu{
+    float: none;
+    width: 100%;
+    text-align: center;
+  }
+  #block-menu-menu-footer-menu{
+    padding-top: 7px;
+    ul.menu{
+      text-align: center;
+      display: table;
+      width: 100%;
+    }
+    ul.menu li{
+      float: none;
+      display: inline-block;
+    }
   }
 }

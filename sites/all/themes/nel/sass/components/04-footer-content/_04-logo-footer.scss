@@ -18,3 +18,48 @@
     }
   }
 }
+@media only screen and (max-width: $desktop_width) {
+  #block-block-2 .block__content{ padding-top: round(($tablet_width - $mobile_padding) * (0.3325) - 5px); }
+}
+@media only screen and (max-width: $tablet_width_2) {
+  #block-block-2 .block__content{ padding-top: round(($tablet_width_2 - $mobile_padding) * (0.3325) - 5px); }
+}
+@media only screen and (max-width: $tablet_width_2_5) {
+  #block-block-2 .block__content{ padding-top: round(($tablet_width_2_5 - $mobile_padding) * (0.3325) - 5px); }
+}
+@media only screen and (max-width: $tablet_width_3) {
+  #block-block-2 .block__content{ padding-top: round(($tablet_width_3 - $mobile_padding) * (0.3325)) - 5px; }
+}
+@media only screen and (max-width: $tablet_width_3_5) {
+  #block-block-2 .block__content{ padding-top: round(($tablet_width_3_5 - $mobile_padding) * (0.3325) - 5px); }
+}
+@media only screen and (max-width: $tablet_width_4) {
+  #block-block-2 .block__content{ padding-top: round(($tablet_width_4 - $mobile_padding) * (0.3325) - 5px); }
+}
+@media only screen and (max-width: $tablet_width_4_5) {
+  #block-block-2 .block__content{ padding-top: round(($tablet_width_4_5 - $mobile_padding) * (0.3325) - 5px); }
+}
+@media only screen and (max-width: $tablet_width_5) {
+  #block-block-2 .block__content{ padding-top: round(($tablet_width_5 - $mobile_padding) * (0.3325) - 5px); }
+}
+@media only screen and (max-width: $tablet_width_5_5) {
+  #block-block-2 .block__content{ padding-top: round(($tablet_width_5_5 - $mobile_padding) * (0.3325) - 5px); }
+}
+@media only screen and (max-width: $tablet_width_6) {
+  #block-block-2 .block__content{ padding-top: round(($tablet_width_6 - $mobile_padding) * (0.3325) - 5px); }
+}
+@media only screen and (max-width: $tablet_width_6_5) {
+  #block-block-2 .block__content{ padding-top: round(($tablet_width_6_5 - $mobile_padding) * (0.3325) - 5px); }
+}
+@media only screen and (max-width: $tablet_width_7) {
+  #block-block-2 .block__content{ padding-top: round(($tablet_width_7 - $mobile_padding) * (0.3325) - 5px); }
+}
+@media only screen and (max-width: $tablet_width_7_5) {
+  #block-block-2 .block__content{ padding-top: round(($tablet_width_7_5 - $mobile_padding) * (0.3325) - 5px); }
+}
+@media only screen and (max-width: $tablet_width_8) {
+  #block-block-2 .block__content{ padding-top: round(($tablet_width_8 - $mobile_padding) * (0.3325) - 5px); }
+}
+@media only screen and (max-width: $tablet_width_8_5) {
+  #block-block-2 .block__content{ padding-top: round(($tablet_width_8_5 - $mobile_padding) * (0.3325) - 5px); }
+}

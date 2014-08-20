@@ -8,3 +8,13 @@
     }
   }
 }
+
+@media only screen and (max-width: $desktop_width) {
+  .type-row.type-node{
+    .node--block{
+      .body iframe{
+        width: 473px !important;
+      }
+    }
+  }
+}

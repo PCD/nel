@@ -8,3 +8,16 @@
     content: "";
   }
 }
+#block-nelb-facebook-script{
+  display: none;
+}
+@media only screen and (max-width: $desktop_width) {
+  #block-block-3 iframe{
+    width: 212px !important;
+  }
+}
+@media only screen and (max-width: $tablet_width) {
+  #block-block-3 iframe{
+    width: 100% !important;
+  }
+}

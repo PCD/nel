@@ -61,10 +61,18 @@
   
   Drupal.behaviors.nelTopCarousel = {
     attach: function (context, settings) {
-      $(window).resize(topCarouselResize);
-      $(window).load(topCarouselResize);
+      $(window).resize(allCarouselResize);
+      $(window).load(allCarouselResize);
     }
   };
+
+function allCarouselResize() {
+  // Top
+  topCarouselResize();
+  
+  // Content
+  contentCarouselResize();
+}
 
 function topCarouselResize() {
   selector = '#block-views-slider-block article, ';
@@ -77,7 +85,30 @@ function topCarouselResize() {
     carousel_width = 321/630*window_width;
     carousel_width = Math.min(321, carousel_width);
     carousel_width = parseInt(Math.max(196, carousel_width), 10);
+    
     $(selector).height(carousel_width);
+  } else if ( window_width <= 996 ) {
+    $(selector).width(473);
+    $(selector).height(321);
+  } else {
+    $(selector).width(630);
+    $(selector).height(321);
+  }
+}
+
+function contentCarouselResize() {
+  selector = '.block-taxonomy-item.small-carousel article, ';
+  selector += '.block-taxonomy-item.small-carousel .views-slideshow-cycle-main-frame, ';
+  selector += '.block-taxonomy-item.small-carousel .views-slideshow-cycle-main-frame-row, ';
+  
+  window_width = parseInt($(window).width(), 10);
+  
+  // Mobile
+  if ( window_width <= 748 ) {
+    window_width -= 16;
+    $(selector).width(window_width);
+    
+    // Image Height
     //$(selector).css("cssText", "height: " + carousel_width + "px !important");
   } else if ( window_width <= 996 ) {
     $(selector).width(473);

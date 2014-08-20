@@ -43,3 +43,34 @@
     background-size: 293px 98px;
   }
 }
+@media only screen and (max-width: $desktop_width) {
+  .l-region--footer-content-left,
+  .l-region--footer-content-right{
+    width: 212px;
+  }
+  .l-footer-main .block{
+    h2.block__title{
+      text-transform: none;
+    }
+  }
+}
+@media only screen and (max-width: $desktop_width) and (-webkit-min-device-pixel-ratio: 2) {
+  .l-footer-content{
+    background-size: 212px 71px;
+  }
+}
+@media only screen and (max-width: $tablet_width) {
+  .l-region--footer-content-left,
+  .l-region--footer-content-right{
+    float: none;
+    width: 100%;
+  }
+  .l-footer-content{
+    background-size: contain;
+    padding-bottom: 0;
+  }
+  .right-menu .l-region--sidebar-second, 
+  .right-menu .l-region--footer-sidebar{
+    padding: 20px 0;
+  }
+}

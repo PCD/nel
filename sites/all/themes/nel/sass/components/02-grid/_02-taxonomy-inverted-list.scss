@@ -19,3 +19,11 @@
     }
   }
 }
+@media only screen and (max-width: $tablet_width) {
+  .four-small-inverted-list{
+    width: 100%;
+    .view-taxonomy-articles .views-row.views-row-last{
+      margin-bottom: 0;
+    }
+  }
+}

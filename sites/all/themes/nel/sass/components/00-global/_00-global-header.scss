@@ -46,3 +46,10 @@ body.toolbar-drawer .navigation-wrapper.stuck{
     margin-top: 0;
   }
 }
+@media only screen and (max-width: $tablet_width) {
+  .l-branding-wrapper .l-branding{
+    height: 57px;
+    padding-top: 0;
+    padding-left: 0;
+  }
+}

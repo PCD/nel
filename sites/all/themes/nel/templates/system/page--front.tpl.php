@@ -79,16 +79,21 @@
     <?php endif; ?>
     <div class="l-branding-wrapper">
       <div class="l-branding">
+        <div class="menu-mobile">
+          <ul class="menu">
+            <li class="menu-open"><a href="#">Menu</a></li>
+          </ul>
+        </div>
         <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home" class="site-logo"><?php print t('Home'); ?></a>
         <?php print render($page['header']); ?>
       </div>
     </div>
     
-    <div class="navigation-wrapper">
-      <?php print render($page['navigation']); ?>
-    </div>
-    
   </header>
+  
+  <div class="navigation-wrapper">
+    <?php print render($page['navigation']); ?>
+  </div>
 
   <div class="l-main">
     <?php print render($page['over_highlighted']); ?>

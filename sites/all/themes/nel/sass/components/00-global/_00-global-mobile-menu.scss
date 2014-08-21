@@ -1,0 +1,41 @@
+.menu-mobile{
+  display: none;
+  ul.menu, 
+  ul.menu li{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    width: 25px;
+    height: 25px;
+  }
+  .menu-open{
+    a{
+      display: block;
+      text-indent: -9999px;
+      width: 47px;
+      height: 57px;
+      background: url(../images/elements-inverted.png) no-repeat;
+      background-position: -15px -1700px;
+      padding-top: 13px;
+      padding-bottom: 13px;
+      border-bottom: transparent solid 4px;
+    }
+    a:hover{
+      border-bottom-color: white;
+    }
+  }
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2) {
+  .menu-mobile{
+    .menu-open a{
+      background-image: url(../images/elements-inverted@2x.png);
+      background-size: 91px 1900px;
+    }
+  }
+}
+@media only screen and (max-width: $tablet_width) {
+  .menu-mobile{
+    display: block;
+    float: left;
+  }
+}

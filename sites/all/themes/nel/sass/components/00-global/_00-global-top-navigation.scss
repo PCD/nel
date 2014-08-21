@@ -119,6 +119,8 @@
     }
   }
 }
-@media only screen and (max-width: $desktop_width) {
-  
+@media only screen and (max-width: $tablet_width) {
+  .top-navigation-wrapper{
+    display: none;
+  }
 }

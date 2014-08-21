@@ -135,3 +135,24 @@
     }
   }
 }
+@media only screen and (max-width: $desktop_width) {
+  #block-system-main-menu,
+  .menu-block-1,
+  .menu-block-2{
+    width: 661px;
+  }
+}
+@media only screen and (max-width: $tablet_width) {
+  .sticky-wrapper{
+    height: 0 !important;
+  }
+  .navigation-wrapper{
+    display: none;
+  }
+  a.site-logo{
+    background-size: contain;
+    float: right;
+    width: 171px;
+    height: 57px;
+  }
+}

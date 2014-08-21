@@ -1,4 +1,8 @@
 (function ($) {
+  /**
+   * Global Variables.
+   */
+  var waypoint_1_set = 0;
 
   /**
    * The recommended way for producing HTML markup through JavaScript is to write
@@ -46,27 +50,54 @@
     }
   };
   
-  Drupal.behaviors.nelStickyHeader = {
-    attach: function (context, settings) {
-      paddingTop = 0;
-      window_width = parseInt($(window).width(), 10);
-      if ( window_width > 996 ) {
-        paddingTop = parseInt($('body').css('padding-top'), 10);
-      }
-      $('.navigation-wrapper').waypoint('sticky', {
-        offset: paddingTop
-      });
-    }
-  };
-  
   Drupal.behaviors.nelTopCarousel = {
     attach: function (context, settings) {
-      $(window).resize(allCarouselResize);
-      $(window).load(allCarouselResize);
+      $(window).resize(allResize);
+      $(window).load(allResize);
     }
   };
 
-function allCarouselResize() {
+/**
+ * Sticky Header
+ */
+function nelStickyHeader() {
+  window_width = parseInt($(window).width(), 10);
+
+  // Mobile
+  if ( window_width <= 748 ) {
+    if ( waypoint_1_set == 1 ) {
+      $('.navigation-wrapper').waypoint('disable');
+      console.dir('waypoint disabled');
+      waypoint_1_set = 2;
+    }
+  } else {
+    if ( waypoint_1_set == 0 ) {
+      $('.navigation-wrapper').waypoint('sticky', {
+        offset: function() {
+          paddingTop = 0;
+          if ( window_width > 996 ) {
+            paddingTop = parseInt($('body').css('padding-top'), 10);
+          }
+          return paddingTop;
+        }
+      });
+      waypoint_1_set = 1;
+      console.dir('waypoint setup');
+    } else if ( waypoint_1_set == 2 ) {
+      $('.navigation-wrapper').waypoint('enable');
+      console.dir('waypoint enabled');
+    }
+  }
+}
+
+
+/**
+ * Resize Callback
+ */
+function allResize() {
+  // Sticky Header
+  nelStickyHeader();
+  
   // Top
   topCarouselResize();
   

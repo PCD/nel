@@ -117,6 +117,40 @@ function block_inject_exceptions_list() {
   return $build;
 }
 
+
+/**
+ * Callback form to add new region.
+ */
+function block_inject_inject_settings_form($form, &$form_state) {
+  $form['block_inject_paragraph_number'] = array(
+    '#type' => 'textfield',
+    '#default_value' => variable_get('block_inject_paragraph_number'),
+    '#title' => t('Inject after paragraph.'),
+    '#description' => t('What is the number of paragraph region should be injected after? Must be numeric. If empty, defaults to middle.'),
+    '#required' => TRUE,
+  );
+
+  $form['block_inject_paragraph_number_submit'] = array(
+    '#type' => 'submit',
+    '#value' => t('Save settings'),
+  );
+
+  return $form;
+}
+
+/**
+ * Submit form that adds the new region to the database.
+ */
+function block_inject_inject_settings_form_submit($form, &$form_state) {
+  // Sanitize the region name submited by the user.
+  if (is_numeric($form_state['input']['block_inject_paragraph_number'])) {
+    variable_set('block_inject_paragraph_number', $form_state['input']['block_inject_paragraph_number']);
+  }
+  else {
+    drupal_set_message(t('Please enter a numeric value!'), 'error');
+  }
+}
+
 /**
  * Callback form to add new region.
  */

@@ -42,6 +42,15 @@ function block_inject_menu() {
     'file' => 'block_inject.admin.inc',
   );
 
+  $items['admin/structure/block-inject/settings'] = array(
+    'title' => 'Configure settings for block inject',
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('block_inject_inject_settings_form'),
+    'access arguments' => array('administer block inject'),
+    'type' => MENU_LOCAL_ACTION,
+    'file' => 'block_inject.admin.inc',
+  );
+
   $items['admin/structure/block-inject/exceptions'] = array(
     'title' => 'Exceptions',
     'description' => 'Nodes excepted from being injected',
@@ -297,11 +306,19 @@ function block_inject_node_view($node, $view_mode, $langcode) {
 function block_inject_node($region, $body, $offset = 0, $attributes = array()) {
   // Break up the body field string into an array of paragraphs.
   $array_explode = explode("<p>", $body);
-  // Get the half number of the total number of paragraphs (round up).
-  $array_explode_half = round((count($array_explode) - 1) / 2);
+  $paragraph = "";
+  $paragraph = variable_get('block_inject_paragraph_number');
+
+  if (is_numeric($paragraph)) {
+    $array_explode_half = $paragraph;
+  } else {
+    // Get the half number of the total number of paragraphs (round up).
+    $array_explode_half = round((count($array_explode) - 1) / 2);
+  }
+
   // Add the attributes to the region renderable array
   $region['#prefix'] = '<div ' . drupal_attributes($attributes) . '>';
-  $region['#suffix'] = '</div><div class="clearfix"></div>';
+  $region['#suffix'] = '</div>';
   // Insert the renderable region array into the middle of the body field.
   array_splice($array_explode, ($array_explode_half + 1 + $offset), 0, render($region));
   // Re-create the body field string with the region injected.

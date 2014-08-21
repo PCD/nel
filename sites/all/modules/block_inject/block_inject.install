@@ -5,6 +5,20 @@
  * Schema function for the Block Inject table *
  */
 
+/**
+ * Implements hook_install.
+ */
+function block_inject_install() {
+  variable_set('block_inject_paragraph_number', "");
+}
+
+/**
+ * Implements hook_uninstall.
+ */
+function block_inject_uninstall() {
+  variable_del('block_inject_paragraph_number');
+}
+
 /*
  * Implements hook_schema().
  */

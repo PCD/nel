@@ -67,7 +67,6 @@ function nelStickyHeader() {
   if ( window_width <= 748 ) {
     if ( waypoint_1_set == 1 ) {
       $('.navigation-wrapper').waypoint('disable');
-      console.dir('waypoint disabled');
       waypoint_1_set = 2;
     }
   } else {
@@ -82,10 +81,8 @@ function nelStickyHeader() {
         }
       });
       waypoint_1_set = 1;
-      console.dir('waypoint setup');
     } else if ( waypoint_1_set == 2 ) {
       $('.navigation-wrapper').waypoint('enable');
-      console.dir('waypoint enabled');
     }
   }
 }

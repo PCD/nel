@@ -88,7 +88,7 @@ function nelb_block_view_facebook_script() {
  */
 function nelb_block_view_facebook_comments() {
   $url = "http://{$_SERVER['HTTP_HOST']}/{$_GET['q']}";
-  $output = "<div class=\"fb-comments\" data-href=\"{$url}\" data-width=\"630\" data-numposts=\"5\" data-colorscheme=\"light\"></div>\n";
+  $output = "<div class=\"fb-comments\" data-href=\"{$url}\" data-width=\"100%\" data-numposts=\"5\" data-colorscheme=\"light\"></div>\n";
   return array(
     'content' => $output, 
   );

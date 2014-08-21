@@ -1,0 +1,17 @@
+#block-nelb-facebook-comments{
+  clear: both;
+  margin-top: 25px;
+  h2.block__title{
+    font-size: 22px;
+    line-height: 29px;
+    color: #333333;
+    background: none;
+    text-transform: none;
+    padding: 0;
+  }
+  .fb-comments,
+  .fb-comments > span[style],
+  .fb-comments iframe[style]{
+    width: 100% !important;
+  }
+}

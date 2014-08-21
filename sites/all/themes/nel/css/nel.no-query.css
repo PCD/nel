@@ -1225,6 +1225,38 @@ h4 a {
 .no-slideshow .node--article--full > .gallery {
   display: none; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/nayaritenlinea\/html\/sites\/all\/themes\/nel\/sass\/components\/01-article\/_01-article-detail\.scss}line{font-family:\0000347}}
+.node--article--full .body > .block-inject {
+  float: left;
+  margin-right: 21px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/nayaritenlinea\/html\/sites\/all\/themes\/nel\/sass\/components\/01-article\/_01-article-detail\.scss}line{font-family:\0000351}}
+.node--article--full .body > .clearfix {
+  display: none; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/nayaritenlinea\/html\/sites\/all\/themes\/nel\/sass\/components\/01-article\/_01-article-detail\.scss}line{font-family:\0000355}}
+.node--article--full .body:after {
+  content: "";
+  display: table;
+  clear: both; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/nayaritenlinea\/html\/sites\/all\/themes\/nel\/sass\/components\/01-article\/_01-facebook-comments\.scss}line{font-family:\000031}}
+#block-nelb-facebook-comments {
+  clear: both;
+  margin-top: 25px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/nayaritenlinea\/html\/sites\/all\/themes\/nel\/sass\/components\/01-article\/_01-facebook-comments\.scss}line{font-family:\000034}}
+  #block-nelb-facebook-comments h2.block__title {
+    font-size: 22px;
+    line-height: 29px;
+    color: #333333;
+    background: none;
+    text-transform: none;
+    padding: 0; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/nayaritenlinea\/html\/sites\/all\/themes\/nel\/sass\/components\/01-article\/_01-facebook-comments\.scss}line{font-family:\0000314}}
+  #block-nelb-facebook-comments .fb-comments,
+  #block-nelb-facebook-comments .fb-comments > span[style],
+  #block-nelb-facebook-comments .fb-comments iframe[style] {
+    width: 100% !important; }
+
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/nayaritenlinea\/html\/sites\/all\/themes\/nel\/sass\/components\/02-grid\/_02-grid\.scss}line{font-family:\000032}}
 .nelb-grid .group-row {
   margin: 30px 0; }

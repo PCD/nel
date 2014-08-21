@@ -43,6 +43,17 @@
 .no-slideshow .node--article--full > .gallery{
   display: none;
 }
-.image.play-video{
-  
+.node--article--full .body{
+  > .block-inject{
+    float: left;
+    margin-right: 21px;
+  }
+  > .clearfix{
+    display: none;
+  }
+}
+.node--article--full .body:after{
+  content: "";
+  display: table;
+  clear: both;
 }

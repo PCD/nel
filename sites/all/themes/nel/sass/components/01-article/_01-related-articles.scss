@@ -1,0 +1,23 @@
+#block-views-related-articles-block .block__content{
+  .views-row{
+    width: 300px;
+    float: left;
+  }
+  .views-row-even{
+    float: right;
+  }
+  .views-row-odd{
+    clear: left;
+  }
+  .node--article--related{
+    margin-bottom: 31px;
+    h3{
+      margin: 0px;
+      font-size: 21px;
+      line-height: 25px;
+      font-family: Fjalla One;
+      color: #333333;
+      font-weight: normal;
+    }
+  }
+}

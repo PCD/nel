@@ -23,16 +23,19 @@ function nelb_node_insert($node) {
   if ( $node->type != 'article' ) {
     return;
   }
-  nelb_pathauto_node_update_alias($node, 'insert');
   
-  // Check for Date
-  if ( !isset($node->field_date[LANGUAGE_NONE][0]['value']) ) {
-    $node->field_date[LANGUAGE_NONE][0] = array(
-      'value' => date('Y-m-d H:i:s', $node->created), 
-      'timezone' => 'America/Mazatlan', 
-      'timezone_db' => 'America/Mazatlan', 
-      'date_type' => 'datetime', 
-    );
+  if ( ($term = nelb_data_get_category_page($node)) ) {
+    nelb_pathauto_node_update_alias($node, 'insert');
+  
+    // Check for Date
+    if ( !isset($node->field_date[LANGUAGE_NONE][0]['value']) ) {
+      $node->field_date[LANGUAGE_NONE][0] = array(
+        'value' => date('Y-m-d H:i:s', $node->created), 
+        'timezone' => 'America/Mazatlan', 
+        'timezone_db' => 'America/Mazatlan', 
+        'date_type' => 'datetime', 
+      );
+    }
   }
 }
 
@@ -43,7 +46,20 @@ function nelb_node_update($node) {
   if ( $node->type != 'article' ) {
     return;
   }
-  nelb_pathauto_node_update_alias($node, 'update');
+  
+  if ( ($term = nelb_data_get_category_page($node)) ) {
+    nelb_pathauto_node_update_alias($node, 'update');
+  
+    // Check for Date
+    if ( !isset($node->field_date[LANGUAGE_NONE][0]['value']) ) {
+      $node->field_date[LANGUAGE_NONE][0] = array(
+        'value' => date('Y-m-d H:i:s', $node->created), 
+        'timezone' => 'America/Mazatlan', 
+        'timezone_db' => 'America/Mazatlan', 
+        'date_type' => 'datetime', 
+      );
+    }
+  }
 }
 
 /**

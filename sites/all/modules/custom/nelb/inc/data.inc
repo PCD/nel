@@ -297,7 +297,7 @@ function nelb_data_get_block_count_per_type($blocks, $type = 'taxonomy') {
 }
 
 /**
- *
+ * Get a Page Taxonomy.
  */
 function nelb_data_get_category_page($node) {
   if ( isset($node->field_category[LANGUAGE_NONE][0]['tid']) ) {

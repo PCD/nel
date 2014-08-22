@@ -56,6 +56,12 @@
       $(window).load(allResize);
     }
   };
+  
+  Drupal.behaviors.nelPlayVideo = {
+    attach: function (context, settings) {
+      //$('.play-video').each();
+    }
+  }
 
 /**
  * Sticky Header
@@ -139,11 +145,11 @@ function contentCarouselResize() {
     // Image Height
     //$(selector).css("cssText", "height: " + carousel_width + "px !important");
   } else if ( window_width <= 996 ) {
-    $(selector).width(473);
-    $(selector).height(321);
+    $(selector).width(226);
+    $(selector).height(245);
   } else {
-    $(selector).width(630);
-    $(selector).height(321);
+    $(selector).width(293);
+    $(selector).height(318);
     //$(selector).css("cssText", "height: 321px !important");
   }
 }

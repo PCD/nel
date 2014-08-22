@@ -21,6 +21,8 @@
     margin: 0 3px 0 0;
     padding: 0;
     list-style: none;
+    width: 104px !important;
+    height: 69px;
   }
   ul.field-slideshow-pager li a{
     display: block;
@@ -32,8 +34,6 @@
     -o-transition: all 0.2s ease-in-out;
     -ms-transition: all 0.2s ease-in-out;
     transition: all 0.2s ease-in-out;
-    width: 104px;
-    height: 69px;
     img{
       display: block;
       border: none;

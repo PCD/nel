@@ -13,28 +13,32 @@ ul.breadcrumb{
 ul.breadcrumb li{
   position: relative;
   display: inline-block;
-  margin-right: 8px;
-  padding-right: 13px;
+  margin: 0 8px;
   a{
-    color: #cbcbcb;
+    color: #3f48cc;
     text-decoration: none;
   }
   a:hover{
+    color: #cbcbcb;
     text-decoration: underline;
   }
 }
-ul.breadcrumb li:after{
-  display: block;
-  position: absolute;
-  top: 4px;
-  right: 0;
+ul.breadcrumb li.first{
+  margin-left: 0;
+}
+ul.breadcrumb li.last{
+  margin-right: 0;
+}
+ul.breadcrumb li.separator{
   width: 4px;
-  height: 7px;
-  content: "";
-  background: url('../images/elements.png') no-repeat -20px -1560px;
+  height: 14px;
+  text-indent: -9999px;
+  background: url('../images/elements.png') no-repeat -20px -1556px;
+  margin: 0;
+  padding: 0;
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 2) {
-  ul.breadcrumb li:after{
+  ul.breadcrumb li.separator{
     background-image: url('../images/elements@2x.png');
     background-size: 91px 1900px;
   }

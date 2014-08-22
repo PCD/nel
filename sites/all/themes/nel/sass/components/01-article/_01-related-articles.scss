@@ -21,3 +21,22 @@
     }
   }
 }
+@media only screen and (max-width: $desktop_width) {
+  #block-views-related-articles-block .block__content{
+    .views-row{
+      width: 226px;
+    }
+  }
+}
+@media only screen and (max-width: $tablet_width) {
+  #block-views-related-articles-block .block__content{
+    .views-row{
+      width: 100%;
+      float: none;
+    }
+    .image{
+      text-align: center;
+      background: #f2f2f2;
+    }
+  }
+}

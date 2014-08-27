@@ -37,6 +37,11 @@ function nelb_menu_home() {
  *
  */
 function nelb_menu_taxonomy_home($term) {
+  $output = '';
+  // Get Top Blocks
+  $output .= nelb_menu_taxonomy_home_promoted_content($term);
+  $output .= nelb_menu_taxonomy_home_popular_content($term);
+  
   // Get Node Blocks and Taxonomy Blocks for HomePage.
   $params = array(
     'promote_to' => 1, 
@@ -45,7 +50,43 @@ function nelb_menu_taxonomy_home($term) {
     'random' => TRUE, 
   );
   $blocks = nelb_data_get_blocks($params);
-  return nelb_theme_blocks($blocks);
+  $output .= nelb_theme_blocks($blocks);
+  return $output;
+}
+
+/**
+ * Gets Promoted Content
+ */
+function nelb_menu_taxonomy_home_promoted_content($term) {
+  $output = '';
+  if ( isset($term->field_show_promoted_content[LANGUAGE_NONE][0]['value']) && $term->field_show_promoted_content[LANGUAGE_NONE][0]['value'] == 1 ) {
+    if ( isset($term->field_videos_only[LANGUAGE_NONE][0]['value']) && $term->field_videos_only[LANGUAGE_NONE][0]['value'] == 1 ) {
+      $output = views_embed_view('last_promoted', 'block_1', $term->tid);
+    } else {
+      $output = views_embed_view('last_promoted', 'block', $term->tid);
+    }
+  }
+  return $output;
+}
+
+/**
+ * Gets Popular Content
+ */
+function nelb_menu_taxonomy_home_popular_content($term) {
+  $output = '';
+  if ( isset($term->field_most_popular_content[LANGUAGE_NONE][0]['value']) && $term->field_most_popular_content[LANGUAGE_NONE][0]
+  ['value'] == 1 ) {
+    $output = "<div id=\"popular-content\" class=\"block\">
+    <h2 class=\"block__title\">Lo Mas Visto</h2>
+    <div class=\"block__content\">\n";
+    if ( isset($term->field_videos_only[LANGUAGE_NONE][0]['value']) && $term->field_videos_only[LANGUAGE_NONE][0]['value'] == 1 ) {
+      $output .= views_embed_view('most_popular_content', 'block_1', $term->tid);
+    } else {
+      $output .= views_embed_view('most_popular_content', 'block', $term->tid);
+    }
+    $output .= "</div></div>\n";
+  }
+  return $output;
 }
 
 /**
@@ -67,23 +108,6 @@ function nelb_taxonomy_term_page($term) {
     //'term' => taxonomy_term_view($term, 'full'),
   );
   
-  return $build;
-
-  if ($nids = taxonomy_select_nodes($term->tid, TRUE, variable_get('default_nodes_main', 10))) {
-    $nodes = node_load_multiple($nids);
-    $build += node_view_multiple($nodes);
-    $build['pager'] = array(
-      '#theme' => 'pager',
-      '#weight' => 5,
-    );
-  }
-  else {
-    $build['no_content'] = array(
-      '#prefix' => '<p>',
-      '#markup' => t('There is currently no content classified with this term.'),
-      '#suffix' => '</p>',
-    );
-  }
   return $build;
 }
 

@@ -208,25 +208,48 @@ function nelb_pathauto_create_alias($module, $op, $source, $data, $type = NULL, 
 function nelb_pathauto_create_alias_article($pattern, $node) {
   // Search for a Category that has the flag active.
   $tids = array();
-  $term_found = null;
+  $terms_found = array();
   if ( isset($node->field_category[LANGUAGE_NONE][0]['tid']) ) {
     foreach($node->field_category[LANGUAGE_NONE] as $raw_term) {
       $tids[] = $raw_term['tid'];
     }
     $terms = taxonomy_term_load_multiple($tids);
     foreach($terms as $term) {
-      if ( isset($term->field_taxonomy_page[LANGUAGE_NONE][0]['value']) && $term->field_taxonomy_page[LANGUAGE_NONE][0]['value'] == 1 ) {
-        $term_found = $term;
-        break;
+      if ( isset($term->field_taxonomy_page[LANGUAGE_NONE][0]['value']) && $term->field_taxonomy_page[LANGUAGE_NONE][0]['value'] == 1 && isset($term->field_url_prefix[LANGUAGE_NONE][0]['value']) && !empty($term->field_url_prefix[LANGUAGE_NONE][0]['value']) ) {
+        $terms_found[$term->tid] = $term;
       }
     }
   }
   
   // Term found
-  if ( !is_null($term_found) && isset($term_found->field_url_prefix[LANGUAGE_NONE][0]['value'])) {
+  if ( !empty($terms_found) ) {
+    $count = count($terms_found);
+    $term_found = false;
+    if ( $count > 1 ) {
+      if ( isset($node->field_main_category[LANGUAGE_NONE][0]['value']) && !empty($node->field_main_category[LANGUAGE_NONE][0]['value']) ) {
+        $term_found = taxonomy_term_load($node->field_main_category[LANGUAGE_NONE][0]['value']);
+      } else {
+        // Look for TV
+        if ( isset($terms_found[14]) ) {
+          $term_found = $terms_found[14];
+        } // Look for Deportes 
+        else if ( isset($terms_found[154]) ) {
+          $term_found = $terms_found[154];
+        } // Look for Estilos
+        else if ( isset($terms_found[157]) ) {
+          $term_found = $terms_found[157];
+        }
+      }
+    }
+    
+    if ( !$term_found ) {
+      $term_found = array_shift($terms_found);
+    }
     $prefix = $term_found->field_url_prefix[LANGUAGE_NONE][0]['value'];
     $prefix = trim(strtolower($prefix));
     $prefix = preg_replace('/[^a-z0-9]+/', '', $prefix);
     return "{$prefix}/{$pattern}";
   }
+  
+  return $pattern;
 }

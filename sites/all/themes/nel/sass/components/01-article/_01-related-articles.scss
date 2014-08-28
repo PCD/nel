@@ -1,4 +1,9 @@
 #block-views-related-articles-block .block__content{
+  .view-content:after{
+    clear: both;
+    content: "";
+    display: table;
+  }
   .views-row{
     width: 300px;
     float: left;

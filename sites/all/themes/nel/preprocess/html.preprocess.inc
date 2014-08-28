@@ -32,15 +32,42 @@ function nel_preprocess_html_node(&$variables) {
   }
   if ( isset($node->field_category[LANGUAGE_NONE][0]['tid']) ) {
     // Look for any Category having Term Page.
+    $terms_found = array();
+    $terms_key = array();
     foreach($node->field_category[LANGUAGE_NONE] as $item) {
       if ( !($term = taxonomy_term_load($item['tid'])) ) {
         continue;
       }
       
+      $weight = 0;
       if ( isset($term->field_taxonomy_page[LANGUAGE_NONE][0]['value']) && $term->field_taxonomy_page[LANGUAGE_NONE][0]['value'] == 1 ) {
-        $variables['term_page'] = $term;
-        break;
+        $terms_found[$term->tid] = $term;
+        
+        // Look for TV
+        if ( $term->tid == 14 ) {
+          $weight = 0;
+        } // Look for Deportes
+        else if ( $term->tid == 154 ) {
+          $weight = 1;
+        } // Look for Estilos
+        else if ( $term->tid == 157 ) {
+          $weight = 2;
+        } // Look for Portada
+        else if ( $term->tid == 9 ) {
+          $weight = 9999;
+        } else {
+          $weight = 10;
+        }
+        $terms_key[$term->tid] = $weight;
       }
+    }
+    asort($terms_key);
+    
+    // There were Any Found?
+    if ( !empty($terms_found) ) {
+      reset($terms_key);
+      $selected = key($terms_key);
+      $variables['term_page'] = $terms_found[$selected];
     }
   }
 }
@@ -117,5 +144,27 @@ function nel_preprocess_html_apply_logo(&$variables) {
   $style .= "width: {$ancho}px !important;";
   $style .= "height: {$alto}px !important;";
   $style .= "}";
+  
+  // Check for Logo Retina
+  if ( isset($term->field_logotipo_retina[LANGUAGE_NONE][0]['uri']) ) {
+    $uri = $term->field_logotipo_retina[LANGUAGE_NONE][0]['uri'];
+    $image_path = image_style_url('logo', $uri);
+    $style .= "@media only screen and (-webkit-min-device-pixel-ratio: 2) {\n";
+    $style .= "a.site-logo{";
+    $style .= "background-image: url('{$image_path}') !important;";
+    $style .= "}";
+    $style .= "}";
+  }
+  
+  // Mobile Overrides
+  $mheight = 57;
+  $mwidth = intval($ancho / $alto * $mheight);
+  $style .= "@media only screen and (max-width: 748px) {
+    a.site-logo{
+      background-size: contain !important;
+      width: {$mwidth}px !important;
+      height: {$mheight}px !important;
+    }
+  }";
   drupal_add_css($style, array('type' => 'inline', 'media' => 'all', 'group' => CSS_THEME));
 }

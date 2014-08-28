@@ -50,6 +50,22 @@
     }
   };
   
+  Drupal.behaviors.nelSearch = {
+    attach: function (context, settings) {
+      $('#search-area a.cta').click(function(e){
+        if ( !$(this).parent().hasClass('open') ) {
+          $(this).parent().addClass('open');
+          $('#search-area .block--search-form .form-item-search-block-form input').focus();
+        }
+        (event.preventDefault) ? event.preventDefault() : event.returnValue = false;
+      });
+      
+      $('#search-area .block--search-form .form-item-search-block-form input').blur(function(){
+        $('#search-area').removeClass('open');
+      });
+    }
+  }
+  
   Drupal.behaviors.nelTopCarousel = {
     attach: function (context, settings) {
       $(window).resize(allResize);

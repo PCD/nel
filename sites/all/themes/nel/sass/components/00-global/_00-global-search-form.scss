@@ -1,3 +1,104 @@
-#block-search-form{
-  display: none;
+#search-area{
+  width: 57px;
+  height: 52px;
+  float: right;
+  position: relative;
+  a.cta{
+    margin-top: 13px;
+    float: right;
+    display: block;
+    width: 25px;
+    height: 25px;
+    background: url('../images/elements@2x.png') no-repeat -20px -544px;
+    background-size: 91px 1900px;
+    cursor: pointer;
+    text-indent: -9999px;
+  }
+}
+#search-area #block-search-form{
+  position: absolute;
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: opacity 0.2s ease-in-out;
+  -moz-transition: opacity 0.2s ease-in-out;
+  -ms-transition: opacity 0.2s ease-in-out;
+  -o-transition: opacity 0.2s ease-in-out;
+  transition: opacity 0.2s ease-in-out;
+  border-top: #122d3f solid 4px;
+  width: 342px;
+  height: 79px;
+  position: absolute;
+  top: 48px;
+  right: 0;
+  padding: 21px 20px 21px 21px;
+  background: white;
+  box-shadow: 0.9px 0.866px 5px 0 rgba(0, 0, 0, 0.3);
+  
+  z-index: 9999;
+  .container-inline:after{
+    clear: both;
+    content: "";
+    display: table;
+  }
+  .form-item-search-block-form{
+    width: 245px;
+    float: left;
+    input{
+      background: #FCFCFC;
+      border: 1px solid #f5f5f5;
+      -webkit-transition: border linear .2s, box-shadow linear .2s;
+      -moz-transition: border linear .2s, box-shadow linear .2s;
+      -o-transition: border linear .2s, box-shadow linear .2s;
+      transition: border linear .2s, box-shadow linear .2s;
+      padding: 4px 6px;
+      font-size: 14px;
+      line-height: 21px;
+      color: #555;
+      -webkit-border-radius: 0;
+      height: 33px;
+      font-family: 'PT Sans', sans-serif;
+    }
+  }
+  .form-actions{
+    width: 56px;
+    height: 34px;
+    float: right;
+    input.form-submit{
+      height: 33px;
+      border: none;
+      width: 62px;
+      font-family: 'Roboto Condensed', sans-serif;
+      font-size: 14px;
+    }
+  }
+}
+#search-area.open #block-search-form{
+  visibility: visible;
+  opacity: 1;
+}
+
+.site-blue{
+  #search-area #block-search-form{
+    border-top-color: $blue_bg_color;
+    .form-actions input.form-submit{
+      background: $blue_bg_color;
+    }
+  }
+  
+}
+.site-red{
+  #search-area #block-search-form{
+    border-top-color: $red_bg_color;
+    .form-actions input.form-submit{
+      background: $red_bg_color;
+    }
+  }
+}
+.site-purple{
+  #search-area #block-search-form{
+    border-top-color: $purple_bg_color;
+    .form-actions input.form-submit{
+      background: $purple_bg_color;
+    }
+  }
 }

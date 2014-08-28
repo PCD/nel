@@ -70,7 +70,7 @@ function nelb_menu_taxonomy_home_promoted_content($term) {
 }
 
 /**
- * Gets Popular Content
+ * Gets Popular Content.
  */
 function nelb_menu_taxonomy_home_popular_content($term) {
   $output = '';

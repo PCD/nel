@@ -11,6 +11,7 @@ a.site-logo{
   height: 100px;
   background: url(../logo.png) no-repeat;
   text-indent: -9999px;
+  float: left;
 }
 .navigation-wrapper.stuck{
 	position:fixed;
@@ -33,10 +34,19 @@ body.toolbar-drawer .navigation-wrapper.stuck{
     background: white;
   }
 }
+.l-region--header{
+  width: 566px;
+  float: right;
+}
 @media only screen and (-webkit-min-device-pixel-ratio: 2) {
   a.site-logo{
     background-image: url(../logo_retina.png);
     background-size: 300px 100px;
+  }
+}
+@media only screen and (max-width: $desktop_wide_width) {
+  .l-region--header{
+    padding-top: 20px;
   }
 }
 
@@ -45,11 +55,31 @@ body.toolbar-drawer .navigation-wrapper.stuck{
   body.toolbar .navigation-wrapper.stuck{
     margin-top: 0;
   }
+  .l-branding-wrapper .l-branding{
+    height: 99px;
+  }
+  a.site-logo{
+    height: 76px;
+    width: 248px;
+    background-size: contain;
+  }
+  .l-region--header{
+    text-align: right;
+    padding-top: 9px;
+    width: 478px;
+  }
 }
 @media only screen and (max-width: $tablet_width) {
   .l-branding-wrapper .l-branding{
     height: 57px;
     padding-top: 0;
     padding-left: 0;
+  }
+  .l-region--header{
+    display: none;
+  }
+  a.site-logo{
+    background-size: contain;
+    height: 57px;
   }
 }

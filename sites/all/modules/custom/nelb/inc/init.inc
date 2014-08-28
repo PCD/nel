@@ -22,6 +22,7 @@ function nelb_init() {
 
     case 'node/add/article':
       drupal_add_css(drupal_get_path('module', 'nelb') . '/css/nelb-categories.css');
+      drupal_add_js(drupal_get_path('module', 'nelb') . '/js/nelb-main-category.js');
       break;
   }
 }

@@ -1,0 +1,39 @@
+#popular-content, 
+#block-views-most-popular-content-block-2{
+  .view-content:after{
+    clear: both;
+    content: "";
+    display: table;
+  }
+  .views-row{
+    width: 190px;
+    float: left;
+    margin-right: 30px;
+  }
+  .views-row-3, 
+  .views-row-6, 
+  .views-row-9, 
+  .views-row-12, 
+  .views-row-15, 
+  .views-row-18, 
+  .views-row-21{
+    float: right;
+    margin-right: 0;
+  }
+  .views-row-1, 
+  .views-row-4, 
+  .views-row-7, 
+  .views-row-10, 
+  .views-row-13, 
+  .views-row-16, 
+  .views-row-19{
+    clear: left;  
+  }
+  h4{
+    margin: 0;
+  }
+  .date{
+    margin: 2px 0px 6px 0px;
+    min-height: 21px;
+  }
+}

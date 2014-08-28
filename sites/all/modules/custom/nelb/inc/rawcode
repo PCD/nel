@@ -1,0 +1,31 @@
+$terms = array();
+foreach($entity->field_category[LANGUAGE_NONE] as $i => $term) {
+  // Look for TV
+  if ( $term['tid'] == 14 ) {
+    $weight = 0;
+  } // Look for Deportes
+  else if ( $term['tid'] == 154 ) {
+    $weight = 1;
+  } // Look for Estilos
+  else if ( $term['tid'] == 157 ) {
+    $weight = 2;
+  } // Look for Portada
+  else if ( $term['tid'] == 9 ) {
+    $weight = 9999;
+  } else {
+    $weight = 10;
+  }
+  
+  $terms[$term['tid']] = $weight;
+}
+
+// Sort by Weight
+asort($terms);
+
+// Get First One
+reset($terms);
+$first_item = key($terms);
+
+// Assign
+$entity->field_main_category[LANGUAGE_NONE][0]['tid'] = $first_item;
+node_save($entity);

@@ -89,7 +89,7 @@ if ( isset($field_promoted_style[LANGUAGE_NONE][0]['value']) && isset($displays[
  * Display Suite 1 column template.
  */
 ?>
-<<?php print $ds_content_wrapper; print $layout_attributes; ?> class="ds-1col <?php print $classes;?> clearfix">
+<<?php print $ds_content_wrapper; print $layout_attributes; ?> class="ds-1col <?php print $classes;?> term-<?php print $tid;?> clearfix">
 
   <?php if (isset($title_suffix['contextual_links'])): ?>
   <?php print render($title_suffix['contextual_links']); ?>

@@ -1,4 +1,5 @@
-.site-blue{
+.site-blue,
+.block-site-blue{
   .group-by .category ul li a,
   h2.block__title{
     background: $blue_bg_color;
@@ -21,7 +22,8 @@
     border-bottom-color: $blue_bg_color;
   }
 }
-.site-red{
+.site-red,
+.block-site-red{
   .group-by .category ul li a, 
   h2.block__title{
     background: $red_bg_color;
@@ -45,7 +47,8 @@
   }
 }
 
-.site-purple{
+.site-purple,
+.block-site-purple{
   .group-by .category ul li a, 
   h2.block__title{
     background: $purple_bg_color;

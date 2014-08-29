@@ -124,7 +124,9 @@ function nelb_data_get_blocks_taxonomy($params) {
     field_promoted_size_value size, 
     field_promoted_style_value style, 
     field_promoted_style_one_column_value style_one_column, 
-    field_promoted_sidebar_style_value style_sidebar 
+    field_promoted_sidebar_style_value style_sidebar, 
+    field_taxonomy_page_value page, 
+    field_color_value color 
     
   FROM {taxonomy_term_data} td \n";
   
@@ -159,6 +161,12 @@ function nelb_data_get_blocks_taxonomy($params) {
   
   // Column: Left or Right
   $sql .= "LEFT JOIN {field_data_field_columna} c ON td.tid = c.entity_id ";
+  
+  // Active Page
+  $sql .= "LEFT JOIN {field_data_field_taxonomy_page} pg ON td.tid = pg.entity_id ";
+  
+  // Color
+  $sql .= "LEFT JOIN {field_data_field_color} cl ON td.tid = cl.entity_id ";
   
   $results = db_query($sql);
   $items = array();

@@ -1284,70 +1284,115 @@ h4 a {
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/nayaritenlinea\/html\/sites\/all\/themes\/nel\/sass\/components\/00-global\/_00-global-typography-00\.scss}line{font-family:\0000382}}
   h4 {
     font-size: 14px; } }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/nayaritenlinea\/html\/sites\/all\/themes\/nel\/sass\/components\/00-global\/_00-global-typography-01-colors\.scss}line{font-family:\000033}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/nayaritenlinea\/html\/sites\/all\/themes\/nel\/sass\/components\/00-global\/_00-global-typography-01-colors\.scss}line{font-family:\000034}}
 .site-blue .group-by .category ul li a,
-.site-blue h2.block__title {
+.site-blue h2.block__title,
+.block-site-blue .group-by .category ul li a,
+.block-site-blue h2.block__title {
   background: #4db2ec; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/nayaritenlinea\/html\/sites\/all\/themes\/nel\/sass\/components\/00-global\/_00-global-typography-01-colors\.scss}line{font-family:\0000312}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/nayaritenlinea\/html\/sites\/all\/themes\/nel\/sass\/components\/00-global\/_00-global-typography-01-colors\.scss}line{font-family:\0000313}}
 .site-blue .article-content,
 .site-blue .article-block,
 .site-blue .l-footer-main .block .block__content,
 .site-blue #block-block-7 .block__content,
 .site-blue #block-views-related-articles-block .block__content,
 .site-blue #popular-content .block__content,
-.site-blue #block-views-most-popular-content-block-2 .block__content {
+.site-blue #block-views-most-popular-content-block-2 .block__content,
+.block-site-blue .article-content,
+.block-site-blue .article-block,
+.block-site-blue .l-footer-main .block .block__content,
+.block-site-blue #block-block-7 .block__content,
+.block-site-blue #block-views-related-articles-block .block__content,
+.block-site-blue #popular-content .block__content,
+.block-site-blue #block-views-most-popular-content-block-2 .block__content {
   border-top-color: #4db2ec; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/nayaritenlinea\/html\/sites\/all\/themes\/nel\/sass\/components\/00-global\/_00-global-typography-01-colors\.scss}line{font-family:\0000320}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/nayaritenlinea\/html\/sites\/all\/themes\/nel\/sass\/components\/00-global\/_00-global-typography-01-colors\.scss}line{font-family:\0000321}}
 .site-blue #block-system-main-menu > ul.menu > li > a.active,
 .site-blue #block-system-main-menu > ul.menu > li > a:hover,
 .site-blue .menu-block-1 > ul.menu > li > a.active,
 .site-blue .menu-block-1 > ul.menu > li > a:hover,
 .site-blue .menu-block-2 > ul.menu > li > a.active,
-.site-blue .menu-block-2 > ul.menu > li > a:hover {
+.site-blue .menu-block-2 > ul.menu > li > a:hover,
+.block-site-blue #block-system-main-menu > ul.menu > li > a.active,
+.block-site-blue #block-system-main-menu > ul.menu > li > a:hover,
+.block-site-blue .menu-block-1 > ul.menu > li > a.active,
+.block-site-blue .menu-block-1 > ul.menu > li > a:hover,
+.block-site-blue .menu-block-2 > ul.menu > li > a.active,
+.block-site-blue .menu-block-2 > ul.menu > li > a:hover {
   border-bottom-color: #4db2ec; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/nayaritenlinea\/html\/sites\/all\/themes\/nel\/sass\/components\/00-global\/_00-global-typography-01-colors\.scss}line{font-family:\0000326}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/nayaritenlinea\/html\/sites\/all\/themes\/nel\/sass\/components\/00-global\/_00-global-typography-01-colors\.scss}line{font-family:\0000328}}
 .site-red .group-by .category ul li a,
-.site-red h2.block__title {
+.site-red h2.block__title,
+.block-site-red .group-by .category ul li a,
+.block-site-red h2.block__title {
   background: #9d0a0e; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/nayaritenlinea\/html\/sites\/all\/themes\/nel\/sass\/components\/00-global\/_00-global-typography-01-colors\.scss}line{font-family:\0000335}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/nayaritenlinea\/html\/sites\/all\/themes\/nel\/sass\/components\/00-global\/_00-global-typography-01-colors\.scss}line{font-family:\0000337}}
 .site-red .article-content,
 .site-red .article-block,
 .site-red .l-footer-main .block .block__content,
 .site-red #block-block-7 .block__content,
 .site-red #block-views-related-articles-block .block__content,
 .site-red #popular-content .block__content,
-.site-red #block-views-most-popular-content-block-2 .block__content {
+.site-red #block-views-most-popular-content-block-2 .block__content,
+.block-site-red .article-content,
+.block-site-red .article-block,
+.block-site-red .l-footer-main .block .block__content,
+.block-site-red #block-block-7 .block__content,
+.block-site-red #block-views-related-articles-block .block__content,
+.block-site-red #popular-content .block__content,
+.block-site-red #block-views-most-popular-content-block-2 .block__content {
   border-top-color: #9d0a0e; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/nayaritenlinea\/html\/sites\/all\/themes\/nel\/sass\/components\/00-global\/_00-global-typography-01-colors\.scss}line{font-family:\0000343}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/nayaritenlinea\/html\/sites\/all\/themes\/nel\/sass\/components\/00-global\/_00-global-typography-01-colors\.scss}line{font-family:\0000345}}
 .site-red #block-system-main-menu > ul.menu > li > a.active,
 .site-red #block-system-main-menu > ul.menu > li > a:hover,
 .site-red .menu-block-1 > ul.menu > li > a.active,
 .site-red .menu-block-1 > ul.menu > li > a:hover,
 .site-red .menu-block-2 > ul.menu > li > a.active,
-.site-red .menu-block-2 > ul.menu > li > a:hover {
+.site-red .menu-block-2 > ul.menu > li > a:hover,
+.block-site-red #block-system-main-menu > ul.menu > li > a.active,
+.block-site-red #block-system-main-menu > ul.menu > li > a:hover,
+.block-site-red .menu-block-1 > ul.menu > li > a.active,
+.block-site-red .menu-block-1 > ul.menu > li > a:hover,
+.block-site-red .menu-block-2 > ul.menu > li > a.active,
+.block-site-red .menu-block-2 > ul.menu > li > a:hover {
   border-bottom-color: #9d0a0e; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/nayaritenlinea\/html\/sites\/all\/themes\/nel\/sass\/components\/00-global\/_00-global-typography-01-colors\.scss}line{font-family:\0000350}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/nayaritenlinea\/html\/sites\/all\/themes\/nel\/sass\/components\/00-global\/_00-global-typography-01-colors\.scss}line{font-family:\0000353}}
 .site-purple .group-by .category ul li a,
-.site-purple h2.block__title {
+.site-purple h2.block__title,
+.block-site-purple .group-by .category ul li a,
+.block-site-purple h2.block__title {
   background: #8224e3; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/nayaritenlinea\/html\/sites\/all\/themes\/nel\/sass\/components\/00-global\/_00-global-typography-01-colors\.scss}line{font-family:\0000359}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/nayaritenlinea\/html\/sites\/all\/themes\/nel\/sass\/components\/00-global\/_00-global-typography-01-colors\.scss}line{font-family:\0000362}}
 .site-purple .article-content,
 .site-purple .article-block,
 .site-purple .l-footer-main .block .block__content,
 .site-purple #block-block-7 .block__content,
 .site-purple #block-views-related-articles-block .block__content,
 .site-purple #popular-content .block__content,
-.site-purple #block-views-most-popular-content-block-2 .block__content {
+.site-purple #block-views-most-popular-content-block-2 .block__content,
+.block-site-purple .article-content,
+.block-site-purple .article-block,
+.block-site-purple .l-footer-main .block .block__content,
+.block-site-purple #block-block-7 .block__content,
+.block-site-purple #block-views-related-articles-block .block__content,
+.block-site-purple #popular-content .block__content,
+.block-site-purple #block-views-most-popular-content-block-2 .block__content {
   border-top-color: #8224e3; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/nayaritenlinea\/html\/sites\/all\/themes\/nel\/sass\/components\/00-global\/_00-global-typography-01-colors\.scss}line{font-family:\0000367}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/nayaritenlinea\/html\/sites\/all\/themes\/nel\/sass\/components\/00-global\/_00-global-typography-01-colors\.scss}line{font-family:\0000370}}
 .site-purple #block-system-main-menu > ul.menu > li > a.active,
 .site-purple #block-system-main-menu > ul.menu > li > a:hover,
 .site-purple .menu-block-1 > ul.menu > li > a.active,
 .site-purple .menu-block-1 > ul.menu > li > a:hover,
 .site-purple .menu-block-2 > ul.menu > li > a.active,
-.site-purple .menu-block-2 > ul.menu > li > a:hover {
+.site-purple .menu-block-2 > ul.menu > li > a:hover,
+.block-site-purple #block-system-main-menu > ul.menu > li > a.active,
+.block-site-purple #block-system-main-menu > ul.menu > li > a:hover,
+.block-site-purple .menu-block-1 > ul.menu > li > a.active,
+.block-site-purple .menu-block-1 > ul.menu > li > a:hover,
+.block-site-purple .menu-block-2 > ul.menu > li > a.active,
+.block-site-purple .menu-block-2 > ul.menu > li > a:hover {
   border-bottom-color: #8224e3; }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/nayaritenlinea\/html\/sites\/all\/themes\/nel\/sass\/components\/01-article\/_01-article-detail\.scss}line{font-family:\000031}}
@@ -2721,4 +2766,35 @@ h4 a {
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/nayaritenlinea\/html\/sites\/all\/themes\/nel\/sass\/components\/05-taxonomy-page\/_05-taxonomy-front-page\.scss}line{font-family:\000033}}
 .term-front-page h1,
 .term-front-page .breadcrumb {
+  display: none; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/nayaritenlinea\/html\/sites\/all\/themes\/nel\/sass\/components\/06-search-results\/_06-search-results-form\.scss}line{font-family:\000033}}
+.page-search .l-content .search-form .form-type-textfield label {
+  display: none; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/nayaritenlinea\/html\/sites\/all\/themes\/nel\/sass\/components\/06-search-results\/_06-search-results-form\.scss}line{font-family:\000036}}
+.page-search .l-content .search-form .form-type-textfield input.form-text {
+  width: 568px;
+  height: 34px;
+  background: #FCFCFC;
+  border: 1px solid #F5F5F5;
+  color: #555555;
+  padding: 4px 6px;
+  font-family: 'PT Sans', sans-serif;
+  font-size: 14px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/nayaritenlinea\/html\/sites\/all\/themes\/nel\/sass\/components\/06-search-results\/_06-search-results-form\.scss}line{font-family:\0000317}}
+.page-search .l-content .search-form input.form-submit {
+  float: right;
+  text-shadow: none;
+  height: 34px;
+  border: none;
+  width: 62px;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: 14px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/nayaritenlinea\/html\/sites\/all\/themes\/nel\/sass\/components\/06-search-results\/_06-search-results-form\.scss}line{font-family:\0000326}}
+.page-search .l-content .search-form .container-inline:after {
+  clear: both;
+  content: "";
+  display: table; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/nayaritenlinea\/html\/sites\/all\/themes\/nel\/sass\/components\/06-search-results\/_06-search-results-form\.scss}line{font-family:\0000331}}
+.page-search .l-content .search-form .search-advanced {
   display: none; }

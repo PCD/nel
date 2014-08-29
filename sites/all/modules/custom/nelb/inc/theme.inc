@@ -82,6 +82,9 @@ function nelb_theme_blocks_type_item_taxonomy($item) {
   if ( !($display = nelb_data_taxonomy_display_get_by_id($item['style'])) ) {
     return '';
   }
+  if ( !empty($item['page']) && !empty($item['color'])) {
+    $item['class'] .= ' block-' . $item['color'];
+  }
   
   // Build Output
   $content = '';

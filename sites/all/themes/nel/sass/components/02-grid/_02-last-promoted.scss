@@ -1,0 +1,57 @@
+.view-last-promoted{
+  margin-bottom: 30px;
+  iframe{
+    width: 100%;
+  }
+}
+@media only screen and (max-width: $desktop_width) {
+  .view-last-promoted iframe{ height: 315px !important; }
+}
+@media only screen and (max-width: $tablet_width) {
+  .view-last-promoted iframe{ height: 474px !important; }
+}
+@media only screen and (max-width: $tablet_width_1_5) {
+  .view-last-promoted iframe{ height: 460px !important; }
+}
+@media only screen and (max-width: $tablet_width_2) {
+  .view-last-promoted iframe{ height: 444px !important; }
+}
+@media only screen and (max-width: $tablet_width_2_5) {
+  .view-last-promoted iframe{ height: 428px !important; }
+}
+@media only screen and (max-width: $tablet_width_3) {
+  .view-last-promoted iframe{ height: 412px !important; }
+}
+@media only screen and (max-width: $tablet_width_3_5) {
+  .view-last-promoted iframe{ height: 396px !important; }
+}
+@media only screen and (max-width: $tablet_width_4) {
+  .view-last-promoted iframe{ height: 380px !important; }
+}
+@media only screen and (max-width: $tablet_width_4_5) {
+  .view-last-promoted iframe{ height: 365px !important; }
+}
+@media only screen and (max-width: $tablet_width_5) {
+  .view-last-promoted iframe{ height: 349px !important; }
+}
+@media only screen and (max-width: $tablet_width_5_5) {
+  .view-last-promoted iframe{ height: 333px !important; }
+}
+@media only screen and (max-width: $tablet_width_6) {
+  .view-last-promoted iframe{ height: 317px !important; }
+}
+@media only screen and (max-width: $tablet_width_6_5) {
+  .view-last-promoted iframe{ height: 301px !important; }
+}
+@media only screen and (max-width: $tablet_width_7) {
+  .view-last-promoted iframe{ height: 285px !important; }
+}
+@media only screen and (max-width: $tablet_width_7_5) {
+  .view-last-promoted iframe{ height: 269px !important; }
+}
+@media only screen and (max-width: $tablet_width_8) {
+  .view-last-promoted iframe{ height: 253px !important; }
+}
+@media only screen and (max-width: $tablet_width_8_5) {
+  .view-last-promoted iframe{ height: 238px !important; }
+}

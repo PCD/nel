@@ -139,10 +139,10 @@ function nel_preprocess_html_apply_logo(&$variables) {
   
   $image_path = image_style_url('logo', $uri);
   $style = "a.site-logo{";
-  $style .= "background-image: url('{$image_path}') !important;";
-  $style .= "background-size: {$ancho}px {$alto}px !important;";
-  $style .= "width: {$ancho}px !important;";
-  $style .= "height: {$alto}px !important;";
+  $style .= "background-image: url('{$image_path}');";
+  $style .= "background-size: {$ancho}px {$alto}px;";
+  $style .= "width: {$ancho}px;";
+  $style .= "height: {$alto}px;";
   $style .= "}";
   
   // Check for Logo Retina
@@ -151,19 +151,29 @@ function nel_preprocess_html_apply_logo(&$variables) {
     $image_path = image_style_url('logo', $uri);
     $style .= "@media only screen and (-webkit-min-device-pixel-ratio: 2) {\n";
     $style .= "a.site-logo{";
-    $style .= "background-image: url('{$image_path}') !important;";
+    $style .= "background-image: url('{$image_path}');";
     $style .= "}";
     $style .= "}";
   }
+  
+  // Tablet Overrides
+  $mheight = 79;
+  $mwidth = intval($ancho / $alto * $mheight);
+  $style .= "@media only screen and (max-width: 996px) {
+    a.site-logo{
+      background-size: contain !important;
+      width: {$mwidth}px;
+      height: {$mheight}px;
+    }
+  }";
   
   // Mobile Overrides
   $mheight = 57;
   $mwidth = intval($ancho / $alto * $mheight);
   $style .= "@media only screen and (max-width: 748px) {
     a.site-logo{
-      background-size: contain !important;
-      width: {$mwidth}px !important;
-      height: {$mheight}px !important;
+      width: {$mwidth}px;
+      height: {$mheight}px;
     }
   }";
   drupal_add_css($style, array('type' => 'inline', 'media' => 'all', 'group' => CSS_THEME));

@@ -123,6 +123,12 @@ function nelb_wp_import_parse_file_line_author($line) {
   if ( preg_match('/<wp:author_id>(.*?)<\/wp:author_id>/msi', $line, $match) ) {
     $author['id'] = $match[1];
   }
+  
+  // Look for existing.
+  if ( nelb_wp_import_data_author_save_search_id($author['id']) ) {
+    return;
+  }
+  
   // Get Author Login
   if ( preg_match('/<wp:author_login>(.*?)<\/wp:author_login>/msi', $line, $match) ) {
     $author['login'] = $match[1];
@@ -161,6 +167,11 @@ function nelb_wp_import_parse_file_line_category($line) {
   // Get Tag id
   if ( preg_match('/<wp:term_id>(.*?)<\/wp:term_id>/msi', $line, $match) ) {
     $category['id'] = intval($match[1]);
+  }
+  
+  // Look for existing.
+  if ( nelb_wp_import_data_category_save_search_id($category['id']) ) {
+    return;
   }
   
   // Get Tag Name

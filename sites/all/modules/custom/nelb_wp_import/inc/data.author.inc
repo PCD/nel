@@ -3,11 +3,6 @@
  * Saves an author.
  */
 function nelb_wp_import_data_author_save($author) {
-  // Look for existing.
-  if ( nelb_wp_import_data_author_save_search_id($author['id']) ) {
-    return;
-  }
-  
   // Register One
   echo "New Author {$author['email']} Registered+\n";
   $term = new stdClass();

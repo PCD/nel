@@ -3,11 +3,6 @@
  * Saves an author.
  */
 function nelb_wp_import_data_category_save($category) {
-  // Look for existing.
-  if ( nelb_wp_import_data_category_save_search_id($category['id']) ) {
-    return;
-  }
-  
   // Register One
   echo "New Category {$category['name']} Registered+\n";
   $term = new stdClass();

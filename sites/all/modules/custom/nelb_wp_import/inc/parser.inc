@@ -406,11 +406,9 @@ function nelb_wp_import_parse_file_line_item_post($line) {
   
           // To Analyze
           case '_thumbnail_id':  
-            if ( $item['status'] != 'draft' ) {
-              print_r($item);
-              print $meta['value'] . "\n\n";
-              exit;
-            }
+            print_r($item);
+            print $meta['value'] . "\n\n";
+            exit;
             break;
   
           default:

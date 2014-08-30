@@ -313,7 +313,6 @@ function nelb_wp_import_parse_file_line_item_attachment($line) {
 
           default:
             print "Unidentified Key:\n{$meta['key']} and {$meta['value']}\n\n";
-            exit;
             break;
         }
       }

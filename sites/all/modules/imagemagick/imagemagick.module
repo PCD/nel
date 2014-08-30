@@ -402,7 +402,6 @@ function _imagemagick_convert($source, $destination, $args) {
   // gm convert [options] input output
   // @see http://www.graphicsmagick.org/GraphicsMagick.html
   if (variable_get('imagemagick_gm', 0)) {
-    array_unshift($args, 'convert');
     $args[] = escapeshellarg($source);
     $args[] = escapeshellarg($destination_format);
   }

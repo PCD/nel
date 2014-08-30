@@ -386,7 +386,7 @@ function nelb_wp_import_parse_file_line_item_post($line) {
       }
       $meta['value'] = nelb_wp_import_remove_cdata($meta_match[1]);
       if ( !empty($meta['value'])) {
-        $item['meta'][] = $meta;
+        //$item['meta'][] = $meta;
         
         // Process Meta
         switch($meta['key']) {
@@ -406,9 +406,9 @@ function nelb_wp_import_parse_file_line_item_post($line) {
   
           // To Analyze
           case '_thumbnail_id':  
-            print_r($item);
-            print $meta['value'] . "\n\n";
-            exit;
+            $image = nelb_wp_import_file_search_id(trim($meta['value']));
+            $item['image'][] = $image;
+            print_r($item);exit;
             break;
   
           default:

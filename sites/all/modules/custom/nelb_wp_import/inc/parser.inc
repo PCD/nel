@@ -494,5 +494,5 @@ function nelb_wp_import_get_blog_source() {
 }
 
 function nelb_wp_import_debug() {
-  return false;
+  return true;
 }

@@ -363,12 +363,8 @@ function nelb_wp_import_parse_file_line_item_post($line) {
     }
   }
   
-  // Video
-  $item['video'] = array();
-  
   // Get Meta Tags
   if ( preg_match_all('/<wp:postmeta>(.*?)<\/wp:postmeta>/msi', $line, $matches) ) {
-    $item['meta'] = array();
     foreach($matches[1] as $meta_raw){
       $meta = array();
       
@@ -408,7 +404,6 @@ function nelb_wp_import_parse_file_line_item_post($line) {
           case '_thumbnail_id':  
             $image = nelb_wp_import_file_search_id(trim($meta['value']));
             $item['image'][] = $image;
-            print_r($item);exit;
             break;
   
           default:
@@ -419,7 +414,7 @@ function nelb_wp_import_parse_file_line_item_post($line) {
       }
     }
   }
-  //print_r($item);
+  print_r($item);
   //print_r($line);
   
 }

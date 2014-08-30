@@ -166,7 +166,9 @@ function nelb_wp_import_file_save_data($data, $destination = NULL, $replace = FI
 /**
  *
  */
-function nelb_wp_import_images_to_parent($params) {
-  print_r($params);
-  exit;
+function nelb_wp_import_images_to_parent(&$params) {
+  $more_images = nelb_wp_import_file_search_post_parent($params['id']);
+  if ( !empty($more_images) ) {
+    $params['image'] = array_merge($params['image'], $more_images);
+  }
 }

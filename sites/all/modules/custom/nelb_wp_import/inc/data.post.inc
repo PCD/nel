@@ -3,7 +3,6 @@
  * Import Post.
  */
 function nelb_wp_import_post($params) {
-  return;
   $node = new stdClass();
   $node->type = 'article';
   node_object_prepare($node);

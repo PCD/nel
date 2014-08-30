@@ -25,7 +25,6 @@ function nelb_wp_import_post($params) {
   foreach($params['category'] as $cat_name) {
     if ( !($term_db = nelb_wp_import_get_category_by_name($cat_name)) ) {
       echo "Couldn't find Term: {$cat_name}.\n\n";
-      exit;
     }
     $node->field_category[LANGUAGE_NONE][] = array('tid' => intval($term_db['tid']));
   }

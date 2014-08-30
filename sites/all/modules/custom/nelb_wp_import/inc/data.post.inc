@@ -23,9 +23,16 @@ function nelb_wp_import_post($params) {
   // Taxonomies
   $node->field_category[LANGUAGE_NONE] = array();
   foreach($params['category'] as $cat_name) {
+    switch($cat_name) {
+      case 'Sin categoría':
+      case 'Sin categoria':
+        continue;
+        break;
+    }
+    
     if ( !($term_db = nelb_wp_import_get_category_by_name($cat_name)) ) {
-      echo "Couldn't find Term: {$cat_name}.\n\n";
-      continue;
+      echo "Couldn't find Term: \"{$cat_name}\"\n\n";
+      exit;
     }
     $node->field_category[LANGUAGE_NONE][] = array('tid' => intval($term_db['tid']));
   }

@@ -127,9 +127,9 @@ function nelb_wp_import_parse_file_line_author($line) {
   }
   
   // Look for existing.
-  if ( nelb_wp_import_data_author_save_search_id($author['id']) ) {
+  /*if ( nelb_wp_import_data_author_save_search_id($author['id']) ) {
     return;
-  }
+  }*/
   
   // Get Author Login
   if ( preg_match('/<wp:author_login>(.*?)<\/wp:author_login>/msi', $line, $match) ) {
@@ -172,9 +172,9 @@ function nelb_wp_import_parse_file_line_category($line) {
   }
   
   // Look for existing.
-  if ( nelb_wp_import_data_category_save_search_id($category['id']) ) {
+  /*if ( nelb_wp_import_data_category_save_search_id($category['id']) ) {
     return;
-  }
+  }*/
   
   // Get Tag Name
   if ( preg_match('/<wp:cat_name>(.*?)<\/wp:cat_name>/msi', $line, $match) ) {

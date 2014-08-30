@@ -10,6 +10,7 @@ function nelb_wp_import_data_author_save($author) {
   $term->vid = 3;
   $term->field_author_id[LANGUAGE_NONE][0]['value'] = $author['id'];
   $term->field_author_email[LANGUAGE_NONE][0]['email'] = strtolower($author['email']);
+  $term->field_author_login[LANGUAGE_NONE][0]['value'] = $author['login'];
   taxonomy_term_save($term);
   return true;
 }

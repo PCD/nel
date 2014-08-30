@@ -18,7 +18,15 @@ function nelb_wp_import_post($params) {
   $node->body[LANGUAGE_NONE][0]['summary'] = text_summary($params['body']);
   $node->body[LANGUAGE_NONE][0]['format'] = 'full_html';
   $node->created = time();
-  $node->status = 1;
+  $status = array(
+    'publish' => 1, 
+    'draft' => 0, 
+  );
+  if ( !isset($status[$params['status']]) ) {
+    echo "Skipping this Node because it has Status = {$params['status']}\n";
+    return;
+  }
+  $node->status = $status[$params['status']];
   
   // Taxonomies
   $node->field_category[LANGUAGE_NONE] = array();

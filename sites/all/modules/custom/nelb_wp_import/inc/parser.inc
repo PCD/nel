@@ -121,15 +121,17 @@ function nelb_wp_import_parse_file_line($line) {
 function nelb_wp_import_parse_file_line_author($line) {
   $author = array();
   
+  $debug = nelb_wp_import_debug();
+  
   // Get Author id
   if ( preg_match('/<wp:author_id>(.*?)<\/wp:author_id>/msi', $line, $match) ) {
     $author['id'] = $match[1];
   }
   
   // Look for existing.
-  /*if ( nelb_wp_import_data_author_save_search_id($author['id']) ) {
+  if ( !$debug && nelb_wp_import_data_author_save_search_id($author['id']) ) {
     return;
-  }*/
+  }
   
   // Get Author Login
   if ( preg_match('/<wp:author_login>(.*?)<\/wp:author_login>/msi', $line, $match) ) {
@@ -152,7 +154,6 @@ function nelb_wp_import_parse_file_line_author($line) {
     $author['last_name'] = nelb_wp_import_remove_cdata($match[1]);
   }
   
-  $debug = nelb_wp_import_debug();
   if ( $debug ) {
     print_r($author);
   } else {
@@ -165,6 +166,7 @@ function nelb_wp_import_parse_file_line_category($line) {
   $category = array();
   
   $blog_source = nelb_wp_import_get_blog_source();
+  $debug = nelb_wp_import_debug();
   
   // Get Tag id
   if ( preg_match('/<wp:term_id>(.*?)<\/wp:term_id>/msi', $line, $match) ) {
@@ -172,9 +174,9 @@ function nelb_wp_import_parse_file_line_category($line) {
   }
   
   // Look for existing.
-  /*if ( nelb_wp_import_data_category_save_search_id($category['id']) ) {
+  if ( !$debug && nelb_wp_import_data_category_save_search_id($category['id']) ) {
     return;
-  }*/
+  }
   
   // Get Tag Name
   if ( preg_match('/<wp:cat_name>(.*?)<\/wp:cat_name>/msi', $line, $match) ) {

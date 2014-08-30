@@ -3,13 +3,18 @@
  * Look for Existing Files.
  */
 function nelb_wp_import_file_search_guid($guid) {
-  $sql = sprintf("SELECT source_id FROM {nelb_file} WHERE guid = '%s'", $guid);
+  $sql = sprintf("SELECT * FROM {nelb_file} WHERE guid = '%s'", $guid);
   $results = db_query($sql);
-  if ( ($row=$results->fetchAssoc())) {
-    //echo "Found, skipping file.\n";
-    return $row['source_id'];
-  }
-  return false;
+  return $results->fetchAssoc();
+}
+
+/**
+ * Get belonging fid from searching the source_id.
+ */
+function nelb_wp_import_file_search_id($id) {
+  $sql = sprintf("SELECT * FROM {nelb_file} WHERE source_id = %d", $id);
+  $results = db_query($sql);
+  return $results->fetchAssoc();
 }
 
 /**

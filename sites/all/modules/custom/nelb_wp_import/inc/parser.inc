@@ -192,8 +192,6 @@ function nelb_wp_import_parse_file_line_item_attachment($line) {
   if ( preg_match('/<guid[^>]*?>(.*?)<\/guid>/msi', $line, $match) ) {
     $guid = $match[1];
     if ( nelb_wp_import_file_search_guid($guid) ) {
-      $j = isset($j)?$j+1:1;
-      $j_t = number_format($j);
       return false;
     }
     
@@ -409,9 +407,9 @@ function nelb_wp_import_parse_file_line_item_post($line) {
           // To Analyze
           case '_thumbnail_id':  
             if ( $item['status'] != 'draft' ) {
-              //print_r($item);
-              //print $meta['value'] . "\n\n";
-              //exit;
+              print_r($item);
+              print $meta['value'] . "\n\n";
+              exit;
             }
             break;
   

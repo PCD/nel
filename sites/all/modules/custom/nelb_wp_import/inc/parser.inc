@@ -298,6 +298,7 @@ function nelb_wp_import_parse_file_line_item_attachment($line) {
           case '_edit_last':
           case '_wpz_original_thumb_url':
           case '_wp_attachment_is_custom_background':
+          case '_wp_attachment_context':
           case 'Views':
             break;
   

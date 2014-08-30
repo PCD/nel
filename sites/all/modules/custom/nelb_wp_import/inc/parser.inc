@@ -485,7 +485,7 @@ function nelb_wp_import_remove_cdata($string) {
 }
 
 function nelb_wp_import_get_blog_source() {
-  return 1;
+  return 2;
 }
 
 function nelb_wp_import_debug() {

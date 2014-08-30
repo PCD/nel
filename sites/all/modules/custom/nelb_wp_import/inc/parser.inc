@@ -51,6 +51,8 @@ function nelb_wp_import_parse_file() {
   }
 
   fclose($handle);
+  $msg = 'NEL Import Finished AT ' . date('H:m:s');
+  mail('cristian100@gmail.com', $msg, $msg);
 }
 
 /**

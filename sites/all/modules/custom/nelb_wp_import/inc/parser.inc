@@ -6,7 +6,21 @@ function nelb_wp_import_parse_file() {
   error_reporting(E_ALL);
   ini_set('display_errors', '1');
 
-  $file_name = 'deportes.wordpress.2014-08-29.xml';
+  $source_blog = nelb_wp_import_get_blog_source();
+  switch($source_blog) {
+    case 0:
+      $file_name = 'deportes.wordpress.2014-08-29.xml';
+      break;
+
+    case 1:
+      $file_name = 'estilos.wordpress.2014-08-29.xml';
+      break;
+
+    case 2:
+      $file_name = 'nayaritenlineamx.wordpress.2014-08-29.xml';
+      break;
+  }
+  
   echo "STARTING IMPORT OF FILE \"{$file_name}\"\n";
   $dumpsdir = dirname(dirname((__FILE__))) . '/dumps/';
   $filepath = $dumpsdir . $file_name;
@@ -68,6 +82,8 @@ function nelb_wp_import_parse_file_line($line) {
   static $i;
   $i = isset($i)?$i+1:1;
   
+  $debug = nelb_wp_import_debug();
+  
   // Identify Line
   $pattern_author = "/<wp:author>(.*?)<\/wp:author>/msi";
   $pattern_category = "/<wp:category>(.*?)<\/wp:category>/msi";
@@ -84,14 +100,14 @@ function nelb_wp_import_parse_file_line($line) {
     nelb_wp_import_parse_file_line_category($match[1]);
     return 1;
   } else // Test Tag
-  if ( preg_match($pattern_tag, $line, $match) ) {
+  if ( !$debug && preg_match($pattern_tag, $line, $match) ) {
     nelb_wp_import_parse_file_line_tag($match[1]);
     return 1;
   } else // Test Item
-  if ( preg_match($pattern_item, $line, $match) ) {
+  if ( !$debug && preg_match($pattern_item, $line, $match) ) {
     return 2;
   } else // Test Menu
-  if ( preg_match($pattern_menu, $line, $match) ) {
+  if ( !$debug && preg_match($pattern_menu, $line, $match) ) {
     // Ignore
     return 1;
   }
@@ -127,8 +143,13 @@ function nelb_wp_import_parse_file_line_author($line) {
     $author['last_name'] = nelb_wp_import_remove_cdata($match[1]);
   }
   
-  // Register Author
-  nelb_wp_import_data_author_save($author);
+  $debug = nelb_wp_import_debug();
+  if ( $debug ) {
+    print_r($author);
+  } else {
+    // Register Author
+    nelb_wp_import_data_author_save($author);
+  }
 }
 
 function nelb_wp_import_parse_file_line_category($line) {
@@ -143,8 +164,12 @@ function nelb_wp_import_parse_file_line_category($line) {
     $category['name'] = nelb_wp_import_remove_cdata($match[1]);
   }
   
-  // Register Category
-  nelb_wp_import_data_category_save($category);
+  if ( $debug ) {
+    print_r($category);
+  } else {
+    // Register Category
+    nelb_wp_import_data_category_save($category);
+  }
 }
 
 function nelb_wp_import_parse_file_line_tag($line) {
@@ -444,5 +469,9 @@ function nelb_wp_import_remove_cdata($string) {
 }
 
 function nelb_wp_import_get_blog_source() {
-  return 0;
+  return 1;
+}
+
+function nelb_wp_import_debug() {
+  return true;
 }

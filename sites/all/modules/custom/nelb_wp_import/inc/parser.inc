@@ -154,9 +154,12 @@ function nelb_wp_import_parse_file_line_author($line) {
 
 function nelb_wp_import_parse_file_line_category($line) {
   $category = array();
+  
+  $blog_source = nelb_wp_import_get_blog_source();
+  
   // Get Tag id
   if ( preg_match('/<wp:term_id>(.*?)<\/wp:term_id>/msi', $line, $match) ) {
-    $category['id'] = $match[1];
+    $category['id'] = intval($match[1]);
   }
   
   // Get Tag Name

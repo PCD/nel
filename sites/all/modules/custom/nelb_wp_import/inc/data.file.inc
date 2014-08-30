@@ -55,8 +55,8 @@ function nelb_wp_import_file($params) {
  *
  */
 function nelb_wp_import_file_mark_done($file, $params) {
-  $sql = "INSERT INTO {nelb_file} (source_id, source_blog, guid, fid) VALUES(%d, %d, '%s', %d)";
-  $sql = sprintf($sql, $params['id'], $params['source_blog'], $params['guid'], $file['fid']);
+  $sql = "INSERT INTO {nelb_file} (source_id, post_parent, source_blog, guid, fid) VALUES(%d, %d, %d, '%s', %d)";
+  $sql = sprintf($sql, $params['id'], $params['post_parent'], $params['source_blog'], $params['guid'], $file['fid']);
   return db_query($sql);
 }
 

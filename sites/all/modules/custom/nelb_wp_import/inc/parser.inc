@@ -203,8 +203,13 @@ function nelb_wp_import_parse_file_line_item_attachment($line) {
     $item['id'] = $match[1];
   }
   
+  // Get Parent Post
+  if ( preg_match('/<wp:post_parent>(.*?)<\/wp:post_parent>/msi', $line, $match) ) {
+    $item['post_parent'] = $match[1];
+  }
+  
   // Source Blog
-  $blog_selected = 0;
+  $blog_selected = nelb_wp_import_get_blog_source();
   $blogs = array(
     0 => 'deportes', 
     1 => 'estilos', 
@@ -289,9 +294,21 @@ function nelb_wp_import_parse_file_line_item_post($line) {
     'author_show' => false, 
   );
   
+  $blog_selected = nelb_wp_import_get_blog_source();
+  $blogs = array(
+    0 => 'deportes', 
+    1 => 'estilos', 
+    2 => 'nayarit', 
+  );
+  $item['source_blog'] = $blog_selected;
+  
   // Get Post Id
   if ( preg_match('/<wp:post_id>(.*?)<\/wp:post_id>/msi', $line, $match) ) {
     $item['id'] = $match[1];
+  }
+  
+  if ( nelb_wp_search_post_by_id($item['id'], $item['source_blog']) ) {
+    return false;
   }
   
   // Get Post GUID
@@ -401,8 +418,8 @@ function nelb_wp_import_parse_file_line_item_post($line) {
             break;
   
           // To Analyze
-          case '_thumbnail_id':  
-            $image = nelb_wp_import_file_search_id(trim($meta['value']));
+          case '_thumbnail_id':
+            $image = nelb_wp_import_file_search_id(trim($meta['value']), $item['source_blog']);
             $item['image'][] = $image;
             break;
   
@@ -414,9 +431,9 @@ function nelb_wp_import_parse_file_line_item_post($line) {
       }
     }
   }
-  print_r($item);
-  //print_r($line);
   
+  // Import
+  nelb_wp_import_post($item);
 }
 
 function nelb_wp_import_remove_cdata($string) {
@@ -424,4 +441,8 @@ function nelb_wp_import_remove_cdata($string) {
     return $match[1];
   }
   return $string;
+}
+
+function nelb_wp_import_get_blog_source() {
+  return 0;
 }

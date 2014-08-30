@@ -2,6 +2,7 @@
 include_once('inc/data.author.inc');
 include_once('inc/data.category.inc');
 include_once('inc/data.file.inc');
+include_once('inc/data.post.inc');
 include_once('inc/data.tag.inc');
 include_once('inc/hook.inc');
 include_once('inc/menu.inc');

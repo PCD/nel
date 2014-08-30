@@ -9,10 +9,23 @@ function nelb_wp_import_file_search_guid($guid) {
 }
 
 /**
+ * Look for Existing Files by Post Parent.
+ */
+function nelb_wp_import_file_search_post_parent($post_parent) {
+  $sql = sprintf("SELECT * FROM {nelb_file} WHERE post_parent = %d", $post_parent);
+  $results = db_query($sql);
+  $files = array();
+  while(($file=$results->fetchAssoc())) {
+    $files[] = $file;
+  }
+  return $files;
+}
+
+/**
  * Get belonging fid from searching the source_id.
  */
-function nelb_wp_import_file_search_id($id) {
-  $sql = sprintf("SELECT * FROM {nelb_file} WHERE source_id = %d", $id);
+function nelb_wp_import_file_search_id($id, $blog_source) {
+  $sql = sprintf("SELECT * FROM {nelb_file} WHERE source_id = %d AND source_blog = %d", $id, $blog_source);
   $results = db_query($sql);
   return $results->fetchAssoc();
 }
@@ -148,4 +161,12 @@ function nelb_wp_import_file_save_data($data, $destination = NULL, $replace = FI
     return file_save($file);
   }
   return FALSE;
+}
+
+/**
+ *
+ */
+function nelb_wp_import_images_to_parent($params) {
+  print_r($params);
+  exit;
 }

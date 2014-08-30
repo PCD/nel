@@ -34,3 +34,13 @@ function nelb_wp_import_data_author_save_search_email($email) {
   $results = db_query($sql);
   return $results->fetchAssoc();
 }
+
+function nelb_wp_import_get_author_by_login($login) {
+  $sql = "SELECT td.tid, td.vid, td.name, cid.field_author_login_value login 
+  FROM taxonomy_term_data td  
+  INNER JOIN field_data_field_author_login cid ON cid.entity_id = td.tid 
+  WHERE cid.field_author_login_value = '%s' LIMIT 1";
+  $sql = sprintf($sql, $login);
+  $results = db_query($sql);
+  return $results->fetchAssoc();
+}

@@ -118,6 +118,7 @@ function nelb_wp_import_parse_file_line($line) {
 
 function nelb_wp_import_parse_file_line_author($line) {
   $author = array();
+  
   // Get Author id
   if ( preg_match('/<wp:author_id>(.*?)<\/wp:author_id>/msi', $line, $match) ) {
     $author['id'] = $match[1];
@@ -167,6 +168,7 @@ function nelb_wp_import_parse_file_line_category($line) {
     $category['name'] = nelb_wp_import_remove_cdata($match[1]);
   }
   
+  $debug = nelb_wp_import_debug();
   if ( $debug ) {
     print_r($category);
   } else {

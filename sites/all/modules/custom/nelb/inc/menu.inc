@@ -120,9 +120,9 @@ function nelb_taxonomy_term_page_generic($term) {
   
   // Content
   $build['term_heading'] = array(
-    '#prefix' => '<div class="term-listing-heading">',
-    '#suffix' => '</div>',
-    '#markup' =>  views_embed_view('taxonomy_page_articles', 'page_1', $term->tid), 
+    //'#prefix' => '<div class="term-listing-heading">',
+    //'#suffix' => '</div>',
+    '#markup' =>  views_embed_view('taxonomy_term', 'page', $term->tid), 
     //'term' => taxonomy_term_view($term, 'full'),
   );
   

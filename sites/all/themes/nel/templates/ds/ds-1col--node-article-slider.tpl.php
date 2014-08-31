@@ -26,6 +26,7 @@ if ( isset($field_video[0]['uri']) ) {
   $image_url = image_style_url('slider', $field_image[0]['uri']);
   $image_alt = $field_image[0]['alt'];
 }
+$fecha = format_date(strtotime($field_date[LANGUAGE_NONE][0]['value']), 'medium', '', null, 'es');
 
 /**
  * @file
@@ -53,9 +54,7 @@ if ( isset($field_video[0]['uri']) ) {
         </a>
       </div>
       <div class="date">
-        <span class="date-display-single" property="dc:date" datatype="xsd:dateTime" content="2013-12-17T03:34:58-07:00">
-          Dic 17, 2013
-        </span>
+        <span><?php print $fecha;?></span>
       </div>
     </div>
     <h3><a href="<?php print $node_url;?>">

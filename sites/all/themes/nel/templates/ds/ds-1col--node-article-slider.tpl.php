@@ -26,9 +26,8 @@ if ( isset($field_video[0]['uri']) ) {
   $image_url = image_style_url('slider', $field_image[0]['uri']);
   $image_alt = $field_image[0]['alt'];
 }
-print_r($field_date);
-exit;
-$fecha = format_date(strtotime($field_date[LANGUAGE_NONE][0]['value']), 'medium', '', null, 'es');
+$fecha = isset($field_date[LANGUAGE_NONE][0])?$field_date[LANGUAGE_NONE][0]:$field_date[0];
+$fecha = format_date(strtotime($fecha['value']), 'medium', '', null, 'es');
 
 /**
  * @file

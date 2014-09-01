@@ -69,7 +69,7 @@ function nelb_data_get_blocks_node_key($params) {
  * Get Node Blocks.
  */
 function nelb_data_get_blocks_node($params) {
-  static $cache;
+  /*static $cache;
 
   // Static Cache
   $key = nelb_data_get_blocks_node_key($params);
@@ -84,7 +84,7 @@ function nelb_data_get_blocks_node($params) {
     if ( $cache[$key]['expire'] > $now ) {
       return $cache[$key]['items'];
     }
-  }
+  }*/
   
   $sql = "SELECT 
     n.nid id, 
@@ -143,10 +143,10 @@ function nelb_data_get_blocks_node($params) {
     $items[] = $item;
   }
   
-  // Save to Cache
+  /*// Save to Cache
   $cache[$key]['items'] = $items;
   $cache[$key]['expire'] = strtotime('+55 minutes');
-  variable_set($key, serialize($cache[$key]));
+  variable_set($key, serialize($cache[$key]));*/
   
   return $items;
 }
@@ -201,7 +201,7 @@ function nelb_data_get_blocks_taxonomy_key($params) {
  * Get Taxonomy Blocks.
  */
 function nelb_data_get_blocks_taxonomy($params) {
-  static $cache;
+  /*static $cache;
   
   // Static Cache
   $key = nelb_data_get_blocks_taxonomy_key($params);
@@ -216,7 +216,7 @@ function nelb_data_get_blocks_taxonomy($params) {
     if ( $cache[$key]['expire'] > $now ) {
       return $cache[$key]['items'];
     }
-  }
+  }*/
   
   $sql = "SELECT 
     td.tid id, 
@@ -291,9 +291,9 @@ function nelb_data_get_blocks_taxonomy($params) {
   }
   
   // Save to Cache
-  $cache[$key]['items'] = $items;
+  /*$cache[$key]['items'] = $items;
   $cache[$key]['expire'] = strtotime('+55 minutes');
-  variable_set($key, serialize($cache[$key]));
+  variable_set($key, serialize($cache[$key]));*/
   
   return $items;
 }

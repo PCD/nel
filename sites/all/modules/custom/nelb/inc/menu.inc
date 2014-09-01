@@ -9,6 +9,20 @@ function nelb_menu() {
     'access arguments' => array('access nelb pages'),
     'type' => MENU_CALLBACK, 
   );
+  // Ajax Block
+  $url = 'ajax/block';
+  $j = 2;
+  $page_arguments = array();
+  for($i=0; $i<5; $i++) {
+    $url .= '/%';
+    $page_arguments[] = ($i+$j);
+    $items[$url] = array(
+      'page callback' => 'nelb_menu_ajax_block', 
+      'page arguments' => $page_arguments, 
+      'access arguments' => array('access nelb pages'), 
+      'type' => MENU_CALLBACK, 
+    );
+  }
   return $items;
 }
 
@@ -159,4 +173,45 @@ function nelb_taxonomy_term_page_common($term) {
   drupal_add_html_head_link(array('rel' => 'canonical', 'href' => url($uri['path'], $uri['options'])), TRUE);
   // Set the non-aliased path as a default shortlink.
   drupal_add_html_head_link(array('rel' => 'shortlink', 'href' => url($uri['path'], array_merge($uri['options'], array('alias' => TRUE)))), TRUE);
+}
+
+/**
+ * Returns a Block for skipping ajax.
+ */
+function nelb_menu_ajax_block($type, $arg1, $arg2 = null, $arg3 = null, $arg4 = null, $arg5 = null) {
+  switch($type) {
+    case 'grid':
+      nelb_menu_ajax_block_grid($type, $arg1, $arg2, $arg3, $arg4, $arg5);
+      break;
+
+    case 'node':
+      
+      break;
+  }
+}
+
+/**
+ *
+ */
+function nelb_menu_ajax_block_grid($type, $arg1, $arg2, $arg3, $arg4) {
+  $params = array();
+  if ( $type == 'node' ) {
+    $params['term'] = false;
+  } else {
+    $params['node'] = false;
+  }
+  if ( !is_null($arg1) ) {
+    $params['promote_to'] = $arg1;
+  }
+  if ( !is_null($arg2) ) {
+    $params['place'] = $arg2;
+  }
+  if ( !is_null($arg3) ) {
+    $params['size'] = $arg3;
+  }
+  if ( !is_null($arg4) ) {
+    $params['column'] = $arg4;
+  }
+  $params['unique'] = true;
+  $response = nelb_data_get_blocks_node($params);
 }

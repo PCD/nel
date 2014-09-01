@@ -9,11 +9,22 @@ function nelb_data_get_blocks($params) {
   $params['pid'] = isset($params['pid'])?$params['pid']:0;
   
   // Get Node Blocks
-  $blocks = nelb_data_get_blocks_node($params);
+  $blocks = array();
+  if ( !isset($params['node']) || $params['node'] == true ) {
+    $items = nelb_data_get_blocks_node($params);
+    
+    // Get Rid of Dupps if Random active
+    if ( isset($params['random']) && $params['random'] == true ) {
+      $items = nelb_data_get_blocks_node_random($items);
+    }
+    $blocks = $items;
+  }
 
-    // Get Taxonomy Blocks
-  $taxonomy_blocks = nelb_data_get_blocks_taxonomy($params);
-  $blocks = array_merge($blocks, $taxonomy_blocks);
+  // Get Taxonomy Blocks
+  if ( !isset($params['term']) || $params['term'] == true ) {
+    $taxonomy_blocks = nelb_data_get_blocks_taxonomy($params);
+    $blocks = array_merge($blocks, $taxonomy_blocks);
+  }
   
   // Sort Them together.
   $blocks = nelb_data_get_blocks_sorted($blocks);
@@ -26,9 +37,55 @@ function nelb_data_get_blocks($params) {
 }
 
 /**
+ * Keys
+ */
+function nelb_data_get_blocks_node_key($params) {
+  // Promote
+  $key = "grid-nodes-promote[{$params['promote_to']}]";
+  
+  // Parent Term
+  $kpid = isset($params['pid'])&&intval($params['pid'])>0?intval($params['pid']):0;
+  $key .= "-pid[{$kpid}]";
+  
+  // Level
+  $klevel= isset($params['level'])&&!is_null($params['level'])?intval($params['level']):'null';
+  $key .= "-level[{$klevel}]";
+  
+  // Place
+  $key .= "-place[{$params['place']}]";
+  
+  // Size
+  $ksize = isset($params['size'])&&!is_null($params['size'])?intval($params['size']):'null';
+  $key .= "-size[{$ksize}]";
+  
+  // Column
+  $kcolumn = isset($params['column'])&&!is_null($params['column'])?$params['column']:'null';
+  $key .= "-column[{$kcolumn}]";
+  
+  return $key;
+}
+
+/**
  * Get Node Blocks.
  */
 function nelb_data_get_blocks_node($params) {
+  static $cache;
+
+  // Static Cache
+  $key = nelb_data_get_blocks_node_key($params);
+  if ( isset($cache[$key]) ) {
+    return $cache[$key]['items'];
+  }
+  
+  // DB Cache
+  if ( ($cache_var = variable_get($key, false)) ) {
+    $cache[$key] = unserialize($cache_var);
+    $now = time();
+    if ( $cache[$key]['expire'] > $now ) {
+      return $cache[$key]['items'];
+    }
+  }
+  
   $sql = "SELECT 
     n.nid id, 
     n.title, 
@@ -39,7 +96,7 @@ function nelb_data_get_blocks_node($params) {
 
   FROM {node} n \n";
   
-  // A que pagina se dirige el block: Homepage o Categoria
+  // Promote To: Homepage o Categoria
   $sql .= sprintf("INNER JOIN {field_data_field_promote_to} pt ON n.nid = pt.entity_id AND n.vid = pt.revision_id AND pt.field_promote_to_value = %d \n", $params['promote_to']);
   
   if ( isset($params['pid']) && $params['pid'] > 0 ) {
@@ -49,16 +106,28 @@ function nelb_data_get_blocks_node($params) {
   }
   
   // Level
-  $sql .= "INNER JOIN {field_data_field_promoted_level} l ON n.nid = l.entity_id AND n.vid = l.revision_id \n";
+  if ( isset($params['level']) && !is_null($params['level'])) {
+    $sql .= sprintf("INNER JOIN {field_data_field_promoted_level} l ON n.nid = l.entity_id AND n.vid = l.revision_id AND field_promoted_level_value = %d\n", $params['level']);
+  } else if ( !isset($params['unique']) ) {
+    $sql .= "INNER JOIN {field_data_field_promoted_level} l ON n.nid = l.entity_id AND n.vid = l.revision_id \n";
+  }
   
   // Place: Contenido Principal o Barra derecha
   $sql .= sprintf("INNER JOIN {field_data_field_promoted_place} pl ON n.nid = pl.entity_id AND n.vid = pl.revision_id AND pl.field_promoted_place_value = %d\n", $params['place']);
   
   // Size
-  $sql .= "LEFT JOIN {field_data_field_promoted_size} size ON n.nid = size.entity_id AND n.vid = size.revision_id \n";
+  if ( isset($params['size']) && !is_null($params['size']) ) {
+    $sql .= "INNER JOIN {field_data_field_promoted_size} size ON n.nid = size.entity_id AND n.vid = size.revision_id \n";
+  } else if ( !isset($params['unique']) ) {
+    $sql .= "LEFT JOIN {field_data_field_promoted_size} size ON n.nid = size.entity_id AND n.vid = size.revision_id \n";
+  }
   
   // Column
-  $sql .= sprintf("LEFT JOIN {field_data_field_columna} c ON n.nid = c.entity_id AND n.vid = c.revision_id \n");
+  if ( isset($params['column']) && !is_null($params['column']) ) {
+    $sql .= sprintf("INNER JOIN {field_data_field_columna} c ON n.nid = c.entity_id AND n.vid = c.revision_id AND field_columna_value = %d\n", $params['column']);
+  } else if ( !isset($params['unique']) ) {
+    $sql .= "LEFT JOIN {field_data_field_columna} c ON n.nid = c.entity_id AND n.vid = c.revision_id \n";
+  }
   
   // Show Title
   $sql .= "LEFT JOIN {field_data_field_show_title} t ON n.nid = t.entity_id AND n.vid = t.revision_id \n";
@@ -74,10 +143,10 @@ function nelb_data_get_blocks_node($params) {
     $items[] = $item;
   }
   
-  // Get Rid of Dupps if Random active
-  if ( isset($params['random']) && $params['random'] == true ) {
-    $items = nelb_data_get_blocks_node_random($items);
-  }
+  // Save to Cache
+  $cache[$key]['items'] = $items;
+  $cache[$key]['expire'] = strtotime('+55 minutes');
+  variable_set($key, serialize($cache[$key]));
   
   return $items;
 }
@@ -112,9 +181,43 @@ function nelb_data_get_blocks_node_random($items) {
 }
 
 /**
+ * Keys
+ */
+function nelb_data_get_blocks_taxonomy_key($params) {
+  // Promote
+  $key = "grid-terms-promote[{$params['promote_to']}]";
+  
+  // Parent Term
+  $kpid = isset($params['pid'])&&intval($params['pid'])>0?intval($params['pid']):0;
+  $key .= "-pid[{$kpid}]";
+    
+  // Place
+  $key .= "-place[{$params['place']}]";
+    
+  return $key;
+}
+
+/**
  * Get Taxonomy Blocks.
  */
 function nelb_data_get_blocks_taxonomy($params) {
+  static $cache;
+  
+  // Static Cache
+  $key = nelb_data_get_blocks_taxonomy_key($params);
+  if ( isset($cache[$key]) ) {
+    return $cache[$key];
+  }
+  
+  // DB Cache
+  if ( ($cache_var = variable_get($key, false)) ) {
+    $cache[$key] = unserialize($cache_var);
+    $now = time();
+    if ( $cache[$key]['expire'] > $now ) {
+      return $cache[$key]['items'];
+    }
+  }
+  
   $sql = "SELECT 
     td.tid id, 
     td.name title, 
@@ -186,6 +289,12 @@ function nelb_data_get_blocks_taxonomy($params) {
     unset($item['style_one_column']);
     $items[] = $item;
   }
+  
+  // Save to Cache
+  $cache[$key]['items'] = $items;
+  $cache[$key]['expire'] = strtotime('+55 minutes');
+  variable_set($key, serialize($cache[$key]));
+  
   return $items;
 }
 

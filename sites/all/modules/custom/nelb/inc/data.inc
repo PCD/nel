@@ -134,7 +134,18 @@ function nelb_data_get_blocks_node($params) {
   
   // Where
   $sql .= "WHERE n.type = 'block' AND n.status = 1";
+  
+  if ( isset($_GET['debug-query-term']) ) {
+    $start = microtime(true);
+  }
+  
   $results = db_query($sql);
+  
+  if ( isset($_GET['debug-query-term']) ) {
+    $start = microtime(true) - $start;
+    print "Node Query Spent: {$start}\n";
+    exit;
+  }
   
   $items = array();
   while(($item = $results->fetchAssoc())) {
@@ -271,7 +282,18 @@ function nelb_data_get_blocks_taxonomy($params) {
   // Color
   $sql .= "LEFT JOIN {field_data_field_color} cl ON td.tid = cl.entity_id ";
   
+  if ( isset($_GET['debug-query']) ) {
+    $start = microtime(true);
+  }
+  
   $results = db_query($sql);
+  
+  if ( isset($_GET['debug-query']) ) {
+    $start = microtime(true) - $start;
+    $start_t = number_format($start, 2);
+    print "Node Query Spent: {$start_t}\n";
+    exit;
+  }
   $items = array();
   while(($item = $results->fetchAssoc())) {
     $item['type'] = 'taxonomy';

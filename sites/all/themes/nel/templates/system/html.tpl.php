@@ -57,6 +57,9 @@
   <title><?php print $head_title; ?></title>
   <?php print $head; ?>
   <?php print $styles; ?>
+  <?php if ( drupal_is_front_page() ):?>
+  <link rel="alternate" type="application/rss+xml" title="nayaritenlinea.mx &raquo; Feed" href="<?php print url('feed', array('absolute' => true));?>"/>
+  <?php endif; ?>
   <?php print $scripts; ?>
 </head>
 <body<?php print $attributes;?>>

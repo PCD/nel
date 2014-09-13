@@ -75,7 +75,7 @@ function nelb_block_view_facebook_script() {
   var js, fjs = d.getElementsByTagName(s)[0];
   if (d.getElementById(id)) return;
   js = d.createElement(s); js.id = id;
-  js.src = \"//connect.facebook.net/es_LA/sdk.js#xfbml=1&appId=1394019554215259&version=v2.0\";
+  js.src = \"//connect.facebook.net/es_LA/sdk.js#xfbml=1&appId=633492456689077&version=v2.0\";
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>\n";
   return array(

@@ -139,7 +139,7 @@ function nelb_data_get_blocks_node($params) {
     $start = microtime(true);
   }
   
-  $results = db_query($sql);
+  $results = db_query($sql, array(), array('target' => 'slave'));
   
   if ( isset($_GET['debug-query-term']) ) {
     $start = microtime(true) - $start;
@@ -286,7 +286,7 @@ function nelb_data_get_blocks_taxonomy($params) {
     $start = microtime(true);
   }
   
-  $results = db_query($sql);
+  $results = db_query($sql, array(), array('target' => 'slave'));
   
   if ( isset($_GET['debug-query']) ) {
     $start = microtime(true) - $start;

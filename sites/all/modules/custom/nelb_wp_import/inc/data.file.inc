@@ -4,7 +4,7 @@
  */
 function nelb_wp_import_file_search_guid($guid) {
   $sql = sprintf("SELECT * FROM {nelb_file} WHERE guid = '%s'", $guid);
-  $results = db_query($sql);
+  $results = db_query($sql, array(), array('target' => 'slave'));
   return $results->fetchAssoc();
 }
 
@@ -13,7 +13,7 @@ function nelb_wp_import_file_search_guid($guid) {
  */
 function nelb_wp_import_file_search_post_parent($post_parent) {
   $sql = sprintf("SELECT * FROM {nelb_file} WHERE post_parent = %d", $post_parent);
-  $results = db_query($sql);
+  $results = db_query($sql, array(), array('target' => 'slave');
   $files = array();
   while(($file=$results->fetchAssoc())) {
     $files[] = $file;
@@ -26,7 +26,7 @@ function nelb_wp_import_file_search_post_parent($post_parent) {
  */
 function nelb_wp_import_file_search_id($id, $blog_source) {
   $sql = sprintf("SELECT * FROM {nelb_file} WHERE source_id = %d AND source_blog = %d", $id, $blog_source);
-  $results = db_query($sql);
+  $results = db_query($sql, array(), array('target' => 'slave'));
   return $results->fetchAssoc();
 }
 
@@ -57,7 +57,7 @@ function nelb_wp_import_file($params) {
 function nelb_wp_import_file_mark_done($file, $params) {
   $sql = "INSERT INTO {nelb_file} (source_id, post_parent, source_blog, guid, fid) VALUES(%d, %d, %d, '%s', %d)";
   $sql = sprintf($sql, $params['id'], $params['post_parent'], $params['source_blog'], $params['guid'], $file['fid']);
-  return db_query($sql);
+  return db_query($sql, array(), array('target' => 'default'));
 }
 
 /**

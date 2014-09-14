@@ -140,7 +140,7 @@ function nelb_wp_import_post($params) {
 function nelb_wp_search_post_by_guid($guid) {
   $sql = "SELECT * FROM {nelb_post} WHERE guid = '%s'";
   $sql = sprintf($sql, $guid);
-  $results = db_query($sql);
+  $results = db_query($sql, array(), array('target' => 'slave'));
   return $results->fetchAssoc();
 }
 
@@ -150,7 +150,7 @@ function nelb_wp_search_post_by_guid($guid) {
 function nelb_wp_search_post_by_id($id, $blog_source) {
   $sql = "SELECT * FROM {nelb_post} WHERE source_id = %d AND source_blog = %d";
   $sql = sprintf($sql, $id, $blog_source);
-  $results = db_query($sql);
+  $results = db_query($sql, array(), array('target' => 'slave'));
   return $results->fetchAssoc();
 }
 
@@ -160,5 +160,5 @@ function nelb_wp_search_post_by_id($id, $blog_source) {
 function nelb_wp_import_post_mark_done($nid, $params) {
   $sql = "INSERT INTO {nelb_post} (source_id, source_blog, guid, nid) VALUES(%d, %d, '%s', %d)";
   $sql = sprintf($sql, $params['id'], $params['source_blog'], $params['guid'], $nid);
-  return db_query($sql);
+  return db_query($sql, array(), array('target' => 'default'));
 }

@@ -69,6 +69,11 @@ function cdn_basic_get_mapping() {
     // otherwise use the non-https mapping
     $mapping = variable_get(CDN_BASIC_MAPPING_VARIABLE, '');
   }
+  
+  global $cdn_override;
+  if ( isset($cdn_override) ) {
+    $mapping = $cdn_override;
+  }
 
   return $mapping;
 }

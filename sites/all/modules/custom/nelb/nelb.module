@@ -6,5 +6,6 @@ include_once('inc/init.inc');
 include_once('inc/menu.inc');
 include_once('inc/pathauto.inc');
 include_once('inc/permission.inc');
+include_once('inc/solr.inc');
 include_once('inc/static.inc');
 include_once('inc/theme.inc');

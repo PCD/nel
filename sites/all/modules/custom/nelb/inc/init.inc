@@ -8,6 +8,8 @@ function nelb_init() {
   // Special Cases
   if ( arg(0) == 'node' && arg(2) == 'edit' ) {
     $q = 'node/add/article';
+  } else if ( arg(0) == 'search' && arg(1) == 'site' ) {
+    $q = 'buscador';
   }
   
   // Switch
@@ -23,6 +25,11 @@ function nelb_init() {
     case 'node/add/article':
       drupal_add_css(drupal_get_path('module', 'nelb') . '/css/nelb-categories.css');
       drupal_add_js(drupal_get_path('module', 'nelb') . '/js/nelb-main-category.js');
+      break;
+
+    case 'buscador':
+      $keywords = arg(2);
+      drupal_set_title('Buscar: ' . arg(2));
       break;
   }
 }

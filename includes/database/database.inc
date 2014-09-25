@@ -2347,10 +2347,6 @@ function db_query($query, array $args = array(), array $options = array()) {
     $options['target'] = 'default';
   }
 
-  if ( isset($_SERVER['HTTP_HOST']) && $_SERVER['HTTP_HOST'] == 'edit.nayaritenlinea.mx' ) {
-    $options['target'] = 'default';
-  }
-
   return Database::getConnection($options['target'])->query($query, $args, $options);
 }
 
@@ -2383,10 +2379,6 @@ function db_query_range($query, $from, $count, array $args = array(), array $opt
     $options['target'] = 'default';
   }
 
-  if ( isset($_SERVER['HTTP_HOST']) && $_SERVER['HTTP_HOST'] == 'edit.nayaritenlinea.mx' ) {
-    $options['target'] = 'default';
-  }
-
   return Database::getConnection($options['target'])->queryRange($query, $from, $count, $args, $options);
 }
 
@@ -2414,10 +2406,6 @@ function db_query_range($query, $from, $count, array $args = array(), array $opt
  */
 function db_query_temporary($query, array $args = array(), array $options = array()) {
   if (empty($options['target'])) {
-    $options['target'] = 'default';
-  }
-
-  if ( isset($_SERVER['HTTP_HOST']) && $_SERVER['HTTP_HOST'] == 'edit.nayaritenlinea.mx' ) {
     $options['target'] = 'default';
   }
 
@@ -2530,10 +2518,6 @@ function db_truncate($table, array $options = array()) {
  */
 function db_select($table, $alias = NULL, array $options = array()) {
   if (empty($options['target'])) {
-    $options['target'] = 'default';
-  }
-
-  if ( isset($_SERVER['HTTP_HOST']) && $_SERVER['HTTP_HOST'] == 'edit.nayaritenlinea.mx' ) {
     $options['target'] = 'default';
   }
   return Database::getConnection($options['target'])->select($table, $alias, $options);
@@ -3056,3 +3040,4 @@ function db_ignore_slave() {
     $_SESSION['ignore_slave_server'] = REQUEST_TIME + $duration;
   }
 }
+

@@ -56,7 +56,6 @@
 <head>
   <title><?php print $head_title; ?></title>
   <meta property="fb:app_id" content="117628395001698"/>
-  <meta property="fb:admins" content="617330094"/>
   <?php print $head; ?>
   <?php print $styles; ?>
   <?php if ( drupal_is_front_page() ):?>

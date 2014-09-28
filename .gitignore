@@ -8,6 +8,7 @@ sites/default/exclude-list
 cache
 wp-content
 sites/*/files
+sites/*/files2
 sites/*/private
 sites/*/pvt
 sites/*/tmp

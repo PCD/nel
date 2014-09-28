@@ -55,14 +55,13 @@
 <?php endif; ?>
 <head>
   <title><?php print $head_title; ?></title>
+  <meta property="fb:app_id" content="117628395001698"/>
   <?php print $head; ?>
   <?php print $styles; ?>
   <?php if ( drupal_is_front_page() ):?>
   <link rel="alternate" type="application/rss+xml" title="nayaritenlinea.mx &raquo; Feed" href="<?php print url('feed', array('absolute' => true));?>"/>
   <?php endif; ?>
   <?php print $scripts; ?>
-  <meta property="fb:app_id" content="117628395001698"/>
-  <meta property="fb:admins" content=""/>
 </head>
 <body<?php print $attributes;?>>
   <a href="#main-content" class="element-invisible element-focusable"><?php print t('Skip to main content'); ?></a>

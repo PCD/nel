@@ -21,6 +21,9 @@ function nel_preprocess_html(&$variables) {
   
   // Apply Logo
   nel_preprocess_html_apply_logo($variables);
+  
+  // Facebook NameSpace
+  $variables['more'] = ' xmlns:fb="http://ogp.me/ns/fb#"';
 }
 
 /**

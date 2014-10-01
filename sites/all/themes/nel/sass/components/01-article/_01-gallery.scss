@@ -44,18 +44,24 @@
     opacity: 1.0;
   }
   
+  .field-slideshow-controls{
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+  }
   .carousel-prev,
   .carousel-next,
   .field-slideshow-wrapper .prev, 
   .field-slideshow-wrapper .next{
-    top: 31px;
+    top: -80px;
     left: 0px;
     position: absolute;
-    width: 28px;
-    height: 28px;
+    width: 48px;
+    height: 48px;
     background: url("../images/elements.png") no-repeat;
     opacity: 0.7;
-    background-position: -20px -1068px;
+    background-position: -20px -1058px;
     -webkit-transition: opacity 0.4s;
     -moz-transition: opacity 0.4s;
     -o-transition: opacity 0.4s;
@@ -64,7 +70,7 @@
   }
   .carousel-next, 
   .field-slideshow-wrapper .next{
-    background-position: -20px -1136px;
+    background-position: 0px -1126px;
     left: auto;
     right: 0px;
   }

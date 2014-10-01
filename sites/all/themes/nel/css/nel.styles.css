@@ -1536,7 +1536,7 @@ h4 a {
 .node--article--full .gallery .carousel-next,
 .node--article--full .gallery .field-slideshow-wrapper .prev,
 .node--article--full .gallery .field-slideshow-wrapper .next {
-  top: -70px;
+  top: 31px;
   left: 0px;
   position: absolute;
   width: 28px;
@@ -1565,7 +1565,7 @@ h4 a {
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/nayaritenlinea\/html\/sites\/all\/themes\/nel\/sass\/components\/01-article\/_01-gallery\.scss}line{font-family:\0000384}}
   .node--article--full .gallery .field-slideshow-wrapper .prev,
   .node--article--full .gallery .field-slideshow-wrapper .next {
-    top: 146px; }
+    top: -70px; }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/nayaritenlinea\/html\/sites\/all\/themes\/nel\/sass\/components\/01-article\/_01-gallery\.scss}line{font-family:\0000387}}
   .node--article--full .gallery .field-slideshow-wrapper .next {
     left: auto;

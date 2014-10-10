@@ -2,6 +2,7 @@
 sites/*/settings*.php
 htpasswd
 sites/default/exclude-list
+neldrupal
 
 # Ignore paths that contain user-generated content.
 .DS_Store

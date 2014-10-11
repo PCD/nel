@@ -10,7 +10,6 @@ foreach($ntitle as $i => $ntitle_line) {
     $wtitle .= "<span class=\"td-sbig-sep\">&nbsp;</span>\n";
   }
 }
-
 $image_url = $image_alt = '';
 if ( isset($field_video) ) {
   if ( isset($field_video[LANGUAGE_NONE]) ) {
@@ -27,6 +26,9 @@ if ( isset($field_video[0]['uri']) ) {
   $image_url = image_style_url('home_content_slider', $field_image[0]['uri']);
   $image_alt = $field_image[0]['alt'];
 }
+
+$fecha = isset($field_date[LANGUAGE_NONE][0])?$field_date[LANGUAGE_NONE][0]:$field_date[0];
+$fecha = format_date(strtotime($fecha['value']), 'medium', '', null, 'es');
 
 /**
  * @file
@@ -52,9 +54,7 @@ if ( isset($field_video[0]['uri']) ) {
         </a>
       </div>
       <div class="date">
-        <span class="date-display-single" property="dc:date" datatype="xsd:dateTime" content="2013-12-17T03:34:58-07:00">
-          Dic 17, 2013
-        </span>
+        <span><?php print $fecha;?></span>
       </div>
     </div>
     <h3><a href="<?php print $node_url;?>">

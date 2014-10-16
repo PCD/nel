@@ -1,3 +1,26 @@
+.short-url{
+  border-top: solid 1px #b2cddf;
+  border-bottom: solid 1px #b2cddf;
+  padding: 10px 0;
+  margin-bottom: 10px;
+  .label-inline{
+    display: inline-block;
+    color: #555;
+  }
+  #block-nelb-short-url{
+    display: inline-block;
+    a{
+      color: #1f9ee7;
+      text-decoration: none;
+    }
+    a:hover{
+      text-decoration: underline;
+    }
+    .contextual-links-wrapper{
+      display: none !important;
+    }
+  }
+}
 .group-by{
   font-size: 12px;
   color: #cbcbcb;

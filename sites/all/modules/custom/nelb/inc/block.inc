@@ -13,6 +13,9 @@ function nelb_block_info() {
   $blocks['facebook_comments'] = array(
     'info' => 'Facebook Comments', 
   );
+  $blocks['short_url'] = array(
+    'info' => 'URL Corta', 
+  );
   return $blocks;
 }
 
@@ -32,6 +35,14 @@ function nelb_block_view($delta = '') {
 
     case 'facebook_comments':
       $block = nelb_block_view_facebook_comments();
+      break;
+
+    case 'short_url':
+      if ( !(arg(0) == 'node' && intval(arg(1)) > 0 && is_null(arg(2)) && user_access('administer nodes')) ) {
+        return false;
+      }
+      $block['subject'] = '';
+      $block['content'] = '<a href="http://nayel.mx/node/' . arg(1) . '" target="_blank">http://nayel.mx/node/' . arg(1) . '</a>';
       break;
   }
   return $block;

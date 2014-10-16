@@ -122,6 +122,9 @@
     text-decoration: none;
   }
 }
+#cool-mobile-menu{
+  display: none;
+}
 
 @media only screen and (-webkit-min-device-pixel-ratio: 2) {
   #block-system-main-menu,
@@ -158,11 +161,107 @@
 }
 
 @media only screen and (max-width: $tablet_width) {
-  #block-system-main-menu{
+  .l-branding-wrapper.mobileMenuOn{
+    z-index: 9999;
     position: fixed;
     top: 0;
     bottom: 0;
     left: 0;
     right: 0;
+    overflow: scroll;
+    .menu-mobile .menu-open a{
+      border-bottom-color: white;
+    }
+    .l-branding{
+      height: auto;
+    }
+    #cool-mobile-menu{
+      display: block;
+      clear: both;
+    }
+  }
+  #cool-mobile-menu > ul{
+    display: block;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    > li{
+      display: block;
+      margin: 0;
+      padding: 0;
+      position: relative;
+      > a.link{
+        border-top: solid 1px #0083CF;
+        border-bottom: solid 1px #005F95;
+        color: #FFDF53;
+        text-decoration: none;
+        display: block;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        font-size: 1em;
+        height: 46px;
+        margin: 0 0 0 0;
+        padding: 14px 0 0 34px;
+        background: #006FA1;
+      }
+      > ul{
+        display: none;
+      }
+    }
+    > li.expanded{
+      > a.link{
+        margin-right: 67px;
+      }
+      > a.opener{
+        border-top: solid 1px #0083CF;
+        border-bottom: solid 1px #005F95;
+        float: right;
+        width: 67px;
+        height: 46px;
+        display: block;
+        background: #006FA1 url(../images/menu-drop-down.png) no-repeat right 0;
+        text-indent: -9999px;
+      }
+    }
+    li.active{
+      > ul{
+        display: block;
+      }
+      > a.opener{
+        background-position: right -47px;
+      }
+    }
+  }
+  #cool-mobile-menu > ul > li > ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    > li {
+      padding: 0;
+      margin: 0;
+      list-style: none;
+      > a{
+        color: white;
+        border-top: solid 1px #00A9FF;
+        border-bottom: solid 1px #007BBF;
+        text-shadow: 1px 1px 0px #006FA1;
+        padding: 14px 0 0 51px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        font-size: 1em;
+        height: 46px;
+        background: #0093D3 url(../images/menu-item-point.png) no-repeat 43px 21px;
+        text-decoration: none;
+        display: block;
+      }
+      > ul {
+        display: none;
+      }
+    }
+    > li.first a{
+      border-top: solid 1px #0083CF;
+    }
   }
 }

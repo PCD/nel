@@ -7,8 +7,21 @@
   Drupal.behaviors.nelMenuMobile = {
     attach: function (context, settings) {
       $(document).ready(function(){
+        $('.menu-open a').click(function(event){
+          $('.l-branding-wrapper').toggleClass('mobileMenuOn');
+          event.preventDefault();
+        });
+      
         menu = $('#block-system-main-menu').clone();
-        $(menu).attr('#cool-mobile-menu');
+        $(menu).attr('id', 'cool-mobile-menu');
+        $(menu).find('> ul > li > a').addClass('link');
+        $(menu).find('> ul > li.expanded').each(function(){
+          $(this).prepend('<a href="#" class="opener">Open</a>');
+          $(this).find('a.opener').click(function(event){
+            $(this).parent().toggleClass('active');
+            event.preventDefault();
+          });
+        });
         $(menu).appendTo('.l-branding');
       });
     }

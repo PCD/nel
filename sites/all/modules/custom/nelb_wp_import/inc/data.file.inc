@@ -13,7 +13,7 @@ function nelb_wp_import_file_search_guid($guid) {
  */
 function nelb_wp_import_file_search_post_parent($post_parent) {
   $sql = sprintf("SELECT * FROM {nelb_file} WHERE post_parent = %d", $post_parent);
-  $results = db_query($sql, array(), array('target' => 'slave');
+  $results = db_query($sql, array(), array('target' => 'slave'));
   $files = array();
   while(($file=$results->fetchAssoc())) {
     $files[] = $file;

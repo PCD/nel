@@ -3,7 +3,17 @@
    * Global Variables.
    */
   var waypoint_1_set = 0;
-
+  
+  Drupal.behaviors.nelMenuMobile = {
+    attach: function (context, settings) {
+      $(document).ready(function(){
+        menu = $('#block-system-main-menu').clone();
+        $(menu).attr('#cool-mobile-menu');
+        $(menu).appendTo('.l-branding');
+      });
+    }
+  };
+  
   /**
    * The recommended way for producing HTML markup through JavaScript is to write
    * theming functions. These are similiar to the theming functions that you might

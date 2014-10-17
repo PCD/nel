@@ -3095,3 +3095,7 @@ h4 a {
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/nayaritenlinea\/html\/sites\/all\/themes\/nel\/sass\/components\/06-search-results\/_06-search-results-form\.scss}line{font-family:\0000331}}
 .page-search .l-content .search-form .search-advanced {
   display: none; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/nayaritenlinea\/html\/sites\/all\/themes\/nel\/sass\/components\/07-home\/_front\.scss}line{font-family:\000032}}
+.front #block-views-slider-block {
+  margin-bottom: 40px; }

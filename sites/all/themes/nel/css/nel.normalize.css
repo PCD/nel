@@ -1,235 +1,69 @@
-/*$purple_bg_color: #FF007F;*/
-/*! normalize.css v3.0.0 | MIT License | git.io/normalize */
-/*! normalize.css v3.0.0 | HTML5 Display Definitions | MIT License | git.io/normalize */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Library\/Ruby\/Gems\/2\.0\.0\/gems\/compass-normalize-1\.5\/stylesheets\/normalize\/_html5\.scss}line{font-family:\0000320}}
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-main,
-nav,
-section,
-summary {
-  display: block; }
+/*
+Error: File to import not found or unreadable: toolkit/border-box.
+       Load paths:
+         /Users/cristian100/Sites/nayaritenlinea/html/sites/all/themes/nel/sass
+         Compass::SpriteImporter
+         /Users/cristian100/Sites/nayaritenlinea/html/sites/all/themes/nel/sass
+         /Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.1/stylesheets
+         /Library/Ruby/Gems/2.0.0/gems/compass-blend-modes-0.0.2/stylesheets
+         /Library/Ruby/Gems/2.0.0/gems/compass-normalize-1.5/stylesheets
+         /Library/Ruby/Gems/2.0.0/gems/susy-2.1.3/sass
+         /Library/Ruby/Gems/2.0.0/gems/compass-rgbapng-0.2.1/lib/stylesheets
+         /Library/Ruby/Gems/2.0.0/gems/toolkit-2.6.0/stylesheets
+         Sass::Globbing::Importer
+        on line 8 of /Users/cristian100/Sites/nayaritenlinea/html/sites/all/themes/nel/sass/nel.normalize.scss
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Library\/Ruby\/Gems\/2\.0\.0\/gems\/compass-normalize-1\.5\/stylesheets\/normalize\/_html5\.scss}line{font-family:\0000332}}
-audio,
-canvas,
-progress,
-video {
-  display: inline-block;
-  vertical-align: baseline; }
+3: 
+4: // Generate normalize.css.
+5: @import "normalize";
+6: 
+7: // Use 'border-box' for the box model.
+8: @import "toolkit/border-box";
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Library\/Ruby\/Gems\/2\.0\.0\/gems\/compass-normalize-1\.5\/stylesheets\/normalize\/_html5\.scss}line{font-family:\0000340}}
-audio:not([controls]) {
-  display: none;
-  height: 0; }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Library\/Ruby\/Gems\/2\.0\.0\/gems\/compass-normalize-1\.5\/stylesheets\/normalize\/_html5\.scss}line{font-family:\0000348}}
-[hidden],
-template {
-  display: none; }
-
-/*! normalize.css v3.0.0 | Base | MIT License | git.io/normalize */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Library\/Ruby\/Gems\/2\.0\.0\/gems\/compass-normalize-1\.5\/stylesheets\/normalize\/_base\.scss}line{font-family:\0000311}}
-html {
-  font-family: sans-serif;
-  -webkit-text-size-adjust: 100%;
-  -ms-text-size-adjust: 100%; }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Library\/Ruby\/Gems\/2\.0\.0\/gems\/compass-normalize-1\.5\/stylesheets\/normalize\/_base\.scss}line{font-family:\0000319}}
-body {
-  margin: 0; }
-
-/*! normalize.css v3.0.0 | Links | MIT License | git.io/normalize */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Library\/Ruby\/Gems\/2\.0\.0\/gems\/compass-normalize-1\.5\/stylesheets\/normalize\/_links\.scss}line{font-family:\000039}}
-a {
-  background: transparent; }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Library\/Ruby\/Gems\/2\.0\.0\/gems\/compass-normalize-1\.5\/stylesheets\/normalize\/_links\.scss}line{font-family:\0000316}}
-a:active,
-a:hover {
-  outline: 0; }
-
-/*! normalize.css v3.0.0 | Typography | MIT License | git.io/normalize */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Library\/Ruby\/Gems\/2\.0\.0\/gems\/compass-normalize-1\.5\/stylesheets\/normalize\/_typography\.scss}line{font-family:\000039}}
-abbr[title] {
-  border-bottom: 1px dotted; }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Library\/Ruby\/Gems\/2\.0\.0\/gems\/compass-normalize-1\.5\/stylesheets\/normalize\/_typography\.scss}line{font-family:\0000316}}
-b,
-strong {
-  font-weight: bold; }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Library\/Ruby\/Gems\/2\.0\.0\/gems\/compass-normalize-1\.5\/stylesheets\/normalize\/_typography\.scss}line{font-family:\0000322}}
-dfn {
-  font-style: italic; }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Library\/Ruby\/Gems\/2\.0\.0\/gems\/compass-normalize-1\.5\/stylesheets\/normalize\/_typography\.scss}line{font-family:\0000329}}
-h1 {
-  font-size: 2em;
-  margin: 0.67em 0; }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Library\/Ruby\/Gems\/2\.0\.0\/gems\/compass-normalize-1\.5\/stylesheets\/normalize\/_typography\.scss}line{font-family:\0000336}}
-mark {
-  background: #ff0;
-  color: #000; }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Library\/Ruby\/Gems\/2\.0\.0\/gems\/compass-normalize-1\.5\/stylesheets\/normalize\/_typography\.scss}line{font-family:\0000343}}
-small {
-  font-size: 80%; }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Library\/Ruby\/Gems\/2\.0\.0\/gems\/compass-normalize-1\.5\/stylesheets\/normalize\/_typography\.scss}line{font-family:\0000350}}
-sub,
-sup {
-  font-size: 75%;
-  line-height: 0;
-  position: relative;
-  vertical-align: baseline; }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Library\/Ruby\/Gems\/2\.0\.0\/gems\/compass-normalize-1\.5\/stylesheets\/normalize\/_typography\.scss}line{font-family:\0000357}}
-sup {
-  top: -0.5em; }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Library\/Ruby\/Gems\/2\.0\.0\/gems\/compass-normalize-1\.5\/stylesheets\/normalize\/_typography\.scss}line{font-family:\0000361}}
-sub {
-  bottom: -0.25em; }
-
-/*! normalize.css v3.0.0 | Embedded Content | MIT License | git.io/normalize */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Library\/Ruby\/Gems\/2\.0\.0\/gems\/compass-normalize-1\.5\/stylesheets\/normalize\/_embeds\.scss}line{font-family:\000039}}
-img {
-  border: 0; }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Library\/Ruby\/Gems\/2\.0\.0\/gems\/compass-normalize-1\.5\/stylesheets\/normalize\/_embeds\.scss}line{font-family:\0000315}}
-svg:not(:root) {
-  overflow: hidden; }
-
-/*! normalize.css v3.0.0 | Figures | MIT License | git.io/normalize */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Library\/Ruby\/Gems\/2\.0\.0\/gems\/compass-normalize-1\.5\/stylesheets\/normalize\/_groups\.scss}line{font-family:\000039}}
-figure {
-  margin: 1em 40px; }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Library\/Ruby\/Gems\/2\.0\.0\/gems\/compass-normalize-1\.5\/stylesheets\/normalize\/_groups\.scss}line{font-family:\0000315}}
-hr {
-  -moz-box-sizing: content-box;
-  box-sizing: content-box;
-  height: 0; }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Library\/Ruby\/Gems\/2\.0\.0\/gems\/compass-normalize-1\.5\/stylesheets\/normalize\/_groups\.scss}line{font-family:\0000323}}
-pre {
-  overflow: auto; }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Library\/Ruby\/Gems\/2\.0\.0\/gems\/compass-normalize-1\.5\/stylesheets\/normalize\/_groups\.scss}line{font-family:\0000332}}
-code,
-kbd,
-pre,
-samp {
-  font-family: monospace, monospace;
-  font-size: 1em; }
-
-/*! normalize.css v3.0.0 | Forms | MIT License | git.io/normalize */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Library\/Ruby\/Gems\/2\.0\.0\/gems\/compass-normalize-1\.5\/stylesheets\/normalize\/_forms\.scss}line{font-family:\0000319}}
-button,
-input,
-optgroup,
-select,
-textarea {
-  color: inherit;
-  font: inherit;
-  margin: 0; }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Library\/Ruby\/Gems\/2\.0\.0\/gems\/compass-normalize-1\.5\/stylesheets\/normalize\/_forms\.scss}line{font-family:\0000327}}
-button {
-  overflow: visible; }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Library\/Ruby\/Gems\/2\.0\.0\/gems\/compass-normalize-1\.5\/stylesheets\/normalize\/_forms\.scss}line{font-family:\0000337}}
-button,
-select {
-  text-transform: none; }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Library\/Ruby\/Gems\/2\.0\.0\/gems\/compass-normalize-1\.5\/stylesheets\/normalize\/_forms\.scss}line{font-family:\0000350}}
-button,
-html input[type="button"],
-input[type="reset"],
-input[type="submit"] {
-  -webkit-appearance: button;
-  cursor: pointer; }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Library\/Ruby\/Gems\/2\.0\.0\/gems\/compass-normalize-1\.5\/stylesheets\/normalize\/_forms\.scss}line{font-family:\0000358}}
-button[disabled],
-html input[disabled] {
-  cursor: default; }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Library\/Ruby\/Gems\/2\.0\.0\/gems\/compass-normalize-1\.5\/stylesheets\/normalize\/_forms\.scss}line{font-family:\0000365}}
-button::-moz-focus-inner,
-input::-moz-focus-inner {
-  border: 0;
-  padding: 0; }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Library\/Ruby\/Gems\/2\.0\.0\/gems\/compass-normalize-1\.5\/stylesheets\/normalize\/_forms\.scss}line{font-family:\0000373}}
-input {
-  line-height: normal; }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Library\/Ruby\/Gems\/2\.0\.0\/gems\/compass-normalize-1\.5\/stylesheets\/normalize\/_forms\.scss}line{font-family:\0000384}}
-input[type="checkbox"],
-input[type="radio"] {
-  box-sizing: border-box;
-  padding: 0; }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Library\/Ruby\/Gems\/2\.0\.0\/gems\/compass-normalize-1\.5\/stylesheets\/normalize\/_forms\.scss}line{font-family:\0000394}}
-input[type="number"]::-webkit-inner-spin-button,
-input[type="number"]::-webkit-outer-spin-button {
-  height: auto; }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Library\/Ruby\/Gems\/2\.0\.0\/gems\/compass-normalize-1\.5\/stylesheets\/normalize\/_forms\.scss}line{font-family:\00003102}}
-input[type="search"] {
-  -webkit-appearance: textfield;
-  -moz-box-sizing: content-box;
-  -webkit-box-sizing: content-box;
-  box-sizing: content-box; }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Library\/Ruby\/Gems\/2\.0\.0\/gems\/compass-normalize-1\.5\/stylesheets\/normalize\/_forms\.scss}line{font-family:\00003114}}
-input[type="search"]::-webkit-search-cancel-button,
-input[type="search"]::-webkit-search-decoration {
-  -webkit-appearance: none; }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Library\/Ruby\/Gems\/2\.0\.0\/gems\/compass-normalize-1\.5\/stylesheets\/normalize\/_forms\.scss}line{font-family:\00003120}}
-fieldset {
-  border: 1px solid #c0c0c0;
-  margin: 0 2px;
-  padding: 0.35em 0.625em 0.75em; }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Library\/Ruby\/Gems\/2\.0\.0\/gems\/compass-normalize-1\.5\/stylesheets\/normalize\/_forms\.scss}line{font-family:\00003129}}
-legend {
-  border: 0;
-  padding: 0; }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Library\/Ruby\/Gems\/2\.0\.0\/gems\/compass-normalize-1\.5\/stylesheets\/normalize\/_forms\.scss}line{font-family:\00003136}}
-textarea {
-  overflow: auto; }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Library\/Ruby\/Gems\/2\.0\.0\/gems\/compass-normalize-1\.5\/stylesheets\/normalize\/_forms\.scss}line{font-family:\00003143}}
-optgroup {
-  font-weight: bold; }
-
-/*! normalize.css v3.0.0 | Tables | MIT License | git.io/normalize */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Library\/Ruby\/Gems\/2\.0\.0\/gems\/compass-normalize-1\.5\/stylesheets\/normalize\/_tables\.scss}line{font-family:\000039}}
-table {
-  border-collapse: collapse;
-  border-spacing: 0; }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Library\/Ruby\/Gems\/2\.0\.0\/gems\/compass-normalize-1\.5\/stylesheets\/normalize\/_tables\.scss}line{font-family:\0000315}}
-td,
-th {
-  padding: 0; }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Library\/Ruby\/Gems\/2\.0\.0\/gems\/toolkit-1\.3\.8\/stylesheets\/toolkit\/_box-sizing\.scss}line{font-family:\0000336}}
-*, *:after, *:before {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  *behavior: url('../behaviors/box-sizing/boxsizing.php'); }
+Backtrace:
+/Users/cristian100/Sites/nayaritenlinea/html/sites/all/themes/nel/sass/nel.normalize.scss:8
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.4/lib/sass/tree/import_node.rb:66:in `rescue in import'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.4/lib/sass/tree/import_node.rb:45:in `import'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.4/lib/sass/tree/import_node.rb:28:in `imported_file'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.4/lib/sass/tree/import_node.rb:37:in `css_import?'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.4/lib/sass/tree/visitors/perform.rb:301:in `visit_import'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.4/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.4/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.4/lib/sass/stack.rb:79:in `block in with_base'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.4/lib/sass/stack.rb:115:in `with_frame'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.4/lib/sass/stack.rb:79:in `with_base'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.4/lib/sass/tree/visitors/perform.rb:158:in `visit'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.4/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.4/lib/sass/tree/visitors/base.rb:52:in `map'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.4/lib/sass/tree/visitors/base.rb:52:in `visit_children'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.4/lib/sass/tree/visitors/perform.rb:167:in `block in visit_children'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.4/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.4/lib/sass/tree/visitors/perform.rb:166:in `visit_children'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.4/lib/sass/tree/visitors/base.rb:36:in `block in visit'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.4/lib/sass/tree/visitors/perform.rb:186:in `visit_root'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.4/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.4/lib/sass/tree/visitors/perform.rb:157:in `visit'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.4/lib/sass/tree/visitors/perform.rb:8:in `visit'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.4/lib/sass/tree/root_node.rb:36:in `css_tree'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.4/lib/sass/tree/root_node.rb:20:in `render'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.4/lib/sass/engine.rb:268:in `render'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.4/lib/sass/plugin/compiler.rb:491:in `update_stylesheet'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.4/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.4/lib/sass/plugin/compiler.rb:209:in `each'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.4/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
+/Library/Ruby/Gems/2.0.0/gems/compass-1.0.1/lib/compass/sass_compiler.rb:40:in `compile!'
+/Library/Ruby/Gems/2.0.0/gems/compass-1.0.1/lib/compass/commands/update_project.rb:49:in `perform'
+/Library/Ruby/Gems/2.0.0/gems/compass-1.0.1/lib/compass/commands/base.rb:18:in `execute'
+/Library/Ruby/Gems/2.0.0/gems/compass-1.0.1/lib/compass/commands/project_base.rb:19:in `execute'
+/Library/Ruby/Gems/2.0.0/gems/compass-1.0.1/lib/compass/exec/sub_command_ui.rb:43:in `perform!'
+/Library/Ruby/Gems/2.0.0/gems/compass-1.0.1/lib/compass/exec/sub_command_ui.rb:15:in `run!'
+/Library/Ruby/Gems/2.0.0/gems/compass-1.0.1/bin/compass:30:in `block in <top (required)>'
+/Library/Ruby/Gems/2.0.0/gems/compass-1.0.1/bin/compass:44:in `call'
+/Library/Ruby/Gems/2.0.0/gems/compass-1.0.1/bin/compass:44:in `<top (required)>'
+/usr/bin/compass:23:in `load'
+/usr/bin/compass:23:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: File to import not found or unreadable: toolkit/border-box.\A        Load paths:\A          /Users/cristian100/Sites/nayaritenlinea/html/sites/all/themes/nel/sass\A          Compass::SpriteImporter\A          /Users/cristian100/Sites/nayaritenlinea/html/sites/all/themes/nel/sass\A          /Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.1/stylesheets\A          /Library/Ruby/Gems/2.0.0/gems/compass-blend-modes-0.0.2/stylesheets\A          /Library/Ruby/Gems/2.0.0/gems/compass-normalize-1.5/stylesheets\A          /Library/Ruby/Gems/2.0.0/gems/susy-2.1.3/sass\A          /Library/Ruby/Gems/2.0.0/gems/compass-rgbapng-0.2.1/lib/stylesheets\A          /Library/Ruby/Gems/2.0.0/gems/toolkit-2.6.0/stylesheets\A          Sass::Globbing::Importer\A         on line 8 of /Users/cristian100/Sites/nayaritenlinea/html/sites/all/themes/nel/sass/nel.normalize.scss\A \A 3: \A 4: // Generate normalize.css.\A 5: @import \"normalize\";\A 6: \A 7: // Use 'border-box' for the box model.\A 8: @import \"toolkit/border-box\";"; }

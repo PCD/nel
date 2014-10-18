@@ -691,6 +691,17 @@ body.cke_ltr {
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/nayaritenlinea\/html\/sites\/all\/themes\/nel\/sass\/components\/00-global\/_00-global-layout\.scss}line{font-family:\00003126}}
   .l-main {
     background: url(../images/little-bg.png) repeat-x; } }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/nayaritenlinea\/html\/sites\/all\/themes\/nel\/sass\/components\/00-global\/_00-global-links\.scss}line{font-family:\000034}}
+.node--article .body a,
+.node--article .body a:visited,
+.node--article .body a:focus {
+  color: #1f9ee7;
+  text-decoration: none; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/nayaritenlinea\/html\/sites\/all\/themes\/nel\/sass\/components\/00-global\/_00-global-links\.scss}line{font-family:\000038}}
+.node--article .body a:hover {
+  color: #1f9ee7;
+  text-decoration: underline; }
+
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/nayaritenlinea\/html\/sites\/all\/themes\/nel\/sass\/components\/00-global\/_00-global-mobile-menu\.scss}line{font-family:\000031}}
 .menu-mobile {
   display: none; }

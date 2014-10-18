@@ -3099,3 +3099,12 @@ h4 a {
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/nayaritenlinea\/html\/sites\/all\/themes\/nel\/sass\/components\/07-home\/_front\.scss}line{font-family:\000032}}
 .front #block-views-slider-block {
   margin-bottom: 40px; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/nayaritenlinea\/html\/sites\/all\/themes\/nel\/sass\/components\/07-home\/_front\.scss}line{font-family:\000036}}
+.type-row.type-node .node--block .body iframe {
+  width: 100% !important; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/nayaritenlinea\/html\/sites\/all\/themes\/nel\/sass\/components\/07-home\/_front\.scss}line{font-family:\0000310}}
+.video .media-vimeo-video iframe,
+.video .media-youtube-video iframe {
+  width: 100% !important; }

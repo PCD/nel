@@ -3,3 +3,10 @@
     margin-bottom: 40px;
   }
 }
+.type-row.type-node .node--block .body iframe{
+  width: 100% !important;
+}
+.video .media-vimeo-video iframe,
+.video .media-youtube-video iframe{
+  width: 100% !important;
+}

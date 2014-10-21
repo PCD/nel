@@ -22,11 +22,11 @@ function nelb_apachesolr_query_prepare($query) {
     // Add the new field as a sort option
     $query->setAvailableSort('ds_field_date', array(
       'title' => t('Article Date'),
-      'default' => 'asc',
+      'default' => 'desc',
     ));
  
     // Sort on our new field
-    $query->setSolrSort('ds_field_date', 'asc');
+    $query->setSolrSort('ds_field_date', 'desc');
 }
 
 /**

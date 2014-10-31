@@ -73,6 +73,21 @@
     background: url('../images/elements.png') no-repeat -20px -479px;
     content: "";
   }
+  > ul.menu > li > .back-to-nel{
+    text-indent: -9999px;
+    width: 175px;
+    position: relative;
+  }
+  > ul.menu > li > .back-to-nel:after{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 175px;
+    height: 48px;
+    display: block;
+    background: url('../images/back-to-nel.jpg') no-repeat;
+    content: "";
+  }
   > ul.menu > li > a.reporte:after{
     background-position: -20px -1632px;
   }

@@ -132,11 +132,18 @@ function nelb_taxonomy_term_page_generic($term) {
   // Common Logic
   nelb_taxonomy_term_page_common($term);
   
+  $markup = '';
+  // Add Author Header
+  if ( $term->vid == 3 ) {
+    $markup .= $taxonomy_term_view($term, 'author_header');
+  }
+  
   // Content
+  $markup .= views_embed_view('taxonomy_page_articles', 'block', $term->tid);
   $build['term_heading'] = array(
     //'#prefix' => '<div class="term-listing-heading">',
     //'#suffix' => '</div>',
-    '#markup' =>  views_embed_view('taxonomy_page_articles', 'block', $term->tid), 
+    '#markup' => $markup, 
     //'term' => taxonomy_term_view($term, 'full'),
   );
   

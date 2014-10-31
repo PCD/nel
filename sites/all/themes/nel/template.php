@@ -16,6 +16,7 @@ function nel_breadcrumb(&$vars) {
   }
   
   $breadcrumb = $vars['breadcrumb'];
+  nel_breadcrumb_article($breadcrumb);
   $count = count($breadcrumb);
   
    // Build output
@@ -34,4 +35,54 @@ function nel_breadcrumb(&$vars) {
 
   $output .= "</ul>\n";
   return $output;
+}
+
+function nel_breadcrumb_article(&$breadcrumb) {
+  if ( !(arg(0) == 'node' && intval(arg(1)) && is_null(arg(2)) && ($node=node_load(arg(1))) && $node->type == 'article') ) {
+    return false;
+  }
+  
+  // Category
+  if ( !(isset($node->field_category[LANGUAGE_NONE][0]['tid']) && !empty($node->field_category[LANGUAGE_NONE][0]['tid'])) ) {
+    return false;
+  }
+  
+  $tid = $node->field_category[LANGUAGE_NONE][0]['tid'];
+  $term = taxonomy_term_load($tid);
+  $array = array($term);
+  nel_get_breadcrumb_hierarchy($term->tid, $array);
+  $new_breadcrumb = array(
+    0 => l('Nayarit En Linea', '<front>'), 
+  );
+  foreach($array as $item) {
+    $new_breadcrumb[] = l($item->name, 'taxonomy/term/' . $item->tid);
+  }
+  $breadcrumb = $new_breadcrumb;
+}
+
+function nel_get_breadcrumb_hierarchy($tid, &$array) {
+  if ( ($parent_term = nel_get_parent_term($tid)) ) {
+    array_unshift($array, $parent_term);
+    nel_get_breadcrumb_hierarchy($parent_term->tid, $array);
+  }
+}
+
+function nel_get_parent_term($tid) {
+  static $parent;
+  if ( isset($parent[$tid]) ) {
+    return $parent[$tid];
+  }
+
+  $sql = "SELECT parent FROM {taxonomy_term_hierarchy} WHERE tid = %d";
+  $sql = sprintf($sql, $tid);
+  $result = db_query($sql);
+  if ( ($row=$result->fetchAssoc()) ) {
+    if ( ($term = taxonomy_term_load($row['parent'])) ) {
+      $parent[$tid] = $term;
+      return $term;
+    }
+  }
+  
+  $parent[$tid] = false;
+  return false;
 }

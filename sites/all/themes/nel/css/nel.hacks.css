@@ -1,9 +1,11 @@
 @media all and (max-width: 996px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/nayaritenlinea\/html\/sites\/all\/themes\/nel\/sass\/nel\.hacks\.scss}line{font-family:\000033}}
+  /* line 3, ../sass/nel.hacks.scss */
   #toolbar, #admin-menu {
     display: none; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/nayaritenlinea\/html\/sites\/all\/themes\/nel\/sass\/nel\.hacks\.scss}line{font-family:\000038}}
+  /* line 8, ../sass/nel.hacks.scss */
   html body.toolbar, html body.admin-menu {
     padding-top: 0 !important;
     margin-top: 0 !important; } }
+
+/*# sourceMappingURL=nel.hacks.css.map */

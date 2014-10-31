@@ -27,6 +27,7 @@ function socialcounts_block_view($delta = '') {
  * Retrieves Social Counts.
  */
 function socialcounts_block_view_counts() {
+  // Get Facebook
   
 }
 
@@ -35,6 +36,15 @@ function socialcounts_block_view_counts() {
  */
 function socialcounts_theme() {
   return array(
+    'socialcounts-plus' => array(
+      'template' => 'themes/socialcounts-plus', 
+    ), 
+    'socialcounts-twitter' => array(
+      'template' => 'themes/socialcounts-twitter', 
+    ), 
+    'socialcounts-facebook' => array(
+      'template' => 'themes/socialcounts-facebook', 
+    ), 
     'socialcounts-counts' => array(
       'arguments' => array(
         'social_likes' => NULL, 

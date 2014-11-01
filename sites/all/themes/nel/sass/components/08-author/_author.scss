@@ -1,0 +1,65 @@
+.page-taxonomy.section-author{
+  h1,
+  .breadcrumb{
+    display: none;
+  }
+}
+.taxonomy-term.view-mode-author_header{
+  border: solid 1px #D6D6D6;
+  padding: 4px;
+  position: relative;
+  min-height: 100px;
+  margin-bottom: 40px;
+
+  h1{
+    display: block;
+    font-size: 20px;
+    margin: 8px 0 0 0;
+  }
+  .body{
+    margin-top: 10px;
+    font-size: 14px;
+  }
+  .image{
+    width: 100px;
+    height: 100px;
+    float: left;
+  }
+  .social{
+    right: 8px;
+    position: absolute;
+    width: 146px;
+    height: 44px;
+    top: 50%;
+    margin-top: -22px;
+  }
+  .info{
+    margin-left: 119px;
+    margin-right: 161px;
+  }
+  .social:after{
+    clear: both;
+    content: "";
+    height: 0;
+    display: table;
+  }
+  .social-link{
+    width: 44px;
+    height: 44px;
+    display: block;
+    text-indent: -9999px;
+    margin-right: 7px;
+    cursor: pointer;
+    float: left;
+  }
+  .social-plus{
+    background: url(../images/nel-plus.png) no-repeat;
+  }
+  .social-twitter{
+    background: url(../images/nel-twitter.png) no-repeat;
+  }
+  .social-facebook{
+    margin-right: 0;
+    background: url(../images/nel-facebook.png) no-repeat;
+  }
+}

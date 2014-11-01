@@ -3112,4 +3112,68 @@ h4 a {
 .video .media-youtube-video iframe {
   width: 100% !important; }
 
+/* line 2, ../sass/components/08-author/_author.scss */
+.page-taxonomy.section-author h1,
+.page-taxonomy.section-author .breadcrumb {
+  display: none; }
+
+/* line 7, ../sass/components/08-author/_author.scss */
+.taxonomy-term.view-mode-author_header {
+  border: solid 1px #D6D6D6;
+  padding: 4px;
+  position: relative;
+  min-height: 100px;
+  margin-bottom: 40px; }
+  /* line 14, ../sass/components/08-author/_author.scss */
+  .taxonomy-term.view-mode-author_header h1 {
+    display: block;
+    font-size: 20px;
+    margin: 8px 0 0 0; }
+  /* line 19, ../sass/components/08-author/_author.scss */
+  .taxonomy-term.view-mode-author_header .body {
+    margin-top: 10px;
+    font-size: 14px; }
+  /* line 23, ../sass/components/08-author/_author.scss */
+  .taxonomy-term.view-mode-author_header .image {
+    width: 100px;
+    height: 100px;
+    float: left; }
+  /* line 28, ../sass/components/08-author/_author.scss */
+  .taxonomy-term.view-mode-author_header .social {
+    right: 8px;
+    position: absolute;
+    width: 146px;
+    height: 44px;
+    top: 50%;
+    margin-top: -22px; }
+  /* line 36, ../sass/components/08-author/_author.scss */
+  .taxonomy-term.view-mode-author_header .info {
+    margin-left: 119px;
+    margin-right: 161px; }
+  /* line 40, ../sass/components/08-author/_author.scss */
+  .taxonomy-term.view-mode-author_header .social:after {
+    clear: both;
+    content: "";
+    height: 0;
+    display: table; }
+  /* line 46, ../sass/components/08-author/_author.scss */
+  .taxonomy-term.view-mode-author_header .social-link {
+    width: 44px;
+    height: 44px;
+    display: block;
+    text-indent: -9999px;
+    margin-right: 7px;
+    cursor: pointer;
+    float: left; }
+  /* line 55, ../sass/components/08-author/_author.scss */
+  .taxonomy-term.view-mode-author_header .social-plus {
+    background: url(../images/nel-plus.png) no-repeat; }
+  /* line 58, ../sass/components/08-author/_author.scss */
+  .taxonomy-term.view-mode-author_header .social-twitter {
+    background: url(../images/nel-twitter.png) no-repeat; }
+  /* line 61, ../sass/components/08-author/_author.scss */
+  .taxonomy-term.view-mode-author_header .social-facebook {
+    margin-right: 0;
+    background: url(../images/nel-facebook.png) no-repeat; }
+
 /*# sourceMappingURL=nel.no-query.css.map */

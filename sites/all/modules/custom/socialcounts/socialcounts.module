@@ -17,6 +17,7 @@ function socialcounts_block_view($delta = '') {
   $block = array();
   switch($delta) {
     case 'counts':
+      drupal_add_js(drupal_get_path('module', 'socialcounts') . '/js/socialcounts.js');
       $block['content'] = socialcounts_block_view_counts();
       break;
   }
@@ -28,7 +29,18 @@ function socialcounts_block_view($delta = '') {
  */
 function socialcounts_block_view_counts() {
   // Get Facebook
+  $facebook = theme('socialcounts-facebook');
+  $twitter_json = socialcounts_get_twitter_counts();
+  $twitter = theme('socialcounts-twitter', array(
+    'count'=>(number_format($twitter_json->followers_count)), 
+  ));
+  $youtube = theme('socialcounts-youtube');
   
+  return theme('socialcounts-counts', array(
+    'facebook' => $facebook, 
+    'twitter' => $twitter, 
+    'youtube' => $youtube, 
+  ));
 }
 
 /**
@@ -36,10 +48,13 @@ function socialcounts_block_view_counts() {
  */
 function socialcounts_theme() {
   return array(
-    'socialcounts-plus' => array(
-      'template' => 'themes/socialcounts-plus', 
+    'socialcounts-youtube' => array(
+      'template' => 'themes/socialcounts-youtube', 
     ), 
     'socialcounts-twitter' => array(
+      'arguments' => array(
+        'count' => NULL, 
+      ), 
       'template' => 'themes/socialcounts-twitter', 
     ), 
     'socialcounts-facebook' => array(
@@ -47,11 +62,39 @@ function socialcounts_theme() {
     ), 
     'socialcounts-counts' => array(
       'arguments' => array(
-        'social_likes' => NULL, 
-        'twitter_followers' => NULL, 
-        'plus_subscribers' => NULL, 
+        'facebook' => NULL, 
+        'twitter' => NULL, 
+        'youtube' => NULL, 
       ), 
       'template' => 'themes/socialcounts-counts', 
     ), 
   );
+}
+
+function socialcounts_get_twitter_counts() {
+  $url = 'https://api.twitter.com/1.1/users/show.json';
+  $get = array('screen_name' => 'antoniotello');
+  $headers = array(
+    'Authorization: OAuth oauth_consumer_key="iJsuuXByymAsd9zIjQtwmzfFQ", oauth_nonce="ec2242a138b4887b94b7916644d269e5", oauth_signature="kIkXejERkgPxhc%2F9TyTCTz8vcwk%3D", oauth_signature_method="HMAC-SHA1", oauth_timestamp="1414859992", oauth_version="1.0"', 
+  );
+  return json_decode(socialcounts_curl_get($url, $get, $headers));
+}
+
+function socialcounts_curl_get($url, array $get = NULL, $headers, array $options = array())  {    
+  $defaults = array( 
+    CURLOPT_URL => $url. (strpos($url, '?') === FALSE ? '?' : ''). http_build_query($get), 
+    CURLOPT_HEADER => 0, 
+    CURLOPT_RETURNTRANSFER => TRUE, 
+    CURLOPT_TIMEOUT => 4, 
+    CURLOPT_HTTPHEADER => $headers, 
+  ); 
+  
+  $ch = curl_init(); 
+  curl_setopt_array($ch, ($options + $defaults)); 
+  if( ! $result = curl_exec($ch)) 
+  { 
+      trigger_error(curl_error($ch)); 
+  } 
+  curl_close($ch); 
+  return $result; 
 }

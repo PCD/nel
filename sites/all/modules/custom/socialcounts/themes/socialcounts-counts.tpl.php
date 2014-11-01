@@ -5,7 +5,7 @@
   <li class="twitter">
     <?php print $twitter;?>
   </li>
-  <li class="youtube">
+  <!-- <li class="youtube">
     <?php print $youtube;?>
-  </li>
+  </li>-->
 </ul>

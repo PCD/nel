@@ -1,12 +1,3 @@
-<a href="#" 
-   class="tweet" 
-   data-url="http://jsfiddle.net" 
-   data-via="JoelBesada" 
-   data-text="Some text to describe the link" 
-   data-related="js_fiddle"
-   data-hashtags="tag">        
-    
-       <span class="count">0</span>
-       <span class="message">Tweet</span>
-       
-</a>
+<a class="social-icon" href="https://twitter.com/intent/user?screen_name=antoniotello">Twitter</a>
+<a class="social-button" href="https://twitter.com/intent/user?screen_name=antoniotello">Seguir</a>
+<div class="social-stats"><span id="twitter_count"><?php print $count;?></span> Seguidores</div>

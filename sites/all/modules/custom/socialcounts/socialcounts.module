@@ -31,10 +31,15 @@ function socialcounts_block_view_counts() {
   // Get Facebook
   $facebook = theme('socialcounts-facebook');
   $twitter_json = socialcounts_get_twitter_counts();
-  $tcounts = intval($twitter_json->followers_count);
-  if ( intval($tcounts) == 0 ) {
+  if ( !isset($twitter_json->followers_count) ) {
     watchdog('socialcounts', $twitter_json);
     $tcounts = 20264;
+  } else {
+    $tcounts = intval($twitter_json->followers_count);
+    if ( intval($tcounts) == 0 ) {
+      watchdog('socialcounts', $twitter_json);
+      $tcounts = 20264;
+    }
   }
   $twitter = theme('socialcounts-twitter', array(
     'count'=>(number_format($tcounts)), 

@@ -31,8 +31,10 @@ function socialcounts_block_view_counts() {
   // Get Facebook
   $facebook = theme('socialcounts-facebook');
   $twitter_json = socialcounts_get_twitter_counts();
+  $tcounts = intval($twitter_json->followers_count);
+  $tcounts = intval($tcounts)>0?$tcounts:20264;
   $twitter = theme('socialcounts-twitter', array(
-    'count'=>(number_format($twitter_json->followers_count)), 
+    'count'=>(number_format($tcounts)), 
   ));
   $youtube = theme('socialcounts-youtube');
   

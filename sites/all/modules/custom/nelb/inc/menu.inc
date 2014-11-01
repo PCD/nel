@@ -135,7 +135,7 @@ function nelb_taxonomy_term_page_generic($term) {
   $markup = '';
   // Add Author Header
   if ( $term->vid == 3 ) {
-    $markup .= $taxonomy_term_view($term, 'author_header');
+    $markup .= taxonomy_term_view($term, 'author_header');
   }
   
   // Content

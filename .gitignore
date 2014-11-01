@@ -2,7 +2,6 @@
 sites/*/settings*.php
 htpasswd
 sites/default/exclude-list
-sites/all/modules/memcache
 neldrupal
 
 # Ignore paths that contain user-generated content.

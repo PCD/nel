@@ -3176,4 +3176,26 @@ h4 a {
     margin-right: 0;
     background: url(../images/nel-facebook.png) no-repeat; }
 
+@media only screen and (max-width: 748px) {
+  /* line 67, ../sass/components/08-author/_author.scss */
+  .taxonomy-term.view-mode-author_header {
+    min-height: 154px; }
+    /* line 70, ../sass/components/08-author/_author.scss */
+    .taxonomy-term.view-mode-author_header .info {
+      margin-left: 110px;
+      margin-right: 54px; }
+    /* line 74, ../sass/components/08-author/_author.scss */
+    .taxonomy-term.view-mode-author_header .social {
+      width: 44px;
+      height: 146px;
+      margin-top: -73px; }
+    /* line 79, ../sass/components/08-author/_author.scss */
+    .taxonomy-term.view-mode-author_header .social-link {
+      margin-right: 0;
+      margin-bottom: 7px;
+      float: none; }
+    /* line 84, ../sass/components/08-author/_author.scss */
+    .taxonomy-term.view-mode-author_header .social-facebook {
+      margin-bottom: 0; } }
+
 /*# sourceMappingURL=nel.styles.css.map */

@@ -63,3 +63,26 @@
     background: url(../images/nel-facebook.png) no-repeat;
   }
 }
+@media only screen and (max-width: $tablet_width) {
+  .taxonomy-term.view-mode-author_header{
+    min-height: 154px;
+
+    .info{
+      margin-left: 110px;
+      margin-right: 54px;
+    }
+    .social{
+      width: 44px;
+      height: 146px;
+      margin-top: -73px;
+    }
+    .social-link{
+      margin-right: 0;
+      margin-bottom: 7px;
+      float: none;
+    }
+    .social-facebook{
+      margin-bottom: 0;
+    }
+  }
+}

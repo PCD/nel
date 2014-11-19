@@ -120,5 +120,7 @@ function socialcounts_curl_get($url, array $get = NULL, $headers, array $options
  * Show views by current path.
  */
 function socialcounts_block_view_visits() {
-  return google_analytics_counter_display($_GET['q']);
+  $visits = intval(google_analytics_counter_display($_GET['q']));
+  $visits = number_format($visits);
+  return t('@visits vistis', array('@visits' => $visits));
 }

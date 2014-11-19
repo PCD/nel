@@ -7,6 +7,9 @@ function socialcounts_block_info() {
   $blocks['counts'] = array(
     'info' => t('Social Counts'), 
   );
+  $blocks['visits'] = array(
+    'info' => t('Page Visits'), 
+  );
   return $blocks;
 }
 
@@ -19,6 +22,10 @@ function socialcounts_block_view($delta = '') {
     case 'counts':
       drupal_add_js(drupal_get_path('module', 'socialcounts') . '/js/socialcounts.js');
       $block['content'] = socialcounts_block_view_counts();
+      break;
+
+    case 'visits':
+      $block['content'] = socialcounts_block_view_visits();
       break;
   }
   return $block;
@@ -107,4 +114,11 @@ function socialcounts_curl_get($url, array $get = NULL, $headers, array $options
   } 
   curl_close($ch); 
   return $result; 
+}
+
+/**
+ * Show views by current path.
+ */
+function socialcounts_block_view_visits() {
+  return google_analytics_counter_display($_GET['q']);
 }

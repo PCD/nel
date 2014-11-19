@@ -122,5 +122,9 @@ function socialcounts_curl_get($url, array $get = NULL, $headers, array $options
 function socialcounts_block_view_visits() {
   $visits = intval(google_analytics_counter_display($_GET['q']));
   $visits = number_format($visits);
+  if ( isset($_GET['visits_debug']) ) {
+    print_r($_GET['q']);
+    exit;
+  }
   return t('@visits vistis', array('@visits' => $visits));
 }

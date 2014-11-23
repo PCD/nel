@@ -1858,6 +1858,17 @@ h4 a {
 .social-links {
   margin-bottom: 10px; }
 
+/* line 2, ../sass/components/01-video/_01-video-channel.scss */
+.node--streaming.view-mode-full > .field-collection-container {
+  padding: 0;
+  border: none;
+  margin: 0; }
+  /* line 6, ../sass/components/01-video/_01-video-channel.scss */
+  .node--streaming.view-mode-full > .field-collection-container .field-collection-view {
+    margin: 0;
+    padding: 0;
+    border: none; }
+
 /* line 2, ../sass/components/01-video/_01-video-teaser.scss */
 .node--video.node-teaser h4 {
   margin: 0; }

@@ -1909,6 +1909,12 @@ h4 a {
 .view-lo-mas-visto .views-row-5,
 .view-lo-mas-visto .views-row-6 {
   margin-bottom: 0; }
+/* line 41, ../sass/components/01-video/_01-video-teaser.scss */
+.view-lo-mas-visto .views-row-1,
+.view-lo-mas-visto .views-row-4,
+.view-lo-mas-visto .views-row-7,
+.view-lo-mas-visto .views-row-10 {
+  clear: left; }
 
 /* line 2, ../sass/components/02-grid/_02-grid.scss */
 .nelb-grid .group-row {

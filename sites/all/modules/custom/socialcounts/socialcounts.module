@@ -126,5 +126,5 @@ function socialcounts_block_view_visits() {
     print_r($_GET['q']);
     exit;
   }
-  return t('@visits vistis', array('@visits' => $visits));
+  return t('@visits visits', array('@visits' => $visits));
 }

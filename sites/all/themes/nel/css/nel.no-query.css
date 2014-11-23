@@ -1883,24 +1883,32 @@ h4 a {
     border-top: solid #122d3f 2px;
     padding-top: 26px; }
 
-/* line 14, ../sass/components/01-video/_01-video-teaser.scss */
+/* line 15, ../sass/components/01-video/_01-video-teaser.scss */
+.view-lo-mas-visto .view-content {
+  margin-bottom: 28px; }
+/* line 18, ../sass/components/01-video/_01-video-teaser.scss */
 .view-lo-mas-visto .view-content:after {
   content: "";
   clear: both;
   display: table;
   height: 0; }
-
-/* line 21, ../sass/components/01-video/_01-video-teaser.scss */
+/* line 24, ../sass/components/01-video/_01-video-teaser.scss */
 .view-lo-mas-visto .views-row {
   width: 191px;
-  float: right;
-  margin-right: 28px; }
-/* line 26, ../sass/components/01-video/_01-video-teaser.scss */
+  float: left;
+  margin-right: 28px;
+  margin-bottom: 28px; }
+/* line 30, ../sass/components/01-video/_01-video-teaser.scss */
 .view-lo-mas-visto .views-row-3,
 .view-lo-mas-visto .views-row-6,
 .view-lo-mas-visto .views-row-9,
 .view-lo-mas-visto .views-row-12 {
   margin-right: 0; }
+/* line 36, ../sass/components/01-video/_01-video-teaser.scss */
+.view-lo-mas-visto .views-row-4,
+.view-lo-mas-visto .views-row-5,
+.view-lo-mas-visto .views-row-6 {
+  margin-bottom: 0; }
 
 /* line 2, ../sass/components/02-grid/_02-grid.scss */
 .nelb-grid .group-row {

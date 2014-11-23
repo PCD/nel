@@ -1,4 +1,8 @@
 <?php
+if ( isset($_GET['vtest']) ) {
+  print_r(get_defined_vars());
+  exit;
+}
 $videos = views_embed_view('lo_mas_visto','block_2', $tid);
 
 /**

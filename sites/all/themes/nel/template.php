@@ -37,8 +37,12 @@ function nel_breadcrumb(&$vars) {
   return $output;
 }
 
+/**
+ * Alters breadcrumb.
+ */
 function nel_breadcrumb_article(&$breadcrumb) {
-  if ( !(arg(0) == 'node' && intval(arg(1)) && is_null(arg(2)) && ($node=node_load(arg(1))) && $node->type == 'article') ) {
+  $types = array('article', 'video');
+  if ( !(arg(0) == 'node' && intval(arg(1)) && is_null(arg(2)) && ($node=node_load(arg(1))) && in_array($node->type, $types)) ) {
     return false;
   }
   

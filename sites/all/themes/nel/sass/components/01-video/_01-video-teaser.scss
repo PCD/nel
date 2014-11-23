@@ -11,17 +11,21 @@
     padding-top: 26px;
   }
 }
-.view-lo-mas-visto .view-content:after{
-  content: "";
-  clear: both;
-  display: table;
-  height: 0;
-}
 .view-lo-mas-visto{
+  .view-content{
+    margin-bottom: 28px;
+  }
+  .view-content:after{    
+    content: "";
+    clear: both;
+    display: table;
+    height: 0;
+  }
   .views-row{
     width: 191px;
-    float: right;
+    float: left;
     margin-right: 28px;
+    margin-bottom: 28px;
   }
   .views-row-3, 
   .views-row-6, 
@@ -29,4 +33,9 @@
   .views-row-12{
     margin-right: 0;
   } 
+  .views-row-4, 
+  .views-row-5, 
+  .views-row-6{
+    margin-bottom: 0;
+  }
 }

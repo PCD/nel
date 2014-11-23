@@ -3,12 +3,12 @@
     attach: function (context, settings) {
       $(window).load(function(){
         thisheight = 0;
-        $(this).find('.views-row').each(function(){
+        $('.view-lo-mas-visto .views-row').each(function(){
           itemheight = parseInt($(this).outerHeight(true), 10);
           thisheight = Math.max(thisheight, itemheight);
         });
         
-        $(this).find('.views-row').height(thisheight);
+        $('.view-lo-mas-visto .views-row').height(thisheight);
       });
     }
   };

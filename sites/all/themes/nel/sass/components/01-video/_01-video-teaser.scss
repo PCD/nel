@@ -1,0 +1,32 @@
+.node--video.node-teaser{
+  h4{
+    margin: 0;
+  }
+}
+#block-views-lo-mas-visto-block, 
+#block-views-lo-mas-visto-block-1{
+  margin: 30px 0;
+  .block__content{
+    border-top: solid #122d3f 2px;
+    padding-top: 26px;
+  }
+}
+.view-lo-mas-visto .view-content:after{
+  content: "";
+  clear: both;
+  display: table;
+  height: 0;
+}
+.view-lo-mas-visto{
+  .views-row{
+    width: 191px;
+    float: right;
+    margin-right: 28px;
+  }
+  .views-row-3, 
+  .views-row-6, 
+  .views-row-9, 
+  .views-row-12{
+    margin-right: 0;
+  } 
+}

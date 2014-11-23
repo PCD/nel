@@ -1,7 +1,7 @@
 (function ($) {
   Drupal.behaviors.nelVideoChannel = {
     attach: function (context, settings) {
-      $('.view-lo-mas-visto', context).once('sameHeight',function(){
+      $(window).load(function(){
         thisheight = 0;
         $(this).find('.views-row').each(function(){
           itemheight = parseInt($(this).outerHeight(true), 10);

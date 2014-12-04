@@ -17,6 +17,7 @@ function nel_breadcrumb(&$vars) {
   
   $breadcrumb = $vars['breadcrumb'];
   nel_breadcrumb_article($breadcrumb);
+  nel_breadcrumb_video($breadcrumb);
   $count = count($breadcrumb);
   
    // Build output
@@ -38,10 +39,10 @@ function nel_breadcrumb(&$vars) {
 }
 
 /**
- * Alters breadcrumb.
+ * Alters breadcrumb for Article.
  */
 function nel_breadcrumb_article(&$breadcrumb) {
-  $types = array('article', 'video');
+  $types = array('article');
   if ( !(arg(0) == 'node' && intval(arg(1)) && is_null(arg(2)) && ($node=node_load(arg(1))) && in_array($node->type, $types)) ) {
     return false;
   }
@@ -61,6 +62,22 @@ function nel_breadcrumb_article(&$breadcrumb) {
   foreach($array as $item) {
     $new_breadcrumb[] = l($item->name, 'taxonomy/term/' . $item->tid);
   }
+  $breadcrumb = $new_breadcrumb;
+}
+
+/**
+ * Alters breadcrumb for Video.
+ */
+function nel_breadcrumb_video(&$breadcrumb) {
+  $types = array('video');
+  if ( !(arg(0) == 'node' && intval(arg(1)) && is_null(arg(2)) && ($node=node_load(arg(1))) && in_array($node->type, $types)) ) {
+    return false;
+  }
+  
+  $new_breadcrumb = array(
+    0 => l('Nayarit En Linea', '<front>'), 
+    1 => l('TV', 'tv'), 
+  );
   $breadcrumb = $new_breadcrumb;
 }
 

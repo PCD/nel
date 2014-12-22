@@ -19,6 +19,9 @@
     background: #213951;
   }
 }
+iframe{
+  max-width: 100%;
+}
 @media only screen and (-webkit-min-device-pixel-ratio: 2) {
   .node-type-video.page-node,
   .node-type-streaming.page-node{

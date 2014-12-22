@@ -1878,13 +1878,17 @@ h4 a {
 .node-type-streaming.page-node .l-branding-wrapper {
   background: #213951; }
 
+/* line 22, ../sass/components/01-video/_01-video-channel.scss */
+iframe {
+  max-width: 100%; }
+
 @media only screen and (-webkit-min-device-pixel-ratio: 2) {
-  /* line 25, ../sass/components/01-video/_01-video-channel.scss */
+  /* line 28, ../sass/components/01-video/_01-video-channel.scss */
   .node-type-video.page-node a.site-logo,
   .node-type-streaming.page-node a.site-logo {
     background: url(../images/ntv2.jpg) no-repeat; }
 
-  /* line 29, ../sass/components/01-video/_01-video-channel.scss */
+  /* line 32, ../sass/components/01-video/_01-video-channel.scss */
   iframe {
     max-width: 100%; } }
 /* line 2, ../sass/components/01-video/_01-video-teaser.scss */

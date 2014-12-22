@@ -1862,19 +1862,30 @@ h4 a {
 .node--streaming.view-mode-full a.site-logo {
   background: url(../images/ntv1.jpg) no-repeat; }
 /* line 5, ../sass/components/01-video/_01-video-channel.scss */
+.node--streaming.view-mode-full .l-branding-wrapper {
+  background: #213951; }
+/* line 8, ../sass/components/01-video/_01-video-channel.scss */
 .node--streaming.view-mode-full > .field-collection-container {
   padding: 0;
   border: none;
   margin: 0; }
-  /* line 9, ../sass/components/01-video/_01-video-channel.scss */
+  /* line 12, ../sass/components/01-video/_01-video-channel.scss */
   .node--streaming.view-mode-full > .field-collection-container .field-collection-view {
     margin: 0;
     padding: 0;
     border: none; }
 
+/* line 20, ../sass/components/01-video/_01-video-channel.scss */
+.node-type-video.page-node a.site-logo {
+  background: url(../images/ntv1.jpg) no-repeat; }
+/* line 23, ../sass/components/01-video/_01-video-channel.scss */
+.node-type-video.page-node .l-branding-wrapper {
+  background: #213951; }
+
 @media only screen and (-webkit-min-device-pixel-ratio: 2) {
-  /* line 18, ../sass/components/01-video/_01-video-channel.scss */
-  .node--streaming.view-mode-full a.site-logo {
+  /* line 30, ../sass/components/01-video/_01-video-channel.scss */
+  .node--streaming.view-mode-full a.site-logo,
+  .node-type-video.page-node a.site-logo {
     background: url(../images/ntv2.jpg) no-repeat; } }
 /* line 2, ../sass/components/01-video/_01-video-teaser.scss */
 .node--video.node-teaser h4 {

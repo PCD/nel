@@ -27,6 +27,27 @@ function nel_preprocess_page_node(&$variables) {
   if ( !(arg(0) == 'node' && intval(arg(1)) > 0 && ($node = node_load(arg(1)))) ) {
     return;
   }
+  
+  // Category
+  nel_preprocess_page_node_category($variables, $node);
+  
+  // Gallery Stuff
+  nel_preprocess_page_node_gallery($variables, $node);
+}
+
+/** 
+ * Helper for nel_preprocess_page_node on Gallery.
+ */
+function nel_preprocess_page_node_gallery(&$variables, $node) {
+  if ( $node->type != 'article' ) {
+    return;
+  }
+}
+
+/**
+ * Helper for nel_preprocess_page_node on Category.
+ */
+function nel_preprocess_page_node_category(&$variables, $node) {
   if ( isset($node->field_category[LANGUAGE_NONE][0]['tid']) ) {
     // Look for any Category having Term Page.
     $terms_found = array();

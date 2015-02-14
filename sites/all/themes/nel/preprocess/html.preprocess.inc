@@ -33,6 +33,33 @@ function nel_preprocess_html_node(&$variables) {
   if ( !(arg(0) == 'node' && intval(arg(1)) > 0 && ($node = node_load(arg(1)))) ) {
     return;
   }
+  
+  // Gallery Stuff
+  nel_preprocess_html_node_gallery($variables, $node);
+  
+  // Category Stuff
+  nel_preprocess_html_node_category($variables, $node);
+}
+
+/**
+ *
+ */
+function nel_preprocess_html_node_gallery(&$variables, $node) {
+  $pattern = '/<div\sclass=\"gallery\"><div\sid="field-slideshow-1-wrapper".*?<\/div><\/article>?/msi';
+  $page = &$variables['page']['#children'];  
+  // 
+  $pattern2 = '/<div\sclass="field-slideshow-slide\sfield-slideshow-slide-1[^"]*">.*?<\/a>\s*<\/div>?/msi';
+  $page = preg_replace($pattern2, '', $page);
+  
+  //
+  $pattern3 = '/(<ul\sid="field-slideshow-1-pager"[^>]*?>)(<li>.*?<\/li>\s*)/msi';
+  $page = preg_replace($pattern3, '$1', $page);
+}
+
+/**
+ * Helper for nel_preprocess_html_node on Category.
+ */
+function nel_preprocess_html_node_category(&$variables, $node) {
   if ( isset($node->field_category[LANGUAGE_NONE][0]['tid']) ) {
     // Look for any Category having Term Page.
     $terms_found = array();

@@ -1,19 +1,31 @@
-.block--views-latest-news-block .views-row{
-  .image{
-    float: left;
-    width: 100px;
-  }
-    
-  .info{
-	  margin-left: 115px;
-  }
-    
-  .info > h4{
-    margin-top: 0;
-	  margin-bottom: 5px;
-  }
-    
-  .info > h4 a{
-		font-size: 15px;
+.block--views-latest-news-block, 
+.block--views-latest-news-block-1, 
+.block--views-latest-news-block-2, 
+.block--views-latest-news-block-3, 
+.block--views-latest-news-block-4, 
+.block--views-latest-news-block-5, 
+.block--views-latest-news-block-6, 
+.block--views-latest-news-block-7, 
+.block--views-latest-news-block-8, 
+.block--views-latest-news-block-9, 
+.block--views-latest-news-block-10{
+  .views-row{
+    .image{
+      float: left;
+      width: 100px;
+    }
+      
+    .info{
+  	  margin-left: 115px;
+    }
+      
+    .info > h4{
+      margin-top: 0;
+  	  margin-bottom: 5px;
+    }
+      
+    .info > h4 a{
+  		font-size: 15px;
+    }
   }
 }

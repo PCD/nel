@@ -126,4 +126,7 @@ body.cke_ltr{
   .l-main{
     background: url(../images/little-bg.png) repeat-x;
   }
+  .l-main:after{
+    clear: both;
+  }
 }

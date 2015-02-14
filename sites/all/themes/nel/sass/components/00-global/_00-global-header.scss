@@ -75,9 +75,12 @@ body.toolbar-drawer .navigation-wrapper.stuck{
     height: 57px;
     padding-top: 0;
     padding-left: 0;
+    padding-right: 0;
   }
   .l-region--header{
-    display: none;
+    width: auto;
+    padding-left: 9px;
+    padding-right: 9px;
   }
   a.site-logo{
     background-size: contain;

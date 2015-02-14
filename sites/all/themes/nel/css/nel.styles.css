@@ -505,13 +505,16 @@ body.toolbar-drawer .navigation-wrapper.stuck {
   .l-branding-wrapper .l-branding {
     height: 57px;
     padding-top: 0;
-    padding-left: 0; }
+    padding-left: 0;
+    padding-right: 0; }
 
-  /* line 79, ../sass/components/00-global/_00-global-header.scss */
+  /* line 80, ../sass/components/00-global/_00-global-header.scss */
   .l-region--header {
-    display: none; }
+    width: auto;
+    padding-left: 9px;
+    padding-right: 9px; }
 
-  /* line 82, ../sass/components/00-global/_00-global-header.scss */
+  /* line 85, ../sass/components/00-global/_00-global-header.scss */
   a.site-logo {
     background-size: contain;
     height: 57px; } }
@@ -663,7 +666,11 @@ body.cke_ltr {
 
   /* line 126, ../sass/components/00-global/_00-global-layout.scss */
   .l-main {
-    background: url(../images/little-bg.png) repeat-x; } }
+    background: url(../images/little-bg.png) repeat-x; }
+
+  /* line 129, ../sass/components/00-global/_00-global-layout.scss */
+  .l-main:after {
+    clear: both; } }
 /* line 2, ../sass/components/00-global/_00-global-links.scss */
 .node--article .body a,
 .node--article .body a:visited,

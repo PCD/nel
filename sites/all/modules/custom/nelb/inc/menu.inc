@@ -48,11 +48,12 @@ function nelb_menu_home() {
 }
 
 /**
- *
+ * Custom Landing Page for Taxonomies.
  */
 function nelb_menu_taxonomy_home($term) {
   $output = '';
   // Get Top Blocks
+  $output .= nelb_menu_taxonomy_home_slider_content($term);
   $output .= nelb_menu_taxonomy_home_promoted_content($term);
   $output .= nelb_menu_taxonomy_home_popular_content($term);
   
@@ -65,6 +66,21 @@ function nelb_menu_taxonomy_home($term) {
   );
   $blocks = nelb_data_get_blocks($params);
   $output .= nelb_theme_blocks($blocks);
+  return $output;
+}
+
+/**
+ * Gets Promoted Content
+ */
+function nelb_menu_taxonomy_home_slider_content($term) {
+  $output = '';
+  if ( isset($term->field_show_carousel[LANGUAGE_NONE][0]['value']) && $term->field_show_carousel[LANGUAGE_NONE][0]['value'] == 1 ) {
+    if ( isset($term->field_videos_only[LANGUAGE_NONE][0]['value']) && $term->field_videos_only[LANGUAGE_NONE][0]['value'] == 1 ) {
+      $output = views_embed_view('slider', 'block_2', $term->tid);
+    } else {
+      $output = views_embed_view('slider', 'block_1', $term->tid);
+    }
+  }
   return $output;
 }
 

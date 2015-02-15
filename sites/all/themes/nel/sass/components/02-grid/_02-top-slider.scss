@@ -45,7 +45,9 @@
     }
   }
 }
-#block-views-slider-block{
+.top-slider{
+  margin-bottom: 40px;
+  
   .skin-default{
     position: relative;
   }
@@ -139,7 +141,7 @@
     height: 321px;
   }
 }
-.skin-default:hover{
+.top-slider .skin-default:hover{
   .views_slideshow_controls_text_previous,
   .views_slideshow_controls_text_next{
     a{
@@ -151,7 +153,7 @@
   }
 }
 @media only screen and (max-width: $desktop_width) {
-  #block-views-slider-block{
+  .top-slider{
     height: 264px;
     overflow: hidden;
     article{
@@ -177,7 +179,7 @@
   }
 }
 @media only screen and (max-width: $tablet_width) {
-  #block-views-slider-block{
+  .top-slider{
     height: auto;
     overflow: visible;
     article{

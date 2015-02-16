@@ -14,9 +14,13 @@
 .node-type-streaming.page-node{
   a.site-logo{
     background-image: url(../images/ntv2.jpg);
+    background-size: 100%;
   }
   .l-branding-wrapper{
     background-color: #213951;
+  }
+  .breadcrumb{
+	  display: none;
   }
 }
 iframe{

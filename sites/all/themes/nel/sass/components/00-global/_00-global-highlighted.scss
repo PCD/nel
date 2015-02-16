@@ -1,3 +1,6 @@
 .l-region--highlighted{
   margin-bottom: 30px;
+  .block+.block{
+    margin-top: 40px;
+  }
 }

@@ -1906,6 +1906,12 @@ iframe {
   /* line 36, ../sass/components/01-video/_01-video-channel.scss */
   iframe {
     max-width: 100%; } }
+/* line 1, ../sass/components/01-video/_01-video-preroll.scss */
+#preroll-player_media,
+#preroll-player {
+  width: 100% !important;
+  height: 380px !important; }
+
 /* line 2, ../sass/components/01-video/_01-video-teaser.scss */
 .node--video.node-teaser h4 {
   margin: 0; }

@@ -33,6 +33,12 @@ function nel_preprocess_page_node(&$variables) {
   
   // Gallery Stuff
   nel_preprocess_page_node_gallery($variables, $node);
+  
+  // Preroll Videos.
+  if ( $node->type == 'video_preroll' ) {
+    drupal_add_js(drupal_get_path('theme', 'nel') . '/js/nel.jwplayer.js');
+    drupal_add_js(drupal_get_path('theme', 'nel') . '/js/nel.video-preroll.js');
+  }
 }
 
 /** 

@@ -1868,6 +1868,23 @@ h4 a {
 .social-links {
   margin-bottom: 10px; }
 
+/* line 2, ../sass/components/01-generic/_01-generic.scss */
+.field-collection-item-field-news .field-collection-item-field-block-2columns .article-content:after {
+  display: table;
+  clear: both;
+  height: 1px;
+  content: " "; }
+/* line 8, ../sass/components/01-generic/_01-generic.scss */
+.field-collection-item-field-news .field-collection-item-field-block-2columns .column-1 {
+  float: left; }
+/* line 11, ../sass/components/01-generic/_01-generic.scss */
+.field-collection-item-field-news .field-collection-item-field-block-2columns .column-2 {
+  float: right; }
+/* line 14, ../sass/components/01-generic/_01-generic.scss */
+.field-collection-item-field-news .field-collection-item-field-block-2columns .article-content .column {
+  width: 293px;
+  clear: none; }
+
 /* line 2, ../sass/components/01-video/_01-video-channel.scss */
 .node--streaming.view-mode-full > .field-collection-container {
   padding: 0;

@@ -1,0 +1,18 @@
+.field-collection-item-field-news .field-collection-item-field-block-2columns{
+  .article-content:after{
+    display: table;
+    clear: both;
+    height: 1px;
+    content: " ";
+  }
+  .column-1{
+    float: left;
+  }
+  .column-2{
+    float: right;
+  }
+  .article-content .column{
+    width: 293px;
+    clear: none;
+  }
+}

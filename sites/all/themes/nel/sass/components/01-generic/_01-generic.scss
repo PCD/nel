@@ -1,3 +1,35 @@
+.node--page-generic.node--page-generic--full{
+  .field-collection-view{
+    padding: 0;
+    margin: 0;
+    border-bottom: none;
+  }
+  .body *{
+    margin: 0;
+  }
+  .body *+*{
+    margin-top: 1em;
+  }
+  .two-block-one-column{
+    .field-collection-item-field-block-left-column{
+      float: left;
+    }
+    .field-collection-item-field-block-right-column{
+      float: right;
+    }
+    .field-collection-item-field-block-left-column, 
+    .field-collection-item-field-block-right-column{
+      width: 293px;
+    }
+  }
+  .two-block-one-column:after{
+    content: " ";
+    display: table;
+    height: 1px;
+    clear: both;
+  }
+}
+
 .field-collection-item-field-news .field-collection-item-field-block-2columns{
   .article-content:after{
     display: table;

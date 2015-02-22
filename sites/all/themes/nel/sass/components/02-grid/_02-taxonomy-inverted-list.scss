@@ -1,6 +1,6 @@
 .four-small-inverted-list{
   width: 293px;
-  .view-taxonomy-articles{
+
     .views-row{
       clear: both;
       min-height: 76px;
@@ -17,11 +17,11 @@
     .info h4{
       margin: 0;
     }
-  }
+
 }
 @media only screen and (max-width: $desktop_width) {
   .four-small-inverted-list{
-    .view-taxonomy-articles{
+
       .image{
         width: 60px;
         height: 39px;
@@ -29,13 +29,13 @@
       .info{
         margin-right: 70px;
       }
-    }
+
   }
 }
 @media only screen and (max-width: $tablet_width) {
   .four-small-inverted-list{
     width: 100%;
-    .view-taxonomy-articles{
+
       .image{
         width: 100px;
         height: 65px;
@@ -46,6 +46,6 @@
       .views-row.views-row-last{
         margin-bottom: 0;
       }
-    }
+
   }
 }

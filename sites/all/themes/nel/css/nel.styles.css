@@ -1869,18 +1869,46 @@ h4 a {
   margin-bottom: 10px; }
 
 /* line 2, ../sass/components/01-generic/_01-generic.scss */
+.node--page-generic.node--page-generic--full .field-collection-view {
+  padding: 0;
+  margin: 0;
+  border-bottom: none; }
+/* line 7, ../sass/components/01-generic/_01-generic.scss */
+.node--page-generic.node--page-generic--full .body * {
+  margin: 0; }
+/* line 10, ../sass/components/01-generic/_01-generic.scss */
+.node--page-generic.node--page-generic--full .body * + * {
+  margin-top: 1em; }
+/* line 14, ../sass/components/01-generic/_01-generic.scss */
+.node--page-generic.node--page-generic--full .two-block-one-column .field-collection-item-field-block-left-column {
+  float: left; }
+/* line 17, ../sass/components/01-generic/_01-generic.scss */
+.node--page-generic.node--page-generic--full .two-block-one-column .field-collection-item-field-block-right-column {
+  float: right; }
+/* line 20, ../sass/components/01-generic/_01-generic.scss */
+.node--page-generic.node--page-generic--full .two-block-one-column .field-collection-item-field-block-left-column,
+.node--page-generic.node--page-generic--full .two-block-one-column .field-collection-item-field-block-right-column {
+  width: 293px; }
+/* line 25, ../sass/components/01-generic/_01-generic.scss */
+.node--page-generic.node--page-generic--full .two-block-one-column:after {
+  content: " ";
+  display: table;
+  height: 1px;
+  clear: both; }
+
+/* line 34, ../sass/components/01-generic/_01-generic.scss */
 .field-collection-item-field-news .field-collection-item-field-block-2columns .article-content:after {
   display: table;
   clear: both;
   height: 1px;
   content: " "; }
-/* line 8, ../sass/components/01-generic/_01-generic.scss */
+/* line 40, ../sass/components/01-generic/_01-generic.scss */
 .field-collection-item-field-news .field-collection-item-field-block-2columns .column-1 {
   float: left; }
-/* line 11, ../sass/components/01-generic/_01-generic.scss */
+/* line 43, ../sass/components/01-generic/_01-generic.scss */
 .field-collection-item-field-news .field-collection-item-field-block-2columns .column-2 {
   float: right; }
-/* line 14, ../sass/components/01-generic/_01-generic.scss */
+/* line 46, ../sass/components/01-generic/_01-generic.scss */
 .field-collection-item-field-news .field-collection-item-field-block-2columns .article-content .column {
   width: 293px;
   clear: none; }
@@ -2638,43 +2666,43 @@ iframe {
 .four-small-inverted-list {
   width: 293px; }
   /* line 4, ../sass/components/02-grid/_02-taxonomy-inverted-list.scss */
-  .four-small-inverted-list .view-taxonomy-articles .views-row {
+  .four-small-inverted-list .views-row {
     clear: both;
     min-height: 76px;
     margin-bottom: 15px; }
   /* line 9, ../sass/components/02-grid/_02-taxonomy-inverted-list.scss */
-  .four-small-inverted-list .view-taxonomy-articles .image {
+  .four-small-inverted-list .image {
     width: 100px;
     height: 65px;
     float: right; }
   /* line 14, ../sass/components/02-grid/_02-taxonomy-inverted-list.scss */
-  .four-small-inverted-list .view-taxonomy-articles .info {
+  .four-small-inverted-list .info {
     margin-right: 117px; }
   /* line 17, ../sass/components/02-grid/_02-taxonomy-inverted-list.scss */
-  .four-small-inverted-list .view-taxonomy-articles .info h4 {
+  .four-small-inverted-list .info h4 {
     margin: 0; }
 
 @media only screen and (max-width: 996px) {
   /* line 25, ../sass/components/02-grid/_02-taxonomy-inverted-list.scss */
-  .four-small-inverted-list .view-taxonomy-articles .image {
+  .four-small-inverted-list .image {
     width: 60px;
     height: 39px; }
   /* line 29, ../sass/components/02-grid/_02-taxonomy-inverted-list.scss */
-  .four-small-inverted-list .view-taxonomy-articles .info {
+  .four-small-inverted-list .info {
     margin-right: 70px; } }
 @media only screen and (max-width: 748px) {
   /* line 36, ../sass/components/02-grid/_02-taxonomy-inverted-list.scss */
   .four-small-inverted-list {
     width: 100%; }
     /* line 39, ../sass/components/02-grid/_02-taxonomy-inverted-list.scss */
-    .four-small-inverted-list .view-taxonomy-articles .image {
+    .four-small-inverted-list .image {
       width: 100px;
       height: 65px; }
     /* line 43, ../sass/components/02-grid/_02-taxonomy-inverted-list.scss */
-    .four-small-inverted-list .view-taxonomy-articles .info {
+    .four-small-inverted-list .info {
       margin-right: 117px; }
     /* line 46, ../sass/components/02-grid/_02-taxonomy-inverted-list.scss */
-    .four-small-inverted-list .view-taxonomy-articles .views-row.views-row-last {
+    .four-small-inverted-list .views-row.views-row-last {
       margin-bottom: 0; } }
 /* line 1, ../sass/components/02-grid/_02-taxonomy-small-list.scss */
 #block-views-taxonomy-promoted-block-7 {

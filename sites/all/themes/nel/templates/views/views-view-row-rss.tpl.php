@@ -6,8 +6,8 @@
  *
  * @ingroup views_templates
  */
- $description = strip_tags(html_entity_decode($description));
- $description = preg_replace('/\s+/msi', ' ', $description);
+ // $description = strip_tags(html_entity_decode($description));
+ // $description = preg_replace('/\s+/msi', ' ', $description);
 ?>
   <item>
     <title><?php print $title; ?></title>

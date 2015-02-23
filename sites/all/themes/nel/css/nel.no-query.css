@@ -2909,26 +2909,27 @@ iframe {
   /* line 182, ../sass/components/02-grid/_02-top-slider.scss */
   .top-slider {
     height: auto;
-    overflow: visible; }
-    /* line 185, ../sass/components/02-grid/_02-top-slider.scss */
+    overflow: visible;
+    margin: 20px 0; }
+    /* line 186, ../sass/components/02-grid/_02-top-slider.scss */
     .top-slider article {
       width: 100% !important;
       height: auto !important;
       max-height: 321px; }
-      /* line 189, ../sass/components/02-grid/_02-top-slider.scss */
+      /* line 190, ../sass/components/02-grid/_02-top-slider.scss */
       .top-slider article .image {
         width: 100%; }
-      /* line 192, ../sass/components/02-grid/_02-top-slider.scss */
+      /* line 193, ../sass/components/02-grid/_02-top-slider.scss */
       .top-slider article .image img {
         width: 100%;
         height: auto;
         margin-left: 0; }
-    /* line 199, ../sass/components/02-grid/_02-top-slider.scss */
+    /* line 200, ../sass/components/02-grid/_02-top-slider.scss */
     .top-slider .views-slideshow-cycle-main-frame,
     .top-slider .views-slideshow-cycle-main-frame-row,
     .top-slider .views-slideshow-cycle-main-frame-row img {
       width: 100% !important; }
-    /* line 204, ../sass/components/02-grid/_02-top-slider.scss */
+    /* line 205, ../sass/components/02-grid/_02-top-slider.scss */
     .top-slider .views-slideshow-cycle-main-frame-row img {
       max-width: 100%;
       height: 100% !important; } }

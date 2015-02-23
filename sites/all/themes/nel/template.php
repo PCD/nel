@@ -19,6 +19,9 @@ function nel_breadcrumb(&$vars) {
   nel_breadcrumb_article($breadcrumb);
   nel_breadcrumb_video($breadcrumb);
   $count = count($breadcrumb);
+  if ( $count < 2 ) {
+    return '';
+  }
   
    // Build output
   $output = "<ul class=\"breadcrumb\">\n";

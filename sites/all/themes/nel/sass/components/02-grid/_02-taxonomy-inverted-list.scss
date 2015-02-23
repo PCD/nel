@@ -1,34 +1,34 @@
 .four-small-inverted-list{
   width: 293px;
 
-    .views-row{
-      clear: both;
-      min-height: 76px;
-      margin-bottom: 15px;
-    }
-    .image{
-      width: 100px;
-      height: 65px;
-      float: right;
-    }
-    .info{
-      margin-right: 117px;
-    }
-    .info h4{
-      margin: 0;
-    }
+  .views-row{
+    clear: both;
+    min-height: 76px;
+    margin-bottom: 15px;
+  }
+  .image{
+    width: 100px;
+    height: 65px;
+    float: right;
+  }
+  .info{
+    margin-right: 117px;
+  }
+  .info h4{
+    margin: 0;
+  }
 
 }
 @media only screen and (max-width: $desktop_width) {
   .four-small-inverted-list{
 
-      .image{
-        width: 60px;
-        height: 39px;
-      }
-      .info{
-        margin-right: 70px;
-      }
+    .image{
+      width: 60px;
+      height: 39px;
+    }
+    .info{
+      margin-right: 70px;
+    }
 
   }
 }
@@ -36,16 +36,16 @@
   .four-small-inverted-list{
     width: 100%;
 
-      .image{
-        width: 100px;
-        height: 65px;
-      }
-      .info{
-        margin-right: 117px;
-      }
-      .views-row.views-row-last{
-        margin-bottom: 0;
-      }
+    .image{
+      width: 100px;
+      height: 65px;
+    }
+    .info{
+      margin-right: 117px;
+    }
+    .views-row.views-row-last{
+      margin-bottom: 0;
+    }
 
   }
 }

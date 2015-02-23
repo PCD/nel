@@ -1,4 +1,6 @@
 .node--page-generic.node--page-generic--full{
+  margin-top: -15px;
+  .field-collection-container, 
   .field-collection-view{
     padding: 0;
     margin: 0;
@@ -29,7 +31,9 @@
     clear: both;
   }
 }
-
+.field-collection-item-field-news{
+  margin: 15px 0;
+}
 .field-collection-item-field-news .field-collection-item-field-block-2columns{
   .article-content:after{
     display: table;

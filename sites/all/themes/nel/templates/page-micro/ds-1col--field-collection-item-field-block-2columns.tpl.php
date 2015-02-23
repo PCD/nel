@@ -6,11 +6,13 @@ $displays = array(
       array(
         'view' => 'taxonomy_articles', 
         'display_id' => 'block', 
+        'display_no_tid_id' => 'block_7', 
         'class' => 'col-1 main-article', 
       ), 
       array(
         'view' => 'taxonomy_articles', 
         'display_id' => 'block_1', 
+        'display_no_tid_id' => 'block_8', 
         'class' => 'col-1 other-article', 
       ), 
     ), 
@@ -22,11 +24,13 @@ $displays = array(
       array(
         'view' => 'taxonomy_articles', 
         'display_id' => 'block_5', 
+        'display_no_tid_id' => 'block_12', 
         'class' => 'two-main-articles', 
       ), 
       array(
         'view' => 'taxonomy_articles', 
         'display_id' => 'block_6', 
+        'display_no_tid_id' => 'block_13', 
         'class' => 'fourth-after-two-main-articles', 
       ), 
     ), 
@@ -38,7 +42,8 @@ $displays = array(
       array(
         'view' => 'slider', 
         'display_id' => 'block_1', 
-        'class' => 'slider-two-columns', 
+        'display_no_tid_id' => 'block', 
+        'class' => '', 
       ), 
     ), 
     'class' => 'slider-two-columns', 
@@ -51,11 +56,11 @@ $view_output = '';
 // Build Output
 $style = $field_block_2columns_style[0]['value'];
 $tid = $field_categoria_single[0]['tid'];
-$term_title = $field_categoria_single[0]['taxonomy_term']->name;
+$title = $field_categoria_single[0]['taxonomy_term']->name;
 $display = $displays[$style];
 foreach($display['columns'] as $i => $column) {
   $j = $i+1;
-  $view_output .= "<div class=\"column column-{$j} {$column['class']}\">\n";
+  $view_output .= "<div class=\"{$column['class']}\">\n";
   $view_output .= views_embed_view($column['view'], $column['display_id'], $tid);
   $view_output .= "</div>\n";
 }
@@ -72,7 +77,10 @@ foreach($display['columns'] as $i => $column) {
   <?php print render($title_suffix['contextual_links']); ?>
   <?php endif; ?>
 
-  <h2 class="block__title"><?php print $term_title;?></h2>
+  <?php if (isset($title)):?>
+  <h2 class="block__title"><?php print $title;?></h2>
+  <?php endif;?>
+
   <div class="article-content ">
     <?php print $view_output;?>
   </div>

@@ -1868,47 +1868,55 @@ h4 a {
 .social-links {
   margin-bottom: 10px; }
 
-/* line 2, ../sass/components/01-generic/_01-generic.scss */
-.node--page-generic.node--page-generic--full .field-collection-view {
-  padding: 0;
-  margin: 0;
-  border-bottom: none; }
-/* line 7, ../sass/components/01-generic/_01-generic.scss */
-.node--page-generic.node--page-generic--full .body * {
-  margin: 0; }
-/* line 10, ../sass/components/01-generic/_01-generic.scss */
-.node--page-generic.node--page-generic--full .body * + * {
-  margin-top: 1em; }
-/* line 14, ../sass/components/01-generic/_01-generic.scss */
-.node--page-generic.node--page-generic--full .two-block-one-column .field-collection-item-field-block-left-column {
-  float: left; }
-/* line 17, ../sass/components/01-generic/_01-generic.scss */
-.node--page-generic.node--page-generic--full .two-block-one-column .field-collection-item-field-block-right-column {
-  float: right; }
-/* line 20, ../sass/components/01-generic/_01-generic.scss */
-.node--page-generic.node--page-generic--full .two-block-one-column .field-collection-item-field-block-left-column,
-.node--page-generic.node--page-generic--full .two-block-one-column .field-collection-item-field-block-right-column {
-  width: 293px; }
-/* line 25, ../sass/components/01-generic/_01-generic.scss */
-.node--page-generic.node--page-generic--full .two-block-one-column:after {
-  content: " ";
-  display: table;
-  height: 1px;
-  clear: both; }
+/* line 1, ../sass/components/01-generic/_01-generic.scss */
+.node--page-generic.node--page-generic--full {
+  margin-top: -15px; }
+  /* line 3, ../sass/components/01-generic/_01-generic.scss */
+  .node--page-generic.node--page-generic--full .field-collection-container,
+  .node--page-generic.node--page-generic--full .field-collection-view {
+    padding: 0;
+    margin: 0;
+    border-bottom: none; }
+  /* line 9, ../sass/components/01-generic/_01-generic.scss */
+  .node--page-generic.node--page-generic--full .body * {
+    margin: 0; }
+  /* line 12, ../sass/components/01-generic/_01-generic.scss */
+  .node--page-generic.node--page-generic--full .body * + * {
+    margin-top: 1em; }
+  /* line 16, ../sass/components/01-generic/_01-generic.scss */
+  .node--page-generic.node--page-generic--full .two-block-one-column .field-collection-item-field-block-left-column {
+    float: left; }
+  /* line 19, ../sass/components/01-generic/_01-generic.scss */
+  .node--page-generic.node--page-generic--full .two-block-one-column .field-collection-item-field-block-right-column {
+    float: right; }
+  /* line 22, ../sass/components/01-generic/_01-generic.scss */
+  .node--page-generic.node--page-generic--full .two-block-one-column .field-collection-item-field-block-left-column,
+  .node--page-generic.node--page-generic--full .two-block-one-column .field-collection-item-field-block-right-column {
+    width: 293px; }
+  /* line 27, ../sass/components/01-generic/_01-generic.scss */
+  .node--page-generic.node--page-generic--full .two-block-one-column:after {
+    content: " ";
+    display: table;
+    height: 1px;
+    clear: both; }
 
 /* line 34, ../sass/components/01-generic/_01-generic.scss */
+.field-collection-item-field-news {
+  margin: 15px 0; }
+
+/* line 38, ../sass/components/01-generic/_01-generic.scss */
 .field-collection-item-field-news .field-collection-item-field-block-2columns .article-content:after {
   display: table;
   clear: both;
   height: 1px;
   content: " "; }
-/* line 40, ../sass/components/01-generic/_01-generic.scss */
+/* line 44, ../sass/components/01-generic/_01-generic.scss */
 .field-collection-item-field-news .field-collection-item-field-block-2columns .column-1 {
   float: left; }
-/* line 43, ../sass/components/01-generic/_01-generic.scss */
+/* line 47, ../sass/components/01-generic/_01-generic.scss */
 .field-collection-item-field-news .field-collection-item-field-block-2columns .column-2 {
   float: right; }
-/* line 46, ../sass/components/01-generic/_01-generic.scss */
+/* line 50, ../sass/components/01-generic/_01-generic.scss */
 .field-collection-item-field-news .field-collection-item-field-block-2columns .article-content .column {
   width: 293px;
   clear: none; }

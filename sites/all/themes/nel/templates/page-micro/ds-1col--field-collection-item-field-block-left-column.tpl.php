@@ -6,11 +6,13 @@ $displays = array(
       array(
         'view' => 'taxonomy_articles', 
         'display_id' => 'block', 
+        'display_no_tid_id' => 'block_7', 
         'class' => 'col-1 main-article', 
       ), 
       array(
         'view' => 'taxonomy_articles', 
         'display_id' => 'block_1', 
+        'display_no_tid_id' => 'block_8', 
         'class' => 'col-1 other-article', 
       ), 
     ), 
@@ -21,6 +23,7 @@ $displays = array(
       array(
         'view' => 'taxonomy_articles', 
         'display_id' => 'block_4', 
+        'display_no_tid_id' => 'block_11', 
         'class' => 'small-carousel', 
       ), 
     ), 
@@ -31,6 +34,7 @@ $displays = array(
       array(
         'view' => 'taxonomy_articles', 
         'display_id' => 'block_3', 
+        'display_no_tid_id' => 'block_10', 
         'class' => '', 
       ), 
     ), 
@@ -41,6 +45,7 @@ $displays = array(
       array(
         'view' => 'taxonomy_articles', 
         'display_id' => 'block_2', 
+        'display_no_tid_id' => 'block_9', 
         'class' => '', 
       ), 
     ), 
@@ -54,7 +59,7 @@ $view_output = '';
 // Build Output
 $style = $field_block_left_column_style[0]['value'];
 $tid = $field_categoria_single[0]['tid'];
-$term_title = $field_categoria_single[0]['taxonomy_term']->name;
+$title = $field_categoria_single[0]['taxonomy_term']->name;
 $display = $displays[$style];
 $view_output .= "<div class=\"{$display['class']}\">\n";
 foreach($display['columns'] as $i => $column) {
@@ -76,7 +81,10 @@ $view_output .= "</div>\n";
   <?php print render($title_suffix['contextual_links']); ?>
   <?php endif; ?>
 
-  <h2 class="block__title"><?php print $term_title;?></h2>
+  <?php if (isset($title)):?>
+  <h2 class="block__title"><?php print $title;?></h2>
+  <?php endif;?>
+
   <div class="article-content ">
     <?php print $view_output;?>
   </div>

@@ -54,14 +54,22 @@ $displays = array(
 $view_output = '';
 
 // Build Output
-$style = $field_block_2columns_style[0]['value'];
-$tid = $field_categoria_single[0]['tid'];
-$title = $field_categoria_single[0]['taxonomy_term']->name;
+$tid = NULL;
+$style = $field_block_right_column_style[0]['value'];
+if ( isset($field_categoria_single[0]['taxonomy_term']->name) ) {
+  $tid = $field_categoria_single[0]['tid'];
+  $title = $field_categoria_single[0]['taxonomy_term']->name;
+}
+
 $display = $displays[$style];
 foreach($display['columns'] as $i => $column) {
   $j = $i+1;
   $view_output .= "<div class=\"{$column['class']}\">\n";
-  $view_output .= views_embed_view($column['view'], $column['display_id'], $tid);
+  if ( !is_null($tid) ) {
+    $view_output .= views_embed_view($column['view'], $column['display_id'], $tid);
+  } else {
+    $view_output .= views_embed_view($column['view'], $column['display_no_tid_id']);
+  }
   $view_output .= "</div>\n";
 }
 

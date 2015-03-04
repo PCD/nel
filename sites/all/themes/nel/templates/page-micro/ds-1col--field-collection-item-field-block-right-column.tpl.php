@@ -69,7 +69,7 @@ $view_output .= "<div class=\"{$display['class']}\">\n";
 foreach($display['columns'] as $i => $column) {
   $j = $i+1;
   $view_output .= "<div class=\"column column-{$j} {$column['class']}\">\n";
-  if ( isset($tid) ) {
+  if ( !is_null($tid) ) {
     $view_output .= views_embed_view($column['view'], $column['display_id'], $tid);
   } else {
     $view_output .= views_embed_view($column['view'], $column['display_no_tid_id']);

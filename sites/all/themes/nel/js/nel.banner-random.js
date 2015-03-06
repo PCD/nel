@@ -11,9 +11,9 @@
         } else if ( $(this).hasClass('two-block-one-column') ) {
           // Process Two Random Blocks.
           left_blocks = $(this).find('> .block-banner-left .banner-block');
-          randomizeBlocks(left_blocks);
+          //randomizeBlocks(left_blocks);
           right_blocks = $(this).find('> .block-banner-right .banner-block');
-          randomizeBlocks(right_blocks);
+          //randomizeBlocks(right_blocks);
         }
       });
     }
@@ -24,11 +24,11 @@
  * Get rid of all Banner blocks but one.
  */
 function randomizeBlocks(blocks) {
-  if ( blocks.length < 2 ) {
+  length = parseInt(blocks.length);
+  if ( length < 2 ) {
     return;
   }
   
-  lenght = parseInt(blocks.length);
   chosen = getRandomInt(1, length) - 1;
   $(blocks).each(function(index){
     if ( index != chosen ) {

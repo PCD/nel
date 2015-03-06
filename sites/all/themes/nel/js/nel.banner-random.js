@@ -11,9 +11,9 @@
         } else if ( $(this).hasClass('two-block-one-column') ) {
           // Process Two Random Blocks.
           left_blocks = $(this).find('> .block-banner-left .banner-block');
-          //randomizeBlocks(left_blocks);
+          randomizeBlocks(left_blocks);
           right_blocks = $(this).find('> .block-banner-right .banner-block');
-          //randomizeBlocks(right_blocks);
+          randomizeBlocks(right_blocks);
         }
       });
     }

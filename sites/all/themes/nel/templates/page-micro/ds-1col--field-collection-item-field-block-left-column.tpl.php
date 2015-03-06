@@ -61,7 +61,8 @@ $style = $field_block_left_column_style[0]['value'];
 $tid = NULL;
 if ( isset($field_categoria_single[0]['taxonomy_term']->name) ) {
   $tid = $field_categoria_single[0]['tid'];
-  $title = $field_categoria_single[0]['taxonomy_term']->name;
+  $term_name = $field_categoria_single[0]['taxonomy_term']->name;
+  $title = l($term_name, 'taxonomy/term/' . $tid);
 }
 
 $display = $displays[$style];

@@ -61,10 +61,11 @@ $tid = NULL;
 $style = $field_block_right_column_style[0]['value'];
 if ( isset($field_categoria_single[0]['taxonomy_term']->name) ) {
   $tid = $field_categoria_single[0]['tid'];
-  $title = $field_categoria_single[0]['taxonomy_term']->name;
+  $term_name = $field_categoria_single[0]['taxonomy_term']->name;
+  $title = l($term_name, 'taxonomy/term/' . $tid);
 }
 
-
+$display = $displays[$style];
 $view_output .= "<div class=\"{$display['class']}\">\n";
 foreach($display['columns'] as $i => $column) {
   $j = $i+1;

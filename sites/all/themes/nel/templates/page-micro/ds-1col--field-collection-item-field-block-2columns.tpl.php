@@ -55,10 +55,14 @@ $view_output = '';
 
 // Build Output
 $tid = NULL;
-$style = $field_block_right_column_style[0]['value'];
+$style = $field_block_2columns_style[0]['value'];
+$title = NULL;
 if ( isset($field_categoria_single[0]['taxonomy_term']->name) ) {
   $tid = $field_categoria_single[0]['tid'];
-  $title = $field_categoria_single[0]['taxonomy_term']->name;
+  $term_name = $field_categoria_single[0]['taxonomy_term']->name;
+  $title = l($term_name, 'taxonomy/term/' . $tid);
+} else {
+  $classes .= ' no-title';
 }
 
 $display = $displays[$style];
@@ -85,7 +89,7 @@ foreach($display['columns'] as $i => $column) {
   <?php print render($title_suffix['contextual_links']); ?>
   <?php endif; ?>
 
-  <?php if (isset($title)):?>
+  <?php if (!is_null($title)):?>
   <h2 class="block__title"><?php print $title;?></h2>
   <?php endif;?>
 

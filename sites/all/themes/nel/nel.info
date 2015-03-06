@@ -22,6 +22,7 @@ scripts[] = js/waypoints/shortcuts/sticky-elements/waypoints-sticky.min.js
 scripts[] = js/mediaelementjs/build/mediaelement-and-player.min.js
 scripts[] = js/nel.behaviors.js
 scripts[] = js/nel.video-channel.js
+scripts[] = js/nel.banner-random.js
 
 ; ========================================
 ; Regions

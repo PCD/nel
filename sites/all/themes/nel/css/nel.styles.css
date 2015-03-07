@@ -1934,6 +1934,69 @@ h4 a {
   border-top: none;
   padding-top: 0; }
 
+/* line 71, ../sass/components/01-generic/_01-generic.scss */
+.l-region--sidebar-second .field-collection-view,
+.l-region--sidebar-second .field-collection-container {
+  border-bottom: 0;
+  margin-bottom: 0; }
+/* line 76, ../sass/components/01-generic/_01-generic.scss */
+.l-region--sidebar-second .field-collection-view ul.field-collection-view-links {
+  margin: 10px 0 0 0; }
+
+/**
+ * Highlighning
+ */
+/* line 84, ../sass/components/01-generic/_01-generic.scss */
+.generic-block-wrapper {
+  position: relative;
+  margin: 15px 0 !important;
+  padding: 10px 0 !important; }
+  /* line 88, ../sass/components/01-generic/_01-generic.scss */
+  .generic-block-wrapper .field-collection-view-links,
+  .generic-block-wrapper .field-collection-item-field-generic-block,
+  .generic-block-wrapper .field-collection-item-field-sidebar-block {
+    position: relative;
+    z-index: 2; }
+  /* line 94, ../sass/components/01-generic/_01-generic.scss */
+  .generic-block-wrapper .field-collection-view-links {
+    z-index: 4; }
+
+/* line 98, ../sass/components/01-generic/_01-generic.scss */
+.generic-block-highlightning {
+  position: absolute;
+  display: block;
+  top: 15px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(65, 255, 122, 0.2);
+  border-radius: 0 10px 10px 10px;
+  border: dashed 2px #279949;
+  content: " ";
+  clear: both;
+  opacity: 0;
+  z-index: 0;
+  -webkit-transition: opacity 0.2s ease;
+  -moz-transition: opacity 0.2s ease;
+  -ms-transition: opacity 0.2s ease;
+  -o-transition: opacity 0.2s ease;
+  transition: opacity 0.2s ease; }
+
+/* line 118, ../sass/components/01-generic/_01-generic.scss */
+.l-region--sidebar-second .generic-block-highlightning {
+  top: 10px; }
+
+/* line 123, ../sass/components/01-generic/_01-generic.scss */
+.generic-block-wrapper.on .generic-block-highlightning,
+.generic-block-wrapper.red .generic-block-highlightning {
+  opacity: 1;
+  z-index: 3; }
+
+/* line 128, ../sass/components/01-generic/_01-generic.scss */
+.generic-block-wrapper.red .generic-block-highlightning {
+  background: rgba(255, 82, 40, 0.2);
+  border-color: #FF5334; }
+
 /* line 2, ../sass/components/01-video/_01-video-channel.scss */
 .node--streaming.view-mode-full > .field-collection-container {
   padding: 0;

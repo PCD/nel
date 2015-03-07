@@ -563,6 +563,17 @@ body.cke_ltr {
   overflow: hidden; }
 
 /* line 33, ../sass/components/00-global/_00-global-layout.scss */
+.l-main {
+  padding-bottom: 36px; }
+
+/* line 36, ../sass/components/00-global/_00-global-layout.scss */
+.l-main:after {
+  clear: both;
+  content: " ";
+  display: table;
+  height: 0; }
+
+/* line 42, ../sass/components/00-global/_00-global-layout.scss */
 .right-menu .colleft {
   float: left;
   width: 200%;
@@ -570,24 +581,24 @@ body.cke_ltr {
   position: relative;
   right: 100%; }
 
-/* line 40, ../sass/components/00-global/_00-global-layout.scss */
+/* line 49, ../sass/components/00-global/_00-global-layout.scss */
 .right-menu .col1wrap {
   float: left;
   width: 50%;
   position: relative;
   left: 50%; }
 
-/* line 46, ../sass/components/00-global/_00-global-layout.scss */
+/* line 55, ../sass/components/00-global/_00-global-layout.scss */
 .right-menu .l-content,
 .right-menu .l-footer-content {
   margin: 0 0 0 336px;
   overflow: hidden; }
 
-/* line 51, ../sass/components/00-global/_00-global-layout.scss */
+/* line 60, ../sass/components/00-global/_00-global-layout.scss */
 .right-menu .l-content {
   padding-bottom: 79px; }
 
-/* line 54, ../sass/components/00-global/_00-global-layout.scss */
+/* line 63, ../sass/components/00-global/_00-global-layout.scss */
 .right-menu .l-region--sidebar-second,
 .right-menu .l-region--footer-sidebar {
   float: right;
@@ -596,7 +607,7 @@ body.cke_ltr {
   left: 336px; }
 
 @media only screen and (max-width: 996px) {
-  /* line 63, ../sass/components/00-global/_00-global-layout.scss */
+  /* line 72, ../sass/components/00-global/_00-global-layout.scss */
   .l-main,
   .l-branding,
   .l-region--top-navigation,
@@ -607,26 +618,26 @@ body.cke_ltr {
     padding-left: 11px;
     padding-right: 11px; }
 
-  /* line 73, ../sass/components/00-global/_00-global-layout.scss */
+  /* line 82, ../sass/components/00-global/_00-global-layout.scss */
   .right-menu .colleft {
     margin-left: -253px; }
 
-  /* line 76, ../sass/components/00-global/_00-global-layout.scss */
+  /* line 85, ../sass/components/00-global/_00-global-layout.scss */
   .right-menu .l-content,
   .right-menu .l-footer-content {
     margin: 0 0 0 253px; }
 
-  /* line 80, ../sass/components/00-global/_00-global-layout.scss */
+  /* line 89, ../sass/components/00-global/_00-global-layout.scss */
   .right-menu .l-region--sidebar-second,
   .right-menu .l-region--footer-sidebar {
     width: 220px;
     left: 253px; }
 
-  /* line 85, ../sass/components/00-global/_00-global-layout.scss */
+  /* line 94, ../sass/components/00-global/_00-global-layout.scss */
   .right-menu .l-content {
     padding-bottom: 20px; } }
 @media only screen and (max-width: 748px) {
-  /* line 91, ../sass/components/00-global/_00-global-layout.scss */
+  /* line 100, ../sass/components/00-global/_00-global-layout.scss */
   .l-main,
   .l-branding,
   .l-region--top-navigation,
@@ -637,41 +648,41 @@ body.cke_ltr {
     padding-left: 8px;
     padding-right: 8px; }
 
-  /* line 101, ../sass/components/00-global/_00-global-layout.scss */
+  /* line 110, ../sass/components/00-global/_00-global-layout.scss */
   .right-menu .colleft {
     float: none;
     width: 100%;
     margin-left: 0;
     right: auto; }
 
-  /* line 107, ../sass/components/00-global/_00-global-layout.scss */
+  /* line 116, ../sass/components/00-global/_00-global-layout.scss */
   .right-menu .col1wrap {
     float: none;
     width: 100%;
     left: auto; }
 
-  /* line 112, ../sass/components/00-global/_00-global-layout.scss */
+  /* line 121, ../sass/components/00-global/_00-global-layout.scss */
   .right-menu .l-content,
   .right-menu .l-footer-content {
     margin: 0;
     overflow: visible; }
 
-  /* line 117, ../sass/components/00-global/_00-global-layout.scss */
+  /* line 126, ../sass/components/00-global/_00-global-layout.scss */
   .right-menu .l-region--sidebar-second,
   .right-menu .l-region--footer-sidebar {
     float: none;
     width: 100%;
     left: auto; }
 
-  /* line 123, ../sass/components/00-global/_00-global-layout.scss */
+  /* line 132, ../sass/components/00-global/_00-global-layout.scss */
   .right-menu .l-content {
     padding-bottom: 0; }
 
-  /* line 126, ../sass/components/00-global/_00-global-layout.scss */
+  /* line 135, ../sass/components/00-global/_00-global-layout.scss */
   .l-main {
     background: url(../images/little-bg.png) repeat-x; }
 
-  /* line 129, ../sass/components/00-global/_00-global-layout.scss */
+  /* line 138, ../sass/components/00-global/_00-global-layout.scss */
   .l-main:after {
     clear: both; } }
 /* line 2, ../sass/components/00-global/_00-global-links.scss */

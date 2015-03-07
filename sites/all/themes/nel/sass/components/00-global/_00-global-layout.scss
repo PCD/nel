@@ -30,6 +30,15 @@ body.cke_ltr{
   width: 100%;
   overflow: hidden;
 }
+.l-main{
+  padding-bottom: 36px;
+}
+.l-main:after{
+  clear: both;
+  content: " ";
+  display: table;
+  height: 0;
+}
 .right-menu .colleft{
   float: left;
   width: 200%;

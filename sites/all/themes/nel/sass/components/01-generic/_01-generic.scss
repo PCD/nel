@@ -71,7 +71,7 @@
   .field-collection-view, 
   .field-collection-container{
     border-bottom: 0;
-    margin-bottom: 0;
+    margin: 0;
   }
   .field-collection-view ul.field-collection-view-links{
     margin: 10px 0 0 0;
@@ -87,7 +87,8 @@
   padding: 10px 0 !important;
   .field-collection-view-links,
   .field-collection-item-field-generic-block, 
-  .field-collection-item-field-sidebar-block{
+  .field-collection-item-field-sidebar-block, 
+  .field-collection-item-field-sidebar-block-2{
     position: relative;
     z-index: 2;
   }

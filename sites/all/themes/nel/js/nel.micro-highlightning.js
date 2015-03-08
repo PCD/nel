@@ -2,7 +2,9 @@
 
   Drupal.behaviors.nelMicroHighlightning = {
     attach: function (context, settings) {
-      $('.field-collection-item-field-generic-block, .field-collection-item-field-sidebar-block', context).once('highlightning', function () {
+      $('.field-collection-item-field-generic-block, ' +
+        '.field-collection-item-field-sidebar-block, ' + 
+        '.field-collection-item-field-sidebar-block-2', context).once('highlightning', function () {
         block = $(this).parent();
         if ( $(block).find('> .field-collection-view-links > li.edit a').length > 0 ) {
           processThisBlock(block);

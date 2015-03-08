@@ -31,6 +31,64 @@ function nelb_menu() {
  */
 function nelb_menu_alter(&$items) {
   $items['taxonomy/term/%taxonomy_term']['page callback'] = 'nelb_taxonomy_term_page';
+  $items['taxonomy/term/%taxonomy_term/feed']['page callback'] = 'nelb_taxonomy_term_feed';
+}
+
+/**
+ * Generate the content feed for a taxonomy term.
+ *
+ * @param $term
+ *   The taxonomy term.
+ */
+function nelb_taxonomy_term_feed($term) {
+  $channel['link'] = url('taxonomy/term/' . $term->tid, array('absolute' => TRUE));
+  $channel['title'] = variable_get('site_name', 'Drupal') . ' - ' . $term->name;
+  // Only display the description if we have a single term, to avoid clutter and confusion.
+  // HTML will be removed from feed description.
+  $channel['description'] = check_markup($term->description, $term->format, '', TRUE);
+  $nids = nelb_taxonomy_select_nodes($term->tid, FALSE, variable_get('feed_default_items', 10));
+
+  node_feed($nids, $channel);
+}
+
+/**
+ * Overrides taxonomy_select_nodes to specify some content types to be allowed.
+ */
+function nelb_taxonomy_select_nodes($tid, $pager = TRUE, $limit = FALSE, $order = array('t.sticky' => 'DESC', 't.created' => 'DESC')) {
+  if (!variable_get('taxonomy_maintain_index_table', TRUE)) {
+    return array();
+  }
+  $query = db_select('taxonomy_index', 't');
+  $query->addTag('node_access');
+  $query->condition('tid', $tid);
+  $query->join('node', 'n', 't.nid = n.nid');
+  $types = array('article', 'page', 'page_generic', 'video', 'video_preroll');
+  $query->condition('type', $types);
+  if ($pager) {
+    $count_query = clone $query;
+    $count_query->addExpression('COUNT(t.nid)');
+
+    $query = $query->extend('PagerDefault');
+    if ($limit !== FALSE) {
+      $query = $query->limit($limit);
+    }
+    $query->setCountQuery($count_query);
+  }
+  else {
+    if ($limit !== FALSE) {
+      $query->range(0, $limit);
+    }
+  }
+  $query->addField('t', 'nid');
+  $query->addField('t', 'tid');
+  foreach ($order as $field => $direction) {
+    $query->orderBy($field, $direction);
+    // ORDER BY fields need to be loaded too, assume they are in the form
+    // table_alias.name
+    list($table_alias, $name) = explode('.', $field);
+    $query->addField($table_alias, $name);
+  }
+  return $query->execute()->fetchCol();
 }
 
 /**

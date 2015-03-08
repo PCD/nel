@@ -1949,7 +1949,7 @@ h4 a {
 .l-region--sidebar-second .field-collection-view,
 .l-region--sidebar-second .field-collection-container {
   border-bottom: 0;
-  margin-bottom: 0; }
+  margin: 0; }
 /* line 76, ../sass/components/01-generic/_01-generic.scss */
 .l-region--sidebar-second .field-collection-view ul.field-collection-view-links {
   margin: 10px 0 0 0; }
@@ -1965,14 +1965,15 @@ h4 a {
   /* line 88, ../sass/components/01-generic/_01-generic.scss */
   .generic-block-wrapper .field-collection-view-links,
   .generic-block-wrapper .field-collection-item-field-generic-block,
-  .generic-block-wrapper .field-collection-item-field-sidebar-block {
+  .generic-block-wrapper .field-collection-item-field-sidebar-block,
+  .generic-block-wrapper .field-collection-item-field-sidebar-block-2 {
     position: relative;
     z-index: 2; }
-  /* line 94, ../sass/components/01-generic/_01-generic.scss */
+  /* line 95, ../sass/components/01-generic/_01-generic.scss */
   .generic-block-wrapper .field-collection-view-links {
     z-index: 4; }
 
-/* line 98, ../sass/components/01-generic/_01-generic.scss */
+/* line 99, ../sass/components/01-generic/_01-generic.scss */
 .generic-block-highlightning {
   position: absolute;
   display: block;
@@ -1993,17 +1994,17 @@ h4 a {
   -o-transition: opacity 0.2s ease;
   transition: opacity 0.2s ease; }
 
-/* line 118, ../sass/components/01-generic/_01-generic.scss */
+/* line 119, ../sass/components/01-generic/_01-generic.scss */
 .l-region--sidebar-second .generic-block-highlightning {
   top: 10px; }
 
-/* line 123, ../sass/components/01-generic/_01-generic.scss */
+/* line 124, ../sass/components/01-generic/_01-generic.scss */
 .generic-block-wrapper.on .generic-block-highlightning,
 .generic-block-wrapper.red .generic-block-highlightning {
   opacity: 1;
   z-index: 3; }
 
-/* line 128, ../sass/components/01-generic/_01-generic.scss */
+/* line 129, ../sass/components/01-generic/_01-generic.scss */
 .generic-block-wrapper.red .generic-block-highlightning {
   background: rgba(255, 82, 40, 0.2);
   border-color: #FF5334; }

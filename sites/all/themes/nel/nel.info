@@ -23,6 +23,7 @@ scripts[] = js/mediaelementjs/build/mediaelement-and-player.min.js
 scripts[] = js/nel.behaviors.js
 scripts[] = js/nel.video-channel.js
 scripts[] = js/nel.banner-random.js
+scripts[] = js/nel.banner-sidebar-random.js
 scripts[] = js/nel.micro-highlightning.js
 
 ; ========================================

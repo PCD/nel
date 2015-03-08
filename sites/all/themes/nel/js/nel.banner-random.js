@@ -3,7 +3,7 @@
     attach: function (context, settings) {
       $('.field-collection-item-field-generic-block-banner, ' + 
         '.field-collection-item-field-generic-block-banner2, ' + 
-        '.field-collection-item-field-generic-block-banner3', context).once('videoPreroll', function () {
+        '.field-collection-item-field-generic-block-banner3', context).once('banner-random', function () {
         if ( $(this).hasClass('one-block-two-columns') ) {
           // Process One Random Block.
           blocks = $(this).find('.banner-block');
@@ -18,7 +18,6 @@
       });
     }
   };
-  
 
 /**
  * Get rid of all Banner blocks but one.

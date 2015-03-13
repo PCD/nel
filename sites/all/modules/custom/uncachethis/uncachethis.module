@@ -1,0 +1,80 @@
+<?php
+/**
+ * Implements hook_permission.
+ */
+function uncachethis_permission() {
+  return array(
+    'Deletes current cached page' => array(
+      'title' => 'Deletes current cached page', 
+      'description' => 'Deletes current cached page', 
+    ), 
+  );
+}
+
+/**
+ * Implements hook_menu.
+ */
+function uncachethis_menu() {
+  $items = array();
+  $items['admin/uncachethis/delete'] = array(
+    'page callback' => 'uncachethis_menu_delete', 
+    'access arguments' => array('Deletes current cached page'), 
+    'type' => MENU_CALLBACK, 
+  );
+  return $items;
+}
+
+/**
+ * Receives as the path and deletes it from boost.
+ */
+function uncachethis_menu_delete() {
+  if ( isset($_GET['delete_path']) ) {
+    $urls = array(urldecode($_GET['delete_path']));
+    boost_expire_cache($urls);
+  }
+  
+  drupal_json_output(array(
+    'valid' => 1, 
+  ));
+  exit;
+}
+
+/**
+ * Implements hook_block_info.
+ */
+function uncachethis_block_info() {
+  $blocks = array();
+  $blocks['button'] = array(
+    'info' => t('UncacheThis Button'), 
+  );
+  return $blocks;
+}
+
+/**
+ * Implements hook_block_view.
+ */
+function uncachethis_block_view($delta = '') {
+  $block = array();
+  switch($delta) {
+    case 'button':
+      if ( user_access('Deletes current cached page') ) {
+        $block['content'] = uncachethis_block_view_button();
+      }
+      break;
+  }
+  return $block;
+}
+
+/**
+ * Retuns a button for cleaning current page cache.
+ */
+function uncachethis_block_view_button() {
+  $current = 'http://' . $_SERVER['HTTP_HOST'] . request_uri();
+  $url = url('admin/uncachethis/delete', array('query' => array(
+    'delete_path' => $current, 
+  )));
+  $title = t('unCache This Page');
+  drupal_add_css(drupal_get_path('module', 'uncachethis') . '/css/uncachethis.css');
+  drupal_add_js(drupal_get_path('module', 'uncachethis') . '/js/uncachethis.js');
+  return "<a id=\"uncache-this-button\" href=\"{$url}\">{$title}</a>";
+}

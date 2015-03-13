@@ -1,0 +1,5 @@
+name = UnCacheThis
+description = Provides a button to delete boost cache for the current page.
+package = aWEBoLabs
+core = 7.x
+dependencies[] = boost

@@ -63,17 +63,32 @@ if ( isset($field_categoria_single[0]['taxonomy_term']->name) ) {
   $tid = $field_categoria_single[0]['tid'];
   $term_name = $field_categoria_single[0]['taxonomy_term']->name;
   $title = l($term_name, 'taxonomy/term/' . $tid);
+  if ( isset($field_title_hide[0]['value']) && $field_title_hide[0]['value'] == 1 ) {
+    $title = NULL;
+    $classes .= ' no-title';
+  }
+} else {
+  $classes .= ' no-title';
 }
 
 $display = $displays[$style];
+
+$limit = NULL;
+if ( isset($field_limit_items[0]['value']) && intval($field_limit_items[0]['value']) > 0 ) {
+  $offset = intval($field_limit_items[0]['value']);
+}
+$offset = NULL;
+if ( isset($field_offset_items[0]['value']) && intval($field_offset_items[0]['value']) > 0 ) {
+  $offset = intval($field_offset_items[0]['value']);
+}
 $view_output .= "<div class=\"{$display['class']}\">\n";
 foreach($display['columns'] as $i => $column) {
   $j = $i+1;
   $view_output .= "<div class=\"column column-{$j} {$column['class']}\">\n";
   if ( !is_null($tid) ) {
-    $view_output .= views_embed_view($column['view'], $column['display_id'], $tid);
+    $view_output .= nel_views_embed_view($column['view'], $column['display_id'], $limit, $offset, $tid);
   } else {
-    $view_output .= views_embed_view($column['view'], $column['display_no_tid_id']);
+    $view_output .= nel_views_embed_view($column['view'], $column['display_no_tid_id'], $limit, $offset);
   }
   $view_output .= "</div>\n";
 }

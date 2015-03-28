@@ -167,6 +167,10 @@ if ( isset($field_categoria_single[0]['taxonomy_term']->name) ) {
   $tid = $field_categoria_single[0]['tid'];
   $term_name = $field_categoria_single[0]['taxonomy_term']->name;
   $title = l($term_name, 'taxonomy/term/' . $tid);
+  if ( isset($field_title_hide[0]['value']) && $field_title_hide[0]['value'] == 1 ) {
+    $title = NULL;
+    $classes .= ' no-title';
+  }
 } else {
   $classes .= ' no-title';
 }

@@ -110,3 +110,54 @@ function nel_get_parent_term($tid) {
   $parent[$tid] = false;
   return false;
 }
+
+/**
+ * Overrides of the function views_embed_view.
+ */
+function nel_views_embed_view($name, $display_id = 'default', $limit = null, $offset = null) {
+  $args = func_get_args();
+  array_shift($args); // remove $name
+  if (count($args)) {
+    array_shift($args); // remove $display_id
+  }
+  if (count($args)) {
+    array_shift($args); // remove $limit
+  }
+  if (count($args)) {
+    array_shift($args); // remove $offset
+  }
+
+  $view = views_get_view($name);
+  if (!$view || !$view->access($display_id)) {
+    return;
+  }
+  
+  // Set Limit and Offset
+  if ( !is_null($limit) && intval($limit) > 0 ) {
+    $view->set_items_per_page(intval($limit));
+  }
+  if ( !is_null($offset) && intval($offset) ) {
+    $view->set_offset(intval($offset));
+  }
+
+  return $view->preview($display_id, $args);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

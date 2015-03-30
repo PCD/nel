@@ -6,9 +6,9 @@ $fb_tags = array();
 $fb_title = $fb_body = $fb_image = NULL;
 
 // FB Title Tag
-if ( isset($field_facebook_title[0]['safe_value']) && !empty($field_facebook_title[0]['safe_value']) ) {
+if ( isset($field_facebook_title[0]['safe_value']) && !nel_is_empty($field_facebook_title[0]['safe_value']) ) {
   $fb_title = $field_facebook_title[0]['safe_value'];
-} else if ( isset($node->title) && !empty($node->title) ) {
+} else if ( isset($node->title) && !nel_is_empty($node->title) ) {
   $fb_title = check_plain($node->title);
 } else {
   $fb_title = 'Nayarit En Linea';
@@ -18,9 +18,9 @@ $fb_tags['fb_metatag_title'] = array(
 );
 
 // FB Description Tag
-if ( isset($field_facebook_body[0]['safe_value']) && !empty($field_facebook_body[0]['safe_value']) ) {
+if ( isset($field_facebook_body[0]['safe_value']) && !nel_is_empty($field_facebook_body[0]['safe_value']) ) {
   $fb_body = $field_facebook_body[0]['safe_value'];
-} else if ( isset($node->body[LANGUAGE_NONE][0]['safe_value']) && !empty($node->body[LANGUAGE_NONE][0]['safe_value'])) {
+} else if ( isset($node->body[LANGUAGE_NONE][0]['safe_value']) && !nel_is_empty($node->body[LANGUAGE_NONE][0]['safe_value'])) {
   $fb_body = $node->body[LANGUAGE_NONE][0]['safe_value'];
 } else {
   $fb_body = 'El Portal de Nayarit';

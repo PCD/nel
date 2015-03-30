@@ -6,6 +6,16 @@
  * Nayarit En Linea theme.
  */
 
+/**
+ * Is Real Empty
+ */
+function nel_is_empty($string) {
+  $string = preg_replace('/\s+/msi', '', $string);
+  if ( strlen($string) == 0 ) {
+    return true;
+  }
+  return false;
+}
 
 /**
  * Overrides Breadcrumb.

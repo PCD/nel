@@ -1,0 +1,67 @@
+#block-inject-1, 
+#block-inject-1 #block-block-8--2 .block__content, 
+.adslot_1{
+  width: 300px;
+  height: 250px;
+}
+
+@media only screen and (max-width: $desktop_width) {
+  #block-inject-1, 
+  #block-inject-1 #block-block-8--2 .block__content, 
+  .adslot_1{
+    width: 250px;
+    height: 250px;
+  }
+}
+
+@media only screen and (max-width: $tablet_width) {
+  #block-inject-1, 
+  #block-inject-1 #block-block-8--2 .block__content, 
+  .adslot_1{
+    width: 200px;
+    height: 200px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  #block-inject-1, 
+  #block-inject-1 #block-block-8--2 .block__content{
+    float: none;
+    width: auto;
+    height: auto;
+    display: table;
+    margin: 0 auto;
+  }
+  .adslot_1{
+    width: 336px;
+    height: 280px;
+  }
+}
+
+@media only screen and (max-width: 351px) {
+  .adslot_1{
+    width: 300px;
+    height: 250px;
+  }
+}
+
+@media only screen and (max-width: 315px) {
+  .adslot_1{
+    width: 250px;
+    height: 250px;
+  }
+}
+
+@media only screen and (max-width: 265px) {
+  .adslot_1{
+    width: 200px;
+    height: 200px;
+  }
+}
+
+@media only screen and (max-width: 215px) {
+  .adslot_1{
+    width: 200px;
+    height: 200px;
+  }
+}

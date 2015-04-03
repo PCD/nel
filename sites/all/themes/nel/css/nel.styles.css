@@ -3131,7 +3131,7 @@ iframe {
 .small-carousel-sidebar-one-delay .views-slideshow-cycle-main-frame,
 .small-carousel-sidebar-two-delay .views-slideshow-cycle-main-frame,
 .small-carousel-sidebar-thre-delay .views-slideshow-cycle-main-frame {
-  width: 293px !important;
+  width: 300px !important;
   height: 298px !important; }
 
 /* line 16, ../sass/components/02-sidebar/_02-sidebar-taxonomy-articles.scss */
@@ -3148,7 +3148,7 @@ iframe {
 
 /* line 28, ../sass/components/02-sidebar/_02-sidebar-taxonomy-articles.scss */
 .node--article--taxonomy-sidebar-section {
-  width: 293px;
+  width: 300px;
   height: 298px;
   position: relative; }
   /* line 32, ../sass/components/02-sidebar/_02-sidebar-taxonomy-articles.scss */

@@ -69,6 +69,13 @@
     .views-slideshow-cycle-main-frame{
       width: $tablet_width -$mobile_padding !important;
     }
+    .image, 
+    .image.play-video{
+      text-align: center;
+      a{
+        display: inline-block;
+      }
+    }
   }
   .node--article--taxonomy-sidebar-section{
     width: $tablet_width -$mobile_padding;

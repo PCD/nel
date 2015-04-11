@@ -130,3 +130,43 @@
   background: rgba(255, 82, 40, 0.2);
   border-color: #FF5334;
 }
+
+@media only screen and (max-width: $desktop_width) {
+  .node--page-generic.node--page-generic--full{
+    .two-block-one-column{
+      .field-collection-item-field-block-left-column, 
+      .field-collection-item-field-block-right-column, 
+      .block-banner-left, 
+      .block-banner-right{
+        width: 226px;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: $tablet_width) {
+  .node--page-generic.node--page-generic--full .two-block-one-column{
+    .field-collection-item-field-block-left-column, 
+    .field-collection-item-field-block-right-column, 
+    .block-banner-left, 
+    .block-banner-right{
+      width: 100%;
+      float: none;
+      .banner-block{
+        display: table;
+        margin: 0 auto;
+      }
+    }
+    .block-banner-left+.block-banner-right{
+      margin-top: 15px;
+    }
+  }
+
+  .node--page-generic.node--page-generic--full .one-block-two-columns {
+    .banner-block{
+      img{
+        width: 100%;
+      }
+    }
+  }
+}

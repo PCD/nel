@@ -6,10 +6,10 @@ $fb_tags = array();
 $fb_title = $fb_body = $fb_image = NULL;
 
 // FB Title Tag
-if ( isset($field_facebook_title[0]['safe_value']) && !nel_is_empty($field_facebook_title[0]['safe_value']) ) {
-  $fb_title = $field_facebook_title[0]['safe_value'];
+if ( isset($field_collection_item->field_facebook_title[LANGUAGE_NONE][0]['value']) && !nel_is_empty($field_collection_item->field_facebook_title[LANGUAGE_NONE][0]['value']) ) {
+  $fb_title = nel_whitener($field_collection_item->field_facebook_title[LANGUAGE_NONE][0]['safe_value']);
 } else if ( isset($node->title) && !nel_is_empty($node->title) ) {
-  $fb_title = check_plain($node->title);
+  $fb_title = nel_whitener($node->title);
 } else {
   $fb_title = 'Nayarit En Linea';
 }
@@ -18,10 +18,10 @@ $fb_tags['fb_metatag_title'] = array(
 );
 
 // FB Description Tag
-if ( isset($field_facebook_body[0]['safe_value']) && !nel_is_empty($field_facebook_body[0]['safe_value']) ) {
-  $fb_body = $field_facebook_body[0]['safe_value'];
-} else if ( isset($node->body[LANGUAGE_NONE][0]['safe_value']) && !nel_is_empty($node->body[LANGUAGE_NONE][0]['safe_value'])) {
-  $fb_body = $node->body[LANGUAGE_NONE][0]['safe_value'];
+if ( isset($field_collection_item->field_facebook_body[LANGUAGE_NONE][0]['value']) && !nel_is_empty($field_collection_item->field_facebook_body[LANGUAGE_NONE][0]['value']) ) {
+  $fb_body = nel_whitener($field_collection_item->field_facebook_body[LANGUAGE_NONE][0]['value']);
+} else if ( isset($node->body[LANGUAGE_NONE][0]['value']) && !nel_is_empty($node->body[LANGUAGE_NONE][0]['value'])) {
+  $fb_body = nel_whitener($node->body[LANGUAGE_NONE][0]['value']);
 } else {
   $fb_body = 'El Portal de Nayarit';
 }
@@ -30,8 +30,8 @@ $fb_tags['fb_metatag_description'] = array(
 );
 
 // FB Image Tag
-if ( isset($field_facebook_image[0]['uri']) && !empty($field_facebook_image[0]['uri']) ) {
-  $fb_image = image_style_url('facebook_sharing', $field_facebook_image[0]['uri']);
+if ( isset($field_collection_item->field_facebook_image[LANGUAGE_NONE][0]['uri']) && !empty($field_collection_item->field_facebook_image[LANGUAGE_NONE][0]['uri']) ) {
+  $fb_image = image_style_url('facebook_sharing', $field_collection_item->field_facebook_image[LANGUAGE_NONE][0]['uri']);
 } else if ( isset($node->field_meta_image[LANGUAGE_NONE][0]['uri']) && !empty($node->field_meta_image[LANGUAGE_NONE][0]['uri']) ) {
   $fb_image = image_style_url('facebook_sharing', $node->field_meta_image[LANGUAGE_NONE][0]['uri']);
 } else if ( isset($node->field_image[LANGUAGE_NONE][0]['uri']) && !empty($node->field_image[LANGUAGE_NONE][0]['uri']) ) {

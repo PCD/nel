@@ -1,0 +1,4 @@
+name = CheckTags
+description = This module will help you be aware of the tags you need to add for better sharing results.
+package = aWEBoLabs
+core = 7.x

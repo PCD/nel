@@ -83,6 +83,7 @@ function nel_breadcrumb_article(&$breadcrumb) {
  */
 function nel_whitener($string) {
   $string = strip_tags($string);
+  $string = str_replace(array('&amp;', '&nbsp;', '&quot;'), array('&', ' ', '"'), $string);
   $string = preg_replace('/\s+/', ' ', $string);
   return trim($string);
 }

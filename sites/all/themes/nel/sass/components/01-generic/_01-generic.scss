@@ -1,3 +1,4 @@
+.page-taxonomy-term, 
 .node--page-generic.node--page-generic--full{
   margin-top: -15px;
   .field-collection-container, 
@@ -85,6 +86,7 @@
   position: relative;
   margin: 15px 0 !important;
   padding: 10px 0 !important;
+  border-bottom: none;
   .field-collection-view-links,
   .field-collection-item-field-generic-block, 
   .field-collection-item-field-sidebar-block, 
@@ -132,6 +134,7 @@
 }
 
 @media only screen and (max-width: $desktop_width) {
+  .page-taxonomy-term, 
   .node--page-generic.node--page-generic--full{
     .two-block-one-column{
       .field-collection-item-field-block-left-column, 
@@ -145,6 +148,7 @@
 }
 
 @media only screen and (max-width: $tablet_width) {
+  .page-taxonomy-term .two-block-one-column, 
   .node--page-generic.node--page-generic--full .two-block-one-column{
     .field-collection-item-field-block-left-column, 
     .field-collection-item-field-block-right-column, 
@@ -162,7 +166,8 @@
     }
   }
 
-  .node--page-generic.node--page-generic--full .one-block-two-columns {
+  .page-taxonomy-term .one-block-two-columns, 
+  .node--page-generic.node--page-generic--full .one-block-two-columns{
     .banner-block{
       img{
         width: 100%;

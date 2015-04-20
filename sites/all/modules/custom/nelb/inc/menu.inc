@@ -111,19 +111,22 @@ function nelb_menu_home() {
 function nelb_menu_taxonomy_home($term) {
   $output = '';
   // Get Top Blocks
-  $output .= nelb_menu_taxonomy_home_slider_content($term);
+  //$output .= nelb_menu_taxonomy_home_slider_content($term);
   $output .= nelb_menu_taxonomy_home_promoted_content($term);
   $output .= nelb_menu_taxonomy_home_popular_content($term);
   
   // Get Node Blocks and Taxonomy Blocks for HomePage.
-  $params = array(
+  /*$params = array(
     'promote_to' => 1, 
     'pid' => $term->tid, 
     'place' => 0, 
     'random' => TRUE, 
-  );
-  $blocks = nelb_data_get_blocks($params);
-  $output .= nelb_theme_blocks($blocks);
+  );*/
+  //$blocks = nelb_data_get_blocks($params);
+  //$output .= nelb_theme_blocks($blocks);
+  
+  // New Content
+  $output .= render(field_view_field('taxonomy_term', $term, 'field_generic_block', 'default'));
   return $output;
 }
 

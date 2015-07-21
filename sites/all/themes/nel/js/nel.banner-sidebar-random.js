@@ -1,5 +1,5 @@
 (function ($) {
-  Drupal.behaviors.nelBannerRandom = {
+  Drupal.behaviors.nelSidebarBannerRandom = {
     attach: function (context, settings) {
       $('.field-collection-item-field-sidebar-block .field-name-field-banner-block, ' + 
         '.field-collection-item-field-sidebar-block-2 .field-name-field-banner-block', context).once('banner-random', function () {

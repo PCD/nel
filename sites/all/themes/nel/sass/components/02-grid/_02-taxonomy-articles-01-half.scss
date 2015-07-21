@@ -21,3 +21,29 @@
     float: right;
   }
 }
+
+@media only screen and (max-width: $desktop_width) {
+  .one-big-4-small-one-column{
+    width: 226px;
+    > .view-content > .views-row{
+      width: 226px;
+    }
+  }
+}
+
+@media only screen and (max-width: $tablet_width) {
+  .one-big-4-small-one-column{
+    width: auto;
+    > .view-content > .views-row{
+      width: auto;
+      float: none;
+    }
+    > .view-content > .views-row-last{
+      float: none;
+    }
+    .image, 
+    .image.play-video{
+      text-align: center;
+    }
+  }
+}

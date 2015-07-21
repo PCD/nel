@@ -79,6 +79,16 @@ function nel_breadcrumb_article(&$breadcrumb) {
 }
 
 /**
+ * Nel Make white stuff.
+ */
+function nel_whitener($string) {
+  $string = strip_tags($string);
+  $string = str_replace(array('&amp;', '&nbsp;', '&quot;'), array('&', ' ', '"'), $string);
+  $string = preg_replace('/\s+/', ' ', $string);
+  return trim($string);
+}
+
+/**
  * Alters breadcrumb for Video.
  */
 function nel_breadcrumb_video(&$breadcrumb) {

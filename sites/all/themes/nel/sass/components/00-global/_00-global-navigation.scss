@@ -159,6 +159,11 @@
   .menu-block-2{
     width: 661px;
   }
+  
+  #block-system-main-menu > ul.menu > li > a, .menu-block-1 > ul.menu > li > a, .menu-block-2 > ul.menu > li > a{
+    padding: 16px 6px 0px 6px;
+    font-size: 15px;
+  }
 }
 @media only screen and (max-width: $tablet_width) {
   .sticky-wrapper{

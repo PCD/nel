@@ -17,11 +17,18 @@ if ( isset($field_video) ) {
   }
 }
 
+$extra_class = '';
 if ( isset($field_video[0]['uri']) ) {
-  $file_for_view = file_load($field_video[0]['fid']);
-  $file_for_view = file_view_file($file_for_view, 'article_taxonomy_slider');
-  $image_url = image_style_url('home_content_slider', $file_for_view['#path']);
-  $image_alt = $file_for_view['#alt'];
+  $extra_class = ' play-video';
+  if ( isset($field_video_image[0]['uri']) ) {
+    $image_url = image_style_url('home_content_slider', $field_video_image[0]['uri']);
+    $image_alt = $field_video_image[0]['alt'];
+  } else {
+    $file_for_view = file_load($field_video[0]['fid']);
+    $file_for_view = file_view_file($file_for_view, 'article_taxonomy_slider');
+    $image_url = image_style_url('home_content_slider', $file_for_view['#path']);
+    $image_alt = $file_for_view['#alt'];
+  }
 } else if ( isset($field_image[0]['uri']) ) {
   $image_url = image_style_url('home_content_slider', $field_image[0]['uri']);
   $image_alt = $field_image[0]['alt'];
@@ -41,7 +48,7 @@ $fecha = format_date(strtotime($fecha['value']), 'medium', '', null, 'es');
   <?php print render($title_suffix['contextual_links']); ?>
   <?php endif; ?>
 
-  <div class="image">
+  <div class="image<?php print $extra_class;?>">
     <a href="<?php print $node_url;?>">
       <img src="<?php print $image_url;?>" alt="<?php print $image_alt;?>" />
     </a>

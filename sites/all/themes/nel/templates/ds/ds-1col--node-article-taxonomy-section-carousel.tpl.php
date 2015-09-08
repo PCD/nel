@@ -28,6 +28,7 @@ if ( isset($field_video[0]['uri']) ) {
     $file_for_view = file_view_file($file_for_view, 'article_taxonomy_slider');
     $image_url = image_style_url('home_content_slider', $file_for_view['#path']);
     $image_alt = $file_for_view['#alt'];
+  }
 } else if ( isset($field_image[0]['uri']) ) {
   $image_url = image_style_url('home_content_slider', $field_image[0]['uri']);
   $image_alt = $field_image[0]['alt'];

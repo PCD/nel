@@ -1708,7 +1708,7 @@ h4 a {
   /* line 5, ../sass/components/01-article/_01-gallery.scss */
   .node--article--full .galeria .masonryImage {
     box-sizing: border-box;
-    width: 320px;
+    width: 50%;
     padding: 5px;
     float: left; }
     /* line 11, ../sass/components/01-article/_01-gallery.scss */

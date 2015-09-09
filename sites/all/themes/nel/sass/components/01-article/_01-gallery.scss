@@ -4,7 +4,7 @@
   
   .masonryImage{
     box-sizing: border-box;
-    width: 320px;
+    width: 50%;
     padding: 5px;
     float: left;
 
@@ -25,18 +25,4 @@
   height: 0;
   display: table;
   clear: both;
-}
-@media only screen and (-webkit-min-device-pixel-ratio: 2) {
-  .node--article--full .gallery{
-    
-  }
-}
-@media only screen and (max-width: $desktop_width) {
-  .node--article--full .gallery{
-    
-  }
-}
-@media only screen and (max-width: $tablet_width) {
-  .node--article--full .gallery{
-  }
 }

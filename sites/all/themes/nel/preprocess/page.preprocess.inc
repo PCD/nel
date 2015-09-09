@@ -31,9 +31,6 @@ function nel_preprocess_page_node(&$variables) {
   // Category
   nel_preprocess_page_node_category($variables, $node);
   
-  // Gallery Stuff
-  nel_preprocess_page_node_gallery($variables, $node);
-  
   // Facebook Tags
   nel_preprocess_page_node_facebook_tags($variables, $node);
   
@@ -41,15 +38,6 @@ function nel_preprocess_page_node(&$variables) {
   if ( $node->type == 'video_preroll' ) {
     drupal_add_js(drupal_get_path('theme', 'nel') . '/js/nel.jwplayer.js');
     drupal_add_js(drupal_get_path('theme', 'nel') . '/js/nel.video-preroll.js');
-  }
-}
-
-/** 
- * Helper for nel_preprocess_page_node on Gallery.
- */
-function nel_preprocess_page_node_gallery(&$variables, $node) {
-  if ( $node->type != 'article' ) {
-    return;
   }
 }
 

@@ -92,9 +92,6 @@ function masonry_fields_field_formatter_settings_summary_alter(&$summary, array 
  *   A boolean indicating the supported status.
  */
 function masonry_fields_formatter_supported($context) {
-  if (!isset($context['instance']['entity_type'])) {
-    return FALSE;
-  }
   $formatter = $context['instance']['display'][$context['view_mode']];
 
   // Fields in Views aren't supported
@@ -127,7 +124,7 @@ function masonry_fields_preprocess_field(&$variables) {
   $options = field_formatter_settings_get_instance_display_settings($element['#entity_type'], $element['#field_name'], $element['#bundle'], $element['#view_mode']);
 
   // Display field items in a Masonry layout
-  if (isset($options['masonry']) && $options['masonry']) {
+  if ($options['masonry']) {
     $container = '.field-name-' . $variables['field_name_css'] . ' .field-items';
     $options['masonry_item_selector'] = '.field-item';
     masonry_apply($container, $options);

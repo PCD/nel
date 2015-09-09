@@ -1,0 +1,77 @@
+#cboxMiddleLeft, 
+#cboxMiddleRight, 
+#cboxClose, 
+#cboxCurrent{
+  display: none !important;
+}
+#cboxWrapper{
+  position: relative;
+  background: transparent;
+  #cboxContent{
+    margin: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: transparent;
+  }
+  #cboxPrevious, 
+  #cboxNext{
+    display: block;
+    width: 66px;
+    height: 124px;
+    position: absolute;
+    top: 50%;
+    margin-top: -53px;
+    left: 0;
+    right: auto;
+    cursor: pointer;
+    background: none;
+    outline: none;
+  }
+  #cboxNext{
+    left: auto;
+    right: 0;
+  }
+  #cboxPrevious:after, 
+  #cboxNext:after{
+    position: absolute;
+    top: 50%;
+    margin-top: -22px;
+    left: 50%;
+    margin-left: -13px;
+    content: "";
+    display: block;
+    width: 26px;
+    height: 44px;
+    background: url("../images/slider-arrows.png") no-repeat;
+    background-size: 26px 90px;
+    opacity: 0;
+  }
+  #cboxNext:after{
+    background-position: 0 -46px;
+  }
+  #cboxPrevious:hover:after, 
+  #cboxNext:hover:after{
+    opacity: 1;
+  }
+  
+  #cboxContent:hover{
+    #cboxPrevious:after, 
+    #cboxNext:after{
+      opacity: 0.5;
+    }
+    #cboxPrevious:hover:after, 
+    #cboxNext:hover:after{
+      opacity: 1;
+    }
+  }
+  
+  #cboxTitle{
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    font-family: Domine;
+    font-size: 12px;
+  }
+}

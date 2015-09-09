@@ -9,19 +9,36 @@
  */
 function masonry_libraries_info() {
   $libraries['masonry'] = array(
-    'name' => 'jQuery Masonry',
+    'name' => 'Masonry',
     'vendor url' => 'http://masonry.desandro.com/',
     'download url' => 'http://masonry.desandro.com/',
     'version arguments' => array(
-      'file' => 'jquery.masonry.min.js',
-      // 2.x: jQuery Masonry v2.1.05
-      'pattern' => '/jQuery\s+Masonry\s+v?([0-9\.]+)/',
+      'file' => 'masonry.pkgd.min.js',
+      // Masonry 3.x
+      'pattern' => '/Masonry\s+PACKAGED\s+v?([0-9\.]+)/',
       'lines' => 2,
       'cols' => 30,
     ),
     'files' => array(
       'js' => array(
-        'jquery.masonry.min.js',
+        'masonry.pkgd.min.js',
+      ),
+    ),
+  );
+  $libraries['imagesloaded'] = array(
+    'name' => 'Images Loaded',
+    'vendor url' => 'http://desandro.github.io/imagesloaded',
+    'download url' => 'http://desandro.github.io/imagesloaded/imagesloaded.pkgd.min.js',
+    'version arguments' => array(
+      'file' => 'imagesloaded.pkgd.min.js',
+      // imagesLoaded 3.x
+      'pattern' => '/imagesLoaded\s+PACKAGED\s+v?([0-9\.]+)/',
+      'lines' => 2,
+      'cols' => 30,
+    ),
+    'files' => array(
+      'js' => array(
+        'imagesloaded.pkgd.min.js',
       ),
     ),
   );
@@ -30,13 +47,15 @@ function masonry_libraries_info() {
 }
 
 /**
- * Check if the Masonry library is installed.
+ * Check if the Masonry and imagesLoaded libraries are installed.
  *
  * @return
  *   A boolean indicating the installed status.
  */
 function masonry_installed() {
-  if (($library = libraries_detect('masonry')) && !empty($library['installed'])) {
+  $masonry = libraries_detect('masonry');
+  $imagesloaded = libraries_detect('imagesloaded');
+  if ((!empty($masonry['installed'])) && (!empty($imagesloaded['installed']))) {
     return TRUE;
   }
   else {
@@ -45,13 +64,15 @@ function masonry_installed() {
 }
 
 /**
- * Check if the Masonry library has been loaded.
+ * Check if the Masonry and imagesLoaded libraries have been loaded.
  *
  * @return
  *   A boolean indicating the loaded status.
  */
 function masonry_loaded() {
-  if (($library = libraries_load('masonry')) && !empty($library['loaded'])) {
+  $masonry = libraries_load('masonry');
+  $imagesloaded = libraries_load('imagesloaded');
+  if ((!empty($masonry['loaded'])) && (!empty($imagesloaded['loaded']))) {
     return TRUE;
   }
   else {
@@ -90,6 +111,7 @@ function masonry_default_options() {
     'masonry_fit_width' => 0,
     'masonry_rtl' => 0,
     'masonry_images_first' => 1,
+    'masonry_stamp_selector' => ''
   );
 
   // Allow other modules to alter the default options
@@ -110,10 +132,8 @@ function masonry_add_options_to_form(&$form, $default_values) {
   $form['masonry_column_width'] = array(
     '#type' => 'textfield',
     '#title' => t('Column width'),
-    '#description' => t("The width of each column."),
+    '#description' => t("The width of each column, enter pixels, percentage, or string of css selector"),
     '#default_value' => $default_values['masonry_column_width'],
-    '#size' => 5,
-    '#maxlength' => 4,
   );
   $form['masonry_column_width_units'] = array(
     '#type' => 'radios',
@@ -122,6 +142,7 @@ function masonry_add_options_to_form(&$form, $default_values) {
     '#options' => array(
       'px' => t("Pixels"),
       '%' => t("Percentage (of container's width)"),
+      'css' => t("CSS selector (you must configure your css to set widths for .masonry-item)"),
     ),
     '#default_value' => $default_values['masonry_column_width_units'],
   );
@@ -133,6 +154,12 @@ function masonry_add_options_to_form(&$form, $default_values) {
     '#size' => 4,
     '#maxlength' => 3,
     '#field_suffix' => t('px'),
+  );
+  $form['masonry_stamp_selector'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Stamp Selector'),
+    '#description' => t("Specifies which elements are stamped within the layout using css selector"),
+    '#default_value' => $default_values['masonry_stamp_selector']
   );
   $form['masonry_resizable'] = array(
     '#type' => 'checkbox',
@@ -226,7 +253,7 @@ function masonry_apply($container, $options = array()) {
       'masonry' => array(
         $container => array(
           'item_selector' => $options['masonry_item_selector'],
-          'column_width' => (int) $options['masonry_column_width'],
+          'column_width' => $options['masonry_column_width'],
           'column_width_units' => $options['masonry_column_width_units'],
           'gutter_width' => (int) $options['masonry_gutter_width'],
           'resizable' => (bool) $options['masonry_resizable'],
@@ -235,6 +262,7 @@ function masonry_apply($container, $options = array()) {
           'fit_width' => (bool) $options['masonry_fit_width'],
           'rtl' => (bool) $options['masonry_rtl'],
           'images_first' => (bool) $options['masonry_images_first'],
+          'stamp' => $options['masonry_stamp_selector']
         ),
       ),
     );
@@ -252,4 +280,3 @@ function masonry_apply($container, $options = array()) {
     drupal_add_js($script_file);
   }
 }
-

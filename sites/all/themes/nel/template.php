@@ -163,7 +163,34 @@ function nel_views_embed_view($name, $display_id = 'default', $limit = null, $of
   return $view->preview($display_id, $args);
 }
 
-
+/**
+ * Implements hook_theme.
+ */
+function nel_theme() {
+  return array(
+    'nel-gamma' => array(
+      'arguments' => array(
+        'items' => NULL, 
+      ), 
+      'template' => 'templates/gamma/nel-gamma', 
+    ), 
+    'nel-gamma-item' => array(
+      'arguments' => array(
+        'i' => NULL, 
+        'title' => NULL, 
+        'max_width' => NULL, 
+        'max_height' => NULL, 
+        'xsmall' => NULL, 
+        'small' => NULL, 
+        'medium' => NULL, 
+        'large' => NULL, 
+        'xlarge' => NULL, 
+        'xxlarge' => NULL, 
+      ), 
+      'template' => 'templates/gamma/nel-gamma-item', 
+    ), 
+  );
+}
 
 
 

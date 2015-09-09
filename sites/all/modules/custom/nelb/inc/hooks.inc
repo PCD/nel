@@ -1,5 +1,17 @@
 <?php
 /**
+ * Implements hook_url_outbound_alter.
+ */
+function nelb_url_outbound_alter(&$path, &$options, $original_path) {
+  // Instead of pointing to user/[uid]/edit, point to user/me/edit.
+  if (preg_match('|^node/([0-9]*)(/.*)?|', $path, $matches)) {
+    if ( ($node = node_load($matches[1])) ) {
+      $options['query']['vid'] = $node->vid;
+    }
+  }
+}
+
+/**
  * Implements hook_node_presave.
  */
 function nelb_node_presave($node, $other_info = null) {

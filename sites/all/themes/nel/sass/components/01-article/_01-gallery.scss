@@ -3,12 +3,20 @@
   margin: 0 -5px;
   
   .masonryImage{
+    box-sizing: border-box;
     width: 320px;
     padding: 5px;
     float: left;
 
     a{
-      display: inline-block;
+      display: block;
+      outline: none;
+    }
+    img{
+      border: solid 1px #666;
+      width: 100%;
+      height: auto;
+      display: block;
     }
   }
 }

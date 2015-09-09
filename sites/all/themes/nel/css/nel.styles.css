@@ -1707,14 +1707,22 @@ h4 a {
   margin: 0 -5px; }
   /* line 5, ../sass/components/01-article/_01-gallery.scss */
   .node--article--full .galeria .masonryImage {
+    box-sizing: border-box;
     width: 320px;
     padding: 5px;
     float: left; }
-    /* line 10, ../sass/components/01-article/_01-gallery.scss */
+    /* line 11, ../sass/components/01-article/_01-gallery.scss */
     .node--article--full .galeria .masonryImage a {
-      display: inline-block; }
+      display: block;
+      outline: none; }
+    /* line 15, ../sass/components/01-article/_01-gallery.scss */
+    .node--article--full .galeria .masonryImage img {
+      border: solid 1px #666;
+      width: 100%;
+      height: auto;
+      display: block; }
 
-/* line 15, ../sass/components/01-article/_01-gallery.scss */
+/* line 23, ../sass/components/01-article/_01-gallery.scss */
 .node--article--full .galeria:after {
   content: "";
   height: 0;

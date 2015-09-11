@@ -1,5 +1,5 @@
 .video.streaming{
-  div.nayarit-player{
+  > .inner-wrapper center > div{
     width: 100% !important;
     object{
       width: 100% !important;
@@ -10,7 +10,7 @@
 
 @media only screen and (max-width: $tablet_width) {
   .video.streaming{
-    div.nayarit-player{
+    > .inner-wrapper center > div{
       height: 270px !important;
     }
   }
@@ -18,7 +18,7 @@
 
 @media only screen and (max-width: 480px) {
   .video.streaming{
-    div.nayarit-player{
+    > .inner-wrapper center > div{
       height: 228px !important;
     }
   }

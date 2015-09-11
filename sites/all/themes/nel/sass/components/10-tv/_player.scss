@@ -1,0 +1,25 @@
+.video.streaming{
+  div.nayarit-player{
+    width: 100% !important;
+    object{
+      width: 100% !important;
+      height: 100% !important;
+    }
+  }
+}
+
+@media only screen and (max-width: $tablet_width) {
+  .video.streaming{
+    div.nayarit-player{
+      height: 270px !important;
+    }
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .video.streaming{
+    div.nayarit-player{
+      height: 228px !important;
+    }
+  }
+}

@@ -3735,5 +3735,21 @@ iframe {
   .adslot_2 {
     width: 180px;
     height: 150px; } }
+/* line 2, ../sass/components/10-tv/_player.scss */
+.video.streaming div.nayarit-player {
+  width: 100% !important; }
+  /* line 4, ../sass/components/10-tv/_player.scss */
+  .video.streaming div.nayarit-player object {
+    width: 100% !important;
+    height: 100% !important; }
+
+@media only screen and (max-width: 748px) {
+  /* line 13, ../sass/components/10-tv/_player.scss */
+  .video.streaming div.nayarit-player {
+    height: 270px !important; } }
+@media only screen and (max-width: 480px) {
+  /* line 21, ../sass/components/10-tv/_player.scss */
+  .video.streaming div.nayarit-player {
+    height: 228px !important; } }
 
 /*# sourceMappingURL=nel.no-query.css.map */

@@ -3,6 +3,7 @@
  * Implements hook_url_outbound_alter.
  */
 function nelb_url_outbound_alter(&$path, &$options, $original_path) {
+  return;
   // Instead of pointing to user/[uid]/edit, point to user/me/edit.
   if (preg_match('|^node/([0-9]*)(/.*)?|', $path, $matches)) {
     if ( ($node = node_load($matches[1])) ) {

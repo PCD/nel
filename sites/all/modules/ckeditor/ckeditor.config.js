@@ -26,7 +26,7 @@ CKEDITOR.editorConfig = function(config) {
 
   // [#1762328] Uncomment the line below to protect <code> tags in CKEditor (hide them in wysiwyg mode).
   // config.protectedSource.push(/<code>[\s\S]*?<\/code>/gi);
-  config.extraPlugins = 'youtube';
+  config.extraPlugins = '';
 
   /*
     * Append here extra CSS rules that should be applied into the editing area.
@@ -58,6 +58,11 @@ CKEDITOR.editorConfig = function(config) {
   if (Drupal.settings.ckeditor.theme == "marinelli") {
     config.bodyClass = 'singlepage';
     config.bodyId = 'primary';
+  }
+
+  // Make CKEditor's edit area as high as the textarea would be.
+  if (this.element.$.rows > 0) {
+    config.height = this.element.$.rows * 20 + 'px';
   }
 }
 

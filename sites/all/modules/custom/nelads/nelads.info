@@ -1,0 +1,4 @@
+name = nelads
+description = Backend for Adsense or Double Click blocks
+package = Nayarit en Linea
+core = 7.x

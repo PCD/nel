@@ -176,17 +176,18 @@ if ( isset($field_categoria_single[0]['taxonomy_term']->name) ) {
 }
 
 $display = $displays[$style];
-foreach($display['columns'] as $i => $column) {
-  $j = $i+1;
-  $view_output .= "<div class=\"{$column['class']}\">\n";
-  if ( !is_null($tid) ) {
-    $view_output .= views_embed_view($column['view'], $column['display_id'], $tid);
-  } else {
-    $view_output .= views_embed_view($column['view'], $column['display_no_tid_id']);
+if ( isset($displays[$style]) ) {
+  foreach($display['columns'] as $i => $column) {
+    $j = $i+1;
+    $view_output .= "<div class=\"{$column['class']}\">\n";
+    if ( !is_null($tid) ) {
+      $view_output .= views_embed_view($column['view'], $column['display_id'], $tid);
+    } else {
+      $view_output .= views_embed_view($column['view'], $column['display_no_tid_id']);
+    }
+    $view_output .= "</div>\n";
   }
-  $view_output .= "</div>\n";
 }
-
 
 /**
  * @file

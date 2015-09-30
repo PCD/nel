@@ -3646,57 +3646,51 @@ iframe {
     .taxonomy-term.view-mode-author_header .social-facebook {
       margin-bottom: 0; } }
 /* line 1, ../sass/components/09-adsense/_09-adsense-article-paragraph.scss */
-#block-inject-1,
-#block-inject-1 #block-block-8--2 .block__content,
 .adslot_1 {
   width: 300px;
   height: 250px; }
 
 @media only screen and (max-width: 996px) {
-  /* line 9, ../sass/components/09-adsense/_09-adsense-article-paragraph.scss */
-  #block-inject-1,
-  #block-inject-1 #block-block-8--2 .block__content,
+  /* line 7, ../sass/components/09-adsense/_09-adsense-article-paragraph.scss */
   .adslot_1 {
     width: 250px;
     height: 250px; } }
 @media only screen and (max-width: 748px) {
-  /* line 18, ../sass/components/09-adsense/_09-adsense-article-paragraph.scss */
-  #block-inject-1,
-  #block-inject-1 #block-block-8--2 .block__content,
+  /* line 14, ../sass/components/09-adsense/_09-adsense-article-paragraph.scss */
   .adslot_1 {
     width: 200px;
     height: 200px; } }
 @media only screen and (max-width: 480px) {
-  /* line 27, ../sass/components/09-adsense/_09-adsense-article-paragraph.scss */
+  /* line 21, ../sass/components/09-adsense/_09-adsense-article-paragraph.scss */
   #block-inject-1,
-  #block-inject-1 #block-block-8--2 .block__content {
+  #block-inject-1 .block--nelads .block__content {
     float: none;
     width: auto;
     height: auto;
     display: table;
     margin: 0 auto; }
 
-  /* line 35, ../sass/components/09-adsense/_09-adsense-article-paragraph.scss */
+  /* line 29, ../sass/components/09-adsense/_09-adsense-article-paragraph.scss */
   .adslot_1 {
     width: 336px;
     height: 280px; } }
 @media only screen and (max-width: 351px) {
-  /* line 42, ../sass/components/09-adsense/_09-adsense-article-paragraph.scss */
+  /* line 36, ../sass/components/09-adsense/_09-adsense-article-paragraph.scss */
   .adslot_1 {
     width: 300px;
     height: 250px; } }
 @media only screen and (max-width: 315px) {
-  /* line 49, ../sass/components/09-adsense/_09-adsense-article-paragraph.scss */
+  /* line 43, ../sass/components/09-adsense/_09-adsense-article-paragraph.scss */
   .adslot_1 {
     width: 250px;
     height: 250px; } }
 @media only screen and (max-width: 265px) {
-  /* line 56, ../sass/components/09-adsense/_09-adsense-article-paragraph.scss */
+  /* line 50, ../sass/components/09-adsense/_09-adsense-article-paragraph.scss */
   .adslot_1 {
     width: 200px;
     height: 200px; } }
 @media only screen and (max-width: 215px) {
-  /* line 63, ../sass/components/09-adsense/_09-adsense-article-paragraph.scss */
+  /* line 57, ../sass/components/09-adsense/_09-adsense-article-paragraph.scss */
   .adslot_1 {
     width: 180px;
     height: 150px; } }

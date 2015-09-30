@@ -186,7 +186,7 @@ function block_inject_node_view($node, $view_mode, $langcode) {
         if ($go_ahead == TRUE) {
           // Return the blocks for each region to be injected into a variable.
           $region = block_get_blocks_by_region('block_inject-' . $item->id);
-          
+
           // Prepare the attributes for the region div.
           $classes = array('block-inject', 'block-inject-' . $item->id);
           $attributes = array(
@@ -317,8 +317,10 @@ function block_inject_node($region, $body, $offset = 0, $attributes = array()) {
   }
 
   // Add the attributes to the region renderable array
-  $region['#prefix'] = '<div ' . drupal_attributes($attributes) . '>';
-  $region['#suffix'] = '</div>';
+  $start_tag = "<!--#{$attributes['id']}-start-->";
+  $end_tag = "<!--#{$attributes['id']}-end-->";
+  $region['#prefix'] = $start_tag . '<div ' . drupal_attributes($attributes) . '>';
+  $region['#suffix'] = '</div>' . $end_tag;
   // Insert the renderable region array into the middle of the body field.
   array_splice($array_explode, ($array_explode_half + 1 + $offset), 0, render($region));
   // Re-create the body field string with the region injected.

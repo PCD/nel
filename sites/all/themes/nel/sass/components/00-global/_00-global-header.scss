@@ -36,7 +36,8 @@ body.toolbar-drawer .navigation-wrapper.stuck{
 }
 .l-region--header{
   width: 646px;
-  text-align: right;
+  padding-top: 5px;
+  text-align: left;
   float: right;
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 2) {
@@ -45,9 +46,10 @@ body.toolbar-drawer .navigation-wrapper.stuck{
     background-size: 300px 100px;
   }
 }
-@media only screen and (max-width: $desktop_wide_width) {
+
+@media only screen and (min-width: $desktop_wide_ads_max) {
   .l-region--header{
-    padding-top: 20px;
+    width: 728px;
   }
 }
 
@@ -78,9 +80,11 @@ body.toolbar-drawer .navigation-wrapper.stuck{
     padding-right: 0;
   }
   .l-region--header{
-    width: auto;
+    width: 100%;
     padding-left: 9px;
     padding-right: 9px;
+    padding-bottom: 9px;
+    text-align: center;
   }
   a.site-logo{
     background-size: contain;

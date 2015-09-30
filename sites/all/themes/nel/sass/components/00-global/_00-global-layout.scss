@@ -7,6 +7,7 @@ body.cke_ltr{
 }
 .l-page{
   background: white;
+  overflow: hidden;
 }
 .l-main,
 .l-branding,
@@ -66,6 +67,18 @@ body.cke_ltr{
   width: 300px;
   position: relative;
   left: 336px;
+}
+
+@media only screen and (min-width: $desktop_wide_ads_max) {
+  .l-branding,
+  .l-region--top-navigation, 
+  .l-region--navigation,
+  .l-footer-main-inner, 
+  .l-region--footer{
+    width: $desktop_wide_ads_max;
+    margin: 0 auto;
+    padding: 0 15px;
+  }
 }
 
 @media only screen and (max-width: $desktop_width) {

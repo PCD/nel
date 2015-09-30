@@ -4,8 +4,12 @@
  */
 function nelads_theme() {
   return array(
-    'nelads-article_detail' => array(
-      'template' => 'templates/nelads-article_detail', 
+    'nelads-adslot' => array(
+      'arguments' => array(
+        'adslot' => 1, 
+        'adsvar' => 'ads_article_detail', 
+      ), 
+      'template' => 'templates/nelads-adslot', 
     ), 
   );
 }

@@ -1,0 +1,110 @@
+.adslot_2{
+  width: 468px;
+  height: 60px;
+}
+#block-nelads-nelads-global-header{
+  padding-top: 5px;
+  display: inline-block;
+}
+
+@media only screen and (min-width: $desktop_wide_ads_max) {
+  .adslot_2{
+    width: 728px;
+    height: 90px;
+  }
+  #block-nelads-nelads-global-header{
+    padding-top: 0;
+  }
+}
+
+@media only screen and (max-width: $desktop_width) {
+  #block-nelads-nelads-global-header{
+    padding-top: 0;
+  }
+}
+
+@media only screen and (max-width: $tablet_width) {
+  .adslot_2{
+    width: 728px;
+    height: 90px;
+  }
+}
+
+@media only screen and (max-width: 746px) {
+  .adslot_2{
+    width: 468px;
+    height: 60px;
+  }
+}
+
+@media only screen and (max-width: 486px) {
+  .adslot_2{
+    width: 336px;
+    height: 280px;
+  }
+}
+
+@media only screen and (max-width: 354px) {
+  .adslot_2{
+    width: 300px;
+    height: 250px;
+  }
+}
+
+@media only screen and (max-width: 318px) {
+  .adslot_2{
+    width: 250px;
+    height: 250px;
+  }
+}
+
+@media only screen and (max-width: 268px) {
+  .adslot_2{
+    width: 200px;
+    height: 200px;
+  }
+}
+
+@media only screen and (max-width: 218px) {
+  .adslot_2{
+    width: 180px;
+    height: 150px;
+  }
+}
+
+@media only screen and (max-width: 198px) {
+  .adslot_2{
+    width: 125px;
+    height: 125px;
+  }
+}
+
+@media only screen and (max-width: 143px) {
+  .adslot_2{
+    display: none;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

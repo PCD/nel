@@ -474,54 +474,57 @@ body.toolbar-drawer .navigation-wrapper.stuck {
 /* line 37, ../sass/components/00-global/_00-global-header.scss */
 .l-region--header {
   width: 646px;
-  text-align: right;
+  padding-top: 5px;
+  text-align: left;
   float: right; }
 
 @media only screen and (-webkit-min-device-pixel-ratio: 2) {
-  /* line 43, ../sass/components/00-global/_00-global-header.scss */
+  /* line 44, ../sass/components/00-global/_00-global-header.scss */
   a.site-logo {
     background-image: url(../logo_retina.png);
     background-size: 300px 100px; } }
-@media only screen and (max-width: 1200px) {
-  /* line 49, ../sass/components/00-global/_00-global-header.scss */
+@media only screen and (min-width: 1078px) {
+  /* line 51, ../sass/components/00-global/_00-global-header.scss */
   .l-region--header {
-    padding-top: 20px; } }
+    width: 728px; } }
 @media only screen and (max-width: 996px) {
-  /* line 55, ../sass/components/00-global/_00-global-header.scss */
+  /* line 57, ../sass/components/00-global/_00-global-header.scss */
   body.toolbar-drawer .navigation-wrapper.stuck,
   body.toolbar .navigation-wrapper.stuck {
     margin-top: 0; }
 
-  /* line 59, ../sass/components/00-global/_00-global-header.scss */
+  /* line 61, ../sass/components/00-global/_00-global-header.scss */
   .l-branding-wrapper .l-branding {
     height: 99px; }
 
-  /* line 62, ../sass/components/00-global/_00-global-header.scss */
+  /* line 64, ../sass/components/00-global/_00-global-header.scss */
   a.site-logo {
     height: 76px;
     width: 248px;
     background-size: contain; }
 
-  /* line 67, ../sass/components/00-global/_00-global-header.scss */
+  /* line 69, ../sass/components/00-global/_00-global-header.scss */
   .l-region--header {
     text-align: right;
     padding-top: 9px;
     width: 478px; } }
 @media only screen and (max-width: 748px) {
-  /* line 74, ../sass/components/00-global/_00-global-header.scss */
+  /* line 76, ../sass/components/00-global/_00-global-header.scss */
   .l-branding-wrapper .l-branding {
     height: 57px;
     padding-top: 0;
     padding-left: 0;
     padding-right: 0; }
 
-  /* line 80, ../sass/components/00-global/_00-global-header.scss */
+  /* line 82, ../sass/components/00-global/_00-global-header.scss */
   .l-region--header {
-    width: auto;
+    width: 100%;
     padding-left: 9px;
-    padding-right: 9px; }
+    padding-right: 9px;
+    padding-bottom: 9px;
+    text-align: center; }
 
-  /* line 85, ../sass/components/00-global/_00-global-header.scss */
+  /* line 89, ../sass/components/00-global/_00-global-header.scss */
   a.site-logo {
     background-size: contain;
     height: 57px; } }
@@ -543,9 +546,10 @@ body.cke_ltr {
 
 /* line 8, ../sass/components/00-global/_00-global-layout.scss */
 .l-page {
-  background: white; }
+  background: white;
+  overflow: hidden; }
 
-/* line 11, ../sass/components/00-global/_00-global-layout.scss */
+/* line 12, ../sass/components/00-global/_00-global-layout.scss */
 .l-main,
 .l-branding,
 .l-region--top-navigation,
@@ -556,12 +560,12 @@ body.cke_ltr {
   margin: 0 auto;
   padding: 0 15px; }
 
-/* line 21, ../sass/components/00-global/_00-global-layout.scss */
+/* line 22, ../sass/components/00-global/_00-global-layout.scss */
 .l-main {
   padding-top: 36px; }
 
 /** 2 Columns Fluid Layout **/
-/* line 26, ../sass/components/00-global/_00-global-layout.scss */
+/* line 27, ../sass/components/00-global/_00-global-layout.scss */
 .colmask.right-menu {
   position: relative;
   clear: both;
@@ -569,18 +573,18 @@ body.cke_ltr {
   width: 100%;
   overflow: hidden; }
 
-/* line 33, ../sass/components/00-global/_00-global-layout.scss */
+/* line 34, ../sass/components/00-global/_00-global-layout.scss */
 .l-main {
   padding-bottom: 36px; }
 
-/* line 36, ../sass/components/00-global/_00-global-layout.scss */
+/* line 37, ../sass/components/00-global/_00-global-layout.scss */
 .l-main:after {
   clear: both;
   content: " ";
   display: table;
   height: 0; }
 
-/* line 42, ../sass/components/00-global/_00-global-layout.scss */
+/* line 43, ../sass/components/00-global/_00-global-layout.scss */
 .right-menu .colleft {
   float: left;
   width: 200%;
@@ -588,24 +592,24 @@ body.cke_ltr {
   position: relative;
   right: 100%; }
 
-/* line 49, ../sass/components/00-global/_00-global-layout.scss */
+/* line 50, ../sass/components/00-global/_00-global-layout.scss */
 .right-menu .col1wrap {
   float: left;
   width: 50%;
   position: relative;
   left: 50%; }
 
-/* line 55, ../sass/components/00-global/_00-global-layout.scss */
+/* line 56, ../sass/components/00-global/_00-global-layout.scss */
 .right-menu .l-content,
 .right-menu .l-footer-content {
   margin: 0 0 0 336px;
   overflow: hidden; }
 
-/* line 60, ../sass/components/00-global/_00-global-layout.scss */
+/* line 61, ../sass/components/00-global/_00-global-layout.scss */
 .right-menu .l-content {
   padding-bottom: 79px; }
 
-/* line 63, ../sass/components/00-global/_00-global-layout.scss */
+/* line 64, ../sass/components/00-global/_00-global-layout.scss */
 .right-menu .l-region--sidebar-second,
 .right-menu .l-region--footer-sidebar {
   float: right;
@@ -613,8 +617,18 @@ body.cke_ltr {
   position: relative;
   left: 336px; }
 
+@media only screen and (min-width: 1078px) {
+  /* line 73, ../sass/components/00-global/_00-global-layout.scss */
+  .l-branding,
+  .l-region--top-navigation,
+  .l-region--navigation,
+  .l-footer-main-inner,
+  .l-region--footer {
+    width: 1078px;
+    margin: 0 auto;
+    padding: 0 15px; } }
 @media only screen and (max-width: 996px) {
-  /* line 72, ../sass/components/00-global/_00-global-layout.scss */
+  /* line 85, ../sass/components/00-global/_00-global-layout.scss */
   .l-main,
   .l-branding,
   .l-region--top-navigation,
@@ -625,26 +639,26 @@ body.cke_ltr {
     padding-left: 11px;
     padding-right: 11px; }
 
-  /* line 82, ../sass/components/00-global/_00-global-layout.scss */
+  /* line 95, ../sass/components/00-global/_00-global-layout.scss */
   .right-menu .colleft {
     margin-left: -253px; }
 
-  /* line 85, ../sass/components/00-global/_00-global-layout.scss */
+  /* line 98, ../sass/components/00-global/_00-global-layout.scss */
   .right-menu .l-content,
   .right-menu .l-footer-content {
     margin: 0 0 0 253px; }
 
-  /* line 89, ../sass/components/00-global/_00-global-layout.scss */
+  /* line 102, ../sass/components/00-global/_00-global-layout.scss */
   .right-menu .l-region--sidebar-second,
   .right-menu .l-region--footer-sidebar {
     width: 220px;
     left: 253px; }
 
-  /* line 94, ../sass/components/00-global/_00-global-layout.scss */
+  /* line 107, ../sass/components/00-global/_00-global-layout.scss */
   .right-menu .l-content {
     padding-bottom: 20px; } }
 @media only screen and (max-width: 748px) {
-  /* line 100, ../sass/components/00-global/_00-global-layout.scss */
+  /* line 113, ../sass/components/00-global/_00-global-layout.scss */
   .l-main,
   .l-branding,
   .l-region--top-navigation,
@@ -655,41 +669,41 @@ body.cke_ltr {
     padding-left: 8px;
     padding-right: 8px; }
 
-  /* line 110, ../sass/components/00-global/_00-global-layout.scss */
+  /* line 123, ../sass/components/00-global/_00-global-layout.scss */
   .right-menu .colleft {
     float: none;
     width: 100%;
     margin-left: 0;
     right: auto; }
 
-  /* line 116, ../sass/components/00-global/_00-global-layout.scss */
+  /* line 129, ../sass/components/00-global/_00-global-layout.scss */
   .right-menu .col1wrap {
     float: none;
     width: 100%;
     left: auto; }
 
-  /* line 121, ../sass/components/00-global/_00-global-layout.scss */
+  /* line 134, ../sass/components/00-global/_00-global-layout.scss */
   .right-menu .l-content,
   .right-menu .l-footer-content {
     margin: 0;
     overflow: visible; }
 
-  /* line 126, ../sass/components/00-global/_00-global-layout.scss */
+  /* line 139, ../sass/components/00-global/_00-global-layout.scss */
   .right-menu .l-region--sidebar-second,
   .right-menu .l-region--footer-sidebar {
     float: none;
     width: 100%;
     left: auto; }
 
-  /* line 132, ../sass/components/00-global/_00-global-layout.scss */
+  /* line 145, ../sass/components/00-global/_00-global-layout.scss */
   .right-menu .l-content {
     padding-bottom: 0; }
 
-  /* line 135, ../sass/components/00-global/_00-global-layout.scss */
+  /* line 148, ../sass/components/00-global/_00-global-layout.scss */
   .l-main {
     background: url(../images/little-bg.png) repeat-x; }
 
-  /* line 138, ../sass/components/00-global/_00-global-layout.scss */
+  /* line 151, ../sass/components/00-global/_00-global-layout.scss */
   .l-main:after {
     clear: both; } }
 /* line 2, ../sass/components/00-global/_00-global-links.scss */
@@ -948,33 +962,33 @@ body.cke_ltr {
     background-image: url("../images/elements@2x.png");
     background-size: 91px 1900px; } }
 @media only screen and (max-width: 996px) {
-  /* line 157, ../sass/components/00-global/_00-global-navigation.scss */
+  /* line 158, ../sass/components/00-global/_00-global-navigation.scss */
   #block-system-main-menu,
   .menu-block-1,
   .menu-block-2 {
     width: 661px; }
 
-  /* line 163, ../sass/components/00-global/_00-global-navigation.scss */
+  /* line 164, ../sass/components/00-global/_00-global-navigation.scss */
   #block-system-main-menu > ul.menu > li > a, .menu-block-1 > ul.menu > li > a, .menu-block-2 > ul.menu > li > a {
     padding: 16px 6px 0px 6px;
     font-size: 15px; } }
 @media only screen and (max-width: 748px) {
-  /* line 169, ../sass/components/00-global/_00-global-navigation.scss */
+  /* line 170, ../sass/components/00-global/_00-global-navigation.scss */
   .sticky-wrapper {
     height: 0 !important; }
 
-  /* line 172, ../sass/components/00-global/_00-global-navigation.scss */
+  /* line 173, ../sass/components/00-global/_00-global-navigation.scss */
   .navigation-wrapper {
     display: none; }
 
-  /* line 175, ../sass/components/00-global/_00-global-navigation.scss */
+  /* line 176, ../sass/components/00-global/_00-global-navigation.scss */
   a.site-logo {
     background-size: contain;
     float: right;
     width: 171px;
     height: 57px; } }
 @media only screen and (max-width: 748px) {
-  /* line 184, ../sass/components/00-global/_00-global-navigation.scss */
+  /* line 185, ../sass/components/00-global/_00-global-navigation.scss */
   .l-branding-wrapper.mobileMenuOn {
     z-index: 9999;
     position: fixed;
@@ -983,31 +997,31 @@ body.cke_ltr {
     left: 0;
     right: 0;
     overflow: scroll; }
-    /* line 192, ../sass/components/00-global/_00-global-navigation.scss */
+    /* line 193, ../sass/components/00-global/_00-global-navigation.scss */
     .l-branding-wrapper.mobileMenuOn .menu-mobile .menu-open a {
       border-bottom-color: white; }
-    /* line 195, ../sass/components/00-global/_00-global-navigation.scss */
+    /* line 196, ../sass/components/00-global/_00-global-navigation.scss */
     .l-branding-wrapper.mobileMenuOn .l-branding {
       height: auto;
       padding-right: 0; }
-    /* line 199, ../sass/components/00-global/_00-global-navigation.scss */
+    /* line 200, ../sass/components/00-global/_00-global-navigation.scss */
     .l-branding-wrapper.mobileMenuOn #cool-mobile-menu {
       display: block;
       clear: both; }
 
-  /* line 204, ../sass/components/00-global/_00-global-navigation.scss */
+  /* line 205, ../sass/components/00-global/_00-global-navigation.scss */
   #cool-mobile-menu > ul {
     display: block;
     margin: 0;
     padding: 0;
     list-style: none; }
-    /* line 209, ../sass/components/00-global/_00-global-navigation.scss */
+    /* line 210, ../sass/components/00-global/_00-global-navigation.scss */
     #cool-mobile-menu > ul > li {
       display: block;
       margin: 0;
       padding: 0;
       position: relative; }
-      /* line 214, ../sass/components/00-global/_00-global-navigation.scss */
+      /* line 215, ../sass/components/00-global/_00-global-navigation.scss */
       #cool-mobile-menu > ul > li > a.link {
         border-top: solid 1px #0083CF;
         border-bottom: solid 1px #005F95;
@@ -1022,13 +1036,13 @@ body.cke_ltr {
         margin: 0 0 0 0;
         padding: 14px 0 0 34px;
         background: #006FA1; }
-      /* line 229, ../sass/components/00-global/_00-global-navigation.scss */
+      /* line 230, ../sass/components/00-global/_00-global-navigation.scss */
       #cool-mobile-menu > ul > li > ul {
         display: none; }
-    /* line 234, ../sass/components/00-global/_00-global-navigation.scss */
+    /* line 235, ../sass/components/00-global/_00-global-navigation.scss */
     #cool-mobile-menu > ul > li.expanded > a.link {
       margin-right: 67px; }
-    /* line 237, ../sass/components/00-global/_00-global-navigation.scss */
+    /* line 238, ../sass/components/00-global/_00-global-navigation.scss */
     #cool-mobile-menu > ul > li.expanded > a.opener {
       border-top: solid 1px #0083CF;
       border-bottom: solid 1px #005F95;
@@ -1038,24 +1052,24 @@ body.cke_ltr {
       display: block;
       background: #006FA1 url(../images/menu-drop-down.png) no-repeat right 0;
       text-indent: -9999px; }
-    /* line 249, ../sass/components/00-global/_00-global-navigation.scss */
+    /* line 250, ../sass/components/00-global/_00-global-navigation.scss */
     #cool-mobile-menu > ul li.active > ul {
       display: block; }
-    /* line 252, ../sass/components/00-global/_00-global-navigation.scss */
+    /* line 253, ../sass/components/00-global/_00-global-navigation.scss */
     #cool-mobile-menu > ul li.active > a.opener {
       background-position: right -47px; }
 
-  /* line 257, ../sass/components/00-global/_00-global-navigation.scss */
+  /* line 258, ../sass/components/00-global/_00-global-navigation.scss */
   #cool-mobile-menu > ul > li > ul {
     margin: 0;
     padding: 0;
     list-style: none; }
-    /* line 261, ../sass/components/00-global/_00-global-navigation.scss */
+    /* line 262, ../sass/components/00-global/_00-global-navigation.scss */
     #cool-mobile-menu > ul > li > ul > li {
       padding: 0;
       margin: 0;
       list-style: none; }
-      /* line 265, ../sass/components/00-global/_00-global-navigation.scss */
+      /* line 266, ../sass/components/00-global/_00-global-navigation.scss */
       #cool-mobile-menu > ul > li > ul > li > a {
         color: white;
         border-top: solid 1px #00A9FF;
@@ -1070,10 +1084,10 @@ body.cke_ltr {
         background: #0093D3 url(../images/menu-item-point.png) no-repeat 43px 21px;
         text-decoration: none;
         display: block; }
-      /* line 280, ../sass/components/00-global/_00-global-navigation.scss */
+      /* line 281, ../sass/components/00-global/_00-global-navigation.scss */
       #cool-mobile-menu > ul > li > ul > li > ul {
         display: none; }
-    /* line 284, ../sass/components/00-global/_00-global-navigation.scss */
+    /* line 285, ../sass/components/00-global/_00-global-navigation.scss */
     #cool-mobile-menu > ul > li > ul > li.first a {
       border-top: solid 1px #0083CF; } }
 /* line 1, ../sass/components/00-global/_00-global-play-video.scss */
@@ -3694,41 +3708,73 @@ iframe {
   .adslot_1 {
     width: 180px;
     height: 150px; } }
-/* line 1, ../sass/components/09-adsense/_09-adsense-listing-sidebar.scss */
+/* line 1, ../sass/components/09-adsense/_09-adsense-global_header.scss */
 .adslot_2 {
-  width: 300px;
-  height: 250px; }
+  width: 468px;
+  height: 60px; }
 
-@media only screen and (max-width: 996px) {
-  /* line 7, ../sass/components/09-adsense/_09-adsense-listing-sidebar.scss */
+/* line 5, ../sass/components/09-adsense/_09-adsense-global_header.scss */
+#block-nelads-nelads-global-header {
+  padding-top: 5px;
+  display: inline-block; }
+
+@media only screen and (min-width: 1078px) {
+  /* line 11, ../sass/components/09-adsense/_09-adsense-global_header.scss */
   .adslot_2 {
-    width: 220px;
-    height: 250px; } }
+    width: 728px;
+    height: 90px; }
+
+  /* line 15, ../sass/components/09-adsense/_09-adsense-global_header.scss */
+  #block-nelads-nelads-global-header {
+    padding-top: 0; } }
+@media only screen and (max-width: 996px) {
+  /* line 21, ../sass/components/09-adsense/_09-adsense-global_header.scss */
+  #block-nelads-nelads-global-header {
+    padding-top: 0; } }
 @media only screen and (max-width: 748px) {
-  /* line 14, ../sass/components/09-adsense/_09-adsense-listing-sidebar.scss */
+  /* line 27, ../sass/components/09-adsense/_09-adsense-global_header.scss */
+  .adslot_2 {
+    width: 728px;
+    height: 90px; } }
+@media only screen and (max-width: 746px) {
+  /* line 34, ../sass/components/09-adsense/_09-adsense-global_header.scss */
+  .adslot_2 {
+    width: 468px;
+    height: 60px; } }
+@media only screen and (max-width: 486px) {
+  /* line 41, ../sass/components/09-adsense/_09-adsense-global_header.scss */
   .adslot_2 {
     width: 336px;
     height: 280px; } }
-@media only screen and (max-width: 351px) {
-  /* line 21, ../sass/components/09-adsense/_09-adsense-listing-sidebar.scss */
+@media only screen and (max-width: 354px) {
+  /* line 48, ../sass/components/09-adsense/_09-adsense-global_header.scss */
   .adslot_2 {
     width: 300px;
     height: 250px; } }
-@media only screen and (max-width: 315px) {
-  /* line 28, ../sass/components/09-adsense/_09-adsense-listing-sidebar.scss */
+@media only screen and (max-width: 318px) {
+  /* line 55, ../sass/components/09-adsense/_09-adsense-global_header.scss */
   .adslot_2 {
     width: 250px;
     height: 250px; } }
-@media only screen and (max-width: 265px) {
-  /* line 35, ../sass/components/09-adsense/_09-adsense-listing-sidebar.scss */
+@media only screen and (max-width: 268px) {
+  /* line 62, ../sass/components/09-adsense/_09-adsense-global_header.scss */
   .adslot_2 {
     width: 200px;
     height: 200px; } }
-@media only screen and (max-width: 215px) {
-  /* line 42, ../sass/components/09-adsense/_09-adsense-listing-sidebar.scss */
+@media only screen and (max-width: 218px) {
+  /* line 69, ../sass/components/09-adsense/_09-adsense-global_header.scss */
   .adslot_2 {
     width: 180px;
     height: 150px; } }
+@media only screen and (max-width: 198px) {
+  /* line 76, ../sass/components/09-adsense/_09-adsense-global_header.scss */
+  .adslot_2 {
+    width: 125px;
+    height: 125px; } }
+@media only screen and (max-width: 143px) {
+  /* line 83, ../sass/components/09-adsense/_09-adsense-global_header.scss */
+  .adslot_2 {
+    display: none; } }
 /* line 2, ../sass/components/10-tv/_player.scss */
 .video.streaming > .inner-wrapper center > div {
   width: 100% !important; }

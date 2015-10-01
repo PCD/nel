@@ -9,4 +9,7 @@ function nelads_process_html(&$vars) {
   
   // Delete Ad Article Detail
   $vars['page'] = preg_replace('/<p><!--#block-inject-1-start-->.*?<!--#block-inject-1-end-->/msi', '', $vars['page']);
+  
+  // Delete Ad Global Header
+  $vars['page'] = preg_replace('/<!--#nelads-block-2-start-->.*?<!--#nelads-block-2-end-->/msi', '', $vars['page']);
 }

@@ -3775,6 +3775,18 @@ iframe {
   /* line 83, ../sass/components/09-adsense/_09-adsense-global_header.scss */
   .adslot_2 {
     display: none; } }
+/* line 1, ../sass/components/09-adsense/_09-adsense-global_sidebar.scss */
+#block-nelads-nelads-global-sidebar {
+  margin: 0; }
+
+/* line 4, ../sass/components/09-adsense/_09-adsense-global_sidebar.scss */
+.block + #block-nelads-nelads-global-sidebar {
+  margin-top: 30px; }
+
+/* line 7, ../sass/components/09-adsense/_09-adsense-global_sidebar.scss */
+#block-nelads-nelads-global-sidebar + .block {
+  margin-top: 30px; }
+
 /* line 2, ../sass/components/10-tv/_player.scss */
 .video.streaming > .inner-wrapper center > div {
   width: 100% !important; }

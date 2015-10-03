@@ -10,6 +10,9 @@ function nelads_block_info() {
   $blocks['nelads-global_header'] = array(
     'info' => 'Nel Ads - Global Header', 
   );
+  $blocks['nelads-global_sidebar'] = array(
+    'info' => 'Nel Ads - Global Sidebar', 
+  );
   return $blocks;
 }
 
@@ -25,6 +28,10 @@ function nelads_block_view($delta = '') {
 
     case 'nelads-global_header':
       $block['content'] = nelads_block_view_global_header();
+      break;
+
+    case 'nelads-global_sidebar':
+      $block['content'] = nelads_block_view_global_sidebar();
       break;
 
   }
@@ -74,5 +81,28 @@ function nelads_block_view_global_header() {
   return theme('nelads-adslot', array(
     'adslot' => 2, 
     'adsvar' => 'ads_global_header', 
+  ));
+}
+
+/**
+ * Returns the nelads-global_sidebar block.
+ */
+function nelads_block_view_global_sidebar() {
+  $nelads = array(
+    (object) array(
+      'ad_client' => 'ca-pub-6659210167862789', 
+      'ad_slot' => '2060294754', 
+      'ad_format' => 'rectangle', 
+    ), 
+    (object) array(
+      'ad_client' => 'ca-pub-5383770617488734', 
+      'ad_slot' => '1089677603', 
+      'ad_format' => 'rectangle', 
+    ), 
+  );
+  drupal_add_js(array('nelads' => array('ads_global_sidebar' => $nelads)), 'setting');
+  return theme('nelads-adslot', array(
+    'adslot' => 3, 
+    'adsvar' => 'ads_global_sidebar', 
   ));
 }

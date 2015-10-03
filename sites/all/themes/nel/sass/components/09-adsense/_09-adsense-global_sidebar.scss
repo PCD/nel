@@ -1,0 +1,9 @@
+#block-nelads-nelads-global-sidebar{
+  margin: 0;
+}
+.block + #block-nelads-nelads-global-sidebar{
+  margin-top: 30px;
+}
+#block-nelads-nelads-global-sidebar + .block{
+  margin-top: 30px;
+}

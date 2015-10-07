@@ -223,13 +223,16 @@ function photoswipe_field_formatter_settings_summary($field, $instance, $view_mo
  * Implements hook_field_formatter_view().
  */
 function photoswipe_field_formatter_view($entity_type, $entity, $field, $instance, $langcode, $items, $display) {
+  static $i;
+  $i = isset($i)?$i+1:1;
+  
   $element = array();
 
   if (!empty($items)) {
     photoswipe_load_assets();
     $element = array(
       '#type' => 'container',
-      '#attributes' => array('class' => array('photoswipe-gallery')),
+      '#attributes' => array('class' => array('photoswipe-gallery', ('photoswipe-gallery-' . $i))),
     );
   }
 

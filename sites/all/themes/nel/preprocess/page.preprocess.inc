@@ -28,6 +28,9 @@ function nel_preprocess_page_node(&$variables) {
     return;
   }
   
+  // Gallery
+  //nel_preprocess_page_node_gallery($variables, $node);
+  
   // Category
   nel_preprocess_page_node_category($variables, $node);
   
@@ -39,6 +42,14 @@ function nel_preprocess_page_node(&$variables) {
     drupal_add_js(drupal_get_path('theme', 'nel') . '/js/nel.jwplayer.js');
     drupal_add_js(drupal_get_path('theme', 'nel') . '/js/nel.video-preroll.js');
   }
+}
+
+/**
+ *
+ */
+function nel_preprocess_page_node_gallery(&$variables, $node) {
+  print_r(($variables['page']['content']['system_main']['nodes'][$node->nid]));
+  exit;
 }
 
 /**

@@ -1,21 +1,5 @@
 <?php
-$node = node_load(arg(1));
-if ( !isset($node->field_video[LANGUAGE_NONE][0]['fid']) ) {
-  if ( isset($node->field_image[LANGUAGE_NONE][0]['fid']) ) {
-    unset($node->field_image[LANGUAGE_NONE][0]);
-  }
-  
-  if ( !empty($node->field_image[LANGUAGE_NONE]) ) {
-    $new_gallery = field_view_field('node', $node, 'field_image', 'photoswipe');
-    $new_gallery = drupal_render($new_gallery);
-  } else {
-    $new_gallery = '';
-  }
-  
-  // Inject New Gallery
-  $pattern = '/<div class="photoswipe-gallery">.*?(?:<\/div>){3}/msi';
-  $ds_content = preg_replace($pattern, $new_gallery, $ds_content);
-}
+
 
 /**
  * @file

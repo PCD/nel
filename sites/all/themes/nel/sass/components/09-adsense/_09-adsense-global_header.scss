@@ -17,6 +17,16 @@
   }
 }
 
+@media only screen and (min-width: $desktop_wide_ads_maxx) {
+  .adslot_2{
+    width: 900px;
+    height: 90px;
+  }
+  #block-nelads-nelads-global-header{
+    padding-top: 0;
+  }
+}
+
 @media only screen and (max-width: $desktop_width) {
   #block-nelads-nelads-global-header{
     padding-top: 0;

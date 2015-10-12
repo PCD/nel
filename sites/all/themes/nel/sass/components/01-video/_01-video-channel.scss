@@ -26,6 +26,19 @@
 iframe{
   max-width: 100%;
 }
+
+@media only screen and (min-width: $desktop_wide_ads_max) {
+  .node-type-video.page-node,
+  .node-type-streaming.page-node{
+    .video.streaming{
+      iframe{
+        width: 712px !important;
+        min-height: 406px !important;
+      }
+    }
+  }
+}
+
 @media only screen and (-webkit-min-device-pixel-ratio: 2) {
   .node-type-video.page-node,
   .node-type-streaming.page-node{

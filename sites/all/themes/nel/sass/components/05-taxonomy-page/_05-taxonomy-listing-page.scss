@@ -1,0 +1,20 @@
+.taxonomy-term-articles{
+  .views-row{
+    margin-bottom: 66px;
+    .image{
+      margin-bottom: 11px;
+      a{
+        display: block;
+        overflow: hidden;
+        max-height: 300px;
+      }
+      img{
+        display: block;
+        width: 100%;
+      }
+    }
+  }
+  .views-row.views-row-last{
+    margin-bottom: 0;
+  }
+}

@@ -10,6 +10,14 @@
     width: 100px;
     height: 65px;
     float: right;
+    a{
+      display: block;
+    }
+    a img, 
+    img{
+      width: 100%;
+      display: block;
+    }
   }
   .info{
     margin-right: 117px;
@@ -17,8 +25,14 @@
   .info h4{
     margin: 0;
   }
-
 }
+
+@media only screen and (min-width: $desktop_wide_ads_max) {
+  .four-small-inverted-list{
+    width: 334px;
+  }
+}
+
 @media only screen and (max-width: $desktop_width) {
   .four-small-inverted-list{
 

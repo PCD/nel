@@ -11,8 +11,15 @@
   width: 293px;
   .image{
     width: 293px;
-    height: 211px;
     margin-bottom: 11px;
+    a{
+      display: block;
+    }
+    a img, 
+    img{
+      width: 100%;
+      display: block;
+    }
   }
   h3{
   	font-family: Fjalla One;
@@ -60,6 +67,14 @@
   h4{
     margin-top: 0;
     margin-bottom: 3px;
+  }
+}
+
+@media only screen and (min-width: $desktop_wide_ads_max) {
+  .main-article, 
+  .main-article .image, 
+  .other-article{
+    width: 334px;
   }
 }
 

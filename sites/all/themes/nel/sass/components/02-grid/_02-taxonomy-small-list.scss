@@ -9,6 +9,14 @@
     width: 191px;
     height: 93px;
     margin-bottom: 11px;
+    a{
+      display: block;
+    }
+    a img, 
+    img{
+      width: 100%;
+      display: block;
+    }
   }
   .info h3{
     margin: 0;

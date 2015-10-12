@@ -12,8 +12,16 @@
     width: 293px;
     .image{
       width: 293px;
-      height: 143px;
+      height: auto;
       margin-bottom: 11px;
+      a{
+        display: block;
+      }
+      a img, 
+      img{
+        width: 100%;
+        display: block;
+      }
     }
     h3{
       font-family: Fjalla One;
@@ -58,6 +66,16 @@
   .fourth-after-two-main-articles .views-row.views-row-even{
     float: right;
     clear: right;
+  }
+}
+
+@media only screen and (min-width: $desktop_wide_ads_max) {
+  .two-big-4-small-two-columns{
+    .two-main-articles .views-row, 
+    .two-main-articles .views-row .image, 
+    .fourth-after-two-main-articles .views-row{
+      width: 334px;
+    }
   }
 }
 

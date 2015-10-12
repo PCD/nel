@@ -70,14 +70,21 @@ body.cke_ltr{
 }
 
 @media only screen and (min-width: $desktop_wide_ads_max) {
+  .l-main, 
   .l-branding,
   .l-region--top-navigation, 
   .l-region--navigation,
-  .l-footer-main-inner, 
   .l-region--footer{
     width: $desktop_wide_ads_max;
-    margin: 0 auto;
-    padding: 0 15px;
+  }
+}
+
+@media only screen and (min-width: $desktop_wide_ads_maxx) {
+  .l-branding,
+  .l-region--top-navigation, 
+  .l-region--navigation,
+  .l-region--footer{
+    width: $desktop_wide_ads_maxx;
   }
 }
 

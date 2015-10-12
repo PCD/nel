@@ -3978,7 +3978,7 @@ iframe {
   padding-top: 5px;
   display: inline-block; }
 
-@media only screen and (min-width: 2094px) {
+@media only screen and (min-width: 1078px) {
   /* line 11, ../sass/components/09-adsense/_09-adsense-global_header.scss */
   .adslot_2 {
     width: 728px;

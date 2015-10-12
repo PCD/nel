@@ -42,7 +42,11 @@ function nelads_block_view($delta = '') {
  * Returns the nelads-article_detail block.
  */
 function nelads_block_view_article_detail() {
-  if ( nelads_ads_count() > 3 ) {
+  if ( !(arg(0) == 'node' && intval(arg(1)) > 0 && is_null(arg(2)) && ($node=node_load(arg(1))) && $node->type == 'article') ) {
+    return false;
+  }
+
+  if ( nelads_ads_count('nelads_block_view_article_detail') > 3 ) {
     return false;
   }
   
@@ -53,10 +57,15 @@ function nelads_block_view_article_detail() {
       'ad_format' => 'rectangle', 
     ), 
     (object) array(
+      'ad_client' => '', 
+      'ad_slot' => '', 
+      'ad_format' => '', 
+    ),
+    /*(object) array(
       'ad_client' => 'ca-pub-5383770617488734', 
       'ad_slot' => '1327010008', 
       'ad_format' => 'rectangle', 
-    ), 
+    ),*/ 
   );
   drupal_add_js(array('nelads' => array('ads_article_detail' => $nelads)), 'setting');
   
@@ -70,7 +79,7 @@ function nelads_block_view_article_detail() {
  * Returns the nelads-global_header block.
  */
 function nelads_block_view_global_header() {
-  if ( nelads_ads_count() > 3 ) {
+  if ( nelads_ads_count('nelads_block_view_global_header') > 3 ) {
     return false;
   }
 
@@ -81,10 +90,15 @@ function nelads_block_view_global_header() {
       'ad_format' => '', 
     ), 
     (object) array(
+      'ad_client' => '', 
+      'ad_slot' => '', 
+      'ad_format' => '', 
+    ), 
+    /*(object) array(
       'ad_client' => 'ca-pub-5383770617488734', 
       'ad_slot' => '3824648002', 
       'ad_format' => '', 
-    ), 
+    ),*/ 
   );
   drupal_add_js(array('nelads' => array('ads_global_header' => $nelads)), 'setting');
   return theme('nelads-adslot', array(
@@ -97,7 +111,7 @@ function nelads_block_view_global_header() {
  * Returns the nelads-global_sidebar block.
  */
 function nelads_block_view_global_sidebar() {
-  if ( nelads_ads_count() > 3 ) {
+  if ( nelads_ads_count('nelads_block_view_global_sidebar') > 3 ) {
     return false;
   }
   
@@ -108,10 +122,15 @@ function nelads_block_view_global_sidebar() {
       'ad_format' => 'rectangle', 
     ), 
     (object) array(
+      'ad_client' => '', 
+      'ad_slot' => '', 
+      'ad_format' => '', 
+    ), 
+    /*(object) array(
       'ad_client' => 'ca-pub-5383770617488734', 
       'ad_slot' => '1089677603', 
       'ad_format' => 'rectangle', 
-    ), 
+    ),*/ 
   );
   drupal_add_js(array('nelads' => array('ads_global_sidebar' => $nelads)), 'setting');
   return theme('nelads-adslot', array(
@@ -124,7 +143,8 @@ function nelads_block_view_global_sidebar() {
  * Returns the nelads-global_sidebar block.
  */
 function nelads_block_view_micro_page() {
-  if ( nelads_ads_count() > 3 ) {
+  return false;
+  if ( nelads_ads_count('nelads_block_view_micro_page') > 3 ) {
     return false;
   }
   
@@ -137,6 +157,7 @@ function nelads_block_view_micro_page() {
   return theme('nelads-adslot', array(
     'adslot' => 'micrositio', 
     'adsvar' => $id_ad, 
+    'wrapper_class' => 'nelads-micrositio-block', 
   ));
 }
 

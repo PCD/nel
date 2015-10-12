@@ -58,14 +58,22 @@
     right: 0;
   }
   article{
-    width: 630px;
-    height: 321px;
+    width: 636px;
+    height: 323px;
     position: relative;
     overflow: hidden;
     
     .image{
-      width: 630px;
-      height: 321px;
+      width: 636px;
+      height: 323px;
+      a{
+        display: block;
+      }
+      a img, 
+      img{
+        width: 100%;
+        display: block;
+      }
     }
     
     .info{
@@ -137,8 +145,8 @@
   .views-slideshow-cycle-main-frame,
   .views-slideshow-cycle-main-frame-row,
   .views-slideshow-cycle-main-frame-row img{
-    width: 630px;
-    height: 321px;
+    width: 636px;
+    height: 323px;
   }
 }
 .top-slider .skin-default:hover{
@@ -152,6 +160,20 @@
     }
   }
 }
+
+@media only screen and (min-width: $desktop_wide_ads_max2) {
+  .top-slider{
+    .views-slideshow-cycle-main-frame, 
+    .views-slideshow-cycle-main-frame-row, 
+    .views-slideshow-cycle-main-frame-row img, 
+    article, 
+    article .image{
+      width: $two_columns_one_block_width;
+      height: $two_columns_one_block_width * 0.5084;
+    }
+  }
+}
+
 @media only screen and (max-width: $desktop_width) {
   .top-slider{
     height: 264px;

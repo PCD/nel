@@ -53,6 +53,12 @@ body.toolbar-drawer .navigation-wrapper.stuck{
   }
 }
 
+@media only screen and (min-width: $desktop_wide_ads_maxx) {
+  .l-region--header{
+    width: 900px;
+  }
+}
+
 @media only screen and (max-width: $desktop_width) {
   body.toolbar-drawer .navigation-wrapper.stuck,
   body.toolbar .navigation-wrapper.stuck{

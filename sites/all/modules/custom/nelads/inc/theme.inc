@@ -8,6 +8,7 @@ function nelads_theme() {
       'arguments' => array(
         'adslot' => 1, 
         'adsvar' => 'ads_article_detail', 
+        'wrapper_class' => FALSE, 
       ), 
       'template' => 'templates/nelads-adslot', 
     ), 

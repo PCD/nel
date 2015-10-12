@@ -13,7 +13,7 @@
   }
   .type-row .block-item{
     float: left;
-    width: 293px;
+    width: 300px;
   }
   .type-row .block-item.even{
     float: right;
@@ -29,6 +29,14 @@
     margin-top: 0;
     .type-row{
       margin-top: 0;
+    }
+  }
+}
+
+@media only screen and (min-width: $desktop_wide_ads_max2) {
+  .nelb-grid{
+    .type-row .block-item{
+      width: $one_column_two_blocks_width;
     }
   }
 }

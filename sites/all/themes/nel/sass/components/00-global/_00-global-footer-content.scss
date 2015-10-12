@@ -20,7 +20,7 @@
 .l-region--footer-content-left,
 .l-region--footer-content-right{
   float: left;
-  width: 293px;
+  width: 300px;
 }
 .l-region--footer-content-right{
   float: right;
@@ -40,7 +40,7 @@
 @media only screen and (-webkit-min-device-pixel-ratio: 2) {
   .l-footer-content{
     background: url(../images/logo_retina1.png) 0 36px no-repeat;
-    background-size: 293px 98px;
+    background-size: 300px 98px;
   }
 }
 @media only screen and (max-width: $desktop_width) {

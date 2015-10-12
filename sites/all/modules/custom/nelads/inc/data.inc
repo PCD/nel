@@ -19,7 +19,7 @@ function nelads_can_we_show_ads($disable = false) {
 /**
  * Increases and return the total of adsense block shown already in the current page.
  */
-function nelads_ads_count() {
+function nelads_ads_count($calling = '') {
   static $ads_count;
   $ads_count = isset($ads_count)?$ads_count+1:1;
   
@@ -43,11 +43,17 @@ function nelads_get_microsite_ad_slot() {
           'ad_number' => 1, 
         ), 
         (object) array(
+          'ad_client' => '', 
+          'ad_slot' => '', 
+          'ad_format' => '', 
+          'ad_number' => 1, 
+        ), 
+        /*(object) array(
           'ad_client' => 'ca-pub-5383770617488734', 
           'ad_slot' => '7222962809', 
           'ad_format' => '', 
           'ad_number' => 1, 
-        ), 
+        ),*/ 
       );
       break;
 
@@ -60,11 +66,17 @@ function nelads_get_microsite_ad_slot() {
           'ad_number' => 2, 
         ), 
         (object) array(
+          'ad_client' => '', 
+          'ad_slot' => '', 
+          'ad_format' => '', 
+          'ad_number' => 2, 
+        ), 
+        /*(object) array(
           'ad_client' => 'ca-pub-5383770617488734', 
           'ad_slot' => '8699696002', 
           'ad_format' => '', 
           'ad_number' => 2, 
-        ), 
+        ),*/ 
       );
       break;
 
@@ -77,11 +89,17 @@ function nelads_get_microsite_ad_slot() {
           'ad_number' => 3, 
         ), 
         (object) array(
+          'ad_client' => '', 
+          'ad_slot' => '', 
+          'ad_format' => '', 
+          'ad_number' => 3, 
+        ), 
+        /*(object) array(
           'ad_client' => 'ca-pub-5383770617488734', 
           'ad_slot' => '1176429201', 
           'ad_format' => '', 
           'ad_number' => 3, 
-        ), 
+        ),*/ 
       );
       break;
   }

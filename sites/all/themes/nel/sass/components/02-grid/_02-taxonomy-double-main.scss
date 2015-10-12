@@ -9,11 +9,19 @@
   }
   .two-main-articles .views-row{
     float: left;
-    width: 293px;
+    width: 300px;
     .image{
-      width: 293px;
-      height: 143px;
+      width: 300px;
+      height: auto;
       margin-bottom: 11px;
+      a{
+        display: block;
+      }
+      a img, 
+      img{
+        width: 100%;
+        display: block;
+      }
     }
     h3{
       font-family: Fjalla One;
@@ -38,8 +46,8 @@
   }
   .fourth-after-two-main-articles .views-row{
     float: left;
-    width: 293px;
-    min-height: 76px;
+    width: 300px;
+    min-height: 77px;
     margin-bottom: 15px;
     clear: left;
     
@@ -58,6 +66,16 @@
   .fourth-after-two-main-articles .views-row.views-row-even{
     float: right;
     clear: right;
+  }
+}
+
+@media only screen and (min-width: $desktop_wide_ads_max2) {
+  .two-big-4-small-two-columns{
+    .two-main-articles .views-row, 
+    .two-main-articles .views-row .image, 
+    .fourth-after-two-main-articles .views-row{
+      width: $one_column_two_blocks_width;
+    }
   }
 }
 

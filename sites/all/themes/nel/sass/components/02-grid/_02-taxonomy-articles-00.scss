@@ -8,11 +8,18 @@
 
 .main-article{
   float: left;
-  width: 293px;
+  width: 300px;
   .image{
-    width: 293px;
-    height: 211px;
+    width: 300px;
     margin-bottom: 11px;
+    a{
+      display: block;
+    }
+    a img, 
+    img{
+      width: 100%;
+      display: block;
+    }
   }
   h3{
   	font-family: Fjalla One;
@@ -38,7 +45,7 @@
 
 .other-article{
   float: right;
-  width: 293px;
+  width: 300px;
 
   .clearfix:after{
     clear: right;
@@ -60,6 +67,14 @@
   h4{
     margin-top: 0;
     margin-bottom: 3px;
+  }
+}
+
+@media only screen and (min-width: $desktop_wide_ads_max2) {
+  .main-article, 
+  .main-article .image, 
+  .other-article{
+    width: $one_column_two_blocks_width;
   }
 }
 

@@ -66,6 +66,17 @@
 .no-slideshow .node--article--full > .gallery{
   display: none;
 }
+.node--article--full > .image{
+  a{
+    display: block;
+    max-height: 450px;
+    overflow: hidden;
+  }
+  img{
+    display: block;
+    width: 100%;
+  }
+}
 .node--article--full .body{
   font-family: Domine;
   font-size: 14px;

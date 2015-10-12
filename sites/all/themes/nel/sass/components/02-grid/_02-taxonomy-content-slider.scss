@@ -1,5 +1,5 @@
 .block-taxonomy-item.small-carousel{
-  width: 293px;
+  width: 300px;
   float: left;
   
   .skin-default{
@@ -13,9 +13,18 @@
   }
 }
 .node--article--taxonomy-section-carousel{
-  width: 293px;
-  height: 318px;
+  width: 300px;
+  height: 325px;
   position: relative;
+  .image{
+    a{
+      display: block;
+    }
+    img{
+      display: block;
+      width: 100%;
+    }
+  }
   .info{
     position: absolute;
     top: 12px;
@@ -77,6 +86,17 @@
     }
   }
 }
+
+@media only screen and (min-width: $desktop_wide_ads_max2) {
+  .block-taxonomy-item.small-carousel, 
+  .node--article--taxonomy-section-carousel{
+    width: $one_column_two_blocks_width;
+  }
+  .node--article--taxonomy-section-carousel{
+    height: 362px;
+  }
+}
+
 @media only screen and (max-width: $desktop_width) {
   .block-taxonomy-item.small-carousel{
     width: 226px;

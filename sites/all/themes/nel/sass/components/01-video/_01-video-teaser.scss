@@ -26,7 +26,28 @@
     float: left;
     margin-right: 28px;
     margin-bottom: 28px;
+    .image{
+      a{
+        display: block;
+      }
+      img{
+        display: block;
+        width: 100%;
+      }
+    }
   }
+}
+
+@media only screen and (min-width: $desktop_wide_ads_max2) {
+  .view-lo-mas-visto{
+    .views-row{
+      width: 218px;
+      margin-right: 29px;
+    }
+  }
+}
+
+.view-lo-mas-visto{
   .views-row-3, 
   .views-row-6, 
   .views-row-9, 

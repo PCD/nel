@@ -1,6 +1,11 @@
+$desktop_wide_ads_maxx: 2250px;
+$desktop_wide_ads_max2: 2094px;
 $desktop_wide_ads_max: 1078px;
 $desktop_wide_width: 1200px;
-$desktop_width: 1010px;
+$desktop_width: 1002px;
+$two_columns_one_block_width: $desktop_wide_ads_max - 366px;
+$one_column_two_blocks_width: ($two_columns_one_block_width - 36px) / 2;
+
 $tablet_width: 748px;
 $tablet_width_1_5: 725px;
 $tablet_width_2: 700px;

@@ -1,5 +1,5 @@
 .one-big-4-small-one-column{
-  width: 293px;
+  width: 300px;
   .col-1{
     float: none;
     margin: 0;
@@ -14,11 +14,18 @@
     content: "";
   }
   > .view-content > .views-row{
-    width: 293px;
+    width: 300px;
     float: left;
   }
   > .view-content > .views-row-last{
     float: right;
+  }
+}
+
+@media only screen and (min-width: $desktop_wide_ads_max2) {
+  .one-big-4-small-one-column, 
+  .one-big-4-small-one-column > .view-content > .views-row{
+    width: $one_column_two_blocks_width;
   }
 }
 

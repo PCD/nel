@@ -1,5 +1,5 @@
 .four-small-inverted-list{
-  width: 293px;
+  width: 300px;
 
   .views-row{
     clear: both;
@@ -10,6 +10,14 @@
     width: 100px;
     height: 65px;
     float: right;
+    a{
+      display: block;
+    }
+    a img, 
+    img{
+      width: 100%;
+      display: block;
+    }
   }
   .info{
     margin-right: 117px;
@@ -17,8 +25,14 @@
   .info h4{
     margin: 0;
   }
-
 }
+
+@media only screen and (min-width: $desktop_wide_ads_max2) {
+  .four-small-inverted-list{
+    width: $one_column_two_blocks_width;
+  }
+}
+
 @media only screen and (max-width: $desktop_width) {
   .four-small-inverted-list{
 

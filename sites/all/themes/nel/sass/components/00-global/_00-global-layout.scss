@@ -69,15 +69,27 @@ body.cke_ltr{
   left: 336px;
 }
 
+@media only screen and (min-width: $desktop_wide_ads_max2) {
+  .l-main{
+    width: $desktop_wide_ads_max;
+  }
+}
+
 @media only screen and (min-width: $desktop_wide_ads_max) {
   .l-branding,
   .l-region--top-navigation, 
   .l-region--navigation,
-  .l-footer-main-inner, 
   .l-region--footer{
     width: $desktop_wide_ads_max;
-    margin: 0 auto;
-    padding: 0 15px;
+  }
+}
+
+@media only screen and (min-width: $desktop_wide_ads_maxx) {
+  .l-branding,
+  .l-region--top-navigation, 
+  .l-region--navigation,
+  .l-region--footer{
+    width: $desktop_wide_ads_maxx;
   }
 }
 

@@ -201,9 +201,93 @@
     .views-slideshow-cycle-main-frame-row img{
       width: 100% !important;
     }
+    .views-slideshow-cycle-main-frame-row{
+      height: auto !important;
+    }
     .views-slideshow-cycle-main-frame-row img{
       max-width: 100%;
       height: 100% !important;
     }
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .top-slider .views-slideshow-cycle-main-frame, 
+  .top-slider .views-slideshow-cycle-main-frame-row, 
+  .top-slider .views-slideshow-cycle-main-frame-row img{
+    /*width: 630px;*/
+    height: 305px !important;
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  .top-slider .views-slideshow-cycle-main-frame, 
+  .top-slider .views-slideshow-cycle-main-frame-row, 
+  .top-slider .views-slideshow-cycle-main-frame-row img{
+    /*
+    width: 630px;
+    height: 321px !important;
+    */
+    height: 280px !important;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .top-slider .views-slideshow-cycle-main-frame, 
+  .top-slider .views-slideshow-cycle-main-frame-row, 
+  .top-slider .views-slideshow-cycle-main-frame-row img{
+    /*
+    width: 630px;
+    height: 321px !important;
+    */
+    height: 254px !important;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .top-slider .views-slideshow-cycle-main-frame, 
+  .top-slider .views-slideshow-cycle-main-frame-row, 
+  .top-slider .views-slideshow-cycle-main-frame-row img{
+    /*
+    width: 630px;
+    height: 321px !important;
+    */
+    height: 229px !important;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .top-slider .views-slideshow-cycle-main-frame, 
+  .top-slider .views-slideshow-cycle-main-frame-row, 
+  .top-slider .views-slideshow-cycle-main-frame-row img{
+    /*
+    width: 630px;
+    height: 321px !important;
+    */
+    height: 203px !important;
+  }
+}
+
+@media only screen and (max-width: 350px) {
+  .top-slider .views-slideshow-cycle-main-frame, 
+  .top-slider .views-slideshow-cycle-main-frame-row, 
+  .top-slider .views-slideshow-cycle-main-frame-row img{
+    /*
+    width: 630px;
+    height: 321px !important;
+    */
+    height: 178px !important;
+  }
+}
+
+@media only screen and (max-width: 300px) {
+  .top-slider .views-slideshow-cycle-main-frame, 
+  .top-slider .views-slideshow-cycle-main-frame-row, 
+  .top-slider .views-slideshow-cycle-main-frame-row img{
+    /*
+    width: 630px;
+    height: 321px !important;
+    */
+    height: 152px !important;
   }
 }

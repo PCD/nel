@@ -42,6 +42,10 @@ function nelads_block_view($delta = '') {
  * Returns the nelads-article_detail block.
  */
 function nelads_block_view_article_detail() {
+  if ( nelads_ads_count() > 3 ) {
+    return false;
+  }
+  
   $nelads = array(
     (object) array(
       'ad_client' => 'ca-pub-6659210167862789', 
@@ -55,6 +59,7 @@ function nelads_block_view_article_detail() {
     ), 
   );
   drupal_add_js(array('nelads' => array('ads_article_detail' => $nelads)), 'setting');
+  
   return theme('nelads-adslot', array(
     'adslot' => 1, 
     'adsvar' => 'ads_article_detail', 
@@ -65,6 +70,10 @@ function nelads_block_view_article_detail() {
  * Returns the nelads-global_header block.
  */
 function nelads_block_view_global_header() {
+  if ( nelads_ads_count() > 3 ) {
+    return false;
+  }
+
   $nelads = array(
     (object) array(
       'ad_client' => 'ca-pub-6659210167862789', 
@@ -88,6 +97,10 @@ function nelads_block_view_global_header() {
  * Returns the nelads-global_sidebar block.
  */
 function nelads_block_view_global_sidebar() {
+  if ( nelads_ads_count() > 3 ) {
+    return false;
+  }
+  
   $nelads = array(
     (object) array(
       'ad_client' => 'ca-pub-6659210167862789', 
@@ -106,3 +119,29 @@ function nelads_block_view_global_sidebar() {
     'adsvar' => 'ads_global_sidebar', 
   ));
 }
+
+/**
+ * Returns the nelads-global_sidebar block.
+ */
+function nelads_block_view_micro_page() {
+  if ( nelads_ads_count() > 3 ) {
+    return false;
+  }
+  
+  if ( !($nelads = nelads_get_microsite_ad_slot()) ) {
+    return false;
+  }
+  
+  $id_ad = 'ads_micrositio_' . $nelads->ad_number;
+  drupal_add_js(array('nelads' => array($id_ad => $nelads)), 'setting');
+  return theme('nelads-adslot', array(
+    'adslot' => 'micrositio', 
+    'adsvar' => $id_ad, 
+  ));
+}
+
+
+
+
+
+

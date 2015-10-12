@@ -15,4 +15,7 @@ function nelads_process_html(&$vars) {
   
   // Delete Ad Global Sidebar
   $vars['page'] = preg_replace('/<!--#nelads-block-3-start-->.*?<!--#nelads-block-3-end-->/msi', '', $vars['page']);
+  
+  // Delete Ad Micrositio
+  $vars['page'] = preg_replace('/<!--#nelads-block-micrositio-start-->.*?<!--#nelads-block-micrositio-end-->/msi', '', $vars['page']);
 }

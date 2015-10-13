@@ -4196,6 +4196,68 @@ iframe {
   .one-block-two-columns .nelads-micrositio-block,
   .one-block-two-columns .adslot_micrositio {
     display: none; } }
+/* line 2, ../sass/components/09-adsense/_09-adsense-tv.scss */
+.page-node.node-type-streaming .nelads-micrositio-block,
+.page-node.node-type-streaming .adslot_micrositio {
+  width: 728px;
+  height: 90px; }
+
+@media only screen and (max-width: 748px) {
+  /* line 11, ../sass/components/09-adsense/_09-adsense-tv.scss */
+  .page-node.node-type-streaming .nelads-micrositio-block {
+    margin: 0 auto; }
+  /* line 14, ../sass/components/09-adsense/_09-adsense-tv.scss */
+  .page-node.node-type-streaming .nelads-micrositio-block,
+  .page-node.node-type-streaming .adslot_micrositio {
+    width: 728px;
+    height: 90px; } }
+@media only screen and (max-width: 746px) {
+  /* line 24, ../sass/components/09-adsense/_09-adsense-tv.scss */
+  .page-node.node-type-streaming .nelads-micrositio-block,
+  .page-node.node-type-streaming .adslot_micrositio {
+    width: 468px;
+    height: 60px; } }
+@media only screen and (max-width: 486px) {
+  /* line 34, ../sass/components/09-adsense/_09-adsense-tv.scss */
+  .page-node.node-type-streaming .nelads-micrositio-block,
+  .page-node.node-type-streaming .adslot_micrositio {
+    width: 336px;
+    height: 280px; } }
+@media only screen and (max-width: 354px) {
+  /* line 44, ../sass/components/09-adsense/_09-adsense-tv.scss */
+  .page-node.node-type-streaming .nelads-micrositio-block,
+  .page-node.node-type-streaming .adslot_micrositio {
+    width: 300px;
+    height: 250px; } }
+@media only screen and (max-width: 318px) {
+  /* line 54, ../sass/components/09-adsense/_09-adsense-tv.scss */
+  .page-node.node-type-streaming .nelads-micrositio-block,
+  .page-node.node-type-streaming .adslot_micrositio {
+    width: 250px;
+    height: 250px; } }
+@media only screen and (max-width: 268px) {
+  /* line 64, ../sass/components/09-adsense/_09-adsense-tv.scss */
+  .page-node.node-type-streaming .nelads-micrositio-block,
+  .page-node.node-type-streaming .adslot_micrositio {
+    width: 200px;
+    height: 200px; } }
+@media only screen and (max-width: 218px) {
+  /* line 74, ../sass/components/09-adsense/_09-adsense-tv.scss */
+  .page-node.node-type-streaming .nelads-micrositio-block,
+  .page-node.node-type-streaming .adslot_micrositio {
+    width: 180px;
+    height: 150px; } }
+@media only screen and (max-width: 198px) {
+  /* line 84, ../sass/components/09-adsense/_09-adsense-tv.scss */
+  .page-node.node-type-streaming .nelads-micrositio-block,
+  .page-node.node-type-streaming .adslot_micrositio {
+    width: 125px;
+    height: 125px; } }
+@media only screen and (max-width: 143px) {
+  /* line 94, ../sass/components/09-adsense/_09-adsense-tv.scss */
+  .page-node.node-type-streaming .nelads-micrositio-block,
+  .page-node.node-type-streaming .adslot_micrositio {
+    display: none; } }
 /* line 2, ../sass/components/10-tv/_player.scss */
 .video.streaming > .inner-wrapper center > div {
   width: 100% !important; }

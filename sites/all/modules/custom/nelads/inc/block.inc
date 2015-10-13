@@ -143,7 +143,6 @@ function nelads_block_view_global_sidebar() {
  * Returns the nelads-global_sidebar block.
  */
 function nelads_block_view_micro_page() {
-  return false;
   if ( nelads_ads_count('nelads_block_view_micro_page') > 3 ) {
     return false;
   }

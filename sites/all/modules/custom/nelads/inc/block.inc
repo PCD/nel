@@ -7,6 +7,9 @@ function nelads_block_info() {
   $blocks['nelads-article_detail'] = array(
     'info' => 'Nel Ads - Article Detail', 
   );
+  $blocks['nelads-article_comments'] = array(
+    'info' => 'Nel Ads - Article Comments', 
+  );
   $blocks['nelads-global_header'] = array(
     'info' => 'Nel Ads - Global Header', 
   );
@@ -24,6 +27,10 @@ function nelads_block_view($delta = '') {
   switch($delta) {
     case 'nelads-article_detail':
       $block['content'] = nelads_block_view_article_detail();
+      break;
+
+    case 'nelads-article_comments':
+      $block['content'] = nelads_block_view_article_comments();
       break;
 
     case 'nelads-global_header':
@@ -67,6 +74,33 @@ function nelads_block_view_article_detail() {
   return theme('nelads-adslot', array(
     'adslot' => 1, 
     'adsvar' => 'ads_article_detail', 
+  ));
+}
+
+/**
+ * Returns the nelads-article_comments block.
+ */
+function nelads_block_view_article_comments() {
+  if ( !(arg(0) == 'node' && intval(arg(1)) > 0 && is_null(arg(2)) && ($node=node_load(arg(1))) && $node->type == 'article') ) {
+    return false;
+  }
+
+  if ( nelads_ads_count('nelads_block_view_article_comments') > 3 ) {
+    return false;
+  }
+  
+  $nelads = array(
+    (object) array(
+      'ad_client' => 'ca-pub-6659210167862789', 
+      'ad_slot' => '3604943158', 
+      'ad_format' => '', 
+    ), 
+  );
+  drupal_add_js(array('nelads' => array('ads_article_comments' => $nelads)), 'setting');
+  
+  return theme('nelads-adslot', array(
+    'adslot' => 4, 
+    'adsvar' => 'ads_article_comments', 
   ));
 }
 

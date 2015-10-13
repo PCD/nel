@@ -2192,7 +2192,7 @@ iframe {
 
 /* line 15, ../sass/components/01-video/_01-video-teaser.scss */
 .view-lo-mas-visto .view-content {
-  margin-bottom: 28px; }
+  margin-bottom: 0; }
 /* line 18, ../sass/components/01-video/_01-video-teaser.scss */
 .view-lo-mas-visto .view-content:after {
   content: "";
@@ -4198,7 +4198,7 @@ iframe {
     display: none; } }
 /* line 2, ../sass/components/09-adsense/_09-adsense-tv.scss */
 .page-node.node-type-streaming .nelads-micrositio-block {
-  margin: 44px auto; }
+  margin: 28px auto; }
   /* line 4, ../sass/components/09-adsense/_09-adsense-tv.scss */
   .page-node.node-type-streaming .nelads-micrositio-block .adslot_micrositio {
     width: 728px;

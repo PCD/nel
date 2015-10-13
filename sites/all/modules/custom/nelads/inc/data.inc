@@ -42,12 +42,6 @@ function nelads_get_microsite_ad_slot() {
           'ad_format' => '', 
           'ad_number' => 1, 
         ), 
-        (object) array(
-          'ad_client' => '', 
-          'ad_slot' => '', 
-          'ad_format' => '', 
-          'ad_number' => 1, 
-        ), 
         /*(object) array(
           'ad_client' => 'ca-pub-5383770617488734', 
           'ad_slot' => '7222962809', 
@@ -65,12 +59,6 @@ function nelads_get_microsite_ad_slot() {
           'ad_format' => '', 
           'ad_number' => 2, 
         ), 
-        (object) array(
-          'ad_client' => '', 
-          'ad_slot' => '', 
-          'ad_format' => '', 
-          'ad_number' => 2, 
-        ), 
         /*(object) array(
           'ad_client' => 'ca-pub-5383770617488734', 
           'ad_slot' => '8699696002', 
@@ -85,12 +73,6 @@ function nelads_get_microsite_ad_slot() {
         (object) array(
           'ad_client' => 'ca-pub-6659210167862789', 
           'ad_slot' => '4167006356', 
-          'ad_format' => '', 
-          'ad_number' => 3, 
-        ), 
-        (object) array(
-          'ad_client' => '', 
-          'ad_slot' => '', 
           'ad_format' => '', 
           'ad_number' => 3, 
         ), 

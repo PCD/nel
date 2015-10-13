@@ -56,11 +56,6 @@ function nelads_block_view_article_detail() {
       'ad_slot' => '3150408355', 
       'ad_format' => 'rectangle', 
     ), 
-    (object) array(
-      'ad_client' => '', 
-      'ad_slot' => '', 
-      'ad_format' => '', 
-    ),
     /*(object) array(
       'ad_client' => 'ca-pub-5383770617488734', 
       'ad_slot' => '1327010008', 
@@ -89,11 +84,6 @@ function nelads_block_view_global_header() {
       'ad_slot' => '3634759556', 
       'ad_format' => '', 
     ), 
-    (object) array(
-      'ad_client' => '', 
-      'ad_slot' => '', 
-      'ad_format' => '', 
-    ), 
     /*(object) array(
       'ad_client' => 'ca-pub-5383770617488734', 
       'ad_slot' => '3824648002', 
@@ -120,11 +110,6 @@ function nelads_block_view_global_sidebar() {
       'ad_client' => 'ca-pub-6659210167862789', 
       'ad_slot' => '2060294754', 
       'ad_format' => 'rectangle', 
-    ), 
-    (object) array(
-      'ad_client' => '', 
-      'ad_slot' => '', 
-      'ad_format' => '', 
     ), 
     /*(object) array(
       'ad_client' => 'ca-pub-5383770617488734', 

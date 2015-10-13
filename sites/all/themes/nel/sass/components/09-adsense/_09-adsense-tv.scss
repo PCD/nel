@@ -1,17 +1,15 @@
 .page-node.node-type-streaming{
-  margin: 44px 0;
-  .nelads-micrositio-block, 
-  .adslot_micrositio{
-    width: 728px;
-    height: 90px;
+  .nelads-micrositio-block{
+    margin: 44px auto;
+    .adslot_micrositio{
+      width: 728px;
+      height: 90px;
+    }
   }
 }
 
 @media only screen and (max-width: $tablet_width) {
   .page-node.node-type-streaming{
-    .nelads-micrositio-block{
-      margin: 0 auto;
-    }
     .nelads-micrositio-block, 
     .adslot_micrositio{
       width: 728px;

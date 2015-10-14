@@ -24,4 +24,8 @@ function nelads_process_html(&$vars) {
   
   // Delete Ad Micrositio
   $vars['page'] = preg_replace('/<!--#nelads-block-micrositio-start-->.*?<!--#nelads-block-micrositio-end-->/msi', '', $vars['page']);
+  
+  // Delete Left Overs
+  $pattern = '/<div[^>]*?class="[^"]*?field-collection-item-field-generic-block-banner3[^"]*">\s*<div class="[^"]*? field-name-field-banner-block[^"]*?">\s*<div class="nelads-micrositio-block">\s*?<\/div>\s*?<\/div><\/div>/msi';
+  $vars['page'] = preg_replace($pattern, '', $vars['page']);
 }

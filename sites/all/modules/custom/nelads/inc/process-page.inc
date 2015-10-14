@@ -11,10 +11,10 @@ function nelads_process_html(&$vars) {
   $vars['page'] = preg_replace('/<p><!--#block-inject-1-start-->.*?<!--#block-inject-1-end-->/msi', '', $vars['page']);
   
   // Delete Ad Article Comments
-  $vars['page'] = preg_replace('/<p><!--#block-inject-4-start-->.*?<!--#block-inject-4-end-->/msi', '', $vars['page']);
+  $vars['page'] = preg_replace('/<!--#nelads-block-4-start-->.*?<!--#nelads-block-4-end-->/msi', '', $vars['page']);
   
   // Delete Ad Article Header
-  $vars['page'] = preg_replace('/<p><!--#block-inject-5-start-->.*?<!--#block-inject-5-end-->/msi', '', $vars['page']);
+  $vars['page'] = preg_replace('/<!--#nelads-block-5-start-->.*?<!--#nelads-block-5-end-->/msi', '', $vars['page']);
   
   // Delete Ad Global Header
   $vars['page'] = preg_replace('/<!--#nelads-block-2-start-->.*?<!--#nelads-block-2-end-->/msi', '', $vars['page']);

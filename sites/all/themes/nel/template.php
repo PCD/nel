@@ -192,6 +192,145 @@ function nel_theme() {
   );
 }
 
+function nel_html_entity_decode_encode_rss($data) { 
+  $array_position = 0; 
+  foreach (get_html_translation_table(HTML_ENTITIES) as $key => $value) { 
+    //print("<br />key: $key, value: $value <br />\n"); 
+    switch ($value) { 
+      // These ones we can skip 
+      case '&nbsp;': 
+        break; 
+      case '&gt;': 
+      case '&lt;': 
+      case '&quot;': 
+      case '&apos;': 
+      case '&amp;': 
+        $entity_custom_from[$array_position] = $key; 
+        $entity_custom_to[$array_position] = $value; 
+        $array_position++; 
+        break; 
+      default: 
+        $entity_custom_from[$array_position] = $value; 
+        $entity_custom_to[$array_position] = $key; 
+        $array_position++; 
+    } 
+  } 
+  return str_replace($entity_custom_from, $entity_custom_to, $data); 
+} 
+
+/**
+ * Implements hook_preprocess_views_view_rss.
+ */
+function nel_preprocess_views_view_rss(&$vars) {
+  drupal_add_http_header('Content-Type', 'text/xml; charset=UTF-8');
+  $view = &$vars['view'];
+  $style = &$view->style_plugin;
+
+  $style->namespaces['xmlns:media'] = 'http://search.yahoo.com/mrss/';
+  $vars['namespaces'] = drupal_attributes($style->namespaces);
+}
+
+/**
+ * Implements hook_preprocess_views_view_row_rss.
+ */
+function nel_preprocess_views_view_row_rss(&$vars) {
+  // xmlns:media="http://search.yahoo.com/mrss/"
+  $view     = &$vars['view'];
+  $options  = &$vars['options'];
+  $item     = &$vars['row'];
+
+  $vars['title'] = check_plain($item->title);
+  
+  $vars['link'] = check_url($item->link);
+  //$vars['description'] = nel_html_entity_decode_encode_rss(strip_tags($item->description));
+  $vars['description'] = check_plain($item->description);
+  
+  // Add More Stuff
+  if ( isset($item->nid) && ($node=node_load($item->nid)) && $node->type == 'article' ) {
+    nel_preprocess_views_view_row_rss_node($item, $node);
+  }
+
+  $vars['item_elements'] = empty($item->elements) ? '' : format_xml_elements($item->elements);
+}
+
+/**
+ *
+ */
+function nel_preprocess_views_view_row_rss_node(&$item, $node) {
+  if ( isset($node->field_video[LANGUAGE_NONE][0]['uri']) ) {
+    $video = $node->field_video[LANGUAGE_NONE][0];
+    switch($video['filemime']) {
+      case 'video/vimeo':
+        if ( preg_match('/v\/(.*)/', $video['uri'], $match) ) {
+          $url = 'https://player.vimeo.com/video/' . $match[1];
+          $item->elements[] = array(
+            'key' => 'media:content', 
+            'value' => array(
+              array(
+                'key' => 'media:player', 
+                'attributes' => array(
+                  'url' => $url, 
+                ), 
+              ), 
+              array(
+                'key' => 'media:title', 
+                'value' => check_plain($node->title), 
+              ), 
+            ), 
+          );
+        }
+        break;
+
+      case 'video/youtube':
+        if ( preg_match('/v\/(.*)/', $video['uri'], $match) ) {
+          $url = "https://www.youtube.com/v/{$match[1]}?version=3";
+          $url_tmb = "https://i4.ytimg.com/vi/{$match[1]}/hqdefault.jpg";
+          $item->elements[] = array(
+            'key' => 'media:group', 
+            'value' => array(
+              array(
+                'key' => 'media:title', 
+                'value' => check_plain($node->title), 
+              ), 
+              array(
+                'key' => 'media:content', 
+                'attributes' => array(
+                  'url' => $url, 
+                  'type' => 'application/x-shockwave-flash', 
+                  'width' => '640', 
+                  'height' => '390', 
+                ), 
+              ),  
+              array(
+                'key' => 'media:thumbnail', 
+                'attributes' => array(
+                  'url' => $url_tmb, 
+                  'width' => '480', 
+                  'height' => '360', 
+                ), 
+              ), 
+            ), 
+          );
+        }
+        break;
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

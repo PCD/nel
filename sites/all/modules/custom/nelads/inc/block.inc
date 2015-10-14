@@ -207,7 +207,7 @@ function nelads_block_view_micro_page() {
     return false;
   }
   
-  $id_ad = 'ads_micrositio_' . $nelads->ad_number;
+  $id_ad = 'ads_micrositio_' . $nelads[0]->ad_number;
   drupal_add_js(array('nelads' => array($id_ad => $nelads)), 'setting');
   return theme('nelads-adslot', array(
     'adslot' => 'micrositio', 

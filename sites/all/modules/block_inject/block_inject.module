@@ -317,8 +317,12 @@ function block_inject_node($region, $body, $offset = 0, $attributes = array()) {
   }
 
   // Add the attributes to the region renderable array
-  $start_tag = "<!--#{$attributes['id']}-start-->";
-  $end_tag = "<!--#{$attributes['id']}-end-->";
+  $start_tag = $end_tag = '';
+  if ( isset($attributes['id']) ) {
+    $start_tag = "<!--#{$attributes['id']}-start-->";
+    $end_tag = "<!--#{$attributes['id']}-end-->";
+  }
+  
   $region['#prefix'] = $start_tag . '<div ' . drupal_attributes($attributes) . '>';
   $region['#suffix'] = '</div>' . $end_tag;
   // Insert the renderable region array into the middle of the body field.

@@ -48,7 +48,7 @@ function nelb_taxonomy_term_feed($term) {
   $channel['description'] = check_markup($term->description, $term->format, '', TRUE);
   $nids = nelb_taxonomy_select_nodes($term->tid, FALSE, variable_get('feed_default_items', 10));
 
-  node_feed($nids, $channel);
+  nelb_node_feed($nids, $channel);
 }
 
 /**
@@ -299,4 +299,149 @@ function nelb_menu_ajax_block_grid($type, $arg1, $arg2, $arg3, $arg4) {
   }
   $params['unique'] = true;
   $response = nelb_data_get_blocks_node($params);
+}
+
+/**
+ * Overrides the function node_feed.
+ */
+function nelb_node_feed($nids = FALSE, $channel = array()) {
+  global $base_url, $language_content;
+
+  if ($nids === FALSE) {
+    $nids = db_select('node', 'n')
+      ->fields('n', array('nid', 'created'))
+      ->condition('n.promote', 1)
+      ->condition('n.status', 1)
+      ->orderBy('n.created', 'DESC')
+      ->range(0, variable_get('feed_default_items', 10))
+      ->addTag('node_access')
+      ->execute()
+      ->fetchCol();
+  }
+
+  $item_length = variable_get('feed_item_length', 'fulltext');
+  $namespaces = array(
+    'xmlns:dc' => 'http://purl.org/dc/elements/1.1/', 
+    'xmlns:media' => 'http://search.yahoo.com/mrss/', 
+  );
+
+  // Load all nodes to be rendered.
+  $nodes = node_load_multiple($nids);
+  $items = '';
+  foreach ($nodes as $node) {
+    $item_text = '';
+
+    $node->link = url("node/$node->nid", array('absolute' => TRUE));
+    $node->rss_namespaces = array();
+    $account = user_load($node->uid);
+    $node->rss_elements = array(
+      array('key' => 'pubDate', 'value' => gmdate('r', $node->created)),
+      array('key' => 'dc:creator', 'value' => format_username($account)),
+      array('key' => 'guid', 'value' => $node->nid . ' at ' . $base_url, 'attributes' => array('isPermaLink' => 'false'))
+    );
+    nelb_row_rss_node($node);
+
+    
+
+    // The node gets built and modules add to or modify $node->rss_elements
+    // and $node->rss_namespaces.
+    $build = node_view($node, 'rss');
+    unset($build['#theme']);
+
+    if (!empty($node->rss_namespaces)) {
+      $namespaces = array_merge($namespaces, $node->rss_namespaces);
+    }
+
+    if ($item_length != 'title') {
+      // We render node contents and force links to be last.
+      $build['links']['#weight'] = 1000;
+      $item_text .= drupal_render($build);
+    }
+
+    $items .= format_rss_item($node->title, $node->link, $item_text, $node->rss_elements);
+  }
+
+  $channel_defaults = array(
+    'version' => '2.0',
+    'title' => variable_get('site_name', 'Drupal'),
+    'link' => $base_url,
+    'description' => variable_get('feed_description', ''),
+    'language' => $language_content->language
+  );
+  $channel_extras = array_diff_key($channel, $channel_defaults);
+  $channel = array_merge($channel_defaults, $channel);
+
+  $output = "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n";
+  $output .= "<rss version=\"" . $channel["version"] . "\" xml:base=\"" . $base_url . "\" " . drupal_attributes($namespaces) . ">\n";
+  $output .= format_rss_channel($channel['title'], $channel['link'], $channel['description'], $items, $channel['language'], $channel_extras);
+  $output .= "</rss>\n";
+
+  drupal_add_http_header('Content-Type', 'text/xml; charset=UTF-8');
+  print $output;
+}
+
+/**
+ *
+ */
+function nelb_row_rss_node(&$node) {
+  if ( isset($node->field_video[LANGUAGE_NONE][0]['uri']) ) {
+    $video = $node->field_video[LANGUAGE_NONE][0];
+    switch($video['filemime']) {
+      case 'video/vimeo':
+        if ( preg_match('/v\/(.*)/', $video['uri'], $match) ) {
+          $url = 'https://player.vimeo.com/video/' . $match[1];
+          $node->rss_elements[] = array(
+            'key' => 'media:content', 
+            'value' => array(
+              array(
+                'key' => 'media:player', 
+                'attributes' => array(
+                  'url' => $url, 
+                ), 
+              ), 
+              array(
+                'key' => 'media:title', 
+                'value' => check_plain($node->title), 
+              ), 
+            ), 
+          );
+        }
+        break;
+
+      case 'video/youtube':
+        if ( preg_match('/v\/(.*)/', $video['uri'], $match) ) {
+          $url = "https://www.youtube.com/v/{$match[1]}?version=3";
+          $url_tmb = "https://i4.ytimg.com/vi/{$match[1]}/hqdefault.jpg";
+          $video = array(
+            'key' => 'media:group', 
+            'value' => array(
+              array(
+                'key' => 'media:title', 
+                'value' => check_plain($node->title), 
+              ), 
+              array(
+                'key' => 'media:content', 
+                'attributes' => array(
+                  'url' => $url, 
+                  'type' => 'application/x-shockwave-flash', 
+                  'width' => '640', 
+                  'height' => '390', 
+                ), 
+              ),  
+              array(
+                'key' => 'media:thumbnail', 
+                'attributes' => array(
+                  'url' => $url_tmb, 
+                  'width' => '480', 
+                  'height' => '360', 
+                ), 
+              ), 
+            ), 
+          );
+          //print_r($video);exit;
+          $node->rss_elements[] = $video;
+        }
+        break;
+    }
+  }
 }

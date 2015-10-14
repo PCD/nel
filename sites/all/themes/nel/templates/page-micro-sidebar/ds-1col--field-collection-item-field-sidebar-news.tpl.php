@@ -161,31 +161,33 @@ $view_output = '';
 
 // Build Output
 $tid = NULL;
-$style = $field_sidebar_news_style[0]['value'];
-$title = NULL;
-if ( isset($field_categoria_single[0]['taxonomy_term']->name) ) {
-  $tid = $field_categoria_single[0]['tid'];
-  $term_name = $field_categoria_single[0]['taxonomy_term']->name;
-  $title = l($term_name, 'taxonomy/term/' . $tid);
-  if ( isset($field_title_hide[0]['value']) && $field_title_hide[0]['value'] == 1 ) {
-    $title = NULL;
+if ( (isset($field_sidebar_news_style) && isset($field_sidebar_news_style[0]['value'])) ) {
+  $style = $field_sidebar_news_style[0]['value'];
+  $title = NULL;
+  if ( isset($field_categoria_single[0]['taxonomy_term']->name) ) {
+    $tid = $field_categoria_single[0]['tid'];
+    $term_name = $field_categoria_single[0]['taxonomy_term']->name;
+    $title = l($term_name, 'taxonomy/term/' . $tid);
+    if ( isset($field_title_hide[0]['value']) && $field_title_hide[0]['value'] == 1 ) {
+      $title = NULL;
+      $classes .= ' no-title';
+    }
+  } else {
     $classes .= ' no-title';
   }
-} else {
-  $classes .= ' no-title';
-}
-
-$display = $displays[$style];
-if ( isset($displays[$style]) ) {
-  foreach($display['columns'] as $i => $column) {
-    $j = $i+1;
-    $view_output .= "<div class=\"{$column['class']}\">\n";
-    if ( !is_null($tid) ) {
-      $view_output .= views_embed_view($column['view'], $column['display_id'], $tid);
-    } else {
-      $view_output .= views_embed_view($column['view'], $column['display_no_tid_id']);
+  
+  $display = $displays[$style];
+  if ( isset($displays[$style]) ) {
+    foreach($display['columns'] as $i => $column) {
+      $j = $i+1;
+      $view_output .= "<div class=\"{$column['class']}\">\n";
+      if ( !is_null($tid) ) {
+        $view_output .= views_embed_view($column['view'], $column['display_id'], $tid);
+      } else {
+        $view_output .= views_embed_view($column['view'], $column['display_no_tid_id']);
+      }
+      $view_output .= "</div>\n";
     }
-    $view_output .= "</div>\n";
   }
 }
 
@@ -194,6 +196,8 @@ if ( isset($displays[$style]) ) {
  * Display Suite 1 column template.
  */
 ?>
+
+<?php if ( (isset($field_sidebar_news_style) && isset($field_sidebar_news_style[0]['value'])) ):?>
 <<?php print $ds_content_wrapper; print $layout_attributes; ?> class="ds-1col <?php print $classes;?> term-<?php print $tid;?> clearfix">
 
   <?php if (isset($title_suffix['contextual_links'])): ?>
@@ -211,4 +215,5 @@ if ( isset($displays[$style]) ) {
 
 <?php if (!empty($drupal_render_children)): ?>
   <?php print $drupal_render_children ?>
+<?php endif; ?>
 <?php endif; ?>

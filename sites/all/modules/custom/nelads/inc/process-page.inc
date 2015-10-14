@@ -28,4 +28,7 @@ function nelads_process_html(&$vars) {
   // Delete Left Overs
   $pattern = '/<div[^>]*?class="[^"]*?field-collection-item-field-generic-block-banner3[^"]*">\s*<div class="[^"]*? field-name-field-banner-block[^"]*?">\s*<div class="nelads-micrositio-block">\s*?<\/div>\s*?<\/div><\/div>/msi';
   $vars['page'] = preg_replace($pattern, '', $vars['page']);
+  
+  $pattern = '/<div id="block-nelads-nelads-article-comments"[^>]*?>\s*<div class="block__content">\s*<\/div>\s*<\/div>/msi';
+  $vars['page'] = preg_replace($pattern, '', $vars['page']);
 }

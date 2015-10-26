@@ -8,5 +8,9 @@ function nelb_permission() {
       'title' => 'access nelb pages', 
       'description' => 'access nelb pages', 
     ), 
+    'clear all cache' => array(
+      'title' => 'clear all cache', 
+      'description' => 'clear all cache', 
+    ), 
   );
 }

@@ -13,6 +13,9 @@ function nelads_block_info() {
   $blocks['nelads-article_header'] = array(
     'info' => 'Nel Ads - Article Header', 
   );
+  $blocks['nelads-related_articles'] = array(
+    'info' => 'Nel Ads - Related Articles', 
+  );
   $blocks['nelads-global_header'] = array(
     'info' => 'Nel Ads - Global Header', 
   );
@@ -38,6 +41,10 @@ function nelads_block_view($delta = '') {
 
     case 'nelads-article_header':
       $block['content'] = nelads_block_view_article_header();
+      break;
+
+    case 'nelads-related_articles':
+      $block['content'] = nelads_block_view_related_articles();
       break;
 
     case 'nelads-global_header':
@@ -134,6 +141,32 @@ function nelads_block_view_article_header() {
   return theme('nelads-adslot', array(
     'adslot' => 5, 
     'adsvar' => 'ads_article_header', 
+  ));
+}
+
+/**
+ * Returns the nelads-related_articles block.
+ */
+function nelads_block_view_related_articles() {
+  if ( !(arg(0) == 'node' && intval(arg(1)) > 0 && is_null(arg(2)) && ($node=node_load(arg(1))) && $node->type == 'article') ) {
+    return false;
+  }
+  
+  /*if ( nelads_ads_count('nelads_block_view_related_articles') > 3 ) {
+    return false;
+  }*/
+
+  $nelads = array(
+    (object) array(
+      'ad_client' => 'ca-pub-6659210167862789', 
+      'ad_slot' => '1208586358', 
+      'ad_format' => 'autorelaxed', 
+    ), 
+  );
+  drupal_add_js(array('nelads' => array('ads_related_articles' => $nelads)), 'setting');
+  return theme('nelads-adslot', array(
+    'adslot' => 6, 
+    'adsvar' => 'ads_related_articles', 
   ));
 }
 

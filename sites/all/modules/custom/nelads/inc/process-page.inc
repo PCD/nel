@@ -16,6 +16,9 @@ function nelads_process_html(&$vars) {
   // Delete Ad Article Header
   $vars['page'] = preg_replace('/<!--#nelads-block-5-start-->.*?<!--#nelads-block-5-end-->/msi', '', $vars['page']);
   
+  // Delete Ad Related Articles
+  $vars['page'] = preg_replace('/<!--#nelads-block-6-start-->.*?<!--#nelads-block-6-end-->/msi', '', $vars['page']);
+  
   // Delete Ad Global Header
   $vars['page'] = preg_replace('/<!--#nelads-block-2-start-->.*?<!--#nelads-block-2-end-->/msi', '', $vars['page']);
   

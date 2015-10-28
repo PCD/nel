@@ -29,8 +29,19 @@ function uncachethis_menu() {
  */
 function uncachethis_menu_delete() {
   if ( isset($_GET['delete_path']) ) {
-    $urls = array(urldecode($_GET['delete_path']));
-    boost_expire_cache($urls);
+    $url = urldecode($_GET['delete_path']);
+    if ( preg_match('/([^?]*?)(\?.*?$)/', $url, $match) ) {
+      $url = $match[1];
+    }
+    
+    $urls = array(
+      $url => $url, 
+    );
+    $wildcards = array(
+      $url => '*', 
+    );
+    
+    boost_expire_cache($urls, $wildcards);
   }
   
   drupal_json_output(array(

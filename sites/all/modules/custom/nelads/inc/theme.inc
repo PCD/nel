@@ -12,5 +12,13 @@ function nelads_theme() {
       ), 
       'template' => 'templates/nelads-adslot', 
     ), 
+    'nelads-dcslot' => array(
+      'arguments' => array(
+        'group_id' => '', 
+        'div_id' => '', 
+        'style' => '', 
+      ), 
+      'template' => 'templates/nelads-dcslot', 
+    ), 
   );
 }

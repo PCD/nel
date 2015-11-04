@@ -1,5 +1,6 @@
 <?php
 include_once('inc/block.inc');
+include_once('inc/dc-block.inc');
 include_once('inc/data.inc');
 include_once('inc/node-view.inc');
 include_once('inc/process-page.inc');

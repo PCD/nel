@@ -4,6 +4,9 @@
  */
 function nelads_block_info() {
   $blocks = array();
+  $blocks['dc-article_body'] = array(
+    'info' => 'DoubleClick - Article Body', 
+  );
   $blocks['nelads-article_detail'] = array(
     'info' => 'Nel Ads - Article Detail', 
   );
@@ -31,6 +34,11 @@ function nelads_block_info() {
 function nelads_block_view($delta = '') {
   $block = array();
   switch($delta) {
+    // Double Click
+    case 'dc-article_body':
+      $block['content'] = nelads_block_view_dc_article_body();
+      break;
+    // Adsense
     case 'nelads-article_detail':
       $block['content'] = nelads_block_view_article_detail();
       break;

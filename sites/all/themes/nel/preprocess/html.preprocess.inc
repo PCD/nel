@@ -34,11 +34,25 @@ function nel_preprocess_html_node(&$variables) {
     return;
   }
   
+  // Google Class
+  nel_preprocess_html_node_google_class($variables, $node);
+  
   // Gallery Stuff
   nel_preprocess_html_node_gallery($variables, $node);
   
   // Category Stuff
   nel_preprocess_html_node_category($variables, $node);
+}
+
+/**
+ *
+ */
+function nel_preprocess_html_node_google_class(&$variables, $node) {
+  $google_class = 'apto-para-adulto';
+  if ( isset($node->field_google_class[LANGUAGE_NONE][0]['value']) ) {
+    $google_class = $node->field_google_class[LANGUAGE_NONE][0]['value'];
+  }
+  $variables['attributes_array']['data-google-class'] = $google_class;
 }
 
 /**

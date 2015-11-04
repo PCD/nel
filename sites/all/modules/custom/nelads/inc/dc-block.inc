@@ -17,7 +17,7 @@ function nelads_block_view_dc_article_body() {
   drupal_add_js(drupal_get_path('module', 'nelads') . '/js/nelads-dc-article_body.js');
   return theme('nelads-dcslot', array(
     'group_id' => '15651346/Article-Body-300x250', 
-    'div_id' => 'div-gpt-ad-1446602697702-0', 
+    'div_id' => 'div-gpt-ad-1446621104256-0', 
     'style' => 'height:250px; width:300px;', 
   ));
 }

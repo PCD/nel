@@ -13,7 +13,20 @@ function nelads_block_view_dc_article_body() {
   }
   
   drupal_add_js(drupal_get_path('module', 'nelads') . '/js/nelads-dc-general.js', array('weight'=>100));
-  drupal_add_js(drupal_get_path('module', 'nelads') . '/js/nelads-dc-article_body.js', array('weight'=>101));
+  static $i;
+  $i = isset($i)?$i+1:1;
+  if ( $i == 1 ) {
+    $js = "googletag.cmd.push(function() {
+      googletag.defineSlot('/15651346/Article-Body-300x250', [300, 250], 'div-gpt-ad-1446621104256-0').addService(googletag.pubads());
+      // Start Custom Criteria
+      googletag.pubads().setTargeting('google_class','{$google_class}');
+      // End Custom Criteria
+      googletag.pubads().enableSingleRequest();
+      googletag.enableServices();
+    });";
+    drupal_add_js($js, array('type'=>'inline', 'scope'=>'header', 'weight' => 101));
+  }
+  
   return theme('nelads-dcslot', array(
     'group_id' => '15651346/Article-Body-300x250', 
     'div_id' => 'div-gpt-ad-1446621104256-0', 

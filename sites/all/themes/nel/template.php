@@ -257,6 +257,75 @@ function nel_preprocess_views_view_row_rss(&$vars) {
  *
  */
 function nel_preprocess_views_view_row_rss_node(&$item, $node) {
+  // Get pictures Together
+  if ( ($pictures = nelb_row_rss_node_get_pictures($node)) ) {
+    foreach($pictures as $picture) {
+      // Type
+      $media_type = $picture['filemime'];
+      
+      // Source
+      $source_url = file_create_url($picture['uri']);
+      $source_width = $picture['width'];
+      $source_height = $picture['height'];
+      
+      // Medium
+      $medium_url = image_style_url('rss_medium', $picture['uri']);
+      $medium_dimensions = array(
+        'width' => $picture['width'],
+        'height' => $picture['height'],
+      );
+      image_style_transform_dimensions('rss_medium', $medium_dimensions);
+      $medium_width = $medium_dimensions['width'];
+      $medium_height = $medium_dimensions['height'];
+      
+      // Thumbnail
+      $thumbnail_url = image_style_url('rss_thumbnail', $picture['uri']);
+      $thumbnail_dimensions = array(
+        'width' => $picture['width'],
+        'height' => $picture['height'],
+      );
+      image_style_transform_dimensions('rss_thumbnail', $thumbnail_dimensions);
+      $thumbnail_width = $thumbnail_dimensions['width'];
+      $thumbnail_height = $thumbnail_dimensions['height'];
+      
+      $item->elements[] = array(
+        'key' => 'media:group', 
+        'value' => array(
+          // Source
+          array(
+            'key' => 'media:content', 
+            'attributes' => array(
+              'url' => $source_url, 
+              'type' => $media_type, 
+              'width' => $source_width, 
+              'height' => $source_height, 
+            ), 
+          ), 
+          // Mediano
+          array(
+            'key' => 'media:content', 
+            'attributes' => array(
+              'url' => $medium_url, 
+              'type' => $media_type, 
+              'width' => $medium_width, 
+              'height' => $medium_height, 
+            ), 
+          ), 
+          // Thumbnail
+          array(
+            'key' => 'media:content', 
+            'attributes' => array(
+              'url' => $thumbnail_url, 
+              'type' => $media_type, 
+              'width' => $thumbnail_width, 
+              'height' => $thumbnail_height, 
+            ), 
+          ), 
+        ), 
+      );
+    }
+  }
+  
   if ( isset($node->field_video[LANGUAGE_NONE][0]['uri']) ) {
     $video = $node->field_video[LANGUAGE_NONE][0];
     switch($video['filemime']) {

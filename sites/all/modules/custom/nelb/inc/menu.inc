@@ -127,7 +127,8 @@ function nelb_menu_taxonomy_home($term) {
   //$output .= nelb_theme_blocks($blocks);
   
   // New Content
-  $output .= render(field_view_field('taxonomy_term', $term, 'field_generic_block', 'default'));
+  $field_view = field_view_field('taxonomy_term', $term, 'field_generic_block', 'default');
+  $output .= render($field_view);
   return $output;
 }
 

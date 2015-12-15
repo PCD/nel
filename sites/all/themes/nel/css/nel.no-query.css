@@ -4083,55 +4083,33 @@ iframe {
   /* line 44, ../sass/components/09-adsense/_09-adsense-global_header.scss */
   .adslot_2,
   .adslot_5 {
-    width: 728px;
-    height: 90px; } }
-@media only screen and (max-width: 746px) {
+    width: 468px;
+    height: 60px; } }
+@media only screen and (max-width: 485px) {
   /* line 52, ../sass/components/09-adsense/_09-adsense-global_header.scss */
   .adslot_2,
   .adslot_5 {
-    width: 468px;
+    width: 320px;
+    height: 100px; } }
+@media only screen and (max-width: 337px) {
+  /* line 61, ../sass/components/09-adsense/_09-adsense-global_header.scss */
+  .adslot_2,
+  .adslot_5 {
+    width: 234px;
     height: 60px; } }
-@media only screen and (max-width: 486px) {
-  /* line 60, ../sass/components/09-adsense/_09-adsense-global_header.scss */
+@media only screen and (max-width: 251px) {
+  /* line 69, ../sass/components/09-adsense/_09-adsense-global_header.scss */
   .adslot_2,
   .adslot_5 {
-    width: 336px;
-    height: 280px; } }
-@media only screen and (max-width: 354px) {
-  /* line 68, ../sass/components/09-adsense/_09-adsense-global_header.scss */
-  .adslot_2,
-  .adslot_5 {
-    width: 300px;
-    height: 250px; } }
-@media only screen and (max-width: 318px) {
+    display: none !important; }
+
+  /* line 73, ../sass/components/09-adsense/_09-adsense-global_header.scss */
+  .l-region--header {
+    display: none; }
+
   /* line 76, ../sass/components/09-adsense/_09-adsense-global_header.scss */
-  .adslot_2,
-  .adslot_5 {
-    width: 250px;
-    height: 250px; } }
-@media only screen and (max-width: 268px) {
-  /* line 84, ../sass/components/09-adsense/_09-adsense-global_header.scss */
-  .adslot_2,
-  .adslot_5 {
-    width: 200px;
-    height: 200px; } }
-@media only screen and (max-width: 218px) {
-  /* line 92, ../sass/components/09-adsense/_09-adsense-global_header.scss */
-  .adslot_2,
-  .adslot_5 {
-    width: 180px;
-    height: 150px; } }
-@media only screen and (max-width: 198px) {
-  /* line 100, ../sass/components/09-adsense/_09-adsense-global_header.scss */
-  .adslot_2,
-  .adslot_5 {
-    width: 125px;
-    height: 125px; } }
-@media only screen and (max-width: 143px) {
-  /* line 108, ../sass/components/09-adsense/_09-adsense-global_header.scss */
-  .adslot_2,
-  .adslot_5 {
-    display: none; } }
+  .l-main {
+    padding-top: 9px; } }
 /* line 1, ../sass/components/09-adsense/_09-adsense-global_sidebar.scss */
 #block-nelads-nelads-global-sidebar {
   margin: 0; }

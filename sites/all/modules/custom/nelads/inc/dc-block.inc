@@ -45,7 +45,7 @@ function nelads_block_view_dc_sidebar_20() {
         addSize([0, 0], [180, 150]).
         build();
         
-      googletag.defineSlot('/15651346/Sidebar20', [[300, 250], [300, 115], [300, 80], [220, 84], [220, 59], [200, 76], [200, 53], [200, 200]], 'div-gpt-ad-1450248044192-0').
+      googletag.defineSlot('/15651346/Sidebar20', [[300, 250], [300, 115], [300, 80], [220, 84], [220, 59], [200, 76], [200, 53], [200, 200]], 'div-gpt-ad-1450250971213-0').
       defineSizeMapping(mapping).
       setCollapseEmptyDiv(true).
       addService(googletag.pubads());
@@ -58,7 +58,7 @@ function nelads_block_view_dc_sidebar_20() {
   
   return theme('nelads-dcslot', array(
     'group_id' => '15651346/Sidebar20', 
-    'div_id' => 'div-gpt-ad-1450248044192-0', 
+    'div_id' => 'div-gpt-ad-1450250971213-0', 
     'style' => '', 
   ));
 }

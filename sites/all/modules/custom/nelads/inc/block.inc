@@ -17,6 +17,15 @@ function nelads_block_info() {
   $blocks['dc-sidebar_18'] = array(
     'info' => 'DoubleClick - Sidebar 18', 
   );
+  $blocks['dc-sidebar_17'] = array(
+    'info' => 'DoubleClick - Sidebar 17', 
+  );
+  $blocks['dc-sidebar_16'] = array(
+    'info' => 'DoubleClick - Sidebar 16', 
+  );
+  $blocks['dc-sidebar_15'] = array(
+    'info' => 'DoubleClick - Sidebar 15', 
+  );
   
   /** Regular **/
   $blocks['nelads-article_detail'] = array(
@@ -61,6 +70,18 @@ function nelads_block_view($delta = '') {
     
     case 'dc-sidebar_18':
       $block['content'] = nelads_block_view_dc_sidebar_18();
+      break;
+    
+    case 'dc-sidebar_17':
+      $block['content'] = nelads_block_view_dc_sidebar_17();
+      break;
+    
+    case 'dc-sidebar_16':
+      $block['content'] = nelads_block_view_dc_sidebar_16();
+      break;
+    
+    case 'dc-sidebar_15':
+      $block['content'] = nelads_block_view_dc_sidebar_15();
       break;
     
     // Adsense

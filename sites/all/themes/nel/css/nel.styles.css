@@ -4249,18 +4249,23 @@ iframe {
 /* line 1, ../sass/components/09-adsense/_09-double-click.scss */
 #block-nelads-dc-sidebar-20,
 #block-nelads-dc-sidebar-19,
-#block-nelads-dc-sidebar-18 {
+#block-nelads-dc-sidebar-18,
+#block-nelads-dc-sidebar-17,
+#block-nelads-dc-sidebar-16,
+#block-nelads-dc-sidebar-15 {
   margin-bottom: 30px; }
 
-/* line 6, ../sass/components/09-adsense/_09-double-click.scss */
+/* line 9, ../sass/components/09-adsense/_09-double-click.scss */
 #div-gpt-ad-1450250971213-0,
 #div-gpt-ad-1450252638117-0,
-#div-gpt-ad-1450252783279-0 {
+#div-gpt-ad-1450252783279-0,
+#div-gpt-ad-1450302135505-0 {
   text-align: center; }
-  /* line 10, ../sass/components/09-adsense/_09-double-click.scss */
+  /* line 14, ../sass/components/09-adsense/_09-double-click.scss */
   #div-gpt-ad-1450250971213-0 > div,
   #div-gpt-ad-1450252638117-0 > div,
-  #div-gpt-ad-1450252783279-0 > div {
+  #div-gpt-ad-1450252783279-0 > div,
+  #div-gpt-ad-1450302135505-0 > div {
     display: inline-block; }
 
 /* line 2, ../sass/components/10-tv/_player.scss */

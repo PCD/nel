@@ -75,15 +75,15 @@ function nelads_block_view_dc_sidebar_19() {
     $js = "googletag.cmd.push(function() {
 
       var mapping = googletag.sizeMapping().
-        addSize([1002, 0], [300, 250]).
-        addSize([748, 0], [220, 183]).
-        addSize([316, 0], [300, 250]).
-        addSize([236, 0], [220, 183]).
-        addSize([216, 0], [[200, 166], [200, 167]]).
+        addSize([1002, 0], [[300, 250], [300, 169]]).
+        addSize([748, 0], [[220, 183], [220, 124]]).
+        addSize([316, 0], [[300, 250], [300, 169]]).
+        addSize([236, 0], [[220, 183], [220, 124]]).
+        addSize([216, 0], [[200, 166], [200, 167], [200, 112]]).
         addSize([0, 0], [180, 150]).
         build();
         
-      googletag.defineSlot('/15651346/Sidebar19', [[300, 250], [220, 183], [200, 167], [200, 166], [180, 150]], 'div-gpt-ad-1450252638117-0').
+      googletag.defineSlot('/15651346/Sidebar19', [[300, 250], [300, 169], [220, 183], [220, 124], [200, 167], [200, 166], [200, 112], [180, 150]], 'div-gpt-ad-1450252638117-0').
       defineSizeMapping(mapping).
       setCollapseEmptyDiv(true).
       addService(googletag.pubads());
@@ -113,15 +113,15 @@ function nelads_block_view_dc_sidebar_18() {
     $js = "googletag.cmd.push(function() {
 
       var mapping = googletag.sizeMapping().
-        addSize([1002, 0], [300, 250]).
-        addSize([748, 0], [220, 183]).
-        addSize([316, 0], [300, 250]).
-        addSize([236, 0], [220, 183]).
-        addSize([216, 0], [[200, 166], [200, 167]]).
+        addSize([1002, 0], [[300, 250], [300, 169]]).
+        addSize([748, 0], [[220, 183], [220, 124]]).
+        addSize([316, 0], [[300, 250], [300, 169]]).
+        addSize([236, 0], [[220, 183], [220, 124]]).
+        addSize([216, 0], [[200, 166], [200, 167], [200, 112]]).
         addSize([0, 0], [180, 150]).
         build();
         
-      googletag.defineSlot('/15651346/sidebar18', [[300, 250], [220, 183], [200, 167], [200, 166], [180, 150]], 'div-gpt-ad-1450252783279-0').
+      googletag.defineSlot('/15651346/sidebar18', [[300, 250], [300, 169], [220, 183], [220, 124], [200, 167], [200, 166], [200, 112], [180, 150]], 'div-gpt-ad-1450252783279-0').
       defineSizeMapping(mapping).
       setCollapseEmptyDiv(true).
       addService(googletag.pubads());
@@ -138,3 +138,159 @@ function nelads_block_view_dc_sidebar_18() {
     'style' => '', 
   ));
 }
+
+/**
+ * Returns the dc-sidebar_17 block.
+ */
+function nelads_block_view_dc_sidebar_17() {
+  drupal_add_js(drupal_get_path('module', 'nelads') . '/js/nelads-dc-general.js', array('weight'=>100));
+
+  static $i;
+  $i = isset($i)?$i+1:1;
+  if ( $i == 1 ) {
+    $js = "googletag.cmd.push(function() {
+
+      var mapping = googletag.sizeMapping().
+        addSize([1002, 0], [[300, 250], [300, 169]]).
+        addSize([748, 0], [[220, 183], [220, 124]]).
+        addSize([316, 0], [[300, 250], [300, 169]]).
+        addSize([236, 0], [[220, 183], [220, 124]]).
+        addSize([216, 0], [[200, 166], [200, 167], [200, 112]]).
+        addSize([0, 0], [180, 150]).
+        build();
+        
+      googletag.defineSlot('/15651346/sidebar_17', [[300, 250], [300, 169], [220, 183], [220, 124], [200, 167], [200, 166], [200, 112], [180, 150]], 'div-gpt-ad-1450302135505-0').
+      defineSizeMapping(mapping).
+      setCollapseEmptyDiv(true).
+      addService(googletag.pubads());
+      googletag.pubads().setTargeting('google_class','google_class_value');
+      googletag.pubads().enableSingleRequest();
+      googletag.enableServices();
+    });";
+    drupal_add_js($js, array('type'=>'inline', 'scope'=>'header', 'weight' => 101));
+  }
+  
+  return theme('nelads-dcslot', array(
+    'group_id' => '15651346/sidebar_17', 
+    'div_id' => 'div-gpt-ad-1450302135505-0', 
+    'style' => '', 
+  ));
+}
+
+/**
+ * Returns the dc-sidebar_17 block.
+ */
+function nelads_block_view_dc_sidebar_16() {
+  drupal_add_js(drupal_get_path('module', 'nelads') . '/js/nelads-dc-general.js', array('weight'=>100));
+
+  static $i;
+  $i = isset($i)?$i+1:1;
+  if ( $i == 1 ) {
+    $js = "googletag.cmd.push(function() {
+
+      var mapping = googletag.sizeMapping().
+        addSize([1002, 0], [[300, 250], [300, 169]]).
+        addSize([748, 0], [[220, 183], [220, 124]]).
+        addSize([316, 0], [[300, 250], [300, 169]]).
+        addSize([236, 0], [[220, 183], [220, 124]]).
+        addSize([216, 0], [[200, 166], [200, 167], [200, 112]]).
+        addSize([0, 0], [180, 150]).
+        build();
+        
+      googletag.defineSlot('/15651346/sidebar_17', [[300, 250], [300, 169], [220, 183], [220, 124], [200, 167], [200, 166], [200, 112], [180, 150]], 'div-gpt-ad-1450300216980-0').
+      defineSizeMapping(mapping).
+      setCollapseEmptyDiv(true).
+      addService(googletag.pubads());
+      googletag.pubads().setTargeting('google_class','google_class_value');
+      googletag.pubads().enableSingleRequest();
+      googletag.enableServices();
+    });";
+    drupal_add_js($js, array('type'=>'inline', 'scope'=>'header', 'weight' => 101));
+  }
+  
+  return theme('nelads-dcslot', array(
+    'group_id' => '15651346/sidebar_17', 
+    'div_id' => 'div-gpt-ad-1450300216980-0', 
+    'style' => '', 
+  ));
+}
+
+/**
+ * Returns the dc-sidebar_17 block.
+ */
+function nelads_block_view_dc_sidebar_15() {
+  drupal_add_js(drupal_get_path('module', 'nelads') . '/js/nelads-dc-general.js', array('weight'=>100));
+
+  static $i;
+  $i = isset($i)?$i+1:1;
+  if ( $i == 1 ) {
+    $js = "googletag.cmd.push(function() {
+
+      var mapping = googletag.sizeMapping().
+        addSize([1002, 0], [[300, 250], [300, 169]]).
+        addSize([748, 0], [[220, 183], [220, 124]]).
+        addSize([316, 0], [[300, 250], [300, 169]]).
+        addSize([236, 0], [[220, 183], [220, 124]]).
+        addSize([216, 0], [[200, 166], [200, 167], [200, 112]]).
+        addSize([0, 0], [180, 150]).
+        build();
+        
+      googletag.defineSlot('/15651346/sidebar_17', [[300, 250], [300, 169], [220, 183], [220, 124], [200, 167], [200, 166], [200, 112], [180, 150]], 'div-gpt-ad-1450300216980-0').
+      defineSizeMapping(mapping).
+      setCollapseEmptyDiv(true).
+      addService(googletag.pubads());
+      googletag.pubads().setTargeting('google_class','google_class_value');
+      googletag.pubads().enableSingleRequest();
+      googletag.enableServices();
+    });";
+    drupal_add_js($js, array('type'=>'inline', 'scope'=>'header', 'weight' => 101));
+  }
+  
+  return theme('nelads-dcslot', array(
+    'group_id' => '15651346/sidebar_17', 
+    'div_id' => 'div-gpt-ad-1450300216980-0', 
+    'style' => '', 
+  ));
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

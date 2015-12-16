@@ -592,7 +592,7 @@ body.cke_ltr {
 .right-menu .colleft {
   float: left;
   width: 200%;
-  margin-left: -336px;
+  margin-left: -330px;
   position: relative;
   right: 100%; }
 
@@ -606,7 +606,7 @@ body.cke_ltr {
 /* line 56, ../sass/components/00-global/_00-global-layout.scss */
 .right-menu .l-content,
 .right-menu .l-footer-content {
-  margin: 0 0 0 336px;
+  margin: 0 0 0 330px;
   overflow: hidden; }
 
 /* line 61, ../sass/components/00-global/_00-global-layout.scss */
@@ -619,7 +619,7 @@ body.cke_ltr {
   float: right;
   width: 300px;
   position: relative;
-  left: 336px; }
+  left: 330px; }
 
 @media only screen and (min-width: 1094px) {
   /* line 73, ../sass/components/00-global/_00-global-layout.scss */

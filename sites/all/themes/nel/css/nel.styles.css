@@ -4247,14 +4247,20 @@ iframe {
   .page-node.node-type-streaming .adslot_micrositio {
     display: none; } }
 /* line 1, ../sass/components/09-adsense/_09-double-click.scss */
-#block-nelads-dc-sidebar-20 {
+#block-nelads-dc-sidebar-20,
+#block-nelads-dc-sidebar-19,
+#block-nelads-dc-sidebar-18 {
   margin-bottom: 30px; }
 
-/* line 4, ../sass/components/09-adsense/_09-double-click.scss */
-#div-gpt-ad-1450248044192-0 {
+/* line 6, ../sass/components/09-adsense/_09-double-click.scss */
+#div-gpt-ad-1450248044192-0,
+#div-gpt-ad-1450252638117-0,
+#div-gpt-ad-1450252783279-0 {
   text-align: center; }
-  /* line 6, ../sass/components/09-adsense/_09-double-click.scss */
-  #div-gpt-ad-1450248044192-0 > div {
+  /* line 10, ../sass/components/09-adsense/_09-double-click.scss */
+  #div-gpt-ad-1450248044192-0 > div,
+  #div-gpt-ad-1450252638117-0 > div,
+  #div-gpt-ad-1450252783279-0 > div {
     display: inline-block; }
 
 /* line 2, ../sass/components/10-tv/_player.scss */

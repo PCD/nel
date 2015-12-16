@@ -4,8 +4,11 @@
  */
 function nelads_process_html(&$vars) {
   if ( nelads_can_we_show_ads() ) {
+    nelads_process_html_google_class($vars, 'apto-para-todo-publico');
     return;
   }
+  
+  nelads_process_html_google_class($vars, 'apto-para-adulto');
   
   // Delete Ad Article Detail
   //$vars['page'] = preg_replace('/<p><!--#block-inject-1-start-->.*?<!--#block-inject-1-end-->/msi', '', $vars['page']);
@@ -34,4 +37,11 @@ function nelads_process_html(&$vars) {
   
   $pattern = '/<div id="block-nelads-nelads-article-comments"[^>]*?>\s*<div class="block__content">\s*<\/div>\s*<\/div>/msi';
   $vars['page'] = preg_replace($pattern, '', $vars['page']);
+}
+
+/**
+ * Fill all Double Click blocks with correct Google Class.
+ */
+function nelads_process_html_google_class(&$vars, $google_class_value) {
+  $vars['scripts'] = str_replace('google_class_value', $google_class_value, $vars['scripts']);
 }

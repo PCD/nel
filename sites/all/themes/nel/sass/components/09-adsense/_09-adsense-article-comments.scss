@@ -7,24 +7,15 @@
   }
 }
 
-@media only screen and (max-width: $tablet_width) {
-  #block-nelads-nelads-article-comments{
-    .block__content, 
-    .adslot_4{
-      margin-left: auto;
-      margin-right: auto;
-      width: 728px;
-      height: 90px;
-    }
-  }
-}
-
-@media only screen and (max-width: 746px) {
+@media only screen and (max-width: $desktop_wide_ads_max2) {
   #block-nelads-nelads-article-comments{
     .block__content, 
     .adslot_4{
       width: 468px;
       height: 60px;
+    }
+    .block__content{
+      margin: 0 auto;
     }
   }
 }

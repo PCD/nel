@@ -3932,58 +3932,53 @@ iframe {
     width: 728px;
     height: 90px; }
 
-@media only screen and (max-width: 748px) {
+@media only screen and (max-width: 1094px) {
   /* line 12, ../sass/components/09-adsense/_09-adsense-article-comments.scss */
   #block-nelads-nelads-article-comments .block__content,
   #block-nelads-nelads-article-comments .adslot_4 {
-    margin-left: auto;
-    margin-right: auto;
-    width: 728px;
-    height: 90px; } }
-@media only screen and (max-width: 746px) {
-  /* line 24, ../sass/components/09-adsense/_09-adsense-article-comments.scss */
-  #block-nelads-nelads-article-comments .block__content,
-  #block-nelads-nelads-article-comments .adslot_4 {
     width: 468px;
-    height: 60px; } }
+    height: 60px; }
+  /* line 17, ../sass/components/09-adsense/_09-adsense-article-comments.scss */
+  #block-nelads-nelads-article-comments .block__content {
+    margin: 0 auto; } }
 @media only screen and (max-width: 486px) {
-  /* line 34, ../sass/components/09-adsense/_09-adsense-article-comments.scss */
+  /* line 25, ../sass/components/09-adsense/_09-adsense-article-comments.scss */
   #block-nelads-nelads-article-comments .block__content,
   #block-nelads-nelads-article-comments .adslot_4 {
     width: 336px;
     height: 280px; } }
 @media only screen and (max-width: 354px) {
-  /* line 44, ../sass/components/09-adsense/_09-adsense-article-comments.scss */
+  /* line 35, ../sass/components/09-adsense/_09-adsense-article-comments.scss */
   #block-nelads-nelads-article-comments .block__content,
   #block-nelads-nelads-article-comments .adslot_4 {
     width: 300px;
     height: 250px; } }
 @media only screen and (max-width: 318px) {
-  /* line 54, ../sass/components/09-adsense/_09-adsense-article-comments.scss */
+  /* line 45, ../sass/components/09-adsense/_09-adsense-article-comments.scss */
   #block-nelads-nelads-article-comments .block__content,
   #block-nelads-nelads-article-comments .adslot_4 {
     width: 250px;
     height: 250px; } }
 @media only screen and (max-width: 268px) {
-  /* line 64, ../sass/components/09-adsense/_09-adsense-article-comments.scss */
+  /* line 55, ../sass/components/09-adsense/_09-adsense-article-comments.scss */
   #block-nelads-nelads-article-comments .block__content,
   #block-nelads-nelads-article-comments .adslot_4 {
     width: 200px;
     height: 200px; } }
 @media only screen and (max-width: 218px) {
-  /* line 74, ../sass/components/09-adsense/_09-adsense-article-comments.scss */
+  /* line 65, ../sass/components/09-adsense/_09-adsense-article-comments.scss */
   #block-nelads-nelads-article-comments .block__content,
   #block-nelads-nelads-article-comments .adslot_4 {
     width: 180px;
     height: 150px; } }
 @media only screen and (max-width: 198px) {
-  /* line 84, ../sass/components/09-adsense/_09-adsense-article-comments.scss */
+  /* line 75, ../sass/components/09-adsense/_09-adsense-article-comments.scss */
   #block-nelads-nelads-article-comments .block__content,
   #block-nelads-nelads-article-comments .adslot_4 {
     width: 125px;
     height: 125px; } }
 @media only screen and (max-width: 143px) {
-  /* line 94, ../sass/components/09-adsense/_09-adsense-article-comments.scss */
+  /* line 85, ../sass/components/09-adsense/_09-adsense-article-comments.scss */
   #block-nelads-nelads-article-comments .block__content,
   #block-nelads-nelads-article-comments .adslot_4 {
     display: none; } }

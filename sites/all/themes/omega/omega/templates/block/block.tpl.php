@@ -43,6 +43,7 @@
  *
  * @ingroup themeable
  */
+//print_r((get_defined_vars()['variables']));exit;
 ?>
 <div<?php print $attributes; ?>>
   <?php print render($title_prefix); ?>

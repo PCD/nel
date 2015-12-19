@@ -4256,22 +4256,59 @@ iframe {
   margin-bottom: 30px; }
 
 /* line 9, ../sass/components/09-adsense/_09-double-click.scss */
+.microsite-wide,
+.microsite-halves {
+  margin: 0 0 30px;
+  position: relative;
+  z-index: 599; }
+
+/* line 16, ../sass/components/09-adsense/_09-double-click.scss */
+.microsite-halves .microsite-half-left {
+  float: left; }
+/* line 19, ../sass/components/09-adsense/_09-double-click.scss */
+.microsite-halves .microsite-half-right {
+  float: right; }
+
+/* line 23, ../sass/components/09-adsense/_09-double-click.scss */
+.microsite-halves:after {
+  clear: both;
+  content: "";
+  display: table;
+  height: 0; }
+
+/* line 29, ../sass/components/09-adsense/_09-double-click.scss */
 #div-gpt-ad-1450250971213-0,
 #div-gpt-ad-1450252638117-0,
 #div-gpt-ad-1450252783279-0,
 #div-gpt-ad-1450302135505-0,
 #div-gpt-ad-1450373545348-0,
-#div-gpt-ad-1450373663867-0 {
+#div-gpt-ad-1450373663867-0,
+#div-gpt-ad-1450427370456-0,
+#div-gpt-ad-1450427490112-0,
+#div-gpt-ad-1450427550452-0,
+#div-gpt-ad-1450427595446-0,
+#div-gpt-ad-1450486677457-0 {
   text-align: center; }
-  /* line 16, ../sass/components/09-adsense/_09-double-click.scss */
+  /* line 41, ../sass/components/09-adsense/_09-double-click.scss */
   #div-gpt-ad-1450250971213-0 > div,
   #div-gpt-ad-1450252638117-0 > div,
   #div-gpt-ad-1450252783279-0 > div,
   #div-gpt-ad-1450302135505-0 > div,
   #div-gpt-ad-1450373545348-0 > div,
-  #div-gpt-ad-1450373663867-0 > div {
+  #div-gpt-ad-1450373663867-0 > div,
+  #div-gpt-ad-1450427370456-0 > div,
+  #div-gpt-ad-1450427490112-0 > div,
+  #div-gpt-ad-1450427550452-0 > div,
+  #div-gpt-ad-1450427595446-0 > div,
+  #div-gpt-ad-1450486677457-0 > div {
     display: inline-block; }
 
+@media only screen and (max-width: 748px) {
+  /* line 48, ../sass/components/09-adsense/_09-double-click.scss */
+  .microsite-halves .microsite-half-left,
+  .microsite-halves .microsite-half-right {
+    float: none;
+    margin-bottom: 30px; } }
 /* line 2, ../sass/components/10-tv/_player.scss */
 .video.streaming > .inner-wrapper center > div {
   width: 100% !important; }

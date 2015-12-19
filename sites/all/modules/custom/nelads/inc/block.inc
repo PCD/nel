@@ -27,6 +27,20 @@ function nelads_block_info() {
     'info' => 'DoubleClick - Sidebar 15', 
   );
   
+  /** Micrositio Double Click **/
+  $blocks['dc-microsite-19-wide'] = array(
+    'info' => 'DoubleClick - Micrositio 19 - Wide', 
+  );
+  $blocks['dc-microsite-19-half_left'] = array(
+    'info' => 'DoubleClick - Micrositio 19 - Half Left', 
+  );
+  $blocks['dc-microsite-19-half_right'] = array(
+    'info' => 'DoubleClick - Micrositio 19 - Half Right', 
+  );
+  $blocks['dc-microsite-17-wide'] = array(
+    'info' => 'DoubleClick - Micrositio 17 - Wide', 
+  );
+  
   /** Regular **/
   $blocks['nelads-article_detail'] = array(
     'info' => 'Nel Ads - Article Detail', 
@@ -82,6 +96,23 @@ function nelads_block_view($delta = '') {
     
     case 'dc-sidebar_15':
       $block['content'] = nelads_block_view_dc_sidebar_15();
+      break;
+
+    // Micrositio Double Click
+    case 'dc-microsite-19-wide':
+      $block['content'] = nelads_block_view_dc_microsite_19_wide();
+      break;
+
+    case 'dc-microsite-19-half_left':
+      $block['content'] = nelads_block_view_dc_microsite_19_half_left();
+      break;
+
+    case 'dc-microsite-19-half_right':
+      $block['content'] = nelads_block_view_dc_microsite_19_half_right();
+      break;
+    
+    case 'dc-microsite-17-wide':
+      $block['content'] = nelads_block_view_dc_microsite_17_wide();
       break;
     
     // Adsense

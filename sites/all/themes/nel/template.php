@@ -386,15 +386,15 @@ function nel_preprocess_views_view_row_rss_node(&$item, $node) {
   }
 }
 
-function nel_get_ii() {
+function nel_get_ii($offset) {
   static $ii;
   $ii = isset($ii)?($ii+1):0;
-  $start = 20;
+  $start = 20 - $offset;
   return ($start - $ii);
 }
 
-function nel_get_dc_microsite_block() {
-  $i = nel_get_ii();
+function nel_get_dc_microsite_block($offset = 0) {
+  $i = nel_get_ii($offset);
   $output = '';
   switch($i) {
     case 19;

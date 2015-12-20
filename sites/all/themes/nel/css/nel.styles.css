@@ -4263,20 +4263,25 @@ iframe {
   z-index: 599; }
 
 /* line 16, ../sass/components/09-adsense/_09-double-click.scss */
+.page-node.node-type-streaming .microsite-wide,
+.page-node.node-type-streaming .microsite-halves {
+  margin-top: 30px; }
+
+/* line 22, ../sass/components/09-adsense/_09-double-click.scss */
 .microsite-halves .microsite-half-left {
   float: left; }
-/* line 19, ../sass/components/09-adsense/_09-double-click.scss */
+/* line 25, ../sass/components/09-adsense/_09-double-click.scss */
 .microsite-halves .microsite-half-right {
   float: right; }
 
-/* line 23, ../sass/components/09-adsense/_09-double-click.scss */
+/* line 29, ../sass/components/09-adsense/_09-double-click.scss */
 .microsite-halves:after {
   clear: both;
   content: "";
   display: table;
   height: 0; }
 
-/* line 29, ../sass/components/09-adsense/_09-double-click.scss */
+/* line 35, ../sass/components/09-adsense/_09-double-click.scss */
 #div-gpt-ad-1450250971213-0,
 #div-gpt-ad-1450252638117-0,
 #div-gpt-ad-1450252783279-0,
@@ -4289,7 +4294,7 @@ iframe {
 #div-gpt-ad-1450427595446-0,
 #div-gpt-ad-1450486677457-0 {
   text-align: center; }
-  /* line 41, ../sass/components/09-adsense/_09-double-click.scss */
+  /* line 47, ../sass/components/09-adsense/_09-double-click.scss */
   #div-gpt-ad-1450250971213-0 > div,
   #div-gpt-ad-1450252638117-0 > div,
   #div-gpt-ad-1450252783279-0 > div,
@@ -4304,7 +4309,7 @@ iframe {
     display: inline-block; }
 
 @media only screen and (max-width: 748px) {
-  /* line 48, ../sass/components/09-adsense/_09-double-click.scss */
+  /* line 54, ../sass/components/09-adsense/_09-double-click.scss */
   .microsite-halves .microsite-half-left,
   .microsite-halves .microsite-half-right {
     float: none;

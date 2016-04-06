@@ -41,7 +41,9 @@ function uncachethis_menu_delete() {
       $url => '*', 
     );
     
-    boost_expire_cache($urls, $wildcards);
+    $object_type = null;
+    $object = null;
+    boost_expire_cache($urls, $wildcards, $object_type, $object);
   }
   
   drupal_json_output(array(

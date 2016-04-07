@@ -4084,26 +4084,25 @@ iframe {
   /* line 52, ../sass/components/09-adsense/_09-adsense-global_header.scss */
   .adslot_2,
   .adslot_5 {
-    display: none !important;
     width: 320px;
     height: 100px; } }
 @media only screen and (max-width: 337px) {
-  /* line 62, ../sass/components/09-adsense/_09-adsense-global_header.scss */
+  /* line 61, ../sass/components/09-adsense/_09-adsense-global_header.scss */
   .adslot_2,
   .adslot_5 {
     width: 234px;
     height: 60px; } }
 @media only screen and (max-width: 251px) {
-  /* line 70, ../sass/components/09-adsense/_09-adsense-global_header.scss */
+  /* line 69, ../sass/components/09-adsense/_09-adsense-global_header.scss */
   .adslot_2,
   .adslot_5 {
     display: none !important; }
 
-  /* line 74, ../sass/components/09-adsense/_09-adsense-global_header.scss */
+  /* line 73, ../sass/components/09-adsense/_09-adsense-global_header.scss */
   .l-region--header {
     display: none; }
 
-  /* line 77, ../sass/components/09-adsense/_09-adsense-global_header.scss */
+  /* line 76, ../sass/components/09-adsense/_09-adsense-global_header.scss */
   .l-main {
     padding-top: 9px; } }
 /* line 1, ../sass/components/09-adsense/_09-adsense-global_sidebar.scss */

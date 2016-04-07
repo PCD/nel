@@ -53,6 +53,13 @@
 <?php else: ?>
   <html class="no-js" lang="<?php print $language->language; ?>" dir="<?php print $language->dir; ?>"<?php print $rdf_namespaces; ?><?php print $more; ?>>
 <?php endif; ?>
+  <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <script>
+    (adsbygoogle = window.adsbygoogle || []).push({
+      google_ad_client: "ca-pub-6659210167862789",
+      enable_page_level_ads: true
+    });
+  </script>
 <head>
   <title><?php print $head_title; ?></title>
   <meta property="fb:app_id" content="117628395001698"/>

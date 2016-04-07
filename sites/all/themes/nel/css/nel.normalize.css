@@ -227,13 +227,20 @@ td,
 th {
   padding: 0; }
 
-/* line 1, ../../../../../../../../../../../usr/local/lib/ruby/gems/2.2.0/gems/toolkit-2.6.0/stylesheets/toolkit/_kickstart.scss */
-*, *:before, *:after {
+/* line 1, ../../../../../../../../../../../usr/local/lib/ruby/gems/2.2.0/gems/toolkit-2.9.0/stylesheets/toolkit/_kickstart.scss */
+html {
   -moz-box-sizing: border-box;
   box-sizing: border-box; }
 
-/* line 11, ../../../../../../../../../../../usr/local/lib/ruby/gems/2.2.0/gems/toolkit-2.6.0/stylesheets/toolkit/_kickstart.scss */
-img, video {
+/* line 11, ../../../../../../../../../../../usr/local/lib/ruby/gems/2.2.0/gems/toolkit-2.9.0/stylesheets/toolkit/_kickstart.scss */
+*, *:before, *:after {
+  box-sizing: inherit; }
+
+/* line 15, ../../../../../../../../../../../usr/local/lib/ruby/gems/2.2.0/gems/toolkit-2.9.0/stylesheets/toolkit/_kickstart.scss */
+embed,
+img,
+object,
+video {
   max-width: 100%;
   height: auto; }
 

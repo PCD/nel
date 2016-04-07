@@ -51,6 +51,7 @@
 @media only screen and (max-width: 485px) {
   .adslot_2, 
   .adslot_5{
+    display: none !important;
     width: 320px;
     height: 100px;
   }

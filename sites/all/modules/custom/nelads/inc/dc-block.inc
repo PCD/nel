@@ -11,12 +11,10 @@ function nelads_block_view_dc_header() {
     $js = "googletag.cmd.push(function() {
 
       var mapping = googletag.sizeMapping().
-        addSize([1250, 0], [[900, 90], [728, 90]]).
-        addSize([1088, 0], [[728, 90], [468, 60]]).
-        addSize([749, 0], [[468, 60], [320, 100]]).
-        addSize([486, 0], [[468, 60], [320, 100]]).
-        addSize([486, 0], [[468, 60], [320, 100]]).
-        addSize([338, 0], [[320, 100], [234, 60]]).
+        addSize([1250, 0], [[900, 90]]).
+        addSize([1088, 0], [[728, 90]]).
+        addSize([486, 0], [[468, 60]]).
+        addSize([338, 0], [[320, 100]]).
         addSize([0, 0], [[234, 60], [180, 150]]).
         build();
         

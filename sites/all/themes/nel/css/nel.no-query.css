@@ -4042,67 +4042,71 @@ iframe {
   height: 60px; }
 
 /* line 6, ../sass/components/09-adsense/_09-adsense-global_header.scss */
+#block-nelads-dc-header,
 #block-nelads-nelads-global-header,
 #block-nelads-nelads-article-header {
   padding-top: 5px;
   display: inline-block; }
 
 @media only screen and (min-width: 1088px) {
-  /* line 13, ../sass/components/09-adsense/_09-adsense-global_header.scss */
+  /* line 14, ../sass/components/09-adsense/_09-adsense-global_header.scss */
   .adslot_2,
   .adslot_5 {
     width: 728px;
     height: 90px; }
 
-  /* line 18, ../sass/components/09-adsense/_09-adsense-global_header.scss */
+  /* line 19, ../sass/components/09-adsense/_09-adsense-global_header.scss */
+  #block-nelads-dc-header,
   #block-nelads-nelads-global-header,
   #block-nelads-nelads-article-header {
     padding-top: 0; } }
 @media only screen and (min-width: 1250px) {
-  /* line 25, ../sass/components/09-adsense/_09-adsense-global_header.scss */
+  /* line 27, ../sass/components/09-adsense/_09-adsense-global_header.scss */
   .adslot_2,
   .adslot_5 {
     width: 900px;
     height: 90px; }
 
-  /* line 30, ../sass/components/09-adsense/_09-adsense-global_header.scss */
+  /* line 32, ../sass/components/09-adsense/_09-adsense-global_header.scss */
+  #block-nelads-dc-header,
   #block-nelads-nelads-global-header,
   #block-nelads-nelads-article-header {
     padding-top: 0; } }
 @media only screen and (max-width: 1002px) {
-  /* line 37, ../sass/components/09-adsense/_09-adsense-global_header.scss */
+  /* line 40, ../sass/components/09-adsense/_09-adsense-global_header.scss */
+  #block-nelads-dc-header,
   #block-nelads-nelads-global-header,
   #block-nelads-nelads-article-header {
     padding-top: 0; } }
 @media only screen and (max-width: 748px) {
-  /* line 44, ../sass/components/09-adsense/_09-adsense-global_header.scss */
+  /* line 48, ../sass/components/09-adsense/_09-adsense-global_header.scss */
   .adslot_2,
   .adslot_5 {
     width: 468px;
     height: 60px; } }
 @media only screen and (max-width: 485px) {
-  /* line 52, ../sass/components/09-adsense/_09-adsense-global_header.scss */
+  /* line 56, ../sass/components/09-adsense/_09-adsense-global_header.scss */
   .adslot_2,
   .adslot_5 {
     width: 320px;
     height: 100px; } }
 @media only screen and (max-width: 337px) {
-  /* line 61, ../sass/components/09-adsense/_09-adsense-global_header.scss */
+  /* line 65, ../sass/components/09-adsense/_09-adsense-global_header.scss */
   .adslot_2,
   .adslot_5 {
     width: 234px;
     height: 60px; } }
 @media only screen and (max-width: 251px) {
-  /* line 69, ../sass/components/09-adsense/_09-adsense-global_header.scss */
+  /* line 73, ../sass/components/09-adsense/_09-adsense-global_header.scss */
   .adslot_2,
   .adslot_5 {
     display: none !important; }
 
-  /* line 73, ../sass/components/09-adsense/_09-adsense-global_header.scss */
+  /* line 77, ../sass/components/09-adsense/_09-adsense-global_header.scss */
   .l-region--header {
     display: none; }
 
-  /* line 76, ../sass/components/09-adsense/_09-adsense-global_header.scss */
+  /* line 80, ../sass/components/09-adsense/_09-adsense-global_header.scss */
   .l-main {
     padding-top: 9px; } }
 /* line 1, ../sass/components/09-adsense/_09-adsense-global_sidebar.scss */

@@ -3,6 +3,7 @@
   width: 468px;
   height: 60px;
 }
+#block-nelads-dc-header, 
 #block-nelads-nelads-global-header, 
 #block-nelads-nelads-article-header{
   padding-top: 5px;
@@ -15,6 +16,7 @@
     width: 728px;
     height: 90px;
   }
+  #block-nelads-dc-header, 
   #block-nelads-nelads-global-header, 
   #block-nelads-nelads-article-header{
     padding-top: 0;
@@ -27,6 +29,7 @@
     width: 900px;
     height: 90px;
   }
+  #block-nelads-dc-header, 
   #block-nelads-nelads-global-header, 
   #block-nelads-nelads-article-header{
     padding-top: 0;
@@ -34,6 +37,7 @@
 }
 
 @media only screen and (max-width: $desktop_width) {
+  #block-nelads-dc-header, 
   #block-nelads-nelads-global-header, 
   #block-nelads-nelads-article-header{
     padding-top: 0;

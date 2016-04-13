@@ -5,6 +5,9 @@
 function nelads_block_info() {
   $blocks = array();
   /** Double Click **/
+  $blocks['dc-header'] = array(
+    'info' => 'DoubleClick - Header', 
+  );
   $blocks['dc-article_body'] = array(
     'info' => 'DoubleClick - Article Body', 
   );
@@ -70,6 +73,10 @@ function nelads_block_view($delta = '') {
   $block = array();
   switch($delta) {
     // Double Click
+    case 'dc-header':
+      $block['content'] = nelads_block_view_dc_header();
+      break;
+      
     case 'dc-article_body':
       $block['content'] = nelads_block_view_dc_article_body();
       break;

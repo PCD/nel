@@ -1,5 +1,44 @@
 <?php
 /**
+ * Returns the dc-article_header block.
+ */
+function nelads_block_view_dc_header() {
+  drupal_add_js(drupal_get_path('module', 'nelads') . '/js/nelads-dc-general.js', array('weight'=>100));
+
+  static $i;
+  $i = isset($i)?$i+1:1;
+  if ( $i == 1 ) {
+    $js = "googletag.cmd.push(function() {
+
+      var mapping = googletag.sizeMapping().
+        addSize([1250, 0], [[900, 90], [728, 90]]).
+        addSize([1088, 0], [[728, 90], [468, 60]]).
+        addSize([749, 0], [[468, 60], [320, 100]]).
+        addSize([486, 0], [[468, 60], [320, 100]]).
+        addSize([486, 0], [[468, 60], [320, 100]]).
+        addSize([338, 0], [[320, 100], [234, 60]]).
+        addSize([0, 0], [[234, 60], [180, 150]]).
+        build();
+        
+      googletag.defineSlot('/15651346/Header', [[900, 90], [728, 90], [468, 60], [320, 100], [234, 60], [180, 150]], 'div-gpt-ad-1460578771697-0').
+      defineSizeMapping(mapping).
+      setCollapseEmptyDiv(true).
+      addService(googletag.pubads());
+      googletag.pubads().setTargeting('google_class','google_class_value');
+      googletag.pubads().enableSingleRequest();
+      googletag.enableServices();
+    });";
+    drupal_add_js($js, array('type'=>'inline', 'scope'=>'header', 'weight' => 101));
+  }
+  
+  return theme('nelads-dcslot', array(
+    'group_id' => '15651346/Header', 
+    'div_id' => 'div-gpt-ad-1460578771697-0', 
+    'style' => '', 
+  ));
+}
+
+/**
  * Returns the dc-article_body block.
  */
 function nelads_block_view_dc_article_body() {

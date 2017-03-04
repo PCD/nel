@@ -1,0 +1,4 @@
+name = "FaceBook Instant Articles Sync"
+description = "Syncs Drupal with FB Instant Articles"
+package = D4ALL.MX
+core = 7.x

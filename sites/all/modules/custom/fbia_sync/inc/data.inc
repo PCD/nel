@@ -163,7 +163,7 @@ function fbia_sync_vimeo_to_figure($vimeo_raw) {
   
   $vimeo_id = $match[1];
   $output = "<figure class=\"op-interactive\">
-    <iframe src=\"https://player.vimeo.com/video/{$vimeo_id}\"></iframe>
+    <iframe src=\"https://player.vimeo.com/video/{$vimeo_id}\" width=\"560\" height=\"315\"></iframe>
   </figure>";
   return $output;
 }

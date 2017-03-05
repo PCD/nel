@@ -4,10 +4,7 @@
  */
 function fbia_sync_node_insert($node) {
   // Crear html output.
-  $output = fbia_sync_prepare_node($node);
-  
-  print_r($output);
-  exit;
+  //$output = fbia_sync_prepare_node($node);
   
   // Mandar a API.
 }

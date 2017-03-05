@@ -6,6 +6,7 @@ function fbia_sync_theme() {
   return array(
     'fbia-sync--article' => array(
       'variables' => array(
+        'url' => NULL,
         'title' => NULL,
         'sub_title' => NULL,
         'published_date' => NULL,
@@ -26,8 +27,10 @@ function fbia_sync_theme() {
     ),
     'fbia-sync--double-click' => array(
       'variables' => array(
-        
+        'slot_id' => NULL,
+        'div_id' => NULL,
       ),
+      'template' => 'templates/fbia-sync--double-click',
     ),
   );
 }

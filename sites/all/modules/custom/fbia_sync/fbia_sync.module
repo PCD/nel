@@ -4,3 +4,4 @@ include_once('inc/menu.inc');
 include_once('inc/nodeapi.inc');
 include_once('inc/permissions.inc');
 include_once('inc/themes.inc');
+include_once('inc/fbia_api.inc');

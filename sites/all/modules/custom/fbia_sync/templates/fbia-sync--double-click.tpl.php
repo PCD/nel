@@ -14,7 +14,7 @@
 </script>
 <script>
   googletag.cmd.push(function() {
-    googletag.defineSlot('/<?php print $slot_id;?>15651346/FB_Instant_300x250', [300, 250], '<?php print $div_id;?>').addService(googletag.pubads());
+    googletag.defineSlot('/<?php print $slot_id;?>', [300, 250], '<?php print $div_id;?>').addService(googletag.pubads());
     googletag.pubads().enableSingleRequest();
     googletag.pubads().collapseEmptyDivs();
     googletag.enableServices();
@@ -22,6 +22,6 @@
 </script>
 <div id='<?php print $div_id;?>' style='height:250px; width:300px;'>
   <script>
-  googletag.cmd.push(function() { googletag.display('<?php print $div_id;?>div-gpt-ad-1488668257116-0'); });
+  googletag.cmd.push(function() { googletag.display('<?php print $div_id;?>'); });
   </script>
 </div>

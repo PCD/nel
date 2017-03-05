@@ -10,6 +10,7 @@ function fbia_sync_prepare_node($node) {
   $main_category = taxonomy_term_load($node->field_main_category[LANGUAGE_NONE][0]['tid']);
   $breadcrumbs = $main_category->name;
   $node_args = array(
+    'url' => url('node/' . $node->nid, array('absolute' => TRUE, 'base_url' => 'http://www.nayaritenlinea.mx')),
     'title' => $node->title,
     'sub_title' => trim(strip_tags($node->field_intro[LANGUAGE_NONE][0]['value'])),
     'published_date' => $published_date,
@@ -97,6 +98,11 @@ function fbia_sync_get_chosen_image($node) {
     $img['alt'] = $node->field_image[LANGUAGE_NONE][0]['alt'];
   }
   
+  if (isset($node->field_meta_image[LANGUAGE_NONE][0]['uri'])) {
+    $img['src'] = file_create_url($node->field_meta_image[LANGUAGE_NONE][0]['uri']);
+    $img['alt'] = $node->field_meta_image[LANGUAGE_NONE][0]['alt'];
+  }
+  
   return $img;
 }
 
@@ -140,7 +146,7 @@ function fbia_sync_youtube_to_figure($youtube_raw) {
   
   $youtube_id = $match[1];
   $output = "<figure class=\"op-interactive\">
-    <iframe src=\"https://www.youtube.com/embed/{$youtube_id}\"></iframe>
+    <iframe src=\"https://www.youtube.com/embed/{$youtube_id}\" width=\"560\" height=\"315\"></iframe>
   </figure>";
   return $output;
 }

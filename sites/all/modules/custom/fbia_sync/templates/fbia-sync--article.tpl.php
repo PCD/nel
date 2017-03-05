@@ -49,7 +49,7 @@
 <?php if (isset($ads) && !empty($ads)):?>
         <section class="op-ad-template">
 <?php foreach ($ads as $ad):?>
-          <figure class="op-ad">
+          <figure class="op-ad op-ad-default">
             <iframe height="<?php print $ad['height'];?>" style="border:0;margin:0;padding:0;" width="<?php print $ad['width'];?>">
               <?php print $ad['code'];?>
             </iframe>
@@ -81,7 +81,7 @@
 <?php endif; ?>
 
 <?php if (isset($add_2) && !empty($add_2)):?>
-      <figure class="op-ad">
+      <figure class="op-ad op-ad-default">
         <?php print $add_2;?>
       </figure>
 <?php endif;?>

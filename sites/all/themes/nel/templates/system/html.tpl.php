@@ -62,6 +62,7 @@
   </script>
 <head>
   <title><?php print $head_title; ?></title>
+  <meta property="fb:pages" content="292496132255" />
   <meta property="fb:app_id" content="117628395001698"/>
   <?php print $head; ?>
   <?php print $styles; ?>

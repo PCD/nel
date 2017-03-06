@@ -1,4 +1,8 @@
 <?php
+//require_once dirname(__DIR__) . '/vendor/autoload.php';
+//print dirname(__DIR__);
+//exit;
+
 /**
  * Process Node into FBIA.
  */

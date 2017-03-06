@@ -12,5 +12,9 @@ function fbia_sync_permissions() {
       'title' => 'Access FBIA',
       'description' => 'Access FBIA',
     ),
+    'Test FBIA Sync' => array(
+      'title' => 'Test FBIA Sync',
+      'description' => 'Test FBIA Sync',
+    ),
   );
 }

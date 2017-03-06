@@ -6,8 +6,7 @@ function fbia_sync_insert_record($node) {
   $data = array(
     'nid' => $node->nid,
   );
-  $return = drupal_write_record('fbia_sync_article', $data);
-  watchdog('fbia_sync', 'about to insert record 3', $return);
+  return drupal_write_record('fbia_sync_article', $data);
 }
 
 /**
@@ -18,8 +17,7 @@ function fbia_sync_update_record($node) {
     'nid' => $node->nid,
     'sync_status' => 0,
   );
-  $return = drupal_write_record('fbia_sync_article', $data);
-  watchdog('fbia_sync', 'about to insert record 3', $return);
+  return drupal_write_record('fbia_sync_article', $data);
 }
 
 /**

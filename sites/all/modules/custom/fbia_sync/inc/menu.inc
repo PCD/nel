@@ -29,8 +29,5 @@ function fbia_sync_menu() {
  * Test out nodes against FBIA Sync.
  */
 function fbia_sync_test_node($node) {
-  $node_args = fbia_sync_prepare_node($node);
-  $output = theme('fbia-sync--article', $node_args);
-  print $output;
-  exit;
+  fbia_sync_process($node);
 }

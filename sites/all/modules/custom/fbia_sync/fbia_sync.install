@@ -1,0 +1,45 @@
+<?php
+/**
+ * Implements hook_schema.
+ */
+function fbia_sync_schema() {
+  $schema = array();
+  $schema['fbia_sync_article'] = array(
+    'description' => 'The table stores the article sync status and any response we might get from facebook.',
+    'fields' => array(
+      'nid' => array(
+        'type' => 'int',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+      ),
+      'sync_status' => array(
+        'type' => 'int',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+        'default' => 0,
+      ),
+      'sync_time' => array(
+        'type' => 'int',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+        'default' => 0,
+      ),
+      'sync_errors' => array(
+        'type' => 'int',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+        'default' => 0,
+      ),
+      'response' => array(
+        'type' => 'blob',
+      ),
+    ),
+    'primary key' => array('nid'),
+    'indexes' => array(
+      'sync_status' => array('sync_status'),
+      'sync_time' => array('sync_time'),
+      'sync_errors' => array('sync_errors'),
+    ),
+  );
+  return $schema;
+}

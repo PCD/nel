@@ -1,38 +1,9 @@
 <?php
+include_once('inc/api.inc');
 include_once('inc/data.inc');
 include_once('inc/form.inc');
 include_once('inc/menu.inc');
 include_once('inc/nodeapi.inc');
 include_once('inc/permissions.inc');
+include_once('inc/script.inc');
 include_once('inc/theme.inc');
-
-/**
- * Creates new schema to save new articles in sync process.
- */
-function fbia_sync_update_7001() {
-  $schema['fbia_sync_article'] = array(
-    'description' => 'The table stores the article sync status and any response we might get from facebook.',
-    'fields' => array(
-      'nid' => array(
-        'type' => 'int',
-        'unsigned' => TRUE,
-        'not null' => TRUE,
-      ),
-      'sync_status' => array(
-        'type' => 'int',
-        'unsigned' => TRUE,
-        'not null' => TRUE,
-      ),
-      'sync_time' => array(
-        'type' => 'int',
-        'unsigned' => TRUE,
-        'not null' => TRUE,
-      ),
-      'response' => array(
-        'type' => 'blob'
-      ),
-    ),
-  );
-  $ret = array();
-  db_create_table($ret, 'fbia_sync_article', $schema['fbia_sync_article']);
-}

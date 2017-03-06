@@ -98,7 +98,10 @@ function nelb_block_view_facebook_script() {
  * Block for Facebook Comments
  */
 function nelb_block_view_facebook_comments() {
-  $url = "http://{$_SERVER['HTTP_HOST']}/{$_GET['q']}";
+  $url = url('node/' . arg(1), array('absolute'=>TRUE));
+  if (preg_match('/(.*?)\?.*/', $url, $match)) {
+    $url = $match[1];
+  }
   $output = "<div class=\"fb-comments\" data-href=\"{$url}\" data-width=\"100%\" data-numposts=\"5\" data-colorscheme=\"light\"></div>\n";
   return array(
     'content' => $output, 

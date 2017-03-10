@@ -1,5 +1,4 @@
 <?php
-include_once('inc/api.inc');
 include_once('inc/data.inc');
 include_once('inc/form.inc');
 include_once('inc/menu.inc');

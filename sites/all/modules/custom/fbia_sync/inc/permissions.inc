@@ -16,5 +16,20 @@ function fbia_sync_permissions() {
       'title' => 'Test FBIA Sync',
       'description' => 'Test FBIA Sync',
     ),
+    'FB Login' => array(
+      'title' => 'FB Login',
+      'description' => 'FB Login',
+    ),
   );
+}
+
+/**
+ *
+ */
+function fbia_sync_test_access($node, $permission) {
+  if ($node->type != 'article') {
+    return FALSE;
+  }
+  
+  return user_access($permission);
 }

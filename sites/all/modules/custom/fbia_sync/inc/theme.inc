@@ -39,44 +39,76 @@ function fbia_sync_theme() {
  * Get FBI Node.
  */
 function fbia_sync_prepare_node($node) {
-  $published_date = format_date(strtotime($node->field_date[LANGUAGE_NONE][0]['value']), 'medium', '', $node->field_date[LANGUAGE_NONE][0]['timezone']);
-  $published_date_r = format_date(strtotime($node->field_date[LANGUAGE_NONE][0]['value']), 'custom', 'r', $node->field_date[LANGUAGE_NONE][0]['timezone']);
-  $modified_date = format_date(strtotime($node->field_date[LANGUAGE_NONE][0]['value']), 'medium', '', $node->field_date[LANGUAGE_NONE][0]['timezone']);
-  $modified_date_r = format_date(strtotime($node->field_date[LANGUAGE_NONE][0]['value']), 'custom', 'r', $node->field_date[LANGUAGE_NONE][0]['timezone']);
-  $main_category = taxonomy_term_load($node->field_main_category[LANGUAGE_NONE][0]['tid']);
-  $breadcrumbs = $main_category->name;
-  $url = url('node/' . $node->nid, array('absolute' => TRUE));
-  if (preg_match('/(.*?)\?.*/', $url, $match)) {
-    $url = $match[1];
-  }
   $node_args = array(
-    'url' => $url,
     'title' => $node->title,
-    'sub_title' => trim(strip_tags($node->field_intro[LANGUAGE_NONE][0]['value'])),
-    'published_date' => $published_date,
-    'published_date_r' => $published_date_r,
-    'modified_date' => $modified_date,
-    'modified_date_r' => $modified_date_r,
-    'author' => $node->field_author[LANGUAGE_NONE][0]['value'],
-    'breadcrumbs' => $breadcrumbs,
-    'body' => $node->body[LANGUAGE_NONE][0]['value'],
-    'video' => fbia_sync_node_video_to_figure($node),
-    'slideshow' => $slideshow,
-    'ads' => $ads,
   );
 
+  // Dates setup.
+  if (isset($node->field_date[LANGUAGE_NONE][0]['value'])) {
+    $node_args['published_date'] = format_date(strtotime($node->field_date[LANGUAGE_NONE][0]['value']), 'medium', '', $node->field_date[LANGUAGE_NONE][0]['timezone']);
+    $node_args['published_date_r'] = format_date(strtotime($node->field_date[LANGUAGE_NONE][0]['value']), 'custom', 'r', $node->field_date[LANGUAGE_NONE][0]['timezone']);
+  }
+  else {
+    $node_args['modified_date'] = format_date($node->created, 'medium');
+    $node_args['modified_date_r'] = format_date($node->created, 'custom', 'r');
+  }
+
+  $node_args['modified_date'] = format_date($node->changed, 'medium');
+  $node_args['modified_date_r'] = format_date($node->changed, 'custom', 'r');
+
+  // Category.
+  if (isset($node->field_main_category[LANGUAGE_NONE][0]['tid'])) {
+    if (($term = taxonomy_term_load($node->field_main_category[LANGUAGE_NONE][0]['tid']))) {
+      $node_args['breadcrumbs'] = $term->name;
+    }
+  }
+
+  // URL Canonical.
+  $url = url('node/' . $node->nid, array('absolute' => TRUE));
+  if (preg_match('/(.*?)\?.*/', $url, $match)) {
+    $node_args['url'] = $match[1];
+  }
+
+  // Intro.
+  if (isset($node->field_intro[LANGUAGE_NONE][0]['value'])) {
+    $node_args['sub_title'] = trim(strip_tags($node->field_intro[LANGUAGE_NONE][0]['value']));
+  }
+
+  // Author.
+  if (isset($node->field_author[LANGUAGE_NONE][0]['value'])) {
+    if (($term = taxonomy_term_load($node->field_author[LANGUAGE_NONE][0]['tid']))) {
+      $node_args['author'] = $term->name;
+    }
+  }
+
+  // Body.
+  if (isset($node->body[LANGUAGE_NONE][0]['value'])) {
+    $node_args['body'] = $node->body[LANGUAGE_NONE][0]['value'];
+  }
+
+  // Video.
+  if (isset($node->field_video[LANGUAGE_NONE][0]['uri'])) {
+    if (($video = fbia_sync_node_video_to_figure($node))) {
+      $node_args['video'] = $video;
+    }
+  }
+
+  // Slideshow.
+  if (($slideshow = fbia_sync_get_slideshow_images($node))) {
+    $node_args['slideshow'] = $slideshow;
+  }
+
+  // Main image.
   if (($img = fbia_sync_get_chosen_image($node))) {
     $node_args['image_main'] = $img['src'];
     $node_args['image_main_alt'] = $img['alt'];
   }
-  
-  if (($slideshow = fbia_sync_get_slideshow_images($node))) {
-    $node_args['slideshow'] = $slideshow;
-  }
-  
+
+  // Ads.
   if (($ads = fbia_sync_get_ads())) {
     $node_args['ads'] = $ads;
   }
+
   return $node_args;
 }
 
@@ -102,6 +134,10 @@ function fbia_sync_get_ads() {
  */
 function fbia_sync_get_slideshow_images($node) {
   $slideshow = array();
+
+  if (!isset($node->field_image[LANGUAGE_NONE][0]['uri'])) {
+    return $slideshow;
+  }
   $count = count($node->field_image[LANGUAGE_NONE]);
   if ($count > 1) {
     for($i=1; $i<$count; $i++) {

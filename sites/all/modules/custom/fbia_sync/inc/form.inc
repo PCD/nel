@@ -35,7 +35,7 @@ function fbia_sync_form($form, &$form_state) {
     );
   }
   
-  if (($access_token = variable_get('fbia_sync_access_token', false))) {
+  if (($access_token = variable_get('fbia_sync_ACCESS_TOKEN', false))) {
     $form['fbia_sync_access_token'] = array(
       '#type' => 'textfield',
       '#title' => 'PAGE ID',

@@ -13,8 +13,6 @@ function fbia_sync_process($node) {
   $html = theme('fbia-sync--article', $node_args);
   $parser = new Parser();
   $instant_article = $parser->parse($html);
-  print_r($instant_article);
-  exit;
   
   $app_id = variable_get('fbia_sync_APP_ID');
   $app_secret = variable_get('fbia_sync_APP_SECRET');
@@ -29,9 +27,12 @@ function fbia_sync_process($node) {
   );
   
   try {
-    $client->importArticle($instant_article, FALSE);
+    $response = $client->importArticle($instant_article, FALSE);
+    print_r($response);
   } catch (Exception $e) {
     echo 'Could not import the article: '.$e->getMessage();
   }
+  
+  print_r($response);
   exit;
 }

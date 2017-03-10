@@ -2,7 +2,7 @@
 /**
  * Implements hook_permissions.
  */
-function fbia_sync_permissions() {
+function fbia_sync_permission() {
   return array(
     'Configure FBIA' => array(
       'title' => 'Configure FBIA',

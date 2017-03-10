@@ -25,6 +25,16 @@ function fbia_sync_form($form, &$form_state) {
     '#required' => TRUE,
     '#default_value' => variable_get('fbia_sync_PAGE_ID', ''),
   );
+  
+  if (($access_token = variable_get('fbia_sync_ACCESS_TOKEN', false))) {
+    $form['fbia_sync_ACCESS_TOKEN'] = array(
+      '#type' => 'textarea',
+      '#title' => 'Access Token',
+      '#required' => TRUE,
+      '#default_value' => $accessToken,
+    );
+  }
+  
   if (($access_token = variable_get('fbia_sync_access_token', false))) {
     $form['fbia_sync_access_token'] = array(
       '#type' => 'textfield',
@@ -115,6 +125,7 @@ function fbia_sync_form($form, &$form_state) {
           '#required' => TRUE,
           '#default_value' => $accessToken,
         );
+        drupal_set_message(t('Access Token has been saved.'));
       }
     }
   }

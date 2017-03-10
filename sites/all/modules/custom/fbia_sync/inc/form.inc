@@ -26,7 +26,7 @@ function fbia_sync_form($form, &$form_state) {
     '#default_value' => variable_get('fbia_sync_PAGE_ID', ''),
   );
   
-  if (($access_token = variable_get('fbia_sync_ACCESS_TOKEN', false)) && !empty($access_token)) {
+  if (($access_token = variable_get('fbia_sync_ACCESS_TOKEN', false)) && !empty($access_token) && !isset($_GET['regenerate'])) {
     $form['fbia_sync_ACCESS_TOKEN'] = array(
       '#type' => 'textarea',
       '#title' => 'Access Token',

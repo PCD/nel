@@ -116,6 +116,7 @@ function fbia_sync_form($form, &$form_state) {
           '#required' => TRUE,
           '#default_value' => $accessToken,
         );
+        
         drupal_set_message(t('Access Token has been saved.'));
       }
     }

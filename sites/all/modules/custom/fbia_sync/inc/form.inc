@@ -140,6 +140,10 @@ function fbia_sync_form_submit(&$form, &$form_state) {
   variable_set('fbia_sync_PAGE_ID', $form_state['values']['fbia_sync_PAGE_ID']);
   if (isset($form_state['values']['fbia_sync_ACCESS_TOKEN'])) {
     variable_set('fbia_sync_ACCESS_TOKEN', $form_state['values']['fbia_sync_ACCESS_TOKEN']);
+    //EAAbJJ6uLYqEBAFSNqrc7ZCEnGjnIOT6QQkTTCcBJcZCqyWSG5p1iSMU7JktBEJRBdYm96P3MNOfDMJIHPr0rZCeAVTsTA8dumjc7uwI4K6r7uQMpoK3QcahuZAzPMOF4l8skVspqzJOlc6PTUwGBJn2O2WbEFI4ZD
+  }
+  else {
+    print_r($form_state['values']);exit;
   }
 }
 

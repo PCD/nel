@@ -17,9 +17,11 @@ function fbia_sync_login() {
 }
 
 function fbia_sync_callback() {
+  $app_id = variable_get('fbia_sync_APP_ID');
+  $app_secret = variable_get('fbia_sync_APP_SECRET');
   $fb = new Facebook\Facebook([
-    'app_id' => variable_get('fbia_sync_APP_ID'),
-    'app_secret' => variable_get('fbia_sync_APP_SECRET'),
+    'app_id' => $app_id,
+    'app_secret' => $app_secret,
     'default_graph_version' => 'v2.5',
   ]);
   
@@ -64,7 +66,7 @@ function fbia_sync_callback() {
   var_dump($tokenMetadata);
   
   // Validation (these will throw FacebookSDKException's when they fail)
-  $tokenMetadata->validateAppId({app-id}); // Replace {app-id} with your app id
+  $tokenMetadata->validateAppId($app_id); // Replace {app-id} with your app id
   // If you know the user ID this access token belongs to, you can validate it here
   //$tokenMetadata->validateUserId('123');
   $tokenMetadata->validateExpiration();

@@ -31,16 +31,6 @@ function fbia_sync_form($form, &$form_state) {
       '#type' => 'textarea',
       '#title' => 'Access Token',
       '#required' => TRUE,
-      '#default_value' => $accessToken,
-    );
-  }
-  
-  if (($access_token = variable_get('fbia_sync_ACCESS_TOKEN', false))) {
-    print "access_token='{$access_token}'";exit;
-    $form['fbia_sync_access_token'] = array(
-      '#type' => 'textfield',
-      '#title' => 'PAGE ID',
-      '#required' => TRUE,
       '#default_value' => $access_token,
     );
   }

@@ -9,7 +9,7 @@ function fbia_sync_login() {
   
   $helper = $fb->getRedirectLoginHelper();
   
-  $permissions = ['manage_pages']; // Optional permissions
+  $permissions = ['pages_manage_instant_articles']; // Optional permissions
   $url = url('fbia_sync/callback', array('absolute'=>TRUE));
   $loginUrl = $helper->getLoginUrl($url, $permissions);
   

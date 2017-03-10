@@ -40,7 +40,7 @@ function fbia_sync_form($form, &$form_state) {
       '#type' => 'textfield',
       '#title' => 'PAGE ID',
       '#required' => TRUE,
-      '#default_value' => variable_get('fbia_sync_access_token', ''),
+      '#default_value' => $access_token,
     );
   }
   else {

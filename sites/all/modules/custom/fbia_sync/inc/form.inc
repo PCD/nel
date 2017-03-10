@@ -47,7 +47,7 @@ function fbia_sync_form($form, &$form_state) {
         
         $helper = $fb->getRedirectLoginHelper();
         
-        $permissions = ['pages_manage_instant_articles']; // Optional permissions
+        $permissions = ['pages_manage_instant_articles', 'pages_show_list']; // Optional permissions
         $url = url('admin/config/fbia_sync', array('absolute'=>TRUE, 'query' => array('regenerate' => 1)));
         $loginUrl = $helper->getLoginUrl($url, $permissions);
         

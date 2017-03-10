@@ -107,7 +107,7 @@ function fbia_sync_form($form, &$form_state) {
           }
         }
         
-        $_SESSION['fb_access_token'] = (string) $accessToken;
+        //$_SESSION['fb_access_token'] = (string) $accessToken;
         variable_set('fbia_sync_ACCESS_TOKEN', $accessToken);
         $form['fbia_sync_ACCESS_TOKEN'] = array(
           '#type' => 'textarea',

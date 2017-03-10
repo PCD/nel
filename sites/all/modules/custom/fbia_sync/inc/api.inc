@@ -11,54 +11,27 @@ use Facebook\InstantArticles\Client\Helper;
 function fbia_sync_process($node) {
   $node_args = fbia_sync_prepare_node($node);
   $html = theme('fbia-sync--article', $node_args);
-  
-  libxml_use_internal_errors(true);
-  $document = new \DOMDocument();
-  $document->loadHTML($html);
-  libxml_use_internal_errors(false);
   $parser = new Parser();
-  //$instant_article = $parser->parse($document);
-  
-  /*$client = Client::create(
-    'APP_ID',
-    'APP_SECRET',
-    'ACCESS_TOKEN',
-    'PAGE_ID',
-    TRUE // Use development environment?
-  );*/
-  $userAccessToken = 'USER_ACCESS_TOKEN';
-
-  // Instantiate a client helper
-  $app_id = variable_get('fbia_sync_APP_ID');
-  $app_secret = variable_get('fbia_sync_APP_SECRET');
-  $helper = Helper::create(
-    $app_id,
-    $app_secret
-  );
-  /*$pagesAndTokens = $helper->getPagesAndTokens($userAccessToken)->all();
-  foreach ($pagesAndTokens as $pageAndToken) {
-    echo 'Page ID: ' . $pageAndToken->getField('id');
-    echo 'Page name: ' . $pageAndToken->getField('name');
-    echo 'Page access token: ' . $pageAndToken->getField('access_token');
-  }
+  $instant_article = $parser->parse($html);
+  print_r($instant_article);
   exit;
   
-  /*
-  
-  // Instantiate an API client
+  $app_id = variable_get('fbia_sync_APP_ID');
+  $app_secret = variable_get('fbia_sync_APP_SECRET');
+  $page_id = variable_get('fbia_sync_PAGE_ID');
+  $access_token = variable_get('fbia_sync_ACCESS_TOKEN');
   $client = Client::create(
-    'APP_ID',
-    'APP_SECRET',
-    'ACCESS_TOKEN',
-    'PAGE_ID',
+    $app_id,
+    $app_secret,
+    $access_token,
+    $page_id,
     TRUE // Use development environment?
   );
   
-  // Import the article
   try {
-    $client->importArticle($article, $take_live);
+    $client->importArticle($instant_article, FALSE);
   } catch (Exception $e) {
     echo 'Could not import the article: '.$e->getMessage();
   }
-  */
+  exit;
 }

@@ -108,7 +108,7 @@ function fbia_sync_build_article($node_args) {
     if ($i == 0 && isset($node_args['ads'][0])) {
       $ad_raw = $node_args['ads'][0];
       $ad = Ad::create();
-      $ad->withHTML($ad_raw['code']);
+      $ad->withSource($ad_raw['src']);
       $ad->withWidth($ad_raw['width']);
       $ad->withHeight($ad_raw['height']);
       $ad->enableDefaultForReuse();
@@ -166,7 +166,7 @@ function fbia_sync_build_article($node_args) {
     for($i = 1; $i < $c; $i++) {
       $ad_raw = $node_args['ads'][$i];
       $ad = Ad::create();
-      $ad->withHTML($ad_raw['code']);
+      $ad->withSource($ad_raw['src']);
       $ad->withWidth($ad_raw['width']);
       $ad->withHeight($ad_raw['height']);
       $ad->enableDefaultForReuse();

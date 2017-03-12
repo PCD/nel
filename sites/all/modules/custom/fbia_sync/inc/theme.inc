@@ -149,9 +149,14 @@ function fbia_sync_prepare_node($node) {
   }
 
   // Ads.
-  if (($ads = fbia_sync_get_ads())) {
+  $node_args['ads'][] = array(
+    'src' => url('fbia_sync/adslot/1', array('absolute' => TRUE)),
+    'width' => 300,
+    'height' => 300,
+  );
+  /*if (($ads = fbia_sync_get_ads())) {
     $node_args['ads'] = $ads;
-  }
+  }*/
 
   return $node_args;
 }

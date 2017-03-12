@@ -23,7 +23,12 @@ function fbia_sync_menu() {
     'type' => MENU_LOCAL_TASK,
     'context' => MENU_CONTEXT_PAGE | MENU_CONTEXT_INLINE,
   );
-
+  $items['fbia_sync/adslot/1'] = array(
+    'page callback' => 'fbia_sync_iframe_adslot_1',
+    'access arguments' => array('Use iFrame for Ads'),
+    'file' => 'inc/ads.inc',
+    'type' => MENU_CALLBACK,
+  );
   return $items;
 }
 

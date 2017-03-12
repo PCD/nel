@@ -20,6 +20,10 @@ function fbia_sync_permission() {
       'title' => 'FB Login',
       'description' => 'FB Login',
     ),
+    'Use iFrame for Ads' => array(
+      'title' => 'Use iFrame for Ads',
+      'description' => 'Use iFrame for Ads',
+    ),
   );
 }
 

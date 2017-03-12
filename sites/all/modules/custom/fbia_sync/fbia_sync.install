@@ -12,6 +12,18 @@ function fbia_sync_schema() {
         'unsigned' => TRUE,
         'not null' => TRUE,
       ),
+      'node_published' => array(
+        'type' => 'int',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+        'default' => 0,
+      ),
+      'sync_enabled' => array(
+        'type' => 'int',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+        'default' => 0,
+      ),
       'sync_status' => array(
         'type' => 'int',
         'unsigned' => TRUE,

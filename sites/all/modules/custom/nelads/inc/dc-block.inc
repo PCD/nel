@@ -294,6 +294,44 @@ function nelads_block_view_dc_sidebar_15() {
 }
 
 /**
+ * Returns the dc-fbia block.
+ */
+function nelads_block_view_dc_fbia() {
+  drupal_add_js(drupal_get_path('module', 'nelads') . '/js/nelads-dc-general.js', array('weight'=>100));
+
+  static $i;
+  $i = isset($i)?$i+1:1;
+  if ( $i == 1 ) {
+    $js = "googletag.cmd.push(function() {
+
+      var mapping = googletag.sizeMapping().
+        addSize([987, 0], [300, 250]).
+        addSize([733, 0], [300, 250]).
+        addSize([316, 0], [300, 250]).
+        addSize([236, 0], [300, 250]).
+        addSize([216, 0], [300, 250]).
+        addSize([0, 0], [300, 250]).
+        build();
+        
+      googletag.defineSlot('/15651346/FB_Instant_300x250', [[300, 250]], 'div-gpt-ad-1489337492379-0').
+      defineSizeMapping(mapping).
+      setCollapseEmptyDiv(true).
+      addService(googletag.pubads());
+      googletag.pubads().setTargeting('google_class','google_class_value');
+      googletag.pubads().enableSingleRequest();
+      googletag.enableServices();
+    });";
+    drupal_add_js($js, array('type'=>'inline', 'scope'=>'header', 'weight' => 101));
+  }
+  
+  return theme('nelads-dcslot', array(
+    'group_id' => '15651346/FB_Instant_300x250', 
+    'div_id' => 'div-gpt-ad-1489337492379-0', 
+    'style' => '', 
+  ));
+}
+
+/**
  * Returns the dc-microsite_19-wide block.
  */
 function nelads_block_view_dc_microsite_19_wide() {

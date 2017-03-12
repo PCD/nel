@@ -30,6 +30,11 @@ function nelads_block_info() {
     'info' => 'DoubleClick - Sidebar 15', 
   );
   
+  /** Facebook Instant Articles. **/
+  $blocks['dc-fbia'] = array(
+    'info' => 'DoubleClick - FB IA', 
+  );
+  
   /** Micrositio Double Click **/
   $blocks['dc-microsite-19-wide'] = array(
     'info' => 'DoubleClick - Micrositio 19 - Wide', 
@@ -103,6 +108,10 @@ function nelads_block_view($delta = '') {
     
     case 'dc-sidebar_15':
       $block['content'] = nelads_block_view_dc_sidebar_15();
+      break;
+
+    case 'dc-fbia':
+      $block['content'] = nelads_block_view_dc_fbia();
       break;
 
     // Micrositio Double Click

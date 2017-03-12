@@ -36,6 +36,46 @@ function fbia_sync_theme() {
 }
 
 /**
+ * Splits paragraphs out of body.
+ */
+function fbia_sync_split_paragraphs($body, &$paragraphs, &$iframes) {
+  $paragraphs = array();
+  $body = str_replace('&nbsp;', ' ', $body);
+  $body = preg_replace('/\s+/msi', ' ', $body);
+  $pattern = '/<p>(.*?)<\/p>/msi';
+  $iframe_pattern = '/(<iframe.*?>.*<\/iframe>)/msi';
+  if (preg_match_all($pattern, $body, $matches)) {
+    foreach($matches[1] as $i => $paragraph) {
+      if (!trim($paragraph)) {
+        continue;
+      }
+
+      // Detect if iframe in there.
+      if (preg_match($iframe_pattern, $paragraph, $match)) {
+        $iframe = array('tag' => $match[1]);
+        if (preg_match('/src="(.+?)"/msi', $match[1], $src)) {
+          $iframe['src'] = $src[1];
+        }
+        if (preg_match('/height="(.+?)"/msi', $match[1], $height)) {
+          $iframe['height'] = (int)$height[1];
+        }
+        
+        if (preg_match('/width="(.+?)"/msi', $match[1], $width)) {
+          $iframe['width'] = (int)$width[1];
+        }
+        
+        $iframes[] = $iframe;
+      }
+      else {
+        $paragraphs[] = $paragraph;
+      }
+    }
+  }
+  
+  return true;
+}
+
+/**
  * Get FBI Node.
  */
 function fbia_sync_prepare_node($node) {
@@ -45,14 +85,17 @@ function fbia_sync_prepare_node($node) {
 
   // Dates setup.
   if (isset($node->field_date[LANGUAGE_NONE][0]['value'])) {
+    $node_args['published_date_time'] = strtotime($node->field_date[LANGUAGE_NONE][0]['value']);
     $node_args['published_date'] = format_date(strtotime($node->field_date[LANGUAGE_NONE][0]['value']), 'medium', '', $node->field_date[LANGUAGE_NONE][0]['timezone']);
     $node_args['published_date_r'] = format_date(strtotime($node->field_date[LANGUAGE_NONE][0]['value']), 'custom', 'r', $node->field_date[LANGUAGE_NONE][0]['timezone']);
   }
   else {
-    $node_args['modified_date'] = format_date($node->created, 'medium');
-    $node_args['modified_date_r'] = format_date($node->created, 'custom', 'r');
+    $node_args['published_date_time'] = $node->created;
+    $node_args['published_date'] = format_date($node->created, 'medium');
+    $node_args['published_date_r'] = format_date($node->created, 'custom', 'r');
   }
 
+  $node_args['modified_date_time'] = $node->changed;
   $node_args['modified_date'] = format_date($node->changed, 'medium');
   $node_args['modified_date_r'] = format_date($node->changed, 'custom', 'r');
 
@@ -78,6 +121,7 @@ function fbia_sync_prepare_node($node) {
   if (isset($node->field_author[LANGUAGE_NONE][0]['value'])) {
     if (($term = taxonomy_term_load($node->field_author[LANGUAGE_NONE][0]['tid']))) {
       $node_args['author'] = $term->name;
+      $node_args['author_url'] = url('taxonomy/term/' . $term->tid, array('absolute' => TRUE));
     }
   }
 
@@ -123,8 +167,8 @@ function fbia_sync_get_ads() {
   ));
   $ads[] = array(
     'code' => $ad1,
-    'width' => 300,
-    'height' => 250,
+    'width' => (int) 300,
+    'height' => (int) 250,
   );
   return $ads;
 }

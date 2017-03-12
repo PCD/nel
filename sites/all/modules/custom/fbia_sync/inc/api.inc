@@ -1,6 +1,15 @@
 <?php
 require_once dirname(__DIR__) . '/libs/facebook-instant-articles-sdk/vendor/autoload.php';
 use Facebook\InstantArticles\Transformer\Transformer;
+use Facebook\InstantArticles\Elements\InstantArticle;
+use Facebook\InstantArticles\Elements\Header;
+use Facebook\InstantArticles\Elements\Time;
+use Facebook\InstantArticles\Elements\Image;
+use Facebook\InstantArticles\Elements\Caption;
+use Facebook\InstantArticles\Elements\Slideshow;
+use Facebook\InstantArticles\Elements\Paragraph;
+use Facebook\InstantArticles\Elements\Ad;
+use Facebook\InstantArticles\Elements\Interactive;
 use Facebook\InstantArticles\Parser\Parser;
 use Facebook\InstantArticles\Client\Client;
 use Facebook\InstantArticles\Client\Helper;
@@ -10,10 +19,8 @@ use Facebook\InstantArticles\Client\Helper;
  */
 function fbia_sync_process($node) {
   $node_args = fbia_sync_prepare_node($node);
-  $html = theme('fbia-sync--article', $node_args);
-  $parser = new Parser();
-  $instant_article = $parser->parse($html);
-  
+  $instant_article = fbia_sync_build_article($node_args);
+
   $app_id = variable_get('fbia_sync_APP_ID');
   $app_secret = variable_get('fbia_sync_APP_SECRET');
   $page_id = variable_get('fbia_sync_PAGE_ID');
@@ -28,11 +35,144 @@ function fbia_sync_process($node) {
   
   try {
     $response = $client->importArticle($instant_article, FALSE);
-    print_r($response);
   } catch (Exception $e) {
     echo 'Could not import the article: '.$e->getMessage();
   }
+}
+
+/**
+ * Builds an Instant Article as DOM based on the node args provided.
+ */
+function fbia_sync_build_article($node_args) {
+  // Header.
+  $header = Header::create()
+  ->withTitle($node_args['title'])
+  ->withSubTitle($node_args['sub_title'])
+  ->withPublishTime(
+    Time::create(Time::PUBLISHED)
+      ->withDatetime(
+        \DateTime::createFromFormat(
+          'j-M-Y G:i:s',
+          date('j-M-Y G:i:s', $node_args['published_date_time'])
+        )
+      )
+  )
+  ->withModifyTime(
+    Time::create(Time::MODIFIED)
+      ->withDatetime(
+        \DateTime::createFromFormat(
+          'j-M-Y G:i:s',
+          date('j-M-Y G:i:s', $node_args['modified_date_time'])
+        )
+      )
+  );
   
-  print_r($response);
-  exit;
+  // Authors.
+  if (isset($node_args['author'])) {
+    $author = Author::create()->withName($node_args['author']);
+    if (isset($node_args['author_url'])) {
+      $author->withURL($node_args['author_url']);
+    }
+    $header->addAuthor($author);
+  }
+  
+  // Breadcrumbs.
+  if (isset($node_args['breadcrumbs'])) {
+    $header->withKicker($node_args['breadcrumbs']);
+  }
+
+  // Main Image - Cover.
+  if (isset($node_args['image_main'])) {
+    $cover_image = Image::create()->withURL($node_args['image_main']);
+    if (isset($node_args['image_main_alt'])) {
+      $cover_caption = Caption::create()->appendText($node_args['image_main_alt']);
+      $cover_image->withCaption($cover_caption);
+    }
+      
+    $header->withCover($cover_image);
+  }
+
+  // Article.
+  $article = InstantArticle::create()
+    ->withCanonicalUrl($node_args['url'])
+    ->withHeader($header);
+  
+  // Body.
+  $paragraphs = $iframes = array();
+  fbia_sync_split_paragraphs($node_args['body'], $paragraphs, $iframes);
+  foreach($paragraphs as $i => $paragraph) {
+    $article->addChild(
+      Paragraph::create()
+        ->appendText($paragraph)
+    );
+    if ($i == 0 && isset($node_args['ads'][0])) {
+      $ad_raw = $node_args['ads'][0];
+      $ad = Ad::create();
+      $ad->withHTML($ad_raw['code']);
+      $ad->withWidth($ad_raw['width']);
+      $ad->withHeight($ad_raw['height']);
+      $ad->enableDefaultForReuse();
+      $article->addChild($ad);
+    }
+  }
+  
+  // Iframes.
+  foreach($iframes as $iframe) {
+    $interactive = Interactive::create()->withSource($iframe['src']);
+    if (isset($iframe['width'])) {
+      $interactive->withWidth($iframe['width']);
+    }
+    if (isset($iframe['height'])) {
+      $interactive->withHeight($iframe['height']);
+    }
+    $article->addChild($interactive);
+  }
+  
+  // Slideshow.
+  if (isset($node_args['slideshow'])) {
+    $slideshow = SlideShow::create();
+    foreach($node_args['slideshow'] as $item) {
+      $image = Image::create()->withURL($item['src']);
+      if (isset($item['alt'])) {
+        $image->withCaption($item['alt']);
+      }
+      $slideshow->addImage($image);
+    }
+    $article->addChild($slideshow);
+  }
+
+  // Analytics.
+  if (isset($google_analytics)) {
+    $google_analytics = $document->createDocumentFragment();
+    $google_analytics->appendXML(
+      "<script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+      
+        ga('create', 'UA-1262614-5', 'auto');
+        ga('send', 'pageview');
+      
+      </script>"
+    );
+    $analytics = Analytics::create()->withHTML($google_analytics);
+    $article->addChild($analytics);
+  }
+  
+  // Ads.
+  if (isset($node_args['ads']) && count($node_args['ads']) > 1) {
+    $c = count($node_args['ads']);
+    for($i = 1; $i < $c; $i++) {
+      $ad_raw = $node_args['ads'][$i];
+      $ad = Ad::create();
+      $ad->withHTML($ad_raw['code']);
+      $ad->withWidth($ad_raw['width']);
+      $ad->withHeight($ad_raw['height']);
+      $ad->enableDefaultForReuse();
+      $article->addChild($ad);
+    }
+  }
+
+  return $article;
 }

@@ -8,7 +8,7 @@ function fbia_sync_node_insert($node) {
   }
   
   // Insert record for further processing.
-  //fbia_sync_insert_record($node);
+  fbia_sync_save_record($node);
   
   //$output = fbia_sync_prepare_node($node);
   
@@ -24,7 +24,7 @@ function fbia_sync_node_update($node) {
   }
   
   // Mark record to be processed again.
-  //fbia_sync_update_record($node);
+  fbia_sync_save_record($node);
 }
 
 /**
@@ -35,5 +35,5 @@ function fbia_sync_node_delete($node) {
     return;
   }
   
-  //fbia_sync_delete_record($node);
+  fbia_sync_delete_record($node);
 }

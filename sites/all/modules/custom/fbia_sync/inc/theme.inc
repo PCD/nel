@@ -154,9 +154,21 @@ function fbia_sync_prepare_node($node) {
     'width' => 300,
     'height' => 300,
   );
-  /*if (($ads = fbia_sync_get_ads())) {
-    $node_args['ads'] = $ads;
-  }*/
+  $node_args['ads'][] = array(
+    'src' => 'https://www.facebook.com/adnw_request?placement=1910022079210145_1915486201997066&adtype=banner300x250',
+    'width' => 300,
+    'height' => 250,
+  );
+  $node_args['ads'][] = array(
+    'src' => 'https://www.facebook.com/adnw_request?placement=1910022079210145_1915486258663727&adtype=banner300x250',
+    'width' => 300,
+    'height' => 250,
+  );
+  $node_args['ads'][] = array(
+    'src' => 'https://www.facebook.com/adnw_request?placement=1910022079210145_1915486281997058&adtype=banner320x50',
+    'width' => 320,
+    'height' => 50,
+  );
 
   return $node_args;
 }

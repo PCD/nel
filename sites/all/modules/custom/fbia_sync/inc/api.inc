@@ -108,6 +108,15 @@ function fbia_sync_build_article($node_args) {
     ->withCanonicalUrl($node_args['url'])
     ->withHeader($header);
   
+  // Tags.
+  $article->addMetaProperty('fb:use_automatic_ad_placement', 'true');
+  $article->addMetaProperty('fb:likes_and_comments', 'true');
+  $article->addMetaProperty('op:generator', 'facebook-instant-articles-sdk-php');
+  $article->addMetaProperty('op:generator:version', '1.0.0');
+  $article->addMetaProperty('op:generator:transformer', 'facebook-instant-articles-sdk-php');
+  $article->addMetaProperty('op:generator:transformer:version', '1.0.0');
+  $article->addMetaProperty('op:markup_version', 'v1.0');
+  
   // Body.
   $paragraphs = $iframes = array();
   fbia_sync_split_paragraphs($node_args['body'], $paragraphs, $iframes);

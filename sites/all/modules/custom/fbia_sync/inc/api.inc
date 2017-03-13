@@ -120,6 +120,7 @@ function fbia_sync_build_article($node_args) {
   // Body.
   $paragraphs = $iframes = array();
   fbia_sync_split_paragraphs($node_args['body'], $paragraphs, $iframes);
+  print_r($paragraphs);exit;
   foreach($paragraphs as $i => $paragraph) {
     $article->addChild(
       Paragraph::create()

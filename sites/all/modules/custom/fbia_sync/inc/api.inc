@@ -91,6 +91,20 @@ function fbia_sync_build_article($node_args) {
   if (isset($node_args['breadcrumbs'])) {
     $header->withKicker($node_args['breadcrumbs']);
   }
+  
+  // Ads.
+  if (isset($node_args['ads'])) {
+    $c = count($node_args['ads']);
+    for($i = 0; $i < $c; $i++) {
+      $ad_raw = $node_args['ads'][$i];
+      $ad = Ad::create();
+      $ad->withSource($ad_raw['src']);
+      $ad->withWidth($ad_raw['width']);
+      $ad->withHeight($ad_raw['height']);
+      $ad->enableDefaultForReuse();
+      $header->addAd($ad);
+    }
+  }
 
   // Main Image - Cover.
   if (isset($node_args['image_main'])) {
@@ -123,15 +137,6 @@ function fbia_sync_build_article($node_args) {
   foreach($paragraphs as $i => $paragraph) {
     $paragraph_item = Paragraph::create()->appendText(strip_tags($paragraph));
     $article->addChild($paragraph_item);
-    if ($i == 0 && isset($node_args['ads'][0])) {
-      $ad_raw = $node_args['ads'][0];
-      $ad = Ad::create();
-      $ad->withSource($ad_raw['src']);
-      $ad->withWidth($ad_raw['width']);
-      $ad->withHeight($ad_raw['height']);
-      $ad->enableDefaultForReuse();
-      $article->addChild($ad);
-    }
   }
   
   // Iframes.
@@ -176,20 +181,6 @@ function fbia_sync_build_article($node_args) {
     );
     $analytics = Analytics::create()->withHTML($google_analytics);
     $article->addChild($analytics);
-  }
-  
-  // Ads.
-  if (isset($node_args['ads']) && count($node_args['ads']) > 1) {
-    $c = count($node_args['ads']);
-    for($i = 1; $i < $c; $i++) {
-      $ad_raw = $node_args['ads'][$i];
-      $ad = Ad::create();
-      $ad->withSource($ad_raw['src']);
-      $ad->withWidth($ad_raw['width']);
-      $ad->withHeight($ad_raw['height']);
-      $ad->enableDefaultForReuse();
-      $article->addChild($ad);
-    }
   }
 
   return $article;

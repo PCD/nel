@@ -13,6 +13,9 @@ use Facebook\InstantArticles\Elements\Interactive;
 use Facebook\InstantArticles\Parser\Parser;
 use Facebook\InstantArticles\Client\Client;
 use Facebook\InstantArticles\Client\Helper;
+use Facebook\InstantArticles\Elements\RelatedArticles;
+use Facebook\InstantArticles\Elements\RelatedItem;
+use Facebook\InstantArticles\Elements\Footer;
 
 /**
  * Process Node into FBIA.
@@ -182,6 +185,15 @@ function fbia_sync_build_article($node_args) {
     $analytics = Analytics::create()->withHTML($google_analytics);
     $article->addChild($analytics);
   }
-
+  
+  // Footer.
+  $footer = Footer::create()
+    ->withRelatedArticles(
+      RelatedArticles::create()
+        ->withTitle('También te puede Interesar')
+    );
+  
+  $article->withFooter($footer);
+  
   return $article;
 }

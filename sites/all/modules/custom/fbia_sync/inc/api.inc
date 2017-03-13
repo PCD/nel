@@ -120,12 +120,9 @@ function fbia_sync_build_article($node_args) {
   // Body.
   $paragraphs = $iframes = array();
   fbia_sync_split_paragraphs($node_args['body'], $paragraphs, $iframes);
-  print_r($paragraphs);exit;
   foreach($paragraphs as $i => $paragraph) {
-    $article->addChild(
-      Paragraph::create()
-        ->appendText($paragraph)
-    );
+    $paragraph_item = Paragraph::create()->appendText(strip_tags($paragraph));
+    $article->addChild($paragraph_item);
     if ($i == 0 && isset($node_args['ads'][0])) {
       $ad_raw = $node_args['ads'][0];
       $ad = Ad::create();

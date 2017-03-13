@@ -107,7 +107,7 @@ function fbia_sync_prepare_node($node) {
   }
 
   // URL Canonical.
-  $url = url('node/' . $node->nid, array('absolute' => TRUE));
+  $url = url('node/' . $node->nid, array('absolute' => TRUE, 'base_url' => 'http://www.nayaritenlinea.mx'));
   if (preg_match('/(.*?)\?.*/', $url, $match)) {
     $node_args['url'] = $match[1];
   }
@@ -121,7 +121,7 @@ function fbia_sync_prepare_node($node) {
   if (isset($node->field_author[LANGUAGE_NONE][0]['value'])) {
     if (($term = taxonomy_term_load($node->field_author[LANGUAGE_NONE][0]['tid']))) {
       $node_args['author'] = $term->name;
-      $node_args['author_url'] = url('taxonomy/term/' . $term->tid, array('absolute' => TRUE));
+      $node_args['author_url'] = url('taxonomy/term/' . $term->tid, array('absolute' => TRUE, 'base_url' => 'http://www.nayaritenlinea.mx'));
     }
   }
 
@@ -150,7 +150,7 @@ function fbia_sync_prepare_node($node) {
 
   // Ads.
   $node_args['ads'][] = array(
-    'src' => url('fbia_sync/adslot/1', array('absolute' => TRUE)),
+    'src' => url('fbia_sync/adslot/1', array('absolute' => TRUE, 'base_url' => 'http://www.nayaritenlinea.mx')),
     'width' => 300,
     'height' => 300,
   );

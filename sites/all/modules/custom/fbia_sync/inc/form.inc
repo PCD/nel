@@ -25,6 +25,26 @@ function fbia_sync_form($form, &$form_state) {
     '#required' => TRUE,
     '#default_value' => variable_get('fbia_sync_PAGE_ID', ''),
   );
+  $form['fbia_sync_DEVELOPMENT_MODE'] = array(
+    '#type' => 'radios',
+    '#title' => 'Development Mode',
+    '#required' => TRUE,
+    '#options' => array(
+      0 => t('No'),
+      1 => t('Yes'),
+    ),
+    '#default_value' => variable_get('fbia_sync_DEVELOPMENT_MODE', 1),
+  );
+  $form['fbia_sync_PUBLISHED'] = array(
+    '#type' => 'radios',
+    '#title' => 'Published',
+    '#required' => TRUE,
+    '#options' => array(
+      0 => t('No'),
+      1 => t('Yes'),
+    ),
+    '#default_value' => variable_get('fbia_sync_PUBLISHED', 0),
+  );
   
   if (($access_token = variable_get('fbia_sync_ACCESS_TOKEN', false)) && !empty($access_token) && !isset($_GET['regenerate'])) {
     $form['fbia_sync_ACCESS_TOKEN'] = array(
@@ -139,6 +159,9 @@ function fbia_sync_form_submit(&$form, &$form_state) {
   variable_set('fbia_sync_APP_ID', $form_state['values']['fbia_sync_APP_ID']);
   variable_set('fbia_sync_APP_SECRET', $form_state['values']['fbia_sync_APP_SECRET']);
   variable_set('fbia_sync_PAGE_ID', $form_state['values']['fbia_sync_PAGE_ID']);
+  variable_set('fbia_sync_DEVELOPMENT_MODE', $form_state['values']['fbia_sync_DEVELOPMENT_MODE']);
+  variable_set('fbia_sync_PUBLISHED', $form_state['values']['fbia_sync_PUBLISHED']);
+  
   if (isset($form_state['values']['fbia_sync_ACCESS_TOKEN'])) {
     variable_set('fbia_sync_ACCESS_TOKEN', $form_state['values']['fbia_sync_ACCESS_TOKEN']);
     //EAAbJJ6uLYqEBAFSNqrc7ZCEnGjnIOT6QQkTTCcBJcZCqyWSG5p1iSMU7JktBEJRBdYm96P3MNOfDMJIHPr0rZCeAVTsTA8dumjc7uwI4K6r7uQMpoK3QcahuZAzPMOF4l8skVspqzJOlc6PTUwGBJn2O2WbEFI4ZD

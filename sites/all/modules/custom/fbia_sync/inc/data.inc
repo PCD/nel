@@ -60,18 +60,37 @@ function fbia_sync_delete_record($node) {
 }
 
 /**
- * Inserts a default record into fbia sync table.
+ * Marks a fbia_sync record as processed but really skipped.
  */
-function fbia_sync_mark_record($node, $errors, $response) {
-  $response = serialize($response);
-  $data = array(
-    'nid' => $node->nid,
+function fbia_sync_mark_record_skipped($node) {
+  $updates = array(
+    'sync_status' => 1,
+    'sync_time' => time(),
+  );
+  return db_update('fbia_sync_article')
+  ->fields($updates)
+  ->condition('nid', $node->nid)
+  ->execute();
+}
+
+/**
+ * Marks a fbia_sync record as processed.
+ */
+function fbia_sync_mark_record($node, $errors = 0, $response = NULL) {
+  $updates = array(
     'sync_status' => 1,
     'sync_time' => time(),
     'sync_errors' => $errors,
     'response' => $response,
   );
-  return drupal_write_record('fbia_sync_article', $data);
+  if (!empty($response)) {
+    $response = serialize($response);
+    $updates['response'] = $response;
+  }
+  return db_update('fbia_sync_article')
+  ->fields($updates)
+  ->condition('nid', $node->nid)
+  ->execute();
 }
 
 /**
@@ -91,11 +110,11 @@ function fbia_sync_load_record($node) {
  */
 function fbia_sync_get_records($limit = 100) {
   return db_select('fbia_sync_article', 'f')
-  ->fields('f', array('nid'))
+  ->fields('f', array('nid', 'sync_enabled', 'node_published'))
   ->condition('sync_status', 0)
   ->range(0, $limit)
   ->execute()
-  ->fetchAssoc();
+  ->fetchAll();
 }
 
 

@@ -20,6 +20,44 @@ use Facebook\InstantArticles\Elements\Footer;
 /**
  * Process Node into FBIA.
  */
+function fbia_sync_process_test($node) {
+  /*fbia_sync_mark_record($node);
+  return true;*/
+  
+  $node_args = fbia_sync_prepare_node($node);
+  $instant_article = fbia_sync_build_article($node_args);
+  print_r($instant_article->render());exit;
+
+  $app_id = variable_get('fbia_sync_APP_ID');
+  $app_secret = variable_get('fbia_sync_APP_SECRET');
+  $page_id = variable_get('fbia_sync_PAGE_ID');
+  $access_token = variable_get('fbia_sync_ACCESS_TOKEN');
+  $dev_mode = variable_get('fbia_sync_DEVELOPMENT_MODE', 1);
+  $dev_mode = $dev_mode == 1 ? TRUE : FALSE;
+  $client = Client::create(
+    $app_id,
+    $app_secret,
+    $access_token,
+    $page_id,
+    $dev_mode // Use development environment?
+  );
+  
+  try {
+    $published_mode = variable_get('fbia_sync_PUBLISHED', 1);
+    $published_mode = $published_mode == 1 ? TRUE : FALSE;
+    $response = $client->importArticle($instant_article, $published_mode);
+    $errors = 0;
+  } catch (Exception $e) {
+    $msg = 'Could not import the article from nid = ' . $node->nid . ': ' . $e->getMessage();
+    watchdog('fbia_sync', $msg, array(), WATCHDOG_ERROR);
+    $errors = 1;
+  }
+  fbia_sync_mark_record($node, $errors, $response);
+}
+
+/**
+ * Process Node into FBIA.
+ */
 function fbia_sync_process($node) {
   /*fbia_sync_mark_record($node);
   return true;*/

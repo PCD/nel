@@ -36,5 +36,5 @@ function fbia_sync_menu() {
  * Test out nodes against FBIA Sync.
  */
 function fbia_sync_test_node($node) {
-  fbia_sync_process($node);
+  fbia_sync_process_test($node);
 }

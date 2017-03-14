@@ -55,6 +55,9 @@ function fbia_sync_split_paragraphs($body, &$paragraphs, &$iframes) {
         $iframe = array('tag' => $match[1]);
         if (preg_match('/src="(.+?)"/msi', $match[1], $src)) {
           $iframe['src'] = $src[1];
+          
+          // Fix src with http for video providers.
+          $iframe['src'] = fbia_sync_fix_video_src($iframe['src']);
         }
         if (preg_match('/height="(.+?)"/msi', $match[1], $height)) {
           $iframe['height'] = (int)$height[1];
@@ -73,6 +76,19 @@ function fbia_sync_split_paragraphs($body, &$paragraphs, &$iframes) {
   }
   
   return true;
+}
+
+/**
+ * Fix video source for known providers.
+ */
+function fbia_sync_fix_video_src($src) {
+  if (preg_match('/^\/\/www\.youtube\.com.*/msi', $src, $match)) {
+    return 'https:' . $src;
+  }
+  
+  if (preg_match('/^\/\/www\..*/msi', $src, $match)) {
+    return 'http:' . $src;
+  }
 }
 
 /**

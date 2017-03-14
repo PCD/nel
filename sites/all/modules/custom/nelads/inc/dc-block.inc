@@ -37,35 +37,6 @@ function nelads_block_view_dc_header() {
 }
 
 /**
- * Returns the dc-article_body block.
- */
-function nelads_block_view_dc_article_body() {
-  if ( !(arg(0) == 'node' && intval(arg(1)) > 0 && is_null(arg(2)) && ($node=node_load(arg(1))) && $node->type == 'article') ) {
-    return false;
-  }
-  drupal_add_js(drupal_get_path('module', 'nelads') . '/js/nelads-dc-general.js', array('weight'=>100));
-  static $i;
-  $i = isset($i)?$i+1:1;
-  if ( $i == 1 ) {
-    $js = "googletag.cmd.push(function() {
-      googletag.defineSlot('/15651346/Article-Body-300x250', [300, 250], 'div-gpt-ad-1446621104256-0').addService(googletag.pubads());
-      // Start Custom Criteria
-      googletag.pubads().setTargeting('google_class','google_class_value');
-      // End Custom Criteria
-      googletag.pubads().enableSingleRequest();
-      googletag.enableServices();
-    });";
-    drupal_add_js($js, array('type'=>'inline', 'scope'=>'header', 'weight' => 101));
-  }
-  
-  return theme('nelads-dcslot', array(
-    'group_id' => '15651346/Article-Body-300x250', 
-    'div_id' => 'div-gpt-ad-1446621104256-0', 
-    'style' => 'height:250px; width:300px;', 
-  ));
-}
-
-/**
  * Returns the dc-sidebar_20 block.
  */
 function nelads_block_view_dc_sidebar_20() {
@@ -294,6 +265,35 @@ function nelads_block_view_dc_sidebar_15() {
 }
 
 /**
+ * Returns the dc-article_body block.
+ */
+function nelads_block_view_dc_article_body() {
+  if ( !(arg(0) == 'node' && intval(arg(1)) > 0 && is_null(arg(2)) && ($node=node_load(arg(1))) && $node->type == 'article') ) {
+    return false;
+  }
+  drupal_add_js(drupal_get_path('module', 'nelads') . '/js/nelads-dc-general.js', array('weight'=>100));
+  static $i;
+  $i = isset($i)?$i+1:1;
+  if ( $i == 1 ) {
+    $js = "googletag.cmd.push(function() {
+      googletag.defineSlot('/15651346/Article-Body-300x250', [300, 250], 'div-gpt-ad-1446621104256-0').addService(googletag.pubads());
+      // Start Custom Criteria
+      googletag.pubads().setTargeting('google_class','google_class_value');
+      // End Custom Criteria
+      googletag.pubads().enableSingleRequest();
+      googletag.enableServices();
+    });";
+    drupal_add_js($js, array('type'=>'inline', 'scope'=>'header', 'weight' => 101));
+  }
+  
+  return theme('nelads-dcslot', array(
+    'group_id' => '15651346/Article-Body-300x250', 
+    'div_id' => 'div-gpt-ad-1446621104256-0', 
+    'style' => 'height:250px; width:300px;', 
+  ));
+}
+
+/**
  * Returns the dc-fbia block.
  */
 function nelads_block_view_dc_fbia() {
@@ -313,7 +313,8 @@ function nelads_block_view_dc_fbia() {
         addSize([0, 0], [300, 250]).
         build();
         
-      googletag.defineSlot('/15651346/FB_Instant_300x250', [[300, 250]], 'div-gpt-ad-1489337492379-0').
+      //googletag.defineSlot('/15651346/FB_Instant_300x250', [[300, 250]], 'div-gpt-ad-1489337492379-0').
+      googletag.defineSlot('/15651346/Article-Body-300x250', [[300, 250]], 'div-gpt-ad-1489337492379-0').
       defineSizeMapping(mapping).
       setCollapseEmptyDiv(true).
       addService(googletag.pubads());
@@ -325,9 +326,10 @@ function nelads_block_view_dc_fbia() {
   }
   
   return theme('nelads-dcslot', array(
-    'group_id' => '15651346/FB_Instant_300x250', 
+    //'group_id' => '15651346/FB_Instant_300x250', 
+    'group_id' => '15651346/Article-Body-300x250', 
     'div_id' => 'div-gpt-ad-1489337492379-0', 
-    'style' => '', 
+    'style' => 'height:250px; width:300px', 
   ));
 }
 

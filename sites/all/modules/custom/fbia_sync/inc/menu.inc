@@ -29,6 +29,13 @@ function fbia_sync_menu() {
     'file' => 'inc/ads.inc',
     'type' => MENU_CALLBACK,
   );
+  $items['admin/fbia_sync'] = array(
+    'title' => 'Facebook IA',
+    'page callback' => 'fbia_sync_menu_log',
+    'access arguments' => array('Configure FBIA'),
+    'type' => MENU_CALLBACK,
+    'file' => 'inc/menu-log.inc',
+  );
   return $items;
 }
 

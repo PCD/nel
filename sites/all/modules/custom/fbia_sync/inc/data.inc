@@ -108,11 +108,23 @@ function fbia_sync_load_record($node) {
 /**
  * Get unprocessed fbia items.
  */
-function fbia_sync_get_records($limit = 100) {
+function fbia_sync_get_records($limit = 100, $offset = 0) {
   return db_select('fbia_sync_article', 'f')
   ->fields('f', array('nid', 'sync_enabled', 'node_published'))
   ->condition('sync_status', 0)
   ->range(0, $limit)
+  ->execute()
+  ->fetchAll();
+}
+
+/**
+ * Get unprocessed fbia items.
+ */
+function fbia_sync_fetch($limit = 100, $offset = 0) {
+  return db_select('fbia_sync_article', 'f')
+  ->fields('f')
+  ->orderBy('node_published', 'DESC')
+  ->range($offset, $limit)
   ->execute()
   ->fetchAll();
 }

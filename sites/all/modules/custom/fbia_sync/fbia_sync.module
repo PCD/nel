@@ -6,3 +6,4 @@ include_once('inc/nodeapi.inc');
 include_once('inc/permissions.inc');
 include_once('inc/script.inc');
 include_once('inc/theme.inc');
+include_once('inc/updates.inc');

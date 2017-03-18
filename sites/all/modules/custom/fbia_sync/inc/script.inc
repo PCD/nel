@@ -26,15 +26,41 @@ function fbia_sync_script_process() {
     }
     echo "\n3.- Finished {$count} items.\n\n";
   }
-  $end = time();
-  $seconds = $end - $start;
-  $minutes = intval($seconds / 60);
-  $seconds = $seconds % 60;
-  $seconds = number_format($seconds);
-  $minutes = number_format($minutes);
-  $time_spent = "{$minutes}m {$seconds}s";
+  
+  $seconds = time() - $start;
+  $time_spent = fbia_sync_get_human_time($seconds);
   
   echo "**************************************\n";
   echo "*  Finished in {$time_spent}   *\n";
   echo "**************************************\n\n";
+}
+
+/**
+ * Resets all fbia sync records.
+ */
+function fbia_sync_reset_all() {
+  $start = time();
+  echo "**************************************\n";
+  echo "*  FB Instant Articles Reset ALL  *\n";
+  echo "**************************************\n\n";
+  
+  db_query('UPDATE fbia_sync_article SET sync_status = 0');
+  
+  $seconds = time() - $start;
+  $time_spent = fbia_sync_get_human_time($seconds);
+  
+  echo "**************************************\n";
+  echo "*  Finished in {$time_spent}   *\n";
+  echo "**************************************\n\n";
+}
+
+/**
+ * Convert time from seconds to human.
+ */
+function fbia_sync_get_human_time($seconds) {
+  $minutes = intval($seconds / 60);
+  $seconds = $seconds % 60;
+  $seconds = number_format($seconds);
+  $minutes = number_format($minutes);
+  return "{$minutes}m {$seconds}s";
 }

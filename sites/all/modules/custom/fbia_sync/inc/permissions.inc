@@ -12,9 +12,13 @@ function fbia_sync_permission() {
       'title' => 'Access FBIA',
       'description' => 'Access FBIA',
     ),
-    'Test FBIA Sync' => array(
-      'title' => 'Test FBIA Sync',
-      'description' => 'Test FBIA Sync',
+    'Access FBIA' => array(
+      'title' => 'Access FBIA',
+      'description' => 'Access FBIA',
+    ),
+    'Use iFrame Block' => array(
+      'title' => 'Use iFrame Block',
+      'description' => 'Use iFrame Block',
     ),
     'FB Login' => array(
       'title' => 'FB Login',

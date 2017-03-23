@@ -26,6 +26,7 @@ function fbia_sync_process_test($node) {
   
   $node_args = fbia_sync_prepare_node($node);
   $instant_article = fbia_sync_build_article($node_args);
+  print_r($instant_article->render());exit;
 
   $app_id = variable_get('fbia_sync_APP_ID');
   $app_secret = variable_get('fbia_sync_APP_SECRET');
@@ -105,27 +106,35 @@ function fbia_sync_process($node) {
  */
 function fbia_sync_build_article($node_args) {
   // Header.
-  $header = Header::create()
-  ->withTitle($node_args['title'])
-  ->withSubTitle($node_args['sub_title'])
-  ->withPublishTime(
-    Time::create(Time::PUBLISHED)
-      ->withDatetime(
-        \DateTime::createFromFormat(
-          'j-M-Y G:i:s',
-          date('j-M-Y G:i:s', $node_args['published_date_time'])
+  $header = Header::create();
+  if (isset($node_args['title'])) {
+    $header->withTitle($node_args['title']);
+  }
+  if (isset($node_args['sub_title'])) {
+    $header->withSubTitle($node_args['sub_title']);
+  }
+  if (isset($node_args['published_date_time'])) {
+    $header->withPublishTime(
+      Time::create(Time::PUBLISHED)
+        ->withDatetime(
+          \DateTime::createFromFormat(
+            'j-M-Y G:i:s',
+            date('j-M-Y G:i:s', $node_args['published_date_time'])
+          )
+        )
+    );
+  }
+  if (isset($node_args['modified_date_time'])) {
+    $header->withModifyTime(
+      Time::create(Time::MODIFIED)
+        ->withDatetime(
+          \DateTime::createFromFormat(
+            'j-M-Y G:i:s',
+            date('j-M-Y G:i:s', $node_args['modified_date_time'])
         )
       )
-  )
-  ->withModifyTime(
-    Time::create(Time::MODIFIED)
-      ->withDatetime(
-        \DateTime::createFromFormat(
-          'j-M-Y G:i:s',
-          date('j-M-Y G:i:s', $node_args['modified_date_time'])
-        )
-      )
-  );
+    );
+  }
   
   // Authors.
   if (isset($node_args['author'])) {
@@ -182,7 +191,9 @@ function fbia_sync_build_article($node_args) {
   
   // Body.
   $paragraphs = $iframes = array();
+  
   fbia_sync_split_paragraphs($node_args['body'], $paragraphs, $iframes);
+  
   foreach($paragraphs as $i => $paragraph) {
     $paragraph_item = Paragraph::create()->appendText(strip_tags($paragraph));
     $article->addChild($paragraph_item);

@@ -29,6 +29,13 @@ function fbia_sync_menu() {
     'file' => 'inc/ads.inc',
     'type' => MENU_CALLBACK,
   );
+  $items['node/%node/iframe-block/%'] = array(
+    'page callback' => 'fbia_sync_iframe_block',
+    'page arguments' => array(1, 2),
+    'access arguments' => array('Use iFrame Block'),
+    'file' => 'inc/iframe-block.inc',
+    'type' => MENU_CALLBACK,
+  );
   $items['admin/fbia_sync'] = array(
     'title' => 'Facebook IA',
     'page callback' => 'fbia_sync_menu_log',

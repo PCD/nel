@@ -26,7 +26,6 @@ function fbia_sync_process_test($node) {
   
   $node_args = fbia_sync_prepare_node($node);
   $instant_article = fbia_sync_build_article($node_args);
-  print_r($instant_article->render());exit;
 
   $app_id = variable_get('fbia_sync_APP_ID');
   $app_secret = variable_get('fbia_sync_APP_SECRET');
@@ -183,6 +182,18 @@ function fbia_sync_build_article($node_args) {
   foreach($paragraphs as $i => $paragraph) {
     $paragraph_item = Paragraph::create()->appendText(strip_tags($paragraph));
     $article->addChild($paragraph_item);
+  }
+  
+  // Videos.
+  if (isset($node_args['video'])) {
+    $interactive = Interactive::create()->withSource($node_args['video']['src']);
+    if (isset($node_args['video']['width'])) {
+      $interactive->withWidth($node_args['video']['width']);
+    }
+    if (isset($node_args['video']['height'])) {
+      $interactive->withHeight($node_args['video']['height']);
+    }
+    $article->addChild($interactive);
   }
   
   // Iframes.

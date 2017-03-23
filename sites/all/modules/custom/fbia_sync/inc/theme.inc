@@ -148,7 +148,7 @@ function fbia_sync_prepare_node($node) {
 
   // Video.
   if (isset($node->field_video[LANGUAGE_NONE][0]['uri'])) {
-    if (($video = fbia_sync_node_video_to_figure($node))) {
+    if (($video = fbia_sync_node_video_data($node))) {
       $node_args['video'] = $video;
     }
   }
@@ -260,6 +260,29 @@ function fbia_sync_get_chosen_image($node) {
 }
 
 /**
+ * Get Node Video data.
+ */
+function fbia_sync_node_video_data($node) {
+  if (!isset($node->field_video[LANGUAGE_NONE][0])) {
+    return FALSE;
+  }
+  
+  $video_url = $node->field_video[LANGUAGE_NONE][0]['uri'];
+
+  // Is youtube?
+  $pattern = '/youtube:/msi';
+  if (preg_match($pattern, $video_url, $match)) {
+    return fbia_sync_youtube_data($video_url);
+  }
+  
+  // Is Vimeo?
+  $pattern = '/vimeo:/msi';
+  if (preg_match($pattern, $video_url, $match)) {
+    return fbia_sync_vimeo_data($video_url);
+  }
+}
+
+/**
  * Get Node Video to Figure.
  */
 function fbia_sync_node_video_to_figure($node) {
@@ -276,16 +299,30 @@ function fbia_sync_node_video_to_figure($node) {
   }
   
   // Is Vimeo?
-  $pattern = '/youtube:/msi';
-  if (preg_match($pattern, $video_url, $match)) {
-    return fbia_sync_youtube_to_figure($video_url);
-  }
-  
-  // Is Vimeo?
   $pattern = '/vimeo:/msi';
   if (preg_match($pattern, $video_url, $match)) {
     return fbia_sync_vimeo_to_figure($video_url);
   }
+}
+
+/**
+ * Get Youtube data.
+ */
+function fbia_sync_youtube_data($youtube_raw) {
+  $pattern = '/v\/(.*)/msi';
+  if (!preg_match($pattern, $youtube_raw, $match)) {
+    return FALSE;
+  }
+  
+  $youtube_id = $match[1];
+  $src = "https://www.youtube.com/embed/{$youtube_id}";
+  $code = "<iframe src=\"{$src}\" width=\"560\" height=\"315\"></iframe>";
+  return array(
+    'code' => $code,
+    'src' => $src,
+    'width' => 560,
+    'height' => 315,
+  );
 }
 
 /**
@@ -303,6 +340,28 @@ function fbia_sync_youtube_to_figure($youtube_raw) {
   </figure>";
   return $output;
 }
+
+/**
+ * Get Youtube data.
+ */
+function fbia_sync_vimeo_data($vimeo_raw) {
+  $pattern = '/v\/(.*)/msi';
+
+  if (!preg_match($pattern, $vimeo_raw, $match)) {
+    return FALSE;
+  }
+  
+  $vimeo_id = $match[1];
+  $src = "https://player.vimeo.com/video/{$vimeo_id}";
+  $code = "<iframe src=\"{$src}\" width=\"560\" height=\"315\"></iframe>";
+  return array(
+    'code' => $code,
+    'src' => $src,
+    'width' => 560,
+    'height' => 315,
+  );
+}
+
 
 /**
  * Get Youtube into Figure.

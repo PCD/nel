@@ -82,6 +82,10 @@ function fbia_sync_process($node) {
     $published_mode = $published_mode == 1 ? TRUE : FALSE;
     $client->importArticle($instant_article, $published_mode);
     $errors = 0;
+    $response = array(
+      'nid' => $node->nid,
+      'node_args' => $node_args,
+    );
   } catch (Exception $e) {
     $msg = 'Could not import the article from nid = ' . $node->nid . ': ' . $e->getMessage();
     watchdog('fbia_sync', $msg, array(), WATCHDOG_ERROR);

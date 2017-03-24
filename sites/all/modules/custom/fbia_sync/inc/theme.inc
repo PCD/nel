@@ -164,6 +164,34 @@ function fbia_sync_prepare_node($node) {
     $node_args['image_main_alt'] = $img['alt'];
   }
 
+  // Embed blocks.
+  if (isset($node->field_iframe_block[LANGUAGE_NONE][0]['value'])) {
+    $i = 0;
+    foreach($node->field_iframe_block[LANGUAGE_NONE] as $index => $item) {
+      if (!($paragraph = paragraphs_item_load($item['value']))) {
+        continue;
+      }
+      
+      $url = url('node/' . $node->nid . '/iframe-block/' . ($index+1), array('absolute' => TRUE));
+      if (preg_match('/(.*?)\?.*/', $url, $match)) {
+        $url = $match[1];
+      }
+      
+      $iframe_block = array(
+        'src' => $url,
+      );
+      
+      if (isset($paragraph->field_embed_width[LANGUAGE_NONE][0]['value'])) {
+        $iframe_block['width'] = intval($paragraph->field_embed_width[LANGUAGE_NONE][0]['value']);
+      }
+      if (isset($paragraph->field_embed_height[LANGUAGE_NONE][0]['value'])) {
+        $iframe_block['height'] = intval($paragraph->field_embed_height[LANGUAGE_NONE][0]['value']);
+      }
+      $node_args['iframe_block'][$i] = $iframe_block;
+      $i++;
+    }
+  }
+
   // Ads.
   $node_args['ads'][] = array(
     'src' => url('fbia_sync/adslot/1', array('absolute' => TRUE, 'base_url' => 'http://www.nayaritenlinea.mx')),

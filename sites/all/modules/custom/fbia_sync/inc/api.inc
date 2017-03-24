@@ -223,6 +223,20 @@ function fbia_sync_build_article($node_args) {
     $article->addChild($interactive);
   }
   
+  // Iframe Blocks.
+  if (isset($node_args['iframe_block'])) {
+    foreach($node_args['iframe_block'] as $iframe_block) {
+      $interactive = Interactive::create()->withSource($iframe_block['src']);
+      if (isset($iframe_block['width'])) {
+        $interactive->withWidth($iframe_block['width']);
+      }
+      if (isset($iframe_block['height'])) {
+        $interactive->withHeight($iframe_block['height']);
+      }
+      $article->addChild($interactive);
+    }
+  }
+  
   // Slideshow.
   if (isset($node_args['slideshow'])) {
     $slideshow = SlideShow::create();

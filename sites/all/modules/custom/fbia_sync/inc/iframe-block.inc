@@ -16,6 +16,7 @@ function fbia_sync_iframe_block($node, $delta) {
   }
   $field = field_get_items('node', $node, 'field_iframe_block');
   $output = field_view_value('node', $node, 'field_iframe_block', $field[$delta]);
-  print render($output);
+  $output = render($output);
+  print "<html><head><style>.twitter-tweet{margin: 0 !important;}</style></head><body style=\"margin:0;padding:0;\">{$output}</body></html>";
   exit;
 }

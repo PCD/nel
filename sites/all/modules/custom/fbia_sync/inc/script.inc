@@ -38,6 +38,25 @@ function fbia_sync_script_process() {
 /**
  * Resets all fbia sync records.
  */
+function fbia_sync_reset_all_with_errors() {
+  $start = time();
+  echo "*************************************************\n";
+  echo "*  FB Instant Articles Reset ALL With Errors  *\n";
+  echo "*************************************************\n\n";
+  
+  db_query('UPDATE fbia_sync_article SET sync_status = 0 WHERE sync_errors = 1');
+  
+  $seconds = time() - $start;
+  $time_spent = fbia_sync_get_human_time($seconds);
+  
+  echo "**************************************\n";
+  echo "*  Finished in {$time_spent}   *\n";
+  echo "**************************************\n\n";
+}
+
+/**
+ * Resets all fbia sync records.
+ */
 function fbia_sync_reset_all() {
   $start = time();
   echo "**************************************\n";

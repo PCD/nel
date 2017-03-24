@@ -55,7 +55,7 @@ function fbia_sync_split_paragraphs($body, &$paragraphs, &$iframes) {
         $iframe = array('tag' => $match[1]);
         if (preg_match('/src="(.+?)"/msi', $match[1], $src)) {
           $iframe['src'] = $src[1];
-          
+
           // Fix src with http for video providers.
           $iframe['src'] = fbia_sync_fix_video_src($iframe['src']);
         }
@@ -89,6 +89,8 @@ function fbia_sync_fix_video_src($src) {
   if (preg_match('/^\/\/www\..*/msi', $src, $match)) {
     return 'http:' . $src;
   }
+  
+  return $src;
 }
 
 /**

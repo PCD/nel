@@ -16,6 +16,6 @@ function fbia_sync_iframe_block($node, $delta) {
   }
   $field = field_get_items('node', $node, 'field_iframe_block');
   $output = field_view_value('node', $node, 'field_iframe_block', $field[$delta]);
-  print $output;
+  print render($output);
   exit;
 }

@@ -29,7 +29,7 @@ function fbia_sync_menu() {
     'file' => 'inc/ads.inc',
     'type' => MENU_CALLBACK,
   );
-  $items['fbia_sync/%node/iframe-block/%'] = array(
+  $items['node/%node/iframe-block/%'] = array(
     'page callback' => 'fbia_sync_iframe_block',
     'page arguments' => array(1, 3),
     'access arguments' => array('Use iFrame Block'),

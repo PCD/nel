@@ -49,13 +49,17 @@ function fbia_sync_update_record($node) {
  * Deletes fbia record.
  */
 function fbia_sync_delete_record($node) {
-  return db_update('fbia_sync_article')
-  ->fields(array(
-    'sync_status' => 0,
-    'node_published' => 0,
-    'sync_enabled' => 0,
-  ))
+  return db_delete('fbia_sync_article')
   ->condition('nid', $node->nid)
+  ->execute();
+}
+
+/**
+ * Deletes fbia record.
+ */
+function fbia_sync_delete_record_by_nid($nid) {
+  return db_delete('fbia_sync_article')
+  ->condition('nid', $nid)
   ->execute();
 }
 

@@ -23,6 +23,10 @@ function fbia_sync_script_process() {
           echo " Skipped!\n";
         }
       }
+      else {
+        echo " Not Found, deregistering it!\n";
+        fbia_sync_delete_record_by_nid($item->nid);
+      }
     }
     echo "\n3.- Finished {$count} items.\n\n";
   }

@@ -9,6 +9,7 @@ use Facebook\InstantArticles\Elements\Caption;
 use Facebook\InstantArticles\Elements\Slideshow;
 use Facebook\InstantArticles\Elements\Paragraph;
 use Facebook\InstantArticles\Elements\Ad;
+use Facebook\InstantArticles\Elements\Author;
 use Facebook\InstantArticles\Elements\Interactive;
 use Facebook\InstantArticles\Parser\Parser;
 use Facebook\InstantArticles\Client\Client;

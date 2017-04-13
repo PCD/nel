@@ -136,7 +136,7 @@ function fbia_sync_prepare_node($node) {
   }
 
   // Author.
-  if (isset($node->field_author[LANGUAGE_NONE][0]['value'])) {
+  if (isset($node->field_author[LANGUAGE_NONE][0]['tid'])) {
     if (($term = taxonomy_term_load($node->field_author[LANGUAGE_NONE][0]['tid']))) {
       $node_args['author'] = $term->name;
       $node_args['author_url'] = url('taxonomy/term/' . $term->tid, array('absolute' => TRUE, 'base_url' => 'http://www.nayaritenlinea.mx'));

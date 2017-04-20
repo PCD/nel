@@ -401,13 +401,13 @@ function nel_get_dc_microsite_block($offset = 0) {
       $block = module_invoke('nelads', 'block_view', 'dc-microsite-19-wide');
       $output = "<div id=\"block-nelads-dc-microsite-19-wide\" class=\"microsite-wide\">{$block['content']}</div>\n";
       
-      $block = module_invoke('nelads', 'block_view', 'dc-microsite-19-half_left');
-      $block1 = "<div id=\"block-nelads-dc-microsite-19-half_left\" class=\"microsite-half microsite-half-left\">{$block['content']}</div>\n";
+      // $block = module_invoke('nelads', 'block_view', 'dc-microsite-19-half_left');
+      // $block1 = "<div id=\"block-nelads-dc-microsite-19-half_left\" class=\"microsite-half microsite-half-left\">{$block['content']}</div>\n";
       
-      $block = module_invoke('nelads', 'block_view', 'dc-microsite-19-half_right');
-      $block2 = "<div id=\"block-nelads-dc-microsite-19-half_right\" class=\"microsite-half microsite-half-right\">{$block['content']}</div>\n";
+      // $block = module_invoke('nelads', 'block_view', 'dc-microsite-19-half_right');
+      // $block2 = "<div id=\"block-nelads-dc-microsite-19-half_right\" class=\"microsite-half microsite-half-right\">{$block['content']}</div>\n";
       
-      $output .= "<div id=\"block-nelads-dc-microsite-19-halves\" class=\"microsite-halves\">{$block1}{$block2}</div>\n";
+      // $output .= "<div id=\"block-nelads-dc-microsite-19-halves\" class=\"microsite-halves\">{$block1}{$block2}</div>\n";
       break;
 
     case 17:

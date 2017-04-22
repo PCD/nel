@@ -2,33 +2,25 @@
 /**
  * Script that process pending items from FB IA.
  */
-function fbia_sync_script_process() {
+function fbia_sync_script_process($nid = null) {
   $start = time();
   echo "**************************************\n";
   echo "*  FB Instant Articles Sync Process  *\n";
   echo "**************************************\n\n";
-  while(($nids = fbia_sync_get_records())) {
-    $count = count($nids);
-    echo "1.- Got {$count} items, lets process them.\n\n";
-    echo "2.- Process the {$count} items:\n";
-    foreach($nids as $item) {
-      echo " >> Processing Item {$item->nid}...";
-      if (($node = node_load($item->nid))) {
-        if ($item->sync_enabled == 1 && $item->node_published == 1) {
-          fbia_sync_process($node);
-          echo " Done!\n";
-        }
-        else {
-          print fbia_sync_mark_record_skipped($node);
-          echo " Skipped!\n";
-        }
-      }
-      else {
-        echo " Not Found, deregistering it!\n";
-        fbia_sync_delete_record_by_nid($item->nid);
-      }
+  if (!is_null($nid)) {
+    $nids = array(
+      (object) array(
+        'nid' => $nid,
+        'sync_enabled' => 1,
+        'node_published' => 1,
+      )
+    );
+    fbia_sync_script_process_batch($nids);
+  }
+  else {
+    while(($nids = fbia_sync_get_records())) {
+      fbia_sync_script_process_batch($nids);
     }
-    echo "\n3.- Finished {$count} items.\n\n";
   }
   
   $seconds = time() - $start;
@@ -37,6 +29,30 @@ function fbia_sync_script_process() {
   echo "**************************************\n";
   echo "*  Finished in {$time_spent}   *\n";
   echo "**************************************\n\n";
+}
+
+function fbia_sync_script_process_batch($nids) {
+  $count = count($nids);
+  echo "1.- Got {$count} items, lets process them.\n\n";
+  echo "2.- Process the {$count} items:\n";
+  foreach($nids as $item) {
+    echo " >> Processing Item {$item->nid}...";
+    if (($node = node_load($item->nid))) {
+      if ($item->sync_enabled == 1 && $item->node_published == 1) {
+        fbia_sync_process($node);
+        echo " Done!\n";
+      }
+      else {
+        print fbia_sync_mark_record_skipped($node);
+        echo " Skipped!\n";
+      }
+    }
+    else {
+      echo " Not Found, deregistering it!\n";
+      fbia_sync_delete_record_by_nid($item->nid);
+    }
+  }
+  echo "\n3.- Finished {$count} items.\n\n";
 }
 
 /**

@@ -62,6 +62,13 @@ function fbia_sync_process_test($node) {
 function fbia_sync_process($node) {
   $node_args = fbia_sync_prepare_node($node);
   
+  $response = array();
+  $errors = 0;
+  fbia_sync_process_exec($node_args, $response, $errors, 2);
+  fbia_sync_mark_record($node, $errors, $response);
+}
+
+function fbia_sync_process_exec($node_args, &$response, &$errors, $try = 2) {
 
   try {
     $instant_article = fbia_sync_build_article($node_args);
@@ -89,17 +96,24 @@ function fbia_sync_process($node) {
       'node_args' => $node_args,
     );
   } catch (Exception $e) {
-    $msg = 'Could not import the article from nid = ' . $node->nid . ': ' . $e->getMessage();
-    watchdog('fbia_sync', $msg, array(), WATCHDOG_ERROR);
-    $response = array(
-      'msg' => $msg,
-      'nid' => $node->nid,
-      'node_args' => $node_args,
-    );
-    $errors = 1;
-    echo print_r($response, TRUE) . "\n\n";
+    if ($try > 0) {
+      $try--;
+      echo "failed... try again... ";
+      sleep(1);
+      fbia_sync_process_exec($node_args, $response, $errors, $try);
+    }
+    else {
+      $msg = 'Could not import the article from nid = ' . $node->nid . ': ' . $e->getMessage();
+      watchdog('fbia_sync', $msg, array(), WATCHDOG_ERROR);
+      $response = array(
+        'msg' => $msg,
+        'nid' => $node->nid,
+        'node_args' => $node_args,
+      );
+      $errors = 1;
+      echo print_r($response, TRUE) . "\n\n";
+    }
   }
-  fbia_sync_mark_record($node, $errors, $response);
 }
 
 /**

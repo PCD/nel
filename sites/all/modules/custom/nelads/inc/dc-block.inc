@@ -23,6 +23,7 @@ function nelads_block_view_dc_header() {
       setCollapseEmptyDiv(true).
       addService(googletag.pubads());
       googletag.pubads().setTargeting('google_class','google_class_value');
+      googletag.pubads().setTargeting('candidato_class','candidato_class_value');
       googletag.pubads().enableSingleRequest();
       googletag.enableServices();
     });";
@@ -61,6 +62,7 @@ function nelads_block_view_dc_sidebar_20() {
       setCollapseEmptyDiv(true).
       addService(googletag.pubads());
       googletag.pubads().setTargeting('google_class','google_class_value');
+      googletag.pubads().setTargeting('candidato_class','candidato_class_value');
       googletag.pubads().enableSingleRequest();
       googletag.enableServices();
     });";
@@ -99,6 +101,7 @@ function nelads_block_view_dc_sidebar_19() {
       setCollapseEmptyDiv(true).
       addService(googletag.pubads());
       googletag.pubads().setTargeting('google_class','google_class_value');
+      googletag.pubads().setTargeting('candidato_class','candidato_class_value');
       googletag.pubads().enableSingleRequest();
       googletag.enableServices();
     });";
@@ -137,6 +140,7 @@ function nelads_block_view_dc_sidebar_18() {
       setCollapseEmptyDiv(true).
       addService(googletag.pubads());
       googletag.pubads().setTargeting('google_class','google_class_value');
+      googletag.pubads().setTargeting('candidato_class','candidato_class_value');
       googletag.pubads().enableSingleRequest();
       googletag.enableServices();
     });";
@@ -175,6 +179,7 @@ function nelads_block_view_dc_sidebar_17() {
       setCollapseEmptyDiv(true).
       addService(googletag.pubads());
       googletag.pubads().setTargeting('google_class','google_class_value');
+      googletag.pubads().setTargeting('candidato_class','candidato_class_value');
       googletag.pubads().enableSingleRequest();
       googletag.enableServices();
     });";
@@ -213,6 +218,7 @@ function nelads_block_view_dc_sidebar_16() {
       setCollapseEmptyDiv(true).
       addService(googletag.pubads());
       googletag.pubads().setTargeting('google_class','google_class_value');
+      googletag.pubads().setTargeting('candidato_class','candidato_class_value');
       googletag.pubads().enableSingleRequest();
       googletag.enableServices();
     });";
@@ -251,6 +257,7 @@ function nelads_block_view_dc_sidebar_15() {
       setCollapseEmptyDiv(true).
       addService(googletag.pubads());
       googletag.pubads().setTargeting('google_class','google_class_value');
+      googletag.pubads().setTargeting('candidato_class','candidato_class_value');
       googletag.pubads().enableSingleRequest();
       googletag.enableServices();
     });";
@@ -279,6 +286,7 @@ function nelads_block_view_dc_article_body() {
       googletag.defineSlot('/15651346/Article-Body-300x250', [300, 250], 'div-gpt-ad-1446621104256-0').addService(googletag.pubads());
       // Start Custom Criteria
       googletag.pubads().setTargeting('google_class','google_class_value');
+      googletag.pubads().setTargeting('candidato_class','candidato_class_value');
       // End Custom Criteria
       googletag.pubads().enableSingleRequest();
       googletag.enableServices();
@@ -319,6 +327,7 @@ function nelads_block_view_dc_fbia() {
       setCollapseEmptyDiv(true).
       addService(googletag.pubads());
       googletag.pubads().setTargeting('google_class','google_class_value');
+      googletag.pubads().setTargeting('candidato_class','candidato_class_value');
       googletag.pubads().enableSingleRequest();
       googletag.enableServices();
     });";
@@ -356,6 +365,7 @@ function nelads_block_view_dc_microsite_19_wide() {
       setCollapseEmptyDiv(true).
       addService(googletag.pubads());
       googletag.pubads().setTargeting('google_class','google_class_value');
+      googletag.pubads().setTargeting('candidato_class','candidato_class_value');
       googletag.pubads().enableSingleRequest();
       googletag.enableServices();
     });";
@@ -392,6 +402,7 @@ function nelads_block_view_dc_microsite_19_half_left() {
       setCollapseEmptyDiv(true).
       addService(googletag.pubads());
       googletag.pubads().setTargeting('google_class','google_class_value');
+      googletag.pubads().setTargeting('candidato_class','candidato_class_value');
       googletag.pubads().enableSingleRequest();
       googletag.enableServices();
     });";
@@ -428,6 +439,7 @@ function nelads_block_view_dc_microsite_19_half_right() {
       setCollapseEmptyDiv(true).
       addService(googletag.pubads());
       googletag.pubads().setTargeting('google_class','google_class_value');
+      googletag.pubads().setTargeting('candidato_class','candidato_class_value');
       googletag.pubads().enableSingleRequest();
       googletag.enableServices();
     });";
@@ -464,6 +476,7 @@ function nelads_block_view_dc_microsite_17_wide() {
       setCollapseEmptyDiv(true).
       addService(googletag.pubads());
       googletag.pubads().setTargeting('google_class','google_class_value');
+      googletag.pubads().setTargeting('candidato_class','candidato_class_value');
       googletag.pubads().enableSingleRequest();
       googletag.enableServices();
     });";

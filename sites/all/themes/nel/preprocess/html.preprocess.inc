@@ -36,6 +36,9 @@ function nel_preprocess_html_node(&$variables) {
   
   // Google Class
   nel_preprocess_html_node_google_class($variables, $node);
+
+  // Candidato Class.
+  nel_preprocess_html_node_candidato_class($variables, $node);
   
   // Gallery Stuff
   nel_preprocess_html_node_gallery($variables, $node);
@@ -53,6 +56,18 @@ function nel_preprocess_html_node_google_class(&$variables, $node) {
     $google_class = $node->field_google_class[LANGUAGE_NONE][0]['value'];
   }
   $variables['attributes_array']['data-google-class'] = $google_class;
+}
+
+/**
+ *
+ */
+function nel_preprocess_html_node_candidato_class(&$variables, $node) {
+  $candidato_class = 'pagina-sin-candidato';
+  if ( isset($node->field_candidato[LANGUAGE_NONE][0]['tid']) ) {
+    $term = taxonomy_term_load($node->field_candidato[LANGUAGE_NONE][0]['tid']);
+    $candidato_class = $term->name;
+  }
+  $variables['attributes_array']['data-candidato-class'] = $candidato_class;
 }
 
 /**

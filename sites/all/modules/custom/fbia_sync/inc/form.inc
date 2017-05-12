@@ -148,6 +148,10 @@ function fbia_sync_form($form, &$form_state) {
       '#type' => 'submit',
       '#value' => t('Save'),
     ),
+    'regenerate' => array(
+      '#type' => 'submit',
+      '#value' => t('Regenerate Token'),
+    ),
   );
   return $form;
 }
@@ -156,15 +160,20 @@ function fbia_sync_form($form, &$form_state) {
  * Process fbia_sync_form submission.
  */
 function fbia_sync_form_submit(&$form, &$form_state) {
-  variable_set('fbia_sync_APP_ID', $form_state['values']['fbia_sync_APP_ID']);
-  variable_set('fbia_sync_APP_SECRET', $form_state['values']['fbia_sync_APP_SECRET']);
-  variable_set('fbia_sync_PAGE_ID', $form_state['values']['fbia_sync_PAGE_ID']);
-  variable_set('fbia_sync_DEVELOPMENT_MODE', $form_state['values']['fbia_sync_DEVELOPMENT_MODE']);
-  variable_set('fbia_sync_PUBLISHED', $form_state['values']['fbia_sync_PUBLISHED']);
-  
-  if (isset($form_state['values']['fbia_sync_ACCESS_TOKEN'])) {
-    variable_set('fbia_sync_ACCESS_TOKEN', $form_state['values']['fbia_sync_ACCESS_TOKEN']);
-    //EAAbJJ6uLYqEBAFSNqrc7ZCEnGjnIOT6QQkTTCcBJcZCqyWSG5p1iSMU7JktBEJRBdYm96P3MNOfDMJIHPr0rZCeAVTsTA8dumjc7uwI4K6r7uQMpoK3QcahuZAzPMOF4l8skVspqzJOlc6PTUwGBJn2O2WbEFI4ZD
+  if ($form_state['values']['op'] == t('Save')) {
+    variable_set('fbia_sync_APP_ID', $form_state['values']['fbia_sync_APP_ID']);
+    variable_set('fbia_sync_APP_SECRET', $form_state['values']['fbia_sync_APP_SECRET']);
+    variable_set('fbia_sync_PAGE_ID', $form_state['values']['fbia_sync_PAGE_ID']);
+    variable_set('fbia_sync_DEVELOPMENT_MODE', $form_state['values']['fbia_sync_DEVELOPMENT_MODE']);
+    variable_set('fbia_sync_PUBLISHED', $form_state['values']['fbia_sync_PUBLISHED']);
+    
+    if (isset($form_state['values']['fbia_sync_ACCESS_TOKEN'])) {
+      variable_set('fbia_sync_ACCESS_TOKEN', $form_state['values']['fbia_sync_ACCESS_TOKEN']);
+      //EAAbJJ6uLYqEBAFSNqrc7ZCEnGjnIOT6QQkTTCcBJcZCqyWSG5p1iSMU7JktBEJRBdYm96P3MNOfDMJIHPr0rZCeAVTsTA8dumjc7uwI4K6r7uQMpoK3QcahuZAzPMOF4l8skVspqzJOlc6PTUwGBJn2O2WbEFI4ZD
+    }
+  }
+  else {
+    variable_set('fbia_sync_ACCESS_TOKEN', '');
   }
 }
 

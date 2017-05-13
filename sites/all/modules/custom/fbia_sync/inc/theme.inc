@@ -197,7 +197,7 @@ function fbia_sync_prepare_node($node) {
 
   // Ads.
   $node_args['ads'][] = array(
-    'src' => url('fbia_sync/adslot/1', array('absolute' => TRUE, 'base_url' => 'http://www.nayaritenlinea.mx')),
+    'src' => url('fbia_sync/adslot/1', array('absolute' => TRUE, 'base_url' => 'http://www.nayaritenlinea.mx', 'query' => array('nid' => $node->nid))),
     'width' => 300,
     'height' => 300,
   );

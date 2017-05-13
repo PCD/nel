@@ -29,6 +29,7 @@ function fbia_sync_theme() {
       'variables' => array(
         'slot_id' => NULL,
         'div_id' => NULL,
+        'candidato_class' => NULL,
       ),
       'template' => 'templates/fbia-sync--double-click',
     ),

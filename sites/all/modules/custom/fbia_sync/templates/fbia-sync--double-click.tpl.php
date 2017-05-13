@@ -15,6 +15,9 @@
 <script>
   googletag.cmd.push(function() {
     googletag.defineSlot('/<?php print $slot_id;?>', [300, 250], '<?php print $div_id;?>').addService(googletag.pubads());
+    <?php if (!empty($candidato_class)):?>
+    googletag.pubads().setTargeting('candidato_class','<?php print $candidato_class;?>');
+    <?php endif; ?>
     googletag.pubads().enableSingleRequest();
     googletag.pubads().collapseEmptyDivs();
     googletag.enableServices();

@@ -60,7 +60,6 @@ function fbia_sync_process_test($node) {
  */
 function fbia_sync_process($node) {
   $node_args = fbia_sync_prepare_node($node);
-  print_r($node_args);exit;
   $response = array();
   $errors = 0;
   fbia_sync_process_exec($node_args, $response, $errors, 2);

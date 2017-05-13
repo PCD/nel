@@ -3,6 +3,9 @@
  * Implements hook_process_html.
  */
 function nelads_process_html(&$vars) {
+  // Replace class for candidato class.
+  nelads_process_html_candidato($vars);
+  
   if ( nelads_can_we_show_ads() ) {
     nelads_process_html_google_class($vars, 'apto-para-todo-publico');
     return;
@@ -44,4 +47,20 @@ function nelads_process_html(&$vars) {
  */
 function nelads_process_html_google_class(&$vars, $google_class_value) {
   $vars['scripts'] = str_replace('google_class_value', $google_class_value, $vars['scripts']);
+}
+
+function nelads_process_html_candidato($vars) {
+  if (!(arg(0) == 'node' && intval(arg(1)) > 0 && ($node = node_load(arg(1))) && $node->type == 'article')) {
+    return;
+  }
+  
+  if (!isset($node->field_candidato[LANGUAGE_NONE][0]['tid'])) {
+    return;
+  }
+
+  if (!($term = taxonomy_term_load($node->field_candidato[LANGUAGE_NONE][0]['tid']))) {
+    return;
+  }
+
+  $vars['scripts'] = str_replace('candidato_class_value', $term->name, $vars['scripts']);
 }

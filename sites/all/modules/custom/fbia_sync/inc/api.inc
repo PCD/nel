@@ -27,7 +27,6 @@ function fbia_sync_process_test($node) {
   
   $node_args = fbia_sync_prepare_node($node);
   $instant_article = fbia_sync_build_article($node_args);
-  print_r($instant_article->render());exit;
 
   $app_id = variable_get('fbia_sync_APP_ID');
   $app_secret = variable_get('fbia_sync_APP_SECRET');

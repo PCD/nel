@@ -49,7 +49,7 @@ function nelads_process_html_google_class(&$vars, $google_class_value) {
   $vars['scripts'] = str_replace('google_class_value', $google_class_value, $vars['scripts']);
 }
 
-function nelads_process_html_candidato($vars) {
+function nelads_process_html_candidato(&$vars) {
   if (!(arg(0) == 'node' && intval(arg(1)) > 0 && ($node = node_load(arg(1))) && $node->type == 'article')) {
     return;
   }

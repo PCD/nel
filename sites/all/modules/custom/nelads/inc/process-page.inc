@@ -54,13 +54,13 @@ function nelads_process_html_candidato(&$vars) {
     return;
   }
   
-  if (!isset($node->field_candidato[LANGUAGE_NONE][0]['tid'])) {
+  if (!isset($node->field_candidato_status[LANGUAGE_NONE][0]['value'])) {
     return;
   }
 
-  if (!($term = taxonomy_term_load($node->field_candidato[LANGUAGE_NONE][0]['tid']))) {
+  if ($node->field_candidato_status[LANGUAGE_NONE][0]['value'] != 'si') {
     return;
   }
 
-  $vars['scripts'] = str_replace('candidato_class_value', $term->name, $vars['scripts']);
+  $vars['scripts'] = str_replace('candidato_class_value', 'candidato');
 }

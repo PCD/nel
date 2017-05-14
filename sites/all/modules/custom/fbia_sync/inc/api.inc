@@ -64,10 +64,10 @@ function fbia_sync_process($node) {
   $errors = 0;
   fbia_sync_process_exec($node_args, $response, $errors, 2);
   fbia_sync_mark_record($node, $errors, $response);
+  sleep(2);
 }
 
 function fbia_sync_process_exec($node_args, &$response, &$errors, $try = 2) {
-
   try {
     $instant_article = fbia_sync_build_article($node_args);
   
@@ -97,7 +97,7 @@ function fbia_sync_process_exec($node_args, &$response, &$errors, $try = 2) {
     if ($try > 0) {
       $try--;
       echo "failed... try again... ";
-      sleep(1);
+      sleep(2);
       fbia_sync_process_exec($node_args, $response, $errors, $try);
     }
     else {

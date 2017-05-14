@@ -62,5 +62,5 @@ function nelads_process_html_candidato(&$vars) {
     return;
   }
 
-  $vars['scripts'] = str_replace('candidato_class_value', 'candidato');
+  $vars['scripts'] = str_replace('candidato_class_value', 'candidato', $vars['scripts']);
 }

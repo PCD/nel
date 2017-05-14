@@ -63,9 +63,10 @@ function nel_preprocess_html_node_google_class(&$variables, $node) {
  */
 function nel_preprocess_html_node_candidato_class(&$variables, $node) {
   $candidato_class = 'pagina-sin-candidato';
-  if ( isset($node->field_candidato[LANGUAGE_NONE][0]['tid']) ) {
-    $term = taxonomy_term_load($node->field_candidato[LANGUAGE_NONE][0]['tid']);
-    $candidato_class = $term->name;
+  if ( isset($node->field_candidato_status[LANGUAGE_NONE][0]['value']) ) {
+    if ($node->field_candidato_status[LANGUAGE_NONE][0]['value'] == 'si') {
+      $candidato_class = 'candidato';
+    }
   }
   $variables['attributes_array']['data-candidato-class'] = $candidato_class;
 }

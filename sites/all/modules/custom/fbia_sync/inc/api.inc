@@ -157,6 +157,17 @@ function fbia_sync_build_article($node_args) {
     }
     $header->addAuthor($author);
   }
+
+  // Credits.
+  if (isset($node_args['credits'])) {
+    foreach($node_args['credits'] as $credit) {
+      $author = Author::create()->withName($credit['text']);
+      if (isset($credit['url'])) {
+        $author->withURL($credit['url']);
+      }
+      $header->addAuthor($author);
+    }
+  }
   
   // Breadcrumbs.
   if (isset($node_args['breadcrumbs'])) {

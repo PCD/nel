@@ -217,6 +217,27 @@ function fbia_sync_prepare_node($node) {
     'height' => 50,
   );
 
+  // Credits.
+  if (isset($node->field_creditos[LANGUAGE_NONE][0]['value'])) {
+    $credits = $node->field_creditos[LANGUAGE_NONE][0]['value'];
+    $credits = strip_tags($credits, '<a>');
+    $credits = explode("\n", trim($credits));
+    $credits_array = array();
+    $pattern = '/href="([^"]+)"/msi';
+    foreach($credits as $credit) {
+      $clean_credit = trim(strip_tags($credit));
+      if (!empty($clean_credit)) {
+        $credit_array = array();
+        $credit_array['text'] = $clean_credit;
+        if (preg_match($pattern, $credit, $match)) {
+          $credit_array['url'] = $match[1];
+        }
+        $credits_array[] = $credit_array;
+      }
+    }
+    $node_args['credits'] = $credits_array;
+  }
+
   return $node_args;
 }
 

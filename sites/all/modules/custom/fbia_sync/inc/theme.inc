@@ -221,6 +221,7 @@ function fbia_sync_prepare_node($node) {
   if (isset($node->field_creditos[LANGUAGE_NONE][0]['value'])) {
     $credits = $node->field_creditos[LANGUAGE_NONE][0]['value'];
     $credits = strip_tags($credits, '<a>');
+    $credits = str_replace('&nbsp;', ' ', $credits);
     $credits = explode("\n", trim($credits));
     $credits_array = array();
     $pattern = '/href="([^"]+)"/msi';

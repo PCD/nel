@@ -157,17 +157,6 @@ function fbia_sync_build_article($node_args) {
     }
     $header->addAuthor($author);
   }
-
-  // Credits.
-  if (isset($node_args['credits'])) {
-    foreach($node_args['credits'] as $credit) {
-      $author = Author::create()->withName($credit['text']);
-      if (isset($credit['url'])) {
-        $author->withURL($credit['url']);
-      }
-      $header->addAuthor($author);
-    }
-  }
   
   // Breadcrumbs.
   if (isset($node_args['breadcrumbs'])) {
@@ -221,6 +210,14 @@ function fbia_sync_build_article($node_args) {
   foreach($paragraphs as $i => $paragraph) {
     $paragraph_item = Paragraph::create()->appendText(strip_tags($paragraph));
     $article->addChild($paragraph_item);
+  }
+  
+  // Credits.
+  if (isset($node_args['credits'])) {
+    foreach($node_args['credits'] as $credit) {
+      $paragraph_item = Paragraph::create()->appendText($credit['text']);
+      $article->addChild($paragraph_item);
+    }
   }
   
   // Videos.

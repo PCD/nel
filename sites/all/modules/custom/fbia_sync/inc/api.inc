@@ -264,7 +264,9 @@ function fbia_sync_build_article($node_args) {
     foreach($node_args['slideshow'] as $item) {
       $image = Image::create()->withURL($item['src']);
       if (isset($item['alt'])) {
-        $image->withCaption($item['alt']);
+        $image->withCaption(
+          Caption::create()->appendText($item['alt'])
+        );
       }
       $slideshow->addImage($image);
     }

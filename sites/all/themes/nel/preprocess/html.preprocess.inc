@@ -4,6 +4,10 @@
  * Implements hook_preprocess_html().
  */
 function nel_preprocess_html(&$variables) {
+  if (drupal_is_front_page()) {
+     header("location: http://www.ntv.com.mx");
+     exit;
+   }
   // You can use preprocess hooks to modify the variables before they are passed
   // to the theme function or template file.
   

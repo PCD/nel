@@ -1,15 +1,6 @@
 # Ignore configuration files that may contain sensitive information.
 sites/*/settings*.php
-htpasswd
-sites/default/exclude-list
-neldrupal
 
 # Ignore paths that contain user-generated content.
-.DS_Store
-cache
-wp-content
 sites/*/files
-sites/*/files2
 sites/*/private
-sites/*/pvt
-sites/*/tmp

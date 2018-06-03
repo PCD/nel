@@ -1,0 +1,5 @@
+name = mpc
+description = "Place holder module."
+core = 7.x
+
+
